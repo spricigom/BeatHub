@@ -1,9 +1,15 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import { RouterLink } from 'vue-router'
 </script>
 
+
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+
+<RouterLink to="/produtos">Produtos </RouterLink>
+<RouterLink to="/Inicio">Inicio </RouterLink>
+
+    
 </template>
+<style scoped>
+
+</style>
