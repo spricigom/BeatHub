@@ -55,6 +55,11 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
+
+            <div class="campo">
+              
+               
+            </div>
         </main>
 
         <footer></footer>
@@ -69,7 +74,14 @@
     padding: 0;
 }
 
-
+.campo{
+  height: 40vh;
+  width: 10vw;
+  background-color: red;
+  margin-bottom: 40px;
+  position: relative;
+  bottom: 100px;
+}
 .logo {
     width: 8vw;
     cursor: pointer;
