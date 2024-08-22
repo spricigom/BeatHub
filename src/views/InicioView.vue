@@ -15,8 +15,10 @@
                     <li><a href="#">Pedais</a></li>
                 </ul>
             </nav>
+            <RouterLink to="/">            
+                <img class="logo" src="@/assets/certa.png" alt="" />
+            </RouterLink>
 
-            <img class="logo" src="@/assets/certa.png" alt="" />
             <p><img src="@/assets/lugar-colocar.png" alt="" class="icones" />Selecione sua regiao</p>
 
             <form class="d-flex" role="search">
@@ -69,19 +71,10 @@
 <style scoped>
 
 * {
-    box-sizing: border-box;
-    margin: 0;
     padding: 0;
 }
 
-.campo{
-  height: 40vh;
-  width: 10vw;
-  background-color: red;
-  margin-bottom: 40px;
-  position: relative;
-  bottom: 100px;
-}
+
 .logo {
     width: 8vw;
     cursor: pointer;
@@ -143,7 +136,7 @@ a {
 .hr {
     color: #000000;
     position: relative;
-    bottom: 2vh;
+    bottom: 5vh;
 }
 
 .icones {
@@ -157,6 +150,19 @@ a {
 
 .compra-e-coracao .icones {
     margin-right: 1.5vw;
+}
+.carousel{
+    margin-top: -5vh;
+}
+#carouselExample .carousel-item::before{
+    content: "";
+    background-image: linear-gradient( to top, white 40%,transparent); 
+
+    display: block;
+    position:absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
 }
 </style>
 
