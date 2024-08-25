@@ -90,7 +90,23 @@
                 </div>
             </div>
             <div class="campo">
+                <div class="mais-vendidos text-center">
+                    
 
+                </div>
+
+                <div class="mais-vendidos">
+                    
+
+                </div>
+
+                <div class="mais-vendidos">
+                    
+                </div>
+
+                <div class="mais-vendidos">
+                    
+                </div>
 
             </div>
         </main>
@@ -100,6 +116,29 @@
 </template>
 
 <style scoped>
+.mais-vendidos{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    margin: 10px;
+}
+
+.mais-vendidos img{
+    width: 100%;
+}
+
+.campo{
+    background-color: red;
+    height: 50vh;
+    width: 80vw;
+    transform: translate(-50%, -50%);
+    margin-top: 30vh;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    left: 50%;
+}
+
 * {
     padding: 0;
 }
@@ -185,6 +224,7 @@ a {
 /*estilos do carrossel */
 body {
     background-color: rgb(240, 240, 240);
+
 }
 .carousel {
     margin-top: -5vh;
