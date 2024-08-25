@@ -15,7 +15,7 @@
                     <li><a href="#">Pedais</a></li>
                 </ul>
             </nav>
-            <RouterLink to="/">            
+            <RouterLink to="/">
                 <img class="logo" src="@/assets/certa.png" alt="" />
             </RouterLink>
 
@@ -57,10 +57,41 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col categorias ">
+                        <div class="texto-categoria">
+                            <h5>Faça seu Login</h5>
+                        </div>
+                        <img src="@/assets/user.png" alt="">
+                    </div>
 
+                    <div class="col categorias ">
+                        <div class="texto-categoria">
+                            <h5>Mais alugados</h5>
+                            <img src="@/assets/item.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col categorias ">
+                        <div class="texto-categoria">
+                            <h5>Sua localização</h5>
+                            <img src="@/assets/local.png" alt="">
+                        </div>
+                        
+                    </div>
+
+                    <div class="col categorias ">
+                        <div class="texto-categoria">
+                            <h5>Categorias</h5>
+                        </div>
+                        <img src="@/assets/categoria.png" alt="">
+                    </div>
+                </div>
+            </div>
             <div class="campo">
-              
-               
+
+
             </div>
         </main>
 
@@ -69,12 +100,11 @@
 </template>
 
 <style scoped>
-
 * {
     padding: 0;
 }
 
-
+/*estilos do header */
 .logo {
     width: 8vw;
     cursor: pointer;
@@ -151,18 +181,57 @@ a {
 .compra-e-coracao .icones {
     margin-right: 1.5vw;
 }
-.carousel{
+
+/*estilos do carrossel */
+body {
+    background-color: rgb(240, 240, 240);
+}
+.carousel {
     margin-top: -5vh;
 }
-#carouselExample .carousel-item::before{
-    content: "";
-    background-image: linear-gradient( to top, white 40%,transparent); 
 
+#carouselExample .carousel-item::before {
+    content: "";
+    background: linear-gradient(0deg, rgb(240, 240, 240) 50%, transparent 69%);
     display: block;
-    position:absolute;
+    position: absolute;
     top: 0;
     width: 100vw;
-    height: 100vh;
+    height: 120vh;
 }
-</style>
 
+
+/*Categorias em cima do carrossel*/
+.categorias {
+    height: 35vh;
+    width: 10vw;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    background-color: white;
+    border-radius: 1vw;
+    padding: 1vw;
+    cursor: pointer;
+    display: flex;
+    display: inline-block;
+    position: relative;
+    bottom: 25vh;
+    margin-bottom: -10vw;
+    box-shadow: 1px 1px 5px 5px rgb(150, 146, 146);
+    justify-content: center;
+}
+
+.categorias img{
+    width: 10vw;
+    height: 10vw;
+    margin-top: .5vw;
+    align-items: center;
+}
+
+.texto-categoria {
+    margin-top: 1vw;
+    font-family: "Josefin Sans", sans-serif;
+    color: #f48200;
+    font-size: 1.8vh;
+}
+
+</style>
