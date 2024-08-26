@@ -78,7 +78,7 @@
                             <h5>Sua localização</h5>
                             <img src="@/assets/local.png" alt="">
                         </div>
-                        
+
                     </div>
 
                     <div class="col categorias ">
@@ -89,23 +89,114 @@
                     </div>
                 </div>
             </div>
+
+
+ <h2 id="amarelo" style="margin-left: 10vw; margin-top: 2vw;">Os mais alugados</h2>
             <div class="campo">
-                <div class="mais-vendidos text-center">
-                    
+               
+                <div class="mais-alugados text-center">
+                    <div class="compra-e-coracao2">
+                        <img src="@/assets/coracao.png" alt="" class="icones">
+                        <img src="@/assets/carrinho-de-compras.png" alt="" class="icones">
+                    </div>
+
+                    <img src="@/assets/ukulele.png" alt="" class="produtos-MaisAlugados">
+                    <h2>Ukulele Concert Us23 Spring</h2>
+
+                    <div class="conteudo1">
+                        <img src="@/assets/estrelas.png" alt="" class="estrelas">
+                        <div class="avaliacao">
+                            <h6>130 avaliações</h6>
+                        </div>
+                    </div>
+
+                    <div class="conteudo2">
+                        <div class="preco">
+                            <h5>R$ 17,00 por mes</h5>
+                        </div>
+                        <img src="@/assets/compartilhe.png" alt="" class="compartilhe">
+                    </div>
 
                 </div>
 
-                <div class="mais-vendidos">
-                    
+                <div class="mais-alugados text-center">
+                    <div class="compra-e-coracao2">
+                        <img src="@/assets/coracao.png" alt="" class="icones">
+                        <img src="@/assets/carrinho-de-compras.png" alt="" class="icones">
+                    </div>
+
+                    <img src="@/assets/violao.png" alt="" class="produtos-MaisAlugados">
+                    <h2>Violão Di Giorgio Master</h2>
+
+                    <div class="conteudo1">
+                        <img src="@/assets/estrelas.png" alt="" class="estrelas">
+                        <div class="avaliacao">
+                            <h6>130 avaliações</h6>
+                        </div>
+                    </div>
+
+                    <div class="conteudo2">
+                        <div class="preco">
+                            <h5>R$ 17,00 por mes</h5>
+                        </div>
+                        <img src="@/assets/compartilhe.png" alt="" class="compartilhe">
+                    </div>
 
                 </div>
 
-                <div class="mais-vendidos">
-                    
+                <div class="mais-alugados text-center">
+                    <div class="compra-e-coracao2">
+                        <img src="@/assets/coracao.png" alt="" class="icones">
+                        <img src="@/assets/carrinho-de-compras.png" alt="" class="icones">
+                    </div>
+
+                    <img src="@/assets/guitarra.png" alt="" class="produtos-MaisAlugados">
+                    <h2>Guitarra elétrica SG</h2>
+
+                    <div class="conteudo1">
+                        <img src="@/assets/estrelas.png" alt="" class="estrelas">
+                        <div class="avaliacao">
+                            <h6>130 avaliações</h6>
+                        </div>
+                    </div>
+
+                    <div class="conteudo2">
+                        <div class="preco">
+                            <h5>R$ 17,00 por mes</h5>
+                        </div>
+                        <img src="@/assets/compartilhe.png" alt="" class="compartilhe">
+                    </div>
+
                 </div>
 
-                <div class="mais-vendidos">
-                    
+
+
+
+
+
+                <div class="mais-alugados text-center">
+                    <div class="compra-e-coracao2">
+                        <img src="@/assets/coracao.png" alt="" class="icones">
+                        <img src="@/assets/carrinho-de-compras.png" alt="" class="icones">
+                    </div>
+
+                    <img src="@/assets/baixo.png" alt="" class="produtos-MaisAlugados">
+                    <h2>Baixo Strinberg JBS50</h2>
+
+                    <div class="conteudo1">
+                        <img src="@/assets/estrelas.png" alt="" class="estrelas">
+                        <div class="avaliacao">
+                            <h6>130 avaliações</h6>
+                        </div>
+                    </div>
+
+                    <div class="conteudo2">
+                        <div class="preco">
+                            <h5>R$ 17,00 por mes</h5>
+                        </div>
+                        <img src="@/assets/compartilhe.png" alt="" class="compartilhe">
+                    </div>
+
                 </div>
 
             </div>
@@ -116,23 +207,68 @@
 </template>
 
 <style scoped>
-.mais-vendidos{
-    height: 100%;
-    width: 100%;
+
+.conteudo2{
+    margin-top: 5vh;
+}
+.compra-e-coracao2 {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1vw;
+    margin-top: 3vh;
+    margin-right: 1vw;
+}
+
+.preco {
+    display: flex;
+    float: left;
+    margin-left: 3vw;
+    font-family: 'Inter', 'sans serif';
+}
+
+.compartilhe {
+    display: flex;
+    float: right;
+    margin-right: 3vw;
+    width: 1.2vw;
+}
+
+.estrelas {
+    display: flex;
+    float: left;
+    margin-left: 2.5vw;
+}
+
+.avaliacao {
+    display: flex;
+    float: right;
+    margin-right: 2.5vw;
+}
+
+
+.produtos-MaisAlugados {
+    width: 130px;
+    height: 321px;
+}
+
+.mais-alugados {
+    height: 64vh;
+    width: 19vw;
     background-color: white;
-    margin: 10px;
 }
 
-.mais-vendidos img{
-    width: 100%;
+.mais-alugados h2 {
+    margin-top: 2vh;
+    font-size: 1.3vw;
+    font-family: 'Inter', 'sans-serif';
 }
 
-.campo{
-    background-color: red;
-    height: 50vh;
+.campo {
+    background-color: white;
+    height: 64vh;
     width: 80vw;
     transform: translate(-50%, -50%);
-    margin-top: 30vh;
+    margin-top: 35vh;
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -226,6 +362,7 @@ body {
     background-color: rgb(240, 240, 240);
 
 }
+
 .carousel {
     margin-top: -5vh;
 }
@@ -260,7 +397,7 @@ body {
     justify-content: center;
 }
 
-.categorias img{
+.categorias img {
     width: 10vw;
     height: 10vw;
     margin-top: .5vw;
@@ -273,5 +410,4 @@ body {
     color: #f48200;
     font-size: 1.8vh;
 }
-
 </style>
