@@ -59,52 +59,49 @@
             </div>
             <div class="container text-center">
                 <div class="row">
-                    <div class="col categorias ">
+                    <div class="col categorias">
                         <div class="texto-categoria">
                             <h5>Faça seu Login</h5>
                         </div>
-                        <img src="@/assets/user.png" alt="">
+                        <img src="@/assets/user.png" alt="" />
                     </div>
 
-                    <div class="col categorias ">
+                    <div class="col categorias">
                         <div class="texto-categoria">
                             <h5>Mais alugados</h5>
-                            <img src="@/assets/item.png" alt="">
+                            <img src="@/assets/item.png" alt="" />
                         </div>
                     </div>
 
-                    <div class="col categorias ">
+                    <div class="col categorias">
                         <div class="texto-categoria">
                             <h5>Sua localização</h5>
-                            <img src="@/assets/local.png" alt="">
+                            <img src="@/assets/local.png" alt="" />
                         </div>
-
                     </div>
 
-                    <div class="col categorias ">
+                    <div class="col categorias">
                         <div class="texto-categoria">
                             <h5>Categorias</h5>
                         </div>
-                        <img src="@/assets/categoria.png" alt="">
+                        <img src="@/assets/categoria.png" alt="" />
                     </div>
                 </div>
             </div>
 
-
- <h2 id="amarelo" style="margin-left: 10vw; margin-top: 2vw;">Os mais alugados</h2>
+            <h2 id="amarelo" style="margin-left: 10vw; margin-top: 2vw">Os mais alugados</h2>
             <div class="campo">
-               
                 <div class="mais-alugados text-center">
                     <div class="compra-e-coracao2">
-                        <img src="@/assets/coracao.png" alt="" class="icones">
-                        <img src="@/assets/carrinho-de-compras.png" alt="" class="icones">
+                        <img src="@/assets/coracao.png" alt="" class="icones" />
+                        <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
                     </div>
 
-                    <img src="@/assets/ukulele.png" alt="" class="produtos-MaisAlugados">
+                    <img src="@/assets/ukulele.png" alt="" class="produtos-MaisAlugados" />
                     <h2>Ukulele Concert Us23 Spring</h2>
 
                     <div class="conteudo1">
-                        <img src="@/assets/estrelas.png" alt="" class="estrelas">
+                        <img src="@/assets/estrelas.png" alt="" class="estrelas" />
                         <div class="avaliacao">
                             <h6>130 avaliações</h6>
                         </div>
@@ -112,24 +109,23 @@
 
                     <div class="conteudo2">
                         <div class="preco">
-                            <h5>R$ 17,00 por mes</h5>
+                            <h5>R$ 17,00 por mês</h5>
                         </div>
-                        <img src="@/assets/compartilhe.png" alt="" class="compartilhe">
+                        <img src="@/assets/compartilhe.png" alt="" class="compartilhe" />
                     </div>
-
                 </div>
 
                 <div class="mais-alugados text-center">
                     <div class="compra-e-coracao2">
-                        <img src="@/assets/coracao.png" alt="" class="icones">
-                        <img src="@/assets/carrinho-de-compras.png" alt="" class="icones">
+                        <img src="@/assets/coracao.png" alt="" class="icones" />
+                        <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
                     </div>
 
-                    <img src="@/assets/violao.png" alt="" class="produtos-MaisAlugados">
+                    <img src="@/assets/violao.png" alt="" class="produtos-MaisAlugados" />
                     <h2>Violão Di Giorgio Master</h2>
 
                     <div class="conteudo1">
-                        <img src="@/assets/estrelas.png" alt="" class="estrelas">
+                        <img src="@/assets/estrelas.png" alt="" class="estrelas" />
                         <div class="avaliacao">
                             <h6>130 avaliações</h6>
                         </div>
@@ -137,24 +133,23 @@
 
                     <div class="conteudo2">
                         <div class="preco">
-                            <h5>R$ 17,00 por mes</h5>
+                            <h5>R$ 17,00 por mês</h5>
                         </div>
-                        <img src="@/assets/compartilhe.png" alt="" class="compartilhe">
+                        <img src="@/assets/compartilhe.png" alt="" class="compartilhe" />
                     </div>
-
                 </div>
 
                 <div class="mais-alugados text-center">
                     <div class="compra-e-coracao2">
-                        <img src="@/assets/coracao.png" alt="" class="icones">
-                        <img src="@/assets/carrinho-de-compras.png" alt="" class="icones">
+                        <img src="@/assets/coracao.png" alt="" class="icones" />
+                        <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
                     </div>
 
-                    <img src="@/assets/guitarra.png" alt="" class="produtos-MaisAlugados">
+                    <img src="@/assets/guitarra.png" alt="" class="produtos-MaisAlugados" />
                     <h2>Guitarra elétrica SG</h2>
 
                     <div class="conteudo1">
-                        <img src="@/assets/estrelas.png" alt="" class="estrelas">
+                        <img src="@/assets/estrelas.png" alt="" class="estrelas" />
                         <div class="avaliacao">
                             <h6>130 avaliações</h6>
                         </div>
@@ -162,29 +157,23 @@
 
                     <div class="conteudo2">
                         <div class="preco">
-                            <h5>R$ 17,00 por mes</h5>
+                            <h5>R$ 17,00 por mês</h5>
                         </div>
-                        <img src="@/assets/compartilhe.png" alt="" class="compartilhe">
+                        <img src="@/assets/compartilhe.png" alt="" class="compartilhe" />
                     </div>
-
                 </div>
-
-
-
-
-
 
                 <div class="mais-alugados text-center">
                     <div class="compra-e-coracao2">
-                        <img src="@/assets/coracao.png" alt="" class="icones">
-                        <img src="@/assets/carrinho-de-compras.png" alt="" class="icones">
+                        <img src="@/assets/coracao.png" alt="" class="icones" />
+                        <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
                     </div>
 
-                    <img src="@/assets/baixo.png" alt="" class="produtos-MaisAlugados">
+                    <img src="@/assets/baixo.png" alt="" class="produtos-MaisAlugados" />
                     <h2>Baixo Strinberg JBS50</h2>
 
                     <div class="conteudo1">
-                        <img src="@/assets/estrelas.png" alt="" class="estrelas">
+                        <img src="@/assets/estrelas.png" alt="" class="estrelas" />
                         <div class="avaliacao">
                             <h6>130 avaliações</h6>
                         </div>
@@ -192,34 +181,44 @@
 
                     <div class="conteudo2">
                         <div class="preco">
-                            <h5>R$ 17,00 por mes</h5>
+                            <h5>R$ 17,00 por mês</h5>
                         </div>
-                        <img src="@/assets/compartilhe.png" alt="" class="compartilhe">
+                        <img src="@/assets/compartilhe.png" alt="" class="compartilhe" />
                     </div>
-
                 </div>
-
             </div>
 
             <div class="container text-center">
-  <div class="row">
-    <div class="col">
-      Column
-    </div>
-    <div class="col">
-      Column
-    </div>
-    <div class="col">
-      Column
-    </div>
-    <div class="col">
-      Column
-    </div>
-    <div class="col">
-      Column
-    </div>
-  </div>
-</div>
+                <div class="row">
+
+
+                    <div class="col produtos">
+
+                        <div class="img-produtos">
+                            <img src="@/assets/microfone.png" alt="" />
+                        </div>
+                        <h2 class="texto-produtos">Microfone SoundPro SP</h2>
+
+
+
+                       
+
+                    </div>
+
+
+                    <div class="col produtos">Column</div>
+                    <div class="col produtos">Column</div>
+                    <div class="col produtos">Column</div>
+                    <div class="col produtos">Column</div>
+                </div>
+                <div class="row">
+                    <div class="col produtos">Column</div>
+                    <div class="col produtos">Column</div>
+                    <div class="col produtos">Column</div>
+                    <div class="col produtos">Column</div>
+                    <div class="col produtos">Column</div>
+                </div>
+            </div>
         </main>
 
         <footer></footer>
@@ -227,10 +226,40 @@
 </template>
 
 <style scoped>
+.texto-produtos {
+    font-size: 1.2vw;
+    margin-top: 2vh;
+}
 
-.conteudo2{
+.img-produtos {
+    height: 20vh;
+}
+
+.img-produtos img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding-top: 5vh;
+}
+
+.produtos {
+    background-color: white;
+    height: 37vh;
+    margin-left: 10px;
+    margin-right: 10px;
+    box-shadow: 1px 1px 5px 5px rgb(150, 146, 146);
+    margin-bottom: 8vh;
+
+
+}
+
+
+
+.conteudo2 {
     margin-top: 5vh;
 }
+
+
 .compra-e-coracao2 {
     display: flex;
     justify-content: space-between;
@@ -246,6 +275,8 @@
     font-family: 'Inter', 'sans serif';
 }
 
+
+
 .compartilhe {
     display: flex;
     float: right;
@@ -253,11 +284,16 @@
     width: 1.2vw;
 }
 
+
+
+
 .estrelas {
     display: flex;
     float: left;
     margin-left: 2.5vw;
 }
+
+
 
 .avaliacao {
     display: flex;
@@ -275,6 +311,8 @@
     height: 64vh;
     width: 19vw;
     background-color: white;
+    border-radius: 1vw;
+
 }
 
 .mais-alugados h2 {
@@ -293,6 +331,9 @@
     justify-content: space-between;
     position: relative;
     left: 50%;
+    box-shadow: 1px 1px 5px 5px rgb(150, 146, 146);
+    border-radius: 1vw;
+
 }
 
 * {
@@ -380,7 +421,6 @@ a {
 /*estilos do carrossel */
 body {
     background-color: rgb(240, 240, 240);
-
 }
 
 .carousel {
@@ -388,7 +428,7 @@ body {
 }
 
 #carouselExample .carousel-item::before {
-    content: "";
+    content: '';
     background: linear-gradient(0deg, rgb(240, 240, 240) 50%, transparent 69%);
     display: block;
     position: absolute;
@@ -396,7 +436,6 @@ body {
     width: 100vw;
     height: 120vh;
 }
-
 
 /*Categorias em cima do carrossel*/
 .categorias {
@@ -420,13 +459,13 @@ body {
 .categorias img {
     width: 10vw;
     height: 10vw;
-    margin-top: .5vw;
+    margin-top: 0.5vw;
     align-items: center;
 }
 
 .texto-categoria {
     margin-top: 1vw;
-    font-family: "Josefin Sans", sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     color: #f48200;
     font-size: 1.8vh;
 }
