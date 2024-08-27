@@ -91,7 +91,7 @@
                 </div>
             </div>
 
-            <h2 id="amarelo" style="margin-left: 10vw; margin-top: 2vw">Os mais alugados</h2>
+            <h2 id="amarelo" style="margin-left: 10vw;position: relative;bottom: 1vh;">Os mais alugados</h2>
             <div class="campo">
                 <div class="mais-alugados text-center">
                     <div class="compra-e-coracao2">
@@ -681,7 +681,7 @@
 
 .campo {
     background-color: white;
-    height: 64vh;
+    height: 66vh;
     width: 80vw;
     transform: translate(-50%, -50%);
     margin-top: 33vh;

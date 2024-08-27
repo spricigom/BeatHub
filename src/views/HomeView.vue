@@ -5,7 +5,7 @@ import { RouterLink } from 'vue-router'
 
 <template>
 
-<RouterLink to="/produtos">Produtos </RouterLink>
+<RouterLink to="/produto">Produto </RouterLink>
 <RouterLink to="/Inicio">Inicio </RouterLink>
 
 
