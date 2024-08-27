@@ -19,12 +19,13 @@
                 <img class="logo" src="@/assets/certa.png" alt="" />
             </RouterLink>
 
-            <p><img src="@/assets/lugar-colocar.png" alt="" class="icones" />Selecione sua regiao</p>
+            <p><img src="@/assets/lugar-colocar.png" alt="" class="icones" style="opacity: .7; position: relative; bottom: .2vh;"/>Selecione sua regiao</p>
 
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="O que você precisa?..."
-                    aria-label="Search" />
+                    aria-label="Search" style=" background-color: #efefef; border: 1px solid #f48200; width: 17vw; border-radius: 300px;"/>
             </form>
+                    <img src="@/assets/lupa.png" alt="" style="width: 1vw; display: flex; position: relative; left: 4vw; bottom: 1vh;">
 
             <div class="compra-e-coracao">
                 <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
@@ -32,7 +33,6 @@
             </div>
         </header>
         <hr class="hr" />
-
         <main>
             <div id="carouselExample" class="carousel slide">
                 <div class="carousel-inner">
@@ -681,15 +681,17 @@
 .logo {
     width: 8vw;
     cursor: pointer;
+    position: relative;
+    bottom: 15px
 }
 
 input {
-    background-color: #efefef;
-    border: 1px solid #f48200;
-    width: 17vw;
-    border-radius: 3vw;
+   
+    display: flex;
     position: relative;
     left: 7vw;
+    bottom: 1.1vh;
+
 }
 
 p {
@@ -697,7 +699,7 @@ p {
     left: 5vw;
     font-family: 'Inter', sans-serif;
     color: #595959;
-    font-size: 2vh;
+    font-size: 1vw;
 }
 
 ::placeholder {
@@ -737,9 +739,9 @@ a {
 }
 
 .hr {
-    color: #000000;
     position: relative;
     bottom: 5vh;
+    border: 1px solid black;
 }
 
 .icones {
@@ -749,6 +751,7 @@ a {
 .compra-e-coracao {
     position: relative;
     left: 7vw;
+    bottom: 1.3vh;
 }
 
 .compra-e-coracao .icones {
