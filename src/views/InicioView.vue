@@ -223,15 +223,15 @@
                         </div>
 
                         <div class="img-produtos">
-                            <img src="@/assets/microfone.png" alt="" />
+                            <img src="@/assets/pedal-OverDrive.png" alt="" />
                         </div>
-                        <h2 class="texto-produtos">Microfone SoundPro SP</h2>
+                        <h2 class="texto-produtos">Pedal Guitarra OverTone</h2>
                         <img src="@/assets/estrelas.png" alt="" class="esq1">
                         <div class="dir1">
                             <h6>100 avaliações</h6>
                         </div>
                         <div class="esq2">
-                            <h5>R$ 42,00 por mes</h5>
+                            <h5>R$ 17,00 por mes</h5>
                         </div>
                         <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos dir2">
                     </div>
@@ -242,15 +242,15 @@
                         </div>
 
                         <div class="img-produtos">
-                            <img src="@/assets/microfone.png" alt="" />
+                            <img src="@/assets/amplificador.png" alt="" />
                         </div>
-                        <h2 class="texto-produtos">Microfone SoundPro SP</h2>
+                        <h2 class="texto-produtos">Cubo Amplificador</h2>
                         <img src="@/assets/estrelas.png" alt="" class="esq1">
                         <div class="dir1">
                             <h6>100 avaliações</h6>
                         </div>
                         <div class="esq2">
-                            <h5>R$ 42,00 por mes</h5>
+                            <h5>R$ 32,00 por mes</h5>
                         </div>
                         <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos dir2">
                     </div>
@@ -261,15 +261,15 @@
                         </div>
 
                         <div class="img-produtos">
-                            <img src="@/assets/microfone.png" alt="" />
+                            <img src="@/assets/ukulele2.png" alt="" />
                         </div>
-                        <h2 class="texto-produtos">Microfone SoundPro SP</h2>
+                        <h2 class="texto-produtos">Ukulele</h2>
                         <img src="@/assets/estrelas.png" alt="" class="esq1">
                         <div class="dir1">
                             <h6>100 avaliações</h6>
                         </div>
                         <div class="esq2">
-                            <h5>R$ 42,00 por mes</h5>
+                            <h5>R$ 24,00 por mes</h5>
                         </div>
                         <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos dir2">
                     </div>
@@ -280,15 +280,15 @@
                         </div>
 
                         <div class="img-produtos">
-                            <img src="@/assets/microfone.png" alt="" />
+                            <img src="@/assets/pandeiro.png" alt="" />
                         </div>
-                        <h2 class="texto-produtos">Microfone SoundPro SP</h2>
+                        <h2 class="texto-produtos">Pandeiro 12 Knight</h2>
                         <img src="@/assets/estrelas.png" alt="" class="esq1">
                         <div class="dir1">
                             <h6>100 avaliações</h6>
                         </div>
                         <div class="esq2">
-                            <h5>R$ 42,00 por mes</h5>
+                            <h5>R$ 32,00 por mes</h5>
                         </div>
                         <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos dir2">
                     </div>
@@ -301,9 +301,66 @@
                         </div>
 
                         <div class="img-produtos">
-                            <img src="@/assets/microfone.png" alt="" />
+                            <img src="@/assets/teclado.png" alt="" />
                         </div>
-                        <h2 class="texto-produtos">Microfone SoundPro SP</h2>
+                        <h2 class="texto-produtos">Teclado musical 61 teclas</h2>
+                        <img src="@/assets/estrelas.png" alt="" class="esq1">
+                        <div class="dir1">
+                            <h6>100 avaliações</h6>
+                        </div>
+                        <div class="esq2">
+                            <h5>R$ 35,00 por mes</h5>
+                        </div>
+                        <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos dir2">
+                    </div>
+                    <div class="col produtos">
+                        <div class="compra-e-coracao_produto">
+                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
+                            <img src="@/assets/coracao.png" alt="" class="icones" />
+                        </div>
+
+                        <div class="img-produtos">
+                            <img src="@/assets/trompete.png" alt="" />
+                        </div>
+                        <h2 class="texto-produtos">Trompete Werill Master</h2>
+                        <img src="@/assets/estrelas.png" alt="" class="esq1">
+                        <div class="dir1">
+                            <h6>100 avaliações</h6>
+                        </div>
+                        <div class="esq2">
+                            <h5>R$ 69,00 por mes</h5>
+                        </div>
+                        <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos dir2">
+                    </div>
+                    <div class="col produtos">
+                        <div class="compra-e-coracao_produto">
+                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
+                            <img src="@/assets/coracao.png" alt="" class="icones" />
+                        </div>
+
+                        <div class="img-produtos">
+                            <img src="@/assets/bateria.png" alt="" />
+                        </div>
+                        <h2 class="texto-produtos">Bateria Acústica</h2>
+                        <img src="@/assets/estrelas.png" alt="" class="esq1">
+                        <div class="dir1">
+                            <h6>100 avaliações</h6>
+                        </div>
+                        <div class="esq2">
+                            <h5>R$ 287,00 por mes</h5>
+                        </div>
+                        <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos dir2">
+                    </div>
+                    <div class="col produtos">
+                        <div class="compra-e-coracao_produto">
+                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
+                            <img src="@/assets/coracao.png" alt="" class="icones" />
+                        </div>
+
+                        <div class="img-produtos">
+                            <img src="@/assets/prato.png" alt="" />
+                        </div>
+                        <h2 class="texto-produtos">Prato Hi Hat</h2>
                         <img src="@/assets/estrelas.png" alt="" class="esq1">
                         <div class="dir1">
                             <h6>100 avaliações</h6>
@@ -320,72 +377,15 @@
                         </div>
 
                         <div class="img-produtos">
-                            <img src="@/assets/microfone.png" alt="" />
+                            <img src="@/assets/gaitaBoca.png" alt="" />
                         </div>
-                        <h2 class="texto-produtos">Microfone SoundPro SP</h2>
+                        <h2 class="texto-produtos">Gaita de boca harmônica</h2>
                         <img src="@/assets/estrelas.png" alt="" class="esq1">
                         <div class="dir1">
                             <h6>100 avaliações</h6>
                         </div>
                         <div class="esq2">
-                            <h5>R$ 42,00 por mes</h5>
-                        </div>
-                        <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos dir2">
-                    </div>
-                    <div class="col produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-
-                        <div class="img-produtos">
-                            <img src="@/assets/microfone.png" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Microfone SoundPro SP</h2>
-                        <img src="@/assets/estrelas.png" alt="" class="esq1">
-                        <div class="dir1">
-                            <h6>100 avaliações</h6>
-                        </div>
-                        <div class="esq2">
-                            <h5>R$ 42,00 por mes</h5>
-                        </div>
-                        <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos dir2">
-                    </div>
-                    <div class="col produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-
-                        <div class="img-produtos">
-                            <img src="@/assets/microfone.png" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Microfone SoundPro SP</h2>
-                        <img src="@/assets/estrelas.png" alt="" class="esq1">
-                        <div class="dir1">
-                            <h6>100 avaliações</h6>
-                        </div>
-                        <div class="esq2">
-                            <h5>R$ 42,00 por mes</h5>
-                        </div>
-                        <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos dir2">
-                    </div>
-                    <div class="col produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-
-                        <div class="img-produtos">
-                            <img src="@/assets/microfone.png" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Microfone SoundPro SP</h2>
-                        <img src="@/assets/estrelas.png" alt="" class="esq1">
-                        <div class="dir1">
-                            <h6>100 avaliações</h6>
-                        </div>
-                        <div class="esq2">
-                            <h5>R$ 42,00 por mes</h5>
+                            <h5>R$ 17,00 por mes</h5>
                         </div>
                         <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos dir2">
                     </div>
