@@ -19,7 +19,7 @@
                 <img class="logo" src="@/assets/certa.png" alt="" />
             </RouterLink>
 
-            <p><img src="@/assets/lugar-colocar.png" alt="" class="icones"
+            <p class="regiao"><img src="@/assets/lugar-colocar.png" alt="" class="icones"
                     style="opacity: .7; position: relative; bottom: .2vh;" />Selecione sua regiao</p>
 
             <form class="d-flex" role="search">
@@ -452,8 +452,8 @@
             </div>
             
   <div class="Copyright" >
-    © 2020 Copyright:
-    <a  href="https://beathub.com/">MDBootstrap.com</a>
+    © 2024 Copyright:
+    <a  href="https://beathub.com/">BeatHub.com</a>
   </div>
         </footer>
 
@@ -715,7 +715,7 @@ input {
 
 }
 
-p {
+.regiao{
     position: relative;
     left: 5vw;
     font-family: 'Inter', sans-serif;

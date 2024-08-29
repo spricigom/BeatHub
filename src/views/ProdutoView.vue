@@ -19,7 +19,7 @@
                 <img class="logo" src="@/assets/certa.png" alt="" />
             </RouterLink>
 
-            <p><img src="@/assets/lugar-colocar.png" alt="" class="icones"
+            <p class="regiao"><img src="@/assets/lugar-colocar.png" alt="" class="icones"
                     style="opacity: .7; position: relative; bottom: .2vh;" />Selecione sua regiao</p>
 
             <form class="d-flex" role="search">
@@ -36,6 +36,12 @@
         </header>
         <hr class="hr" />
         
+        <main>
+            <div class="fundo">
+                <p>ksksksks</p>
+            </div>
+        </main>
+
 
         <footer>
             <div class="footer">
@@ -91,8 +97,8 @@
             </div>
             
   <div class="Copyright" >
-    © 2020 Copyright:
-    <a  href="https://beathub.com/">MDBootstrap.com</a>
+    © 2024 Copyright:
+    <a  href="https://beathub.com/">BeatHub.com</a>
   </div>
         </footer>
 
@@ -100,6 +106,22 @@
 </template>
 
 <style scoped>
+body {
+    background-color: rgb(240, 240, 240);
+}
+
+main{
+    background-color: #efefef;
+    display: flex;
+    justify-content: space-around;
+    height: 100vh;
+}
+.fundo{
+    width: 70%;
+    height: 70vh;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
 .Copyright{
     background-color:rgb(95, 95, 95);
     color: white;
@@ -354,7 +376,7 @@ input {
 
 }
 
-p {
+.regiao {
     position: relative;
     left: 5vw;
     font-family: 'Inter', sans-serif;
@@ -418,54 +440,8 @@ a {
     margin-right: 1.5vw;
 }
 
-/*estilos do carrossel */
-body {
-    background-color: rgb(240, 240, 240);
-}
 
-.carousel {
-    margin-top: -5vh;
-}
 
-#carouselExample .carousel-item::before {
-    content: '';
-    background: linear-gradient(0deg, rgb(240, 240, 240) 50%, transparent 69%);
-    display: block;
-    position: absolute;
-    top: 0;
-    width: 100vw;
-    height: 120vh;
-}
 
-/*Categorias em cima do carrossel*/
-.categorias {
-    height: 35vh;
-    width: 10vw;
-    margin-left: 4vw;
-    margin-right: 4vw;
-    background-color: white;
-    border-radius: 1vw;
-    padding: 1vw;
-    cursor: pointer;
-    display: flex;
-    display: inline-block;
-    position: relative;
-    bottom: 6.5vh;
-    box-shadow: 1px 1px 5px 5px rgb(150, 146, 146);
-    justify-content: center;
-}
 
-.categorias img {
-    width: 10vw;
-    height: 10vw;
-    margin-top: 0.5vw;
-    align-items: center;
-}
-
-.texto-categoria {
-    margin-top: 1vw;
-    font-family: 'Josefin Sans', sans-serif;
-    color: #f48200;
-    font-size: 1.8vh;
-}
 </style>
