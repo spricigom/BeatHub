@@ -5,7 +5,6 @@ import { RouterLink } from 'vue-router'
 
 <template>
 
-<RouterLink to="/produto">Produto </RouterLink>
 <RouterLink to="/Inicio">Inicio </RouterLink>
 
 
