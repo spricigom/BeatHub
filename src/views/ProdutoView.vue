@@ -1,7 +1,6 @@
 <script setup></script>
 
 <template>
-
     <body>
         <header>
             <nav>
@@ -35,28 +34,50 @@
             </div>
         </header>
         <hr class="hr" />
-        
+
         <main>
             <div class="fundo">
 
 
 
-                <div class="favoritos-compartilhe">
-                    <img src="@/assets/coracao.png" alt="" class="icones">
-                    <p>Favoritos</p>
-                   <img src="@/assets/compartilhe.png" alt="" class="icones">
-                   <p>compartilhe</p>
+
+
+                <div class="esquerda">
+                    <div class="favoritos-compartilhe">
+                        <img src="@/assets/coracao.png" alt="" class="icones">
+                        <p>Favoritos</p>
+                        <img src="@/assets/compartilhe.png" alt="" class="icones" style="margin-left: 1vw;">
+                        <p>Compartilhe</p>
+                    </div>
+
+
+                    <div class="img-produto">
+                        <img src="@/assets/teclado.png" alt="">
+                    </div>
+
+                    <div class="mais">
+                        <img src="@/assets/teclado1-3.png" alt="" class="mais-fotos">
+                        <img src="@/assets/teclado1-2.png" alt="" class="mais-fotos">
+                        <img src="@/assets/teclado1-4.png" alt="" class="mais-fotos">
+                    </div>
                 </div>
 
-
-                <div class="img-produto">
-                    <img src="@/assets/teclado.png" alt="">
-                </div>
-
-                <div class="mais">
-                    <img src="@/assets/teclado.png" alt="" class="mais-fotos">
-                    <img src="@/assets/teclado.png" alt="" class="mais-fotos">
-                    <img src="@/assets/teclado.png" alt="" class="mais-fotos">
+                <div class="centro">
+                    <h4 class="titulo-produto">Teclado Piano Musical 61 Teclas 500 Ritmos E 80 Músicas - MXT</h4>
+                    
+                    <div class="avaliacao">
+                        
+                    </div>
+                    <img id="direita" src="@/assets/estrelas.png" alt="">
+                    <h6 id="esquerda">130 avaliações</h6>
+                   
+                    <div class="descricao">
+                        <p>O teclado musical MT-4500 é uma sinfonia de inovação e versatilidade. </p>
+                            <p>61 teclas sensíveis à velocidade, proporciona uma experiência de toque  expressiva. </p>
+                        <p>Seu design elegante abriga uma biblioteca de 500 timbres e ritmos  autênticos, de pianos a sintetizadores, oferecendo possibilidades sonoras ilimitadas.</p>
+                        <p>Possui 3 modos de aprendizagem e  metrônomo.</p>
+                    </div>
+                    
                 </div>
 
             </div>
@@ -115,82 +136,128 @@
                 </div>
 
             </div>
-            
-  <div class="Copyright" >
-    © 2024 Copyright:
-    <a  href="https://beathub.com/">BeatHub.com</a>
-  </div>
+
+            <div class="Copyright">
+                © 2024 Copyright:
+                <a href="https://beathub.com/">BeatHub.com</a>
+            </div>
         </footer>
 
     </body>
 </template>
 
 <style scoped>
-.mais{
+
+.descricao{
+    margin-top: 7vh;
+}
+#direita{
+    float: left;
+    position: relative ;
+    left: 2vw;
+}
+
+#esquerda{
+    float: right;
+    position: relative;
+    right: 2vw;
+}
+
+.centro{
+    width: 22vw;
+    position: relative;
+    left: 5vw;
+    top: 4vh;
+}
+.centro h4{
+    text-align: center;
+    font-size: 1.49vw;
+    margin-top: 5vh;
+    color: #3C3C3C;
+    font-family: 'Josefin Sans', sans-serif;   
+}
+.centro p{
+    font-size: .8vw;
+    color: #3C3C3C;
+    margin-top: 1vh;
+    font-family: 'Josefin Sans', sans-serif;   
+justify-content: center;
+align-items: center;
+}
+.mais {
     display: flex;
     flex-wrap: wrap;
-    width: 30vw;
-    height: 18vh;
-    background-color: green;
+    width: 22vw;
     margin-left: 2vw;
     justify-content: space-around;
 }
-.mais-fotos{
-    height: 15vh;
-    width: 10vw;
-    background-color: red;
+
+.mais-fotos {
+    height: 100px;
+    width: 100px;
+    background-color: white;
 }
-.img-produto{
+
+.img-produto {
     height: 40vh;
-    width:18vw;
+    width: 18vw;
     margin-left: 7vh;
 }
-.img-produto img{
+
+.img-produto img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
-.favoritos-compartilhe p{
+.favoritos-compartilhe p {
     color: #f48200;
     margin: 1vw;
     text-decoration: underline;
     font-size: 1.4vw;
 }
-.favoritos-compartilhe{
+
+.favoritos-compartilhe {
     display: flex;
     align-items: center;
     margin-top: 5vh;
     margin-left: 2vw;
-   
+
 }
+
 body {
     background-color: rgb(240, 240, 240);
 }
 
-main{
+main {
     background-color: #efefef;
     display: flex;
     justify-content: space-around;
     height: 100vh;
 }
-.fundo{
+
+.fundo {
+    display: flex;
+    flex-direction: row;
     width: 80%;
-    height: 85vh;
-    background-color: #ffffff;
+    height: 75vh;
+    background-color: #e9e9e9;
     border-radius: 20px;
 }
-.Copyright{
-    background-color:rgb(95, 95, 95);
+
+.Copyright {
+    background-color: rgb(95, 95, 95);
     color: white;
     height: 7vh;
     display: flex;
     padding-top: 2.3vh;
     justify-content: center;
 }
-.Copyright a{
+
+.Copyright a {
     color: white;
 }
+
 .icones-footer {
     width: 2.5vw;
     margin-top: 5vh;
@@ -496,10 +563,4 @@ a {
 
 .compra-e-coracao .icones {
     margin-right: 1.5vw;
-}
-
-
-
-
-
-</style>
+}</style>
