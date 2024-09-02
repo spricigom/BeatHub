@@ -1,6 +1,7 @@
 <script setup></script>
 
 <template>
+
     <body>
         <header>
             <nav>
@@ -64,20 +65,42 @@
 
                 <div class="centro">
                     <h4 class="titulo-produto">Teclado Piano Musical 61 Teclas 500 Ritmos E 80 Músicas - MXT</h4>
-                    
+
                     <div class="avaliacao">
-                        
+
                     </div>
                     <img id="direita" src="@/assets/estrelas.png" alt="">
                     <h6 id="esquerda">130 avaliações</h6>
-                   
+
                     <div class="descricao">
                         <p>O teclado musical MT-4500 é uma sinfonia de inovação e versatilidade. </p>
-                            <p>61 teclas sensíveis à velocidade, proporciona uma experiência de toque  expressiva. </p>
-                        <p>Seu design elegante abriga uma biblioteca de 500 timbres e ritmos  autênticos, de pianos a sintetizadores, oferecendo possibilidades sonoras ilimitadas.</p>
-                        <p>Possui 3 modos de aprendizagem e  metrônomo.</p>
+                        <p>61 teclas sensíveis à velocidade, proporciona uma experiência de toque expressiva. </p>
+                        <p>Seu design elegante abriga uma biblioteca de 500 timbres e ritmos autênticos, de pianos a
+                            sintetizadores, oferecendo possibilidades sonoras ilimitadas.</p>
+                        <p>Possui 3 modos de aprendizagem e metrônomo.</p>
                     </div>
-                    
+
+                </div>
+
+                <div class="direita">
+                    <div class="valor">
+                        <h2 class="preco">R$45,00 por mês</h2>
+                        <h5 class="forma_pagamento">No pix</h5>
+
+                    </div>
+
+
+
+                    <div class="cep">
+                        <h5 class="frete">calcule seu cep</h5>
+                        <form class="input_cep">
+                            <input placeholder="Insira seu cep...">
+                        </form>
+                    </div>
+
+                    <button>ALUGUE</button>
+
+
                 </div>
 
             </div>
@@ -147,43 +170,109 @@
 </template>
 
 <style scoped>
+.valor{
+    margin-top: 1vh;
+}
+.cep{
+    margin-top: 18vh;
+}
+.input_cep {
+    display: flex;
+    position: relative;
+    right: 5vw;
 
-.descricao{
+}
+
+.input_cep input {
+    border: 1px solid white;
+    border-radius: .5vw;
+    padding: 2px 2px;
+
+}
+
+.frete {
+    font-size: 1.1vw;
+    color: #555151;
+    font-family: 'Josefin Sans', sans-serif;
+    position: relative;
+    bottom: .5vh;
+    margin-top: 10vh;
+}
+
+button {
+    height: 5vh;
+    width: 17vw;
+    background-color: #2C2B2B;
+    color: white;
+    border: 0;
+    margin-top: 20vh;
+    cursor: pointer;
+    border-radius: 15px;
+    font-family: 'Josefin Sans', sans-serif
+}
+
+.forma_pagamento {
+    font-size: 1.5vw;
+    color: #555151;
+    font-family: 'Josefin Sans', sans-serif;
+    text-decoration: underline;
+    position: relative;
+    bottom: 2vh;
+
+}
+
+.preco {
+    color: #f48200;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.direita {
+    position: relative;
+    top: 6vh;
+    width: 20vw;
+    text-align: center;
+}
+
+.descricao {
     margin-top: 7vh;
 }
-#direita{
+
+#direita {
     float: left;
-    position: relative ;
+    position: relative;
     left: 2vw;
 }
 
-#esquerda{
+#esquerda {
     float: right;
     position: relative;
     right: 2vw;
+    color: #bebbbb;
 }
 
-.centro{
+.centro {
     width: 22vw;
     position: relative;
-    left: 5vw;
     top: 4vh;
 }
-.centro h4{
+
+.centro h4 {
     text-align: center;
     font-size: 1.49vw;
     margin-top: 5vh;
     color: #3C3C3C;
-    font-family: 'Josefin Sans', sans-serif;   
+    font-family: 'Josefin Sans', sans-serif;
 }
-.centro p{
+
+.centro p {
     font-size: .8vw;
     color: #3C3C3C;
     margin-top: 1vh;
-    font-family: 'Josefin Sans', sans-serif;   
-justify-content: center;
-align-items: center;
+    font-family: 'Josefin Sans', sans-serif;
+    justify-content: center;
+    align-items: center;
 }
+
 .mais {
     display: flex;
     flex-wrap: wrap;
@@ -239,6 +328,7 @@ main {
 .fundo {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     width: 80%;
     height: 75vh;
     background-color: #e9e9e9;
@@ -412,12 +502,7 @@ main {
     margin-right: 1vw;
 }
 
-.preco {
-    display: flex;
-    float: left;
-    margin-left: 3vw;
-    font-family: 'Inter', 'sans serif';
-}
+
 
 
 
@@ -563,4 +648,5 @@ a {
 
 .compra-e-coracao .icones {
     margin-right: 1.5vw;
-}</style>
+}
+</style>
