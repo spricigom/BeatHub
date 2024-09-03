@@ -179,22 +179,20 @@
 
 <style scoped>
 .recomenda{
+    width: 95%;
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
 }
 .produto{
     background-color: white;
-    height: 25vh;
-    flex-direction: row;
-    width: 5vw;
-
-
-
+    height: 45vh;
+    width: 15vw;
+    border-radius: 20px;
+    margin-bottom: 10vh;
 }
 #interesse{
     color: #f48200;
-}
+    margin-top: 5vh}
 .valor{
     margin-top: 1vh;
 }
@@ -349,7 +347,6 @@ main {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 100vh;
 }
 
 .fundo {
