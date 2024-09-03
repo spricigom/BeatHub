@@ -104,6 +104,14 @@
                 </div>
 
             </div>
+            <h1 id="interesse">itens que talvez você tenha interesse</h1>
+            <div class="recomenda" style="display: flex; flex-direction: row;">
+                <div class="produto"></div>
+                <div class="produto"></div>
+                <div class="produto"></div>
+                <div class="produto"></div>
+                <div class="produto"></div>
+            </div>
         </main>
 
 
@@ -170,6 +178,23 @@
 </template>
 
 <style scoped>
+.recomenda{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.produto{
+    background-color: white;
+    height: 25vh;
+    flex-direction: row;
+    width: 5vw;
+
+
+
+}
+#interesse{
+    color: #f48200;
+}
 .valor{
     margin-top: 1vh;
 }
@@ -179,8 +204,7 @@
 .input_cep {
     display: flex;
     position: relative;
-    right: 5vw;
-
+    right: 3.5vw;
 }
 
 .input_cep input {
@@ -231,6 +255,7 @@ button {
     top: 6vh;
     width: 20vw;
     text-align: center;
+    align-items: center;
 }
 
 .descricao {
@@ -321,7 +346,9 @@ body {
 main {
     background-color: #efefef;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    align-items: center;
     height: 100vh;
 }
 
@@ -474,18 +501,7 @@ main {
     object-fit: contain;
 }
 
-.produtos {
-    background-color: white;
-    height: 45vh;
-    margin-left: 12px;
-    margin-right: 12px;
-    margin-top: 4vh;
-    box-shadow: -.5px .5px .5px .5px rgb(150, 146, 146);
-    margin-bottom: 8vh;
-    border-radius: 2vw;
 
-
-}
 
 
 
