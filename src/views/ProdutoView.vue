@@ -27,7 +27,7 @@
                     style=" background-color: #efefef; border: 1px solid #f48200; width: 17vw; border-radius: 300px;" />
             </form>
             <img src="@/assets/lupa.png" alt=""
-                style="width: 1vw; display: flex; position: relative; left: 4vw; bottom: 1vh;">
+                style="width: 1vw; display: flex; position: relative; left: 3vw; bottom: 1vh;">
 
             <div class="compra-e-coracao">
                 <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
@@ -106,7 +106,18 @@
             </div>
             <h1 id="interesse">itens que talvez você tenha interesse</h1>
             <div class="recomenda" style="display: flex; flex-direction: row;">
-                <div class="produto"></div>
+                <div class="produto">
+                    <div class="compra-e-coracao_produto">
+                        <img src="@/assets/coracao.png" alt="" class="icones">
+                        <img src="@/assets/carrinho-de-compras.png" alt="" class="icones">
+                    </div>
+                    <div class="img-produtos">
+                        <img src="@/assets/bateria.png" alt="">
+                    </div>
+                </div>
+
+
+
                 <div class="produto"></div>
                 <div class="produto"></div>
                 <div class="produto"></div>
@@ -190,9 +201,12 @@
     border-radius: 20px;
     margin-bottom: 10vh;
 }
+
 #interesse{
     color: #f48200;
-    margin-top: 5vh}
+    margin-top: 5vh
+}
+
 .valor{
     margin-top: 1vh;
 }
@@ -473,13 +487,14 @@ main {
 }
 
 .compra-e-coracao_produto {
-    position: relative;
-    left: 5vw;
     margin-top: 1vw;
+    display: flex;
+    justify-content: space-between;
 }
 
 .compra-e-coracao_produto .icones {
-    margin-right: .3vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
 }
 
 .texto-produtos {
@@ -488,8 +503,8 @@ main {
 }
 
 .img-produtos {
-    height: 25vh;
-
+    height: 35vh;
+  
 }
 
 .img-produtos img {
@@ -502,81 +517,43 @@ main {
 
 
 
-.conteudo2 {
-    margin-top: 5vh;
-}
-
-
-.compra-e-coracao2 {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 1vw;
-    margin-top: 3vh;
-    margin-right: 1vw;
-}
 
 
 
 
 
-.compartilhe {
-    display: flex;
-    float: right;
-    margin-right: 3vw;
-    width: 1.2vw;
-}
 
 
 
 
-.estrelas {
-    display: flex;
-    float: left;
-    margin-left: 2.5vw;
-}
 
 
 
-.avaliacao {
-    display: flex;
-    float: right;
-    margin-right: 2.5vw;
-}
 
 
-.produtos-MaisAlugados {
-    width: 130px;
-    height: 321px;
-}
 
-.mais-alugados {
-    height: 64vh;
-    width: 19vw;
-    background-color: white;
-    border-radius: 1vw;
 
-}
 
-.mais-alugados h2 {
-    margin-top: 2vh;
-    font-size: 1.3vw;
-    font-family: 'Inter', 'sans-serif';
-}
 
-.campo {
-    background-color: white;
-    height: 66vh;
-    width: 80vw;
-    transform: translate(-50%, -50%);
-    margin-top: 33vh;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    left: 50%;
-    box-shadow: 1px 1px 5px 5px rgb(150, 146, 146);
-    border-radius: 1vw;
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 * {
     padding: 0;
