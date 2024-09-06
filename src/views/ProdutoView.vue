@@ -106,22 +106,115 @@
             </div>
             <h1 id="interesse">itens que talvez você tenha interesse</h1>
             <div class="recomenda" style="display: flex; flex-direction: row;">
+                
                 <div class="produto">
                     <div class="compra-e-coracao_produto">
                         <img src="@/assets/coracao.png" alt="" class="icones">
                         <img src="@/assets/carrinho-de-compras.png" alt="" class="icones">
                     </div>
                     <div class="img-produtos">
-                        <img src="@/assets/bateria.png" alt="">
+                        <img src="@/assets/tambor2.png" alt="">
+                    </div>
+                    <div class="text-produto">
+                        <p>Muslady tambor de percussão</p>
+                    </div>
+                    
+                    <div class="avaliacao_recomenda">
+                        <img src="@/assets/estrelas.png" alt="" style=" display: flex; position: relative; bottom: 1vh"> 
+                        <p style="color: rgb(105, 105, 105);">130 avaliações</p>
+                    </div>
+                    <div class="valor_recomenda">                        
+                        <p >R$ 60,00 por mês</p>
+                        <img src="@/assets/compartilhe.png" alt="" class="icones" style=" display: flex; position: relative; bottom: 1vh;">
                     </div>
                 </div>
 
 
 
-                <div class="produto"></div>
-                <div class="produto"></div>
-                <div class="produto"></div>
-                <div class="produto"></div>
+                <div class="produto">
+                    <div class="compra-e-coracao_produto">
+                        <img src="@/assets/coracao.png" alt="" class="icones">
+                        <img src="@/assets/carrinho-de-compras.png" alt="" class="icones">
+                    </div>
+                    <div class="img-produtos">
+                        <img src="@/assets/tambor2.png" alt="">
+                    </div>
+                    <div class="text-produto">
+                        <p>Muslady tambor de percussão</p>
+                    </div>
+                    
+                    <div class="avaliacao_recomenda">
+                        <img src="@/assets/estrelas.png" alt="" style=" display: flex; position: relative; bottom: 1vh" >
+                        <p style="color: rgb(105, 105, 105);">130 avaliações</p>
+                    </div>
+                    <div class="valor_recomenda">                        
+                        <p >R$ 60,00 por mês</p>
+                        <img src="@/assets/compartilhe.png" alt="" class="icones" style=" display: flex; position: relative; bottom: 1vh">
+                    </div>
+                </div>
+                <div class="produto">
+                    <div class="compra-e-coracao_produto">
+                        <img src="@/assets/coracao.png" alt="" class="icones">
+                        <img src="@/assets/carrinho-de-compras.png" alt="" class="icones">
+                    </div>
+                    <div class="img-produtos">
+                        <img src="@/assets/tambor2.png" alt="">
+                    </div>
+                    <div class="text-produto">
+                        <p>Muslady tambor de percussão</p>
+                    </div>
+                    
+                    <div class="avaliacao_recomenda">
+                        <img src="@/assets/estrelas.png" alt="" style=" display: flex; position: relative; bottom: 1vh">
+                        <p style="color: rgb(105, 105, 105);">130 avaliações</p>
+                    </div>
+                    <div class="valor_recomenda">                        
+                        <p >R$ 60,00 por mês</p>
+                        <img src="@/assets/compartilhe.png" alt="" class="icones" style=" display: flex; position: relative; bottom: 1vh">
+                    </div>
+                </div>
+                <div class="produto">
+                    <div class="compra-e-coracao_produto">
+                        <img src="@/assets/coracao.png" alt="" class="icones">
+                        <img src="@/assets/carrinho-de-compras.png" alt="" class="icones">
+                    </div>
+                    <div class="img-produtos">
+                        <img src="@/assets/tambor2.png" alt="">
+                    </div>
+                    <div class="text-produto">
+                        <p>Muslady tambor de percussão</p>
+                    </div>
+                    
+                    <div class="avaliacao_recomenda">
+                        <img src="@/assets/estrelas.png" alt="" style=" display: flex; position: relative; bottom: 1vh">
+                        <p style="color: rgb(105, 105, 105);">130 avaliações</p>
+                    </div>
+                    <div class="valor_recomenda">                        
+                        <p >R$ 60,00 por mês</p>
+                        <img src="@/assets/compartilhe.png" alt="" class="icones" style=" display: flex; position: relative; bottom: 1vh">
+                    </div>
+                </div>
+                <div class="produto">
+                    <div class="compra-e-coracao_produto">
+                        <img src="@/assets/coracao.png" alt="" class="icones">
+                        <img src="@/assets/carrinho-de-compras.png" alt="" class="icones">
+                    </div>
+                    <div class="img-produtos">
+                        <img src="@/assets/tambor2.png" alt="">
+                    </div>
+                    <div class="text-produto">
+                        <p>Muslady tambor de percussão</p>
+                    </div>
+                    
+                    <div class="avaliacao_recomenda">
+                        <img src="@/assets/estrelas.png" alt="" style=" display: flex; position: relative; bottom: 1vh">
+                        <p style="color: rgb(105, 105, 105);">130 avaliações</p>
+                    </div>
+                    <div class="valor_recomenda">                        
+                        <p >R$ 60,00 por mês</p>
+                        <img src="@/assets/compartilhe.png" alt="" class="icones" style=" display: flex; position: relative; bottom: 1vh">
+                    </div>
+                </div>
             </div>
         </main>
 
@@ -189,6 +282,34 @@
 </template>
 
 <style scoped>
+.avaliacao_recomenda{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    bottom: 1vh;
+   
+}
+.valor_recomenda{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    bottom:2.5vh;
+   
+}
+.valor_recomenda p{
+    color:black;
+    font-size: 1.2vw;
+}
+.text-produto{
+    text-align: center;
+}
+.text-produto p{
+    color: #2C2B2B;
+    font-size: 1.3vw;
+    font-weight: 500;
+}
 .recomenda{
     width: 95%;
     display: flex;
@@ -196,10 +317,12 @@
 }
 .produto{
     background-color: white;
-    height: 45vh;
-    width: 15vw;
+    height: 50vh;
+    width: 15.5vw;
     border-radius: 20px;
     margin-bottom: 10vh;
+    box-shadow:  1px 1px 3px 3px  rgb(150, 146, 146);
+    border-radius: 1vw;
 }
 
 #interesse{
@@ -495,6 +618,7 @@ main {
 .compra-e-coracao_produto .icones {
     margin-left: 2vw;
     margin-right: 2vw;
+    width: 2vw;
 }
 
 .texto-produtos {
@@ -503,7 +627,7 @@ main {
 }
 
 .img-produtos {
-    height: 35vh;
+    height: 27vh;
   
 }
 
