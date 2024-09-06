@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import ListProduct from '@/components/ListProduct.vue';
+</script>
 
 <template>
 
@@ -392,7 +394,7 @@
                         <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos dir2">
                     </div>
                 </div>
-
+                <ListProduct/>  
             </div>
         </main>
 
