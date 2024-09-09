@@ -36,6 +36,10 @@
         </header>
         <hr class="hr" />
         <main>
+            <div class="carrinho-e-texto">
+<img src="@/assets/bag.png" alt="" id="carrinho">
+           <p>Adicione itens no seu carrinho</p>
+            </div>
            
         </main>
 
@@ -104,6 +108,29 @@
 </template>
 
 <style scoped>
+.carrinho-e-texto{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10vh;
+}
+.carrinho-e-texto p{
+    color: #000000;
+    font-weight: 700;
+    font-size: 1.8vw;
+}
+#carrinho{
+    width: 20vw;
+}
+main{
+    height: 100vh;
+    background-color: #efefef;
+    display: flex; 
+    align-items: center;
+    flex-direction: column;
+}
+
 .Copyright{
     background-color:rgb(95, 95, 95);
     color: white;
@@ -173,168 +200,6 @@
 .footer {
     width: 100%;
     background-color: #9b9a9a;
-}
-
-.container {
-    position: relative;
-    bottom: 17vh;
-}
-
-.esq1 {
-    float: left;
-    position: relative;
-    width: 6.5vw;
-    left: 1vw;
-}
-
-.dir1 {
-    float: right;
-    position: relative;
-    right: 1vw;
-}
-
-.esq2 {
-    float: left;
-    width: 10vw;
-    position: relative;
-    left: 1.3vw;
-}
-
-.esq2 h5 {
-    font-size: 1.1vw;
-}
-
-.dir2 {
-    float: right;
-    position: relative;
-    right: 2.5vw;
-    margin-top: .5vh;
-}
-
-.compartilhe-produtos {
-    width: 1.3vw;
-}
-
-.compra-e-coracao_produto {
-    position: relative;
-    left: 5vw;
-    margin-top: 1vw;
-}
-
-.compra-e-coracao_produto .icones {
-    margin-right: .3vw;
-}
-
-.texto-produtos {
-    font-size: 1.2vw;
-    margin-top: 2vh;
-}
-
-.img-produtos {
-    height: 25vh;
-
-}
-
-.img-produtos img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.produtos {
-    background-color: white;
-    height: 45vh;
-    margin-left: 12px;
-    margin-right: 12px;
-    margin-top: 4vh;
-    box-shadow: -.5px .5px .5px .5px rgb(150, 146, 146);
-    margin-bottom: 8vh;
-    border-radius: 2vw;
-
-
-}
-
-
-
-.conteudo2 {
-    margin-top: 5vh;
-}
-
-
-.compra-e-coracao2 {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 1vw;
-    margin-top: 3vh;
-    margin-right: 1vw;
-}
-
-.preco {
-    display: flex;
-    float: left;
-    margin-left: 3vw;
-    font-family: 'Inter', 'sans serif';
-}
-
-
-
-.compartilhe {
-    display: flex;
-    float: right;
-    margin-right: 3vw;
-    width: 1.2vw;
-}
-
-
-
-
-.estrelas {
-    display: flex;
-    float: left;
-    margin-left: 2.5vw;
-}
-
-
-
-.avaliacao {
-    display: flex;
-    float: right;
-    margin-right: 2.5vw;
-}
-
-
-.produtos-MaisAlugados {
-    width: 130px;
-    height: 321px;
-}
-
-.mais-alugados {
-    height: 64vh;
-    width: 19vw;
-    background-color: white;
-    border-radius: 1vw;
-
-}
-
-.mais-alugados h2 {
-    margin-top: 2vh;
-    font-size: 1.3vw;
-    font-family: 'Inter', 'sans-serif';
-}
-
-.campo {
-    background-color: white;
-    height: 66vh;
-    width: 80vw;
-    transform: translate(-50%, -50%);
-    margin-top: 33vh;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    left: 50%;
-    box-shadow: 1px 1px 5px 5px rgb(150, 146, 146);
-    border-radius: 1vw;
-
 }
 
 * {
