@@ -1,4 +1,17 @@
-<script setup></script>
+<script setup>
+import { ref } from 'vue';
+
+
+const imagemExibida = ref('@/assets/teclado.png');
+const imagensSecundarias = ['@/assets/teclado1-2.png', '@/assets/teclado1-3.png', '@/assets/teclado1-4.png'];
+
+function pegarImagem(id) {
+    const urlImagemExibida = imagemExibida.value;
+    imagemExibida.value = imagensSecundarias[id]
+    imagensSecundarias.push(urlImagemExibida)
+}
+
+</script>
 
 <template>
 
@@ -52,16 +65,24 @@
                     </div>
 
 
-                    <div class="img-produto">
-                        <img src="@/assets/teclado.png" alt="">
+                    <div class="product-gallery">
+                        <div class="img-produto">
+                            <img id="main-image" src="@/assets/teclado.png" alt="">
+                        </div>
+
+                        <div class="mais">
+                            
+                            <img src="@/assets/teclado1-3.png" @click="pegarImagem(id)" class="mais-fotos">
+                            <img src="@/assets/teclado1-2.png" alt="" class="mais-fotos">
+                            <img src="@/assets/teclado1-4.png" alt="" class="mais-fotos">
+                        </div>
                     </div>
 
-                    <div class="mais">
-                        <img src="@/assets/teclado1-3.png" alt="" class="mais-fotos">
-                        <img src="@/assets/teclado1-2.png" alt="" class="mais-fotos">
-                        <img src="@/assets/teclado1-4.png" alt="" class="mais-fotos">
-                    </div>
                 </div>
+
+
+
+
 
                 <div class="centro">
                     <h4 class="titulo-produto">Teclado Piano Musical 61 Teclas 500 Ritmos E 80 Músicas - MXT</h4>
@@ -106,30 +127,6 @@
             </div>
             <h1 id="interesse">itens que talvez você tenha interesse</h1>
             <div class="recomenda" style="display: flex; flex-direction: row;">
-                
-                <div class="produto">
-                    <div class="compra-e-coracao_produto">
-                        <img src="@/assets/coracao.png" alt="" class="icones">
-                        <img src="@/assets/carrinho-de-compras.png" alt="" class="icones">
-                    </div>
-                    <div class="img-produtos">
-                        <img src="@/assets/tambor2.png" alt="">
-                    </div>
-                    <div class="text-produto">
-                        <p>Muslady tambor de percussão</p>
-                    </div>
-                    
-                    <div class="avaliacao_recomenda">
-                        <img src="@/assets/estrelas.png" alt="" style=" display: flex; position: relative; bottom: 1vh"> 
-                        <p style="color: rgb(105, 105, 105);">130 avaliações</p>
-                    </div>
-                    <div class="valor_recomenda">                        
-                        <p >R$ 60,00 por mês</p>
-                        <img src="@/assets/compartilhe.png" alt="" class="icones" style=" display: flex; position: relative; bottom: 1vh;">
-                    </div>
-                </div>
-
-
 
                 <div class="produto">
                     <div class="compra-e-coracao_produto">
@@ -142,14 +139,40 @@
                     <div class="text-produto">
                         <p>Muslady tambor de percussão</p>
                     </div>
-                    
+
                     <div class="avaliacao_recomenda">
-                        <img src="@/assets/estrelas.png" alt="" style=" display: flex; position: relative; bottom: 1vh" >
+                        <img src="@/assets/estrelas.png" alt="" style=" display: flex; position: relative; bottom: 1vh">
                         <p style="color: rgb(105, 105, 105);">130 avaliações</p>
                     </div>
-                    <div class="valor_recomenda">                        
-                        <p >R$ 60,00 por mês</p>
-                        <img src="@/assets/compartilhe.png" alt="" class="icones" style=" display: flex; position: relative; bottom: 1vh">
+                    <div class="valor_recomenda">
+                        <p>R$ 60,00 por mês</p>
+                        <img src="@/assets/compartilhe.png" alt="" class="icones"
+                            style=" display: flex; position: relative; bottom: 1vh;">
+                    </div>
+                </div>
+
+
+
+                <div class="produto">
+                    <div class="compra-e-coracao_produto">
+                        <img src="@/assets/coracao.png" alt="" class="icones">
+                        <img src="@/assets/carrinho-de-compras.png" alt="" class="icones">
+                    </div>
+                    <div class="img-produtos">
+                        <img src="@/assets/trompete.png" alt="">
+                    </div>
+                    <div class="text-produto">
+                        <p>Muslady tambor de percussão</p>
+                    </div>
+
+                    <div class="avaliacao_recomenda">
+                        <img src="@/assets/estrelas.png" alt="" style=" display: flex; position: relative; bottom: 1vh">
+                        <p style="color: rgb(105, 105, 105);">130 avaliações</p>
+                    </div>
+                    <div class="valor_recomenda">
+                        <p>R$ 60,00 por mês</p>
+                        <img src="@/assets/compartilhe.png" alt="" class="icones"
+                            style=" display: flex; position: relative; bottom: 1vh">
                     </div>
                 </div>
                 <div class="produto">
@@ -158,19 +181,20 @@
                         <img src="@/assets/carrinho-de-compras.png" alt="" class="icones">
                     </div>
                     <div class="img-produtos">
-                        <img src="@/assets/tambor2.png" alt="">
+                        <img src="@/assets/bateria.png" alt="">
                     </div>
                     <div class="text-produto">
                         <p>Muslady tambor de percussão</p>
                     </div>
-                    
+
                     <div class="avaliacao_recomenda">
                         <img src="@/assets/estrelas.png" alt="" style=" display: flex; position: relative; bottom: 1vh">
                         <p style="color: rgb(105, 105, 105);">130 avaliações</p>
                     </div>
-                    <div class="valor_recomenda">                        
-                        <p >R$ 60,00 por mês</p>
-                        <img src="@/assets/compartilhe.png" alt="" class="icones" style=" display: flex; position: relative; bottom: 1vh">
+                    <div class="valor_recomenda">
+                        <p>R$ 60,00 por mês</p>
+                        <img src="@/assets/compartilhe.png" alt="" class="icones"
+                            style=" display: flex; position: relative; bottom: 1vh">
                     </div>
                 </div>
                 <div class="produto">
@@ -179,19 +203,20 @@
                         <img src="@/assets/carrinho-de-compras.png" alt="" class="icones">
                     </div>
                     <div class="img-produtos">
-                        <img src="@/assets/tambor2.png" alt="">
+                        <img src="@/assets/prato.png" alt="">
                     </div>
                     <div class="text-produto">
                         <p>Muslady tambor de percussão</p>
                     </div>
-                    
+
                     <div class="avaliacao_recomenda">
                         <img src="@/assets/estrelas.png" alt="" style=" display: flex; position: relative; bottom: 1vh">
                         <p style="color: rgb(105, 105, 105);">130 avaliações</p>
                     </div>
-                    <div class="valor_recomenda">                        
-                        <p >R$ 60,00 por mês</p>
-                        <img src="@/assets/compartilhe.png" alt="" class="icones" style=" display: flex; position: relative; bottom: 1vh">
+                    <div class="valor_recomenda">
+                        <p>R$ 60,00 por mês</p>
+                        <img src="@/assets/compartilhe.png" alt="" class="icones"
+                            style=" display: flex; position: relative; bottom: 1vh">
                     </div>
                 </div>
                 <div class="produto">
@@ -200,19 +225,20 @@
                         <img src="@/assets/carrinho-de-compras.png" alt="" class="icones">
                     </div>
                     <div class="img-produtos">
-                        <img src="@/assets/tambor2.png" alt="">
+                        <img src="@/assets/gaitaBoca.png" alt="">
                     </div>
                     <div class="text-produto">
                         <p>Muslady tambor de percussão</p>
                     </div>
-                    
+
                     <div class="avaliacao_recomenda">
                         <img src="@/assets/estrelas.png" alt="" style=" display: flex; position: relative; bottom: 1vh">
                         <p style="color: rgb(105, 105, 105);">130 avaliações</p>
                     </div>
-                    <div class="valor_recomenda">                        
-                        <p >R$ 60,00 por mês</p>
-                        <img src="@/assets/compartilhe.png" alt="" class="icones" style=" display: flex; position: relative; bottom: 1vh">
+                    <div class="valor_recomenda">
+                        <p>R$ 60,00 por mês</p>
+                        <img src="@/assets/compartilhe.png" alt="" class="icones"
+                            style=" display: flex; position: relative; bottom: 1vh">
                     </div>
                 </div>
             </div>
@@ -282,60 +308,68 @@
 </template>
 
 <style scoped>
-.avaliacao_recomenda{
+.avaliacao_recomenda {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     position: relative;
     bottom: 1vh;
-   
+
 }
-.valor_recomenda{
+
+.valor_recomenda {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     position: relative;
-    bottom:2.5vh;
-   
+    bottom: 2.5vh;
+
 }
-.valor_recomenda p{
-    color:black;
+
+.valor_recomenda p {
+    color: black;
     font-size: 1.2vw;
 }
-.text-produto{
+
+.text-produto {
     text-align: center;
 }
-.text-produto p{
+
+.text-produto p {
     color: #2C2B2B;
     font-size: 1.3vw;
     font-weight: 500;
 }
-.recomenda{
-    width: 95%;
+
+.recomenda {
+    width: 85%;
     display: flex;
     justify-content: space-around;
 }
-.produto{
+
+.produto {
     background-color: white;
     height: 50vh;
-    width: 15.5vw;
+    width: 14.5vw;
     border-radius: 20px;
     margin-bottom: 10vh;
-    box-shadow:  1px 1px 3px 3px  rgb(150, 146, 146);
+    box-shadow: 1px 1px 3px 3px rgb(150, 146, 146);
     border-radius: 1vw;
 }
 
-#interesse{
+#interesse {
     color: #f48200;
     margin-top: 5vh
 }
 
-.valor{
+.valor {
     margin-top: 1vh;
 }
-.cep{
+
+.cep {
     margin-top: 18vh;
 }
+
 .input_cep {
     display: flex;
     position: relative;
@@ -628,7 +662,7 @@ main {
 
 .img-produtos {
     height: 27vh;
-  
+
 }
 
 .img-produtos img {
