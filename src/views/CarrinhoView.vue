@@ -119,9 +119,10 @@
     color: #000000;
     font-weight: 700;
     font-size: 1.8vw;
+    font-family: 'Josefin Sans', sans-serif;
 }
 #carrinho{
-    width: 20vw;
+    width: 18vw;
 }
 main{
     height: 100vh;
