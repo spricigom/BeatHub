@@ -394,6 +394,7 @@ import ListProduct from '@/components/ListProduct.vue';
                         <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos dir2">
                     </div>
                 </div>
+                <hr>
                 <ListProduct/>  
             </div>
         </main>
