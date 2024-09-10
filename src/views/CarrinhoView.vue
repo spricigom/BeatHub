@@ -37,8 +37,9 @@
         <hr class="hr" />
         <main>
             <div class="carrinho-e-texto">
-<img src="@/assets/bag.png" alt="" id="carrinho">
-           <p>Adicione itens no seu carrinho</p>
+                <img src="@/assets/bag.png" alt="" id="carrinho">
+                <p>Adicione itens no seu carrinho</p>
+                <button><p id="texto_botao" >voltar para o site</p></button>
             </div>
            
         </main>
@@ -108,6 +109,30 @@
 </template>
 
 <style scoped>
+#texto_botao{
+    color: #f48200; 
+    font-size: 1.2vw;
+    position: relative;
+    top: 1vh;
+    font-family: 'Josefin Sans', sans-serif;
+    width: 500;
+}
+button {
+    height: 5vh;
+    width: 15vw;
+    background-color: #2C2B2B;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    border-radius: 40px;
+    font-family: 'Josefin Sans', sans-serif;
+
+}
+button p{
+    color: #f48200;
+
+}
+
 .carrinho-e-texto{
     display: flex;
     justify-content: space-between;
