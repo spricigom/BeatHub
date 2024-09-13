@@ -195,206 +195,7 @@ import ListProduct from '@/components/ListProduct.vue';
 
 
             <div class="container text-center">
-                <div class="row">
-
-                    <div class="col produtos">
-
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-
-                        <div class="img-produtos">
-                            <img src="@/assets/microfone.png" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Microfone SoundPro SP</h2>
-                        <img src="@/assets/estrelas.png" alt="" class="esq1">
-                        <div class="dir1">
-                            <h6>100 avaliações</h6>
-                        </div>
-                        <div class="esq2">
-                            <h5>R$ 42,00 por mes</h5>
-                        </div>
-                        <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos dir2">
-
-                    </div>
-
-
-                    <div class="col produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-
-                        <div class="img-produtos">
-                            <img src="@/assets/pedal-OverDrive.png" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Pedal Guitarra OverTone</h2>
-                        <img src="@/assets/estrelas.png" alt="" class="esq1">
-                        <div class="dir1">
-                            <h6>100 avaliações</h6>
-                        </div>
-                        <div class="esq2">
-                            <h5>R$ 17,00 por mes</h5>
-                        </div>
-                        <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos dir2">
-                    </div>
-                    <div class="col produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-
-                        <div class="img-produtos">
-                            <img src="@/assets/amplificador.png" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Cubo Amplificador</h2>
-                        <img src="@/assets/estrelas.png" alt="" class="esq1">
-                        <div class="dir1">
-                            <h6>100 avaliações</h6>
-                        </div>
-                        <div class="esq2">
-                            <h5>R$ 32,00 por mes</h5>
-                        </div>
-                        <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos dir2">
-                    </div>
-                    <div class="col produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-
-                        <div class="img-produtos">
-                            <img src="@/assets/ukulele2.png" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Ukulele</h2>
-                        <img src="@/assets/estrelas.png" alt="" class="esq1">
-                        <div class="dir1">
-                            <h6>100 avaliações</h6>
-                        </div>
-                        <div class="esq2">
-                            <h5>R$ 24,00 por mes</h5>
-                        </div>
-                        <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos dir2">
-                    </div>
-                    <div class="col produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-
-                        <div class="img-produtos">
-                            <img src="@/assets/pandeiro.png" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Pandeiro 12 Knight</h2>
-                        <img src="@/assets/estrelas.png" alt="" class="esq1">
-                        <div class="dir1">
-                            <h6>100 avaliações</h6>
-                        </div>
-                        <div class="esq2">
-                            <h5>R$ 32,00 por mes</h5>
-                        </div>
-                        <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos dir2">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-
-                        <div class="img-produtos">
-                            <img src="@/assets/teclado.png" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Teclado musical 61 teclas</h2>
-                        <img src="@/assets/estrelas.png" alt="" class="esq1">
-                        <div class="dir1">
-                            <h6>100 avaliações</h6>
-                        </div>
-                        <div class="esq2">
-                            <h5>R$ 35,00 por mes</h5>
-                        </div>
-                        <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos dir2">
-                    </div>
-                    <div class="col produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-
-                        <div class="img-produtos">
-                            <img src="@/assets/trompete.png" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Trompete Werill Master</h2>
-                        <img src="@/assets/estrelas.png" alt="" class="esq1">
-                        <div class="dir1">
-                            <h6>100 avaliações</h6>
-                        </div>
-                        <div class="esq2">
-                            <h5>R$ 69,00 por mes</h5>
-                        </div>
-                        <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos dir2">
-                    </div>
-                    <div class="col produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-
-                        <div class="img-produtos">
-                            <img src="@/assets/bateria.png" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Bateria Acústica</h2>
-                        <img src="@/assets/estrelas.png" alt="" class="esq1">
-                        <div class="dir1">
-                            <h6>100 avaliações</h6>
-                        </div>
-                        <div class="esq2">
-                            <h5>R$ 287,00 por mes</h5>
-                        </div>
-                        <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos dir2">
-                    </div>
-                    <div class="col produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-
-                        <div class="img-produtos">
-                            <img src="@/assets/prato.png" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Prato Hi Hat</h2>
-                        <img src="@/assets/estrelas.png" alt="" class="esq1">
-                        <div class="dir1">
-                            <h6>100 avaliações</h6>
-                        </div>
-                        <div class="esq2">
-                            <h5>R$ 42,00 por mes</h5>
-                        </div>
-                        <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos dir2">
-                    </div>
-                    <div class="col produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-
-                        <div class="img-produtos">
-                            <img src="@/assets/gaitaBoca.png" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Gaita de boca harmônica</h2>
-                        <img src="@/assets/estrelas.png" alt="" class="esq1">
-                        <div class="dir1">
-                            <h6>100 avaliações</h6>
-                        </div>
-                        <div class="esq2">
-                            <h5>R$ 17,00 por mes</h5>
-                        </div>
-                        <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos dir2">
-                    </div>
-                </div>
-                <hr>
+            
                 <ListProduct/>  
             </div>
         </main>
@@ -540,47 +341,16 @@ import ListProduct from '@/components/ListProduct.vue';
     bottom: 17vh;
 }
 
-.esq1 {
-    float: left;
-    position: relative;
-    width: 6.5vw;
-    left: 1vw;
-}
 
-.dir1 {
-    float: right;
-    position: relative;
-    right: 1vw;
-}
 
-.esq2 {
-    float: left;
-    width: 10vw;
-    position: relative;
-    left: 1.3vw;
-}
 
-.esq2 h5 {
-    font-size: 1.1vw;
+.compra-e-coracao2 {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1vw;
+    margin-top: 3vh;
+    margin-right: 1vw;
 }
-
-.dir2 {
-    float: right;
-    position: relative;
-    right: 2.5vw;
-    margin-top: .5vh;
-}
-
-.compartilhe-produtos {
-    width: 1.3vw;
-}
-
-.compra-e-coracao_produto {
-    position: relative;
-    left: 5vw;
-    margin-top: 1vw;
-}
-
 .compra-e-coracao_produto .icones {
     margin-right: .3vw;
 }
@@ -618,7 +388,10 @@ import ListProduct from '@/components/ListProduct.vue';
 
 .conteudo2 {
     margin-top: 5vh;
+}.icones {
+    width: 1.5vw;
 }
+
 
 
 .compra-e-coracao2 {

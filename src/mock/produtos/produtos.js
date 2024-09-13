@@ -3,71 +3,71 @@ const produtos = [
     {
         id: 1,
         nome: 'Microfone SoundPro SP',
-        preco: '42,00 por mês',
+        preco: 'R$ 42,00 por mês',
         img: 'microfone.png', 
         avaliacao:''
     },
     {
         id: 2,
         nome: 'Pedal Over Drive',
-        preco: '17,00 por mês',
+        preco: 'R$ 17,00 por mês',
         img: 'pedal-OverDrive.png', 
         avaliacao:''
     },
     {
         id: 3,
         nome: 'Cubo Amplificador',
-        preco: '32,00 por mês',
+        preco: 'R$ 32,00 por mês',
         img: 'amplificador.png', 
         avaliacao:''
     },
     {
         id: 4,
         nome: 'Ukulele',
-        preco: '24,00 por mês',
+        preco: 'R$ 24,00 por mês',
         img: 'ukulele2.png', 
         avaliacao:''
     },
     {
         id: 5,
         nome: 'Pandeiro',
-        preco: '32,00 por mês',
+        preco: ' R$ 32,00 por mês',
         img: 'pandeiro.png', 
         avaliacao:''
     },
     {
         id: 6,
-        nome: 'Pandeiro',
-        preco: '32,00 por mês',
-        img: 'pandeiro.png', 
+        nome: 'Teclado musical 61 teclas',
+        preco: 'R$ 35,00 por mês',
+        img: 'teclado.png', 
         avaliacao:''
     },
     {
         id: 7,
-        nome: 'Pandeiro',
-        preco: '32,00 por mês',
-        img: 'pandeiro.png', 
+        nome: 'Trompete Werill Master',
+        preco: 'R$ 69,00 por mês',
+        img: 'trompete.png', 
         avaliacao:''
     },
     {
         id: 8,
-        nome: 'Pandeiro',
-        preco: '32,00 por mês',
-        img: 'pandeiro.png', 
+        nome: 'Bateria Acústica',
+        preco: ' R$ 287,00 por mês',
+        img: 'bateria.png', 
         avaliacao:''
     },
     {
         id: 9,
-        nome: 'Pandeiro',
-        preco: '32,00 por mês',
-        img: 'pandeiro.png', 
+        nome: 'Prato Hi Hat',
+        preco: ' R$ 42,00 por mês',
+        img: 'prato.png', 
         avaliacao:''
     },
     {
         id: 10,
-        nome: 'Pandeiro',
-        preco: '32,00 por mês',
-        img: 'pandeiro.png', 
+        nome: 'Gaita de boca harmônica',
+        preco: 'R$ 17,00 por mês',
+        img: 'gaitaBoca.png', 
         avaliacao:''
     }
 ]
