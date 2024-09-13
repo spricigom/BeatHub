@@ -9,10 +9,10 @@ function getImage(productIndex) {
 </script>
 <template>
     <div class="row">
-        <div v-for="produto, index in products" :key="produto.id" class="col produtos">
-            <div class="compra-e-coracao_produto ">
-                <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                <img src="@/assets/coracao.png" alt="" class="icones" />
+        <div v-for="produto, index in products" :key="produto.id" class="col produtos text-center">
+            <div class="compra-e-coracao_produto">
+                <img src="@/assets/coracao.png" alt="" class="icones"  />
+                <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" style="opacity: .7;" />
             </div>
             <div class="img-produtos"> <img :src="getImage(index)" alt=""></div>
             <div>
@@ -37,22 +37,21 @@ function getImage(productIndex) {
 }
 
 .compra-e-coracao_produto {
-    position: relative;
-    left: 5vw;
     margin-top: 1vw;
+    display: flex;
+    justify-content: space-between;
+    padding-left:.7vw ;
+    padding-right: .7vw;
 }
 
 .icones {
-    width: 1.5vw;
+    width: 1.8vw;
 }
 
 .compartilhe-produtos {
     width: 1.3vw;
 }
 
-.compra-e-coracao_produto .icones {
-    margin-right: .3vw;
-}
 
 .dir1 {
     float: right;
@@ -93,6 +92,7 @@ function getImage(productIndex) {
     box-shadow: -.5px .5px .5px .5px rgb(150, 146, 146);
     margin-bottom: 8vh;
     border-radius: 2vw;
+
 }
 
 .img-produtos {

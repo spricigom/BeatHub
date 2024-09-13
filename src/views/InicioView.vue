@@ -340,10 +340,6 @@ import ListProduct from '@/components/ListProduct.vue';
     position: relative;
     bottom: 17vh;
 }
-
-
-
-
 .compra-e-coracao2 {
     display: flex;
     justify-content: space-between;
@@ -351,49 +347,11 @@ import ListProduct from '@/components/ListProduct.vue';
     margin-top: 3vh;
     margin-right: 1vw;
 }
-.compra-e-coracao_produto .icones {
-    margin-right: .3vw;
-}
-
-.texto-produtos {
-    font-size: 1.2vw;
-    margin-top: 2vh;
-}
-
-.img-produtos {
-    height: 25vh;
-
-}
-
-.img-produtos img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.produtos {
-    background-color: white;
-    height: 45vh;
-    margin-left: 12px;
-    margin-right: 12px;
-    margin-top: 4vh;
-    box-shadow: -.5px .5px .5px .5px rgb(150, 146, 146);
-    margin-bottom: 8vh;
-    border-radius: 2vw;
-
-
-}
-
-
-
 .conteudo2 {
     margin-top: 5vh;
 }.icones {
     width: 1.5vw;
 }
-
-
-
 .compra-e-coracao2 {
     display: flex;
     justify-content: space-between;
