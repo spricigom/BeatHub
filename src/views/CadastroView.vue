@@ -1,7 +1,6 @@
 <script setup></script>
 
 <template>
-
     <body>
         <header>
             <nav>
@@ -45,75 +44,132 @@
         </div>
         <div class="direita">
             <form class="cadastro">
-                <input type="text" placeholder="insira seu nome">
+                <div class="campo_cadastro">
+                    <p class="titulo_cadastro">Nome completo</p>
+                    <input type="text" placeholder="insira seu nome">
+                </div>
+
+                <div class="campo_cadastro">
+                    <p class="titulo_cadastro">Nome completo</p>
+                    <input type="text" placeholder="insira seu nome">
+                </div>
+                <div class="campo_cadastro">
+                    <p class="titulo_cadastro">Nome completo</p>
+                    <input type="text" placeholder="insira seu nome">
+                </div>
+                <div class="campo_cadastro">
+                    <p class="titulo_cadastro">Nome completo</p>
+                    <input type="text" placeholder="insira seu nome">
+                </div>
+                <div class="campo_cadastro">
+                    <p class="titulo_cadastro">Nome completo</p>
+                    <input type="text" placeholder="insira seu nome">
+                </div>
+                <div class="campo_cadastro">
+                    <p class="titulo_cadastro">Nome completo</p>
+                    <input type="text" placeholder="insira seu nome">
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </form>
         </div>
     </main>
 </template>
 
 <style scoped>
-body{
+body {
     background: #efefef;
 }
-main{
-  margin-top: -4vh;
-  display: flex;
-  background: #efefef;
+
+main {
+    margin-top: -4vh;
+    display: flex;
+    background: #efefef;
 
 }
 
 /*estilos da esquerda */
-.esquerda{
+.esquerda {
     background-color: #efefef;
     height: 100vh;
     width: 55%;
     margin-top: 5vh;
 }
 
-.titulo{
-background: none;
-display: flex;
-justify-content: center;
-margin-top: 6vh;
+.titulo {
+    background: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 6vh;
 }
-.titulo h1{
+
+.titulo h1 {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: bold;
     font-size: 3vw;
     color: black;
 }
-#banda{
+
+#banda {
     width: 58vw;
     position: relative;
     margin-top: 5vh;
 }
+
 /*estilos da esquerda */
 
 
 
 /*estilos da direita */
-.direita{
+.direita {
     background: #f8bb75;
     height: 100vh;
     width: 45%;
-    border-radius: 1vw ;
+    border-radius: 1vw;
     margin-top: 5vh;
 }
-.cadastro{
+
+.cadastro {
     margin-top: 5vh;
-    position: relative;
-    left: 8vw;
+    margin-left: 8vw;
+    display: flex;
+    flex-direction: column;
 }
-.direita input{
+
+.direita input {
     border: none;
     height: 6vh;
     width: 20vw;
     border-radius: .7vw;
 }
-.direita ::placeholder{
+
+.direita ::placeholder {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1vw;
     font-weight: light;
+}
+.direita p{
+    font-family: 'Josefin Sans', sans-serif;
+    color: black;
+    margin-bottom: -.1vh;
+    font-size: 1.3w
+    
+}
+.campo_cadastro{
+    margin-top: 5vh;
 }
 /*estilos da direita */
 
@@ -137,7 +193,7 @@ header input {
 
 }
 
-.regiao{
+.regiao {
     position: relative;
     left: 5vw;
     font-family: 'Inter', sans-serif;
@@ -199,6 +255,4 @@ a {
 
 .compra-e-coracao .icones {
     margin-right: 1.5vw;
-}
-
-</style>
+}</style>
