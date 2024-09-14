@@ -145,7 +145,7 @@ function pegarImagem(id) {
                         <p style="color: rgb(105, 105, 105);">130 avaliações</p>
                     </div>
                     <div class="valor_recomenda">
-                        <p>R$ 60,00 por mês</p>
+                        <p>R$ 61,00 por mês</p>
                         <img src="@/assets/compartilhe.png" alt="" class="icones"
                             style=" display: flex; position: relative; bottom: 1vh;">
                     </div>
