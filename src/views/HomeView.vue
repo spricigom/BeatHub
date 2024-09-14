@@ -7,6 +7,8 @@ import { RouterLink } from 'vue-router'
 
 <RouterLink to="/Inicio">Inicio </RouterLink>
 <RouterLink to="/produto">produto </RouterLink>
+<RouterLink to="/Cadastro">Cadastro </RouterLink>
+
 
 
 
