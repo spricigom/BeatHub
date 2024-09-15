@@ -1,6 +1,7 @@
 <script setup></script>
 
 <template>
+
     <body>
         <header>
             <nav>
@@ -41,35 +42,79 @@
                 <h1>FAÇA O SEU CADASTRO!</h1>
             </div>
             <img src="@/assets/banda.png" alt="" id="banda">
+            <div class="Beat">
+                <h1>BEAT</h1>
+            </div>
+            <div class="Hub">
+                <h1>HUB</h1>
+            </div>
+            
         </div>
+
+
         <div class="direita">
             <form class="cadastro">
-                <div class="campo_cadastro">
-                    <p class="titulo_cadastro">Nome completo</p>
-                    <input type="text" placeholder="insira seu nome">
+                <div class="campo_cadastro nome">
+                    <p class="titulo_cadastro" id="cabecalho">Nome completo</p>
+                    <input class="input" type="text" placeholder="insira seu nome">
                 </div>
 
-                <div class="campo_cadastro">
-                    <p class="titulo_cadastro">Nome completo</p>
-                    <input type="text" placeholder="insira seu nome">
-                </div>
-                <div class="campo_cadastro">
-                    <p class="titulo_cadastro">Nome completo</p>
-                    <input type="text" placeholder="insira seu nome">
-                </div>
-                <div class="campo_cadastro">
-                    <p class="titulo_cadastro">Nome completo</p>
-                    <input type="text" placeholder="insira seu nome">
-                </div>
-                <div class="campo_cadastro">
-                    <p class="titulo_cadastro">Nome completo</p>
-                    <input type="text" placeholder="insira seu nome">
-                </div>
-                <div class="campo_cadastro">
-                    <p class="titulo_cadastro">Nome completo</p>
-                    <input type="text" placeholder="insira seu nome">
+                <div class="campo_cadastro data">
+                    <p class="titulo_cadastro">Data de nascimento</p>
+                    <input class="input" type="date">
                 </div>
 
+                        <p>Genero</p>
+
+                <div class="genero">
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Masculino
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            Feminino
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                            checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            Prefiro não informar
+                        </label>
+                    </div>
+
+
+
+
+                </div>
+
+
+
+                <div class="campo_cadastro">
+                    <p class="titulo_cadastro">CPF</p>
+                    <input class="input" type="number" placeholder="___.___.___-__">
+                </div>
+                <div class="campo_cadastro">
+                    <p class="titulo_cadastro">Telefone</p>
+                    <input class="input" type="number" placeholder="(__) _____-____">
+                </div>
+                <div class="campo_cadastro">
+                    <p class="titulo_cadastro">E-mail</p>
+                    <input class="input" type="email" placeholder="Ex: joaozinho@gmail.com">
+                </div>
+                <div class="campo_cadastro">
+                    <p class="titulo_cadastro">Senha</p>
+                    <input class="input" type="password">
+                </div>
+                <div class="campo_cadastro">
+                    <p class="titulo_cadastro">Confirmação de Senha</p>
+                    <input class="input" type="password">
+                </div>
 
 
 
@@ -77,6 +122,7 @@
 
 
 
+<button>Criar Conta</button>
 
 
 
@@ -87,6 +133,7 @@
             </form>
         </div>
     </main>
+    
 </template>
 
 <style scoped>
@@ -104,7 +151,6 @@ main {
 /*estilos da esquerda */
 .esquerda {
     background-color: #efefef;
-    height: 100vh;
     width: 55%;
     margin-top: 5vh;
 }
@@ -115,10 +161,32 @@ main {
     justify-content: center;
     margin-top: 6vh;
 }
-
+.Beat {
+    display: flex;
+    justify-content: center;
+    margin-top: 15vh;
+    color: black;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.Beat h1{
+    font-size: 3vw;
+    font-weight: 500;
+}
+.Hub{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 2vh;
+    color: #f48200;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.Hub h1{
+    font-size: 3vw;
+    font-weight: 500;
+}
 .titulo h1 {
     font-family: 'Josefin Sans', sans-serif;
-    font-weight: bold;
+    font-weight: 1000;
     font-size: 3vw;
     color: black;
 }
@@ -126,7 +194,7 @@ main {
 #banda {
     width: 58vw;
     position: relative;
-    margin-top: 5vh;
+    margin-top: 2vh;
 }
 
 /*estilos da esquerda */
@@ -136,40 +204,87 @@ main {
 /*estilos da direita */
 .direita {
     background: #f8bb75;
-    height: 100vh;
     width: 45%;
     border-radius: 1vw;
     margin-top: 5vh;
 }
 
 .cadastro {
-    margin-top: 5vh;
     margin-left: 8vw;
     display: flex;
     flex-direction: column;
 }
 
-.direita input {
+.direita .input {
     border: none;
-    height: 6vh;
-    width: 20vw;
+    height: 8vh;
+    width: 15vw;
     border-radius: .7vw;
 }
 
 .direita ::placeholder {
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 1vw;
+    font-size: 1.1vw;
     font-weight: light;
+    padding-left: 1vw;
 }
-.direita p{
+
+.direita p {
     font-family: 'Josefin Sans', sans-serif;
     color: black;
     margin-bottom: -.1vh;
-    font-size: 1.3w
-    
+    font-weight: 650;
+    font-size: 1.2vw;
 }
-.campo_cadastro{
-    margin-top: 5vh;
+
+.campo_cadastro {
+    margin-bottom: 2vh;
+}
+
+#cabecalho {
+    margin-top: 3vh;
+}
+
+.nome .input {
+    width: 33vw;
+}
+
+.data .input {
+    width: 6vw;
+}
+
+.genero {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2vh;
+    justify-content: space-between;
+}
+
+.genero input{
+    background-color: #D9D9D9;
+}
+.genero :checked{
+    background-color: #f48200;
+    border: #f8bb75;
+}
+label{
+    font-family: 'Josefin Sans',  sans-serif;
+    font-weight: 700;
+}
+
+button{
+    border: 0;
+    background-color: #2C2B2B;
+    color: #f48200;
+    width: 20vw;
+    height: 6vh;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    border-radius: 3vw;
+    margin-top: 7vh;
+    margin-left: 5vw;
+    margin-bottom: 5vh;
 }
 /*estilos da direita */
 
@@ -255,4 +370,5 @@ a {
 
 .compra-e-coracao .icones {
     margin-right: 1.5vw;
-}</style>
+}
+</style>
