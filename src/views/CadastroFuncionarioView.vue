@@ -37,22 +37,8 @@
         <hr class="hr" />
     </body>
     <main>
+
         <div class="esquerda">
-            <div class="titulo">
-                <h1>FAÇA O SEU CADASTRO!</h1>
-            </div>
-            <img src="@/assets/banda.png" alt="" id="banda">
-            <div class="Beat">
-                <h1>BEAT</h1>
-            </div>
-            <div class="Hub">
-                <h1>HUB</h1>
-            </div>
-            
-        </div>
-
-
-        <div class="direita">
             <form class="cadastro">
                 <div class="campo_cadastro nome">
                     <p class="titulo_cadastro" id="cabecalho">Nome completo</p>
@@ -63,37 +49,6 @@
                     <p class="titulo_cadastro">Data de nascimento</p>
                     <input class="input" type="date">
                 </div>
-
-                        <p>Genero</p>
-
-                <div class="genero">
-
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            Masculino
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                        <label class="form-check-label" for="flexRadioDefault2">
-                            Feminino
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
-                            checked>
-                        <label class="form-check-label" for="flexRadioDefault2">
-                            Prefiro não informar
-                        </label>
-                    </div>
-
-
-
-
-                </div>
-
-
 
                 <div class="campo_cadastro">
                     <p class="titulo_cadastro">CPF</p>
@@ -112,25 +67,25 @@
                     <input class="input" type="password">
                 </div>
                 <div class="campo_cadastro">
-                    <p class="titulo_cadastro">Confirmação de Senha</p>
-                    <input class="input" type="password">
+                    <p class="titulo_cadastro">CTPS</p>
+                    <input class="input" type="text" placeholder="Carteira de trabalho">
                 </div>
-
-
-
-
-
-
-
-<button>Criar Conta</button>
-
-
-
-
-
-
-
+                <div class="campo_cadastro">
+                    <p class="titulo_cadastro">Código da empresa</p>
+                    <input class="input" type="text">
+                </div>
+                <button>Criar Conta</button>
             </form>
+        </div>
+
+        <div class="direita">
+                <h1 class="titulo">LOGIN FUNCIONÁRIO</h1>           
+
+            <p class="subtitulo">(Apenas pessoas autorizadas)</p>
+
+            <img src="@/assets/funcionario.png" alt="" id="funcionaria">
+            
+
         </div>
     </main>
 </template>
@@ -147,61 +102,39 @@ main {
 
 }
 
-/*estilos da esquerda */
-.esquerda {
+/*estilos da direita */
+.direita {
     background-color: #efefef;
     width: 55%;
     margin-top: 5vh;
+    text-align: center;
 }
 
-.titulo {
-    background: none;
-    display: flex;
-    justify-content: center;
+
+
+.titulo {    
     margin-top: 6vh;
-}
-.Beat {
-    display: flex;
-    justify-content: center;
-    margin-top: 15vh;
-    color: black;
-    font-family: 'Josefin Sans', sans-serif;
-}
-.Beat h1{
-    font-size: 3vw;
-    font-weight: 500;
-}
-.Hub{
-    display: flex;
-    justify-content: center;
-    position: relative;
-    bottom: 2vh;
-    color: #f48200;
-    font-family: 'Josefin Sans', sans-serif;
-}
-.Hub h1{
-    font-size: 3vw;
-    font-weight: 500;
-}
-.titulo h1 {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 1000;
     font-size: 3vw;
     color: black;
 }
-
-#banda {
-    width: 58vw;
-    position: relative;
-    margin-top: 2vh;
+.subtitulo{
+    color: black;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 1000;
+    font-size: 1.2vw;
+}
+#funcionaria {
+    width: 50vw;
 }
 
-/*estilos da esquerda */
-
-
-
 /*estilos da direita */
-.direita {
+
+
+
+/*estilos da esquerda */
+.esquerda {
     background: #f8bb75;
     width: 45%;
     border-radius: 1vw;
@@ -209,26 +142,26 @@ main {
 }
 
 .cadastro {
-    margin-left: 8vw;
+    margin-left: 6vw;
     display: flex;
     flex-direction: column;
 }
 
-.direita .input {
+.esquerda .input {
     border: none;
     height: 8vh;
     width: 15vw;
     border-radius: .7vw;
 }
 
-.direita ::placeholder {
+.esquerda ::placeholder {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1.1vw;
     font-weight: light;
     padding-left: 1vw;
 }
 
-.direita p {
+.esquerda p {
     font-family: 'Josefin Sans', sans-serif;
     color: black;
     margin-bottom: -.1vh;
@@ -260,19 +193,21 @@ main {
     justify-content: space-between;
 }
 
-.genero input{
+.genero input {
     background-color: #D9D9D9;
 }
-.genero :checked{
+
+.genero :checked {
     background-color: #f48200;
     border: #f8bb75;
 }
-label{
-    font-family: 'Josefin Sans',  sans-serif;
+
+label {
+    font-family: 'Josefin Sans', sans-serif;
     font-weight: 700;
 }
 
-button{
+button {
     border: 0;
     background-color: #2C2B2B;
     color: #f48200;
@@ -281,11 +216,12 @@ button{
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 600;
     border-radius: 3vw;
-    margin-top: 7vh;
+    margin-top:1vh;
     margin-left: 5vw;
     margin-bottom: 5vh;
 }
-/*estilos da direita */
+
+/*estilos da esquerda */
 
 
 
