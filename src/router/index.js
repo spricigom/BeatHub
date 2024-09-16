@@ -15,9 +15,9 @@ const router = createRouter({
       component: () => import('../views/InicioView.vue')
     },
     {
-      path: '/produto',
-      name: 'produto',
-      component: () => import('../views/ProdutoView.vue')
+      path: '/Favorito',
+      name: 'Favorito',
+      component: () => import('../views/FavoritoView.vue')
     }
   ]
 })
