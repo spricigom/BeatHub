@@ -18,6 +18,10 @@ const router = createRouter({
       path: '/Carrinho',
       name: 'Carrinho',
       component: () => import('../views/CarrinhoView.vue')
+    },
+      path: '/Favorito',
+      name: 'Favorito',
+      component: () => import('../views/FavoritoView.vue')
     }
   ]
 })
