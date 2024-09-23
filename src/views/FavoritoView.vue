@@ -42,6 +42,9 @@
                 <button><p id="texto_botao" >Voltar Para o Site</p></button>
             </div>
            
+
+            <div class="teste">
+            </div>
         </main>
 
 
@@ -109,6 +112,22 @@
 </template>
 
 <style scoped>
+.teste{
+    width: 30%;
+    height: 80vh;
+    background-color: black;
+  padding: 21px;
+  box-shadow:
+       inset 0 -3em 3em #efefef,
+             0 0  0 0 red,
+             inset 0 -3em 3em #efefef
+}
+.teste img{
+   
+    object-fit: cover;
+    float: right;
+
+}
 #texto_botao{
     color: #f48200; 
     font-size: 1.2vw;
@@ -147,7 +166,7 @@ button {
     opacity: 0.8;
 }
 main{
-    height: 80vh;
+    height: 200vh;
     background-color: #efefef;
     display: flex; 
     align-items: center;
