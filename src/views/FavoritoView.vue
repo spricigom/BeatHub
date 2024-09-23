@@ -1,4 +1,8 @@
-<script setup></script>
+<script setup>
+
+import { favoritos } from "@/mock"
+
+</script>
 
 <template>
 
@@ -41,7 +45,7 @@
                 <p>Adicione itens no seu favorito</p>
                 <button><p id="texto_botao" >Voltar Para o Site</p></button>
             </div>
-           
+            {{  favoritos }}
         </main>
 
 
