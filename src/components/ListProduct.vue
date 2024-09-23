@@ -3,6 +3,13 @@ import { ref } from "vue"
 import { produtos } from '@/mock';
 const products = ref(produtos)
 
+
+function favoritar(productId) {
+   const product = products.value.find(p => p.id === productId)
+   product.favoritado = !product.favoritado
+}
+
+
 function getImage(productIndex) {
     return new URL(`../assets/${products.value[productIndex].img}`, import.meta.url).href
 }
@@ -11,7 +18,8 @@ function getImage(productIndex) {
     <div class="row">
         <div v-for="produto, index in products" :key="produto.id" class="col produtos text-center">
             <div class="compra-e-coracao_produto">
-                <img src="@/assets/coracao.png" alt="" class="icones"  />
+                <img src="@/assets/coracaoVermelho.png" alt="" class="icones" @click="favoritar(produto.id)" v-if="produto.favoritado" />
+                <img src="@/assets/coracao.png" alt="" class="icones" @click="favoritar(produto.id)" v-else>
                 <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" style="opacity: .7;" />
             </div>
             <div class="img-produtos"> <img :src="getImage(index)" alt=""></div>
