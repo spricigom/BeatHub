@@ -14,10 +14,27 @@ const router = createRouter({
       name: 'Inicio',
       component: () => import('../views/InicioView.vue')
     },
+
+
     {
       path: '/produto',
       name: 'produto',
       component: () => import('../views/ProdutoView.vue')
+    },
+    {
+      path: '/Cadastro',
+      name: 'Cadastro',
+      component: () => import('../views/CadastroView.vue')
+    },
+    {
+      path: '/Carrinho',
+      name: 'Carrinho',
+      component: () => import('../views/CarrinhoView.vue')
+    },
+    {
+      path: '/Favorito',
+      name: 'Favorito',
+      component: () => import('../views/FavoritoView.vue')
     }
   ]
 })
