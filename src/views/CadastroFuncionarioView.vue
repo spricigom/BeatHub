@@ -280,7 +280,7 @@ header {
 a {
     text-decoration: none;
     color: #595959;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Josefin Sans', 'sans-serif';
 }
 
 #amarelo {
