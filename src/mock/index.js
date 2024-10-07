@@ -1,4 +1,4 @@
-import produtos from "./produtos/produtos";
+import MockProducts from "./produtos/produtos";
 export{
-    produtos,
+    MockProducts,
 }

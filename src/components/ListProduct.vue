@@ -1,22 +1,26 @@
 <script setup>
-import { ref } from "vue"
-import { produtos } from '@/mock';
-const products = ref(produtos)
+import { onMounted } from 'vue';
+import { useProdutoStore } from '@/stores/produto';
+const produtoStore = useProdutoStore()
+
 
 
 function favoritar(productId) {
-   const product = products.value.find(p => p.id === productId)
-   product.favoritado = !product.favoritado
+    produtoStore.favoritar(productId)   
 }
 
 
 function getImage(productIndex) {
-    return new URL(`../assets/${products.value[productIndex].img}`, import.meta.url).href
+    return new URL(`../assets/${produtoStore.produtos[productIndex].img}`, import.meta.url).href
 }
+
+onMounted(async () => {
+    await produtoStore.buscarTodosOsProdutos()
+})
 </script>
 <template>
     <div class="row">
-        <div v-for="produto, index in products" :key="produto.id" class="col produtos text-center">
+        <div v-for="produto, index in produtoStore.produtos" :key="produto.id" class="col produtos text-center">
             <div class="compra-e-coracao_produto">
                 <img src="@/assets/coracaoVermelho.png" alt="" class="icones" @click="favoritar(produto.id)" v-if="produto.favoritado" />
                 <img src="@/assets/coracao.png" alt="" class="icones" @click="favoritar(produto.id)" v-else>
