@@ -41,45 +41,91 @@
             <div class="img-cima">
                 <img src="@/assets/instrumentos.png" alt="">
             </div>
+            <div>
+                <button><a href="#quem-somos">quem somos?</a></button>
+            </div>
 
 
 
-            <div class="quem-somos">
+            <div class="quem-somos" id="quem-somos">
                 <div class="texto-grupo">
                     <div class="titulo-grupo">
                         <h1><strong>Quem somos?</strong></h1>
                     </div>
                     <div class="descricao-grupo">
-                        <p>No Beathub, nossa missão é promover o desenvolvimento de jovens músicos que enfrentam dificuldades para adquirir seus próprios instrumentos. Nosso site é especialmente voltado para aqueles que desejam crescer profissionalmente na música, oferecendo suporte e oportunidades para alcançar seus objetivos.</p>
+                        <p>No Beathub, nossa missão é promover o desenvolvimento de jovens músicos que enfrentam
+                            dificuldades para adquirir seus próprios instrumentos. Nosso site é especialmente voltado
+                            para aqueles que desejam crescer profissionalmente na música, oferecendo suporte e
+                            oportunidades para alcançar seus objetivos.</p>
                     </div>
-                   
+
                 </div>
                 <div class="img-grupo">
                     <img src="@/assets/grupo.jpeg" alt="">
                 </div>
             </div>
 
-            <h1 class="conheca" > Conheça nossos colaboradores</h1>
+            <h1 class="conheca"> Conheça nossos colaboradores</h1>
 
             <div class="pessoas-cima">
                 <div class="card-pessoa">
                     <div class="img-pessoa">
-
+                        <img src="@/assets/helo.jpeg" alt="">
+                    </div>
+                    <div class="nome_e_funcao-pessoa">
+                        <h2><strong>Emili Spricigo</strong></h2>
+                        <h6>Script e Componentes</h6>
                     </div>
                 </div>
-                <div class="card-pessoa"><div class="img-pessoa"></div></div>
-                <div class="card-pessoa"><div class="img-pessoa"></div></div>
-                <div class="card-pessoa"><div class="img-pessoa"></div></div>
+                <div class="card-pessoa">
+                    <div class="img-pessoa">
+                        <img src="@/assets/helo.jpeg" alt="">
+                    </div>
+                   <div class="nome_e_funcao-pessoa">
+                        <h2><strong>Heloísa</strong></h2>
+                        <h6>Banco de Dados</h6>
+                   </div>
+                </div>
+                <div class="card-pessoa">
+                    <div class="img-pessoa">
+                        <img src="@/assets/helo.jpeg" alt="">
+                    </div>
+                   <div class="nome_e_funcao-pessoa">
+                        <h2><strong>Francisco Vargas</strong></h2>
+                        <h6>Script e Componentes</h6>
+                   </div>
+                </div>
+                <div class="card-pessoa">
+                    <div class="img-pessoa">
+                        <img src="@/assets/helo.jpeg" alt="">
+                    </div>
+                   <div class="nome_e_funcao-pessoa">
+                        <h2><strong>Luiz Eduardo</strong></h2>
+                        <h6>Telas no Vue</h6>
+                   </div>
+                </div>
             </div>
 
             <div class="pessoas-baixo">
                 <div class="card-pessoa">
                     <div class="img-pessoa">
-
+                        <img src="@/assets/helo.jpeg" alt="">
                     </div>
+                   <div class="nome_e_funcao-pessoa">
+                        <h2><strong>Luna</strong></h2>
+                        <h6>Telas no Figma</h6>
+                   </div>
                 </div>
-                <div class="card-pessoa"><div class="img-pessoa"></div></div>
-                
+                <div class="card-pessoa">
+                    <div class="img-pessoa">
+                        <img src="@/assets/helo.jpeg" alt="">
+                    </div>
+                   <div class="nome_e_funcao-pessoa">
+                        <h2><strong>Sara</strong></h2>
+                        <h6>Requisitos</h6>
+                   </div>
+                </div>
+
             </div>
         </main>
 
@@ -148,55 +194,103 @@
 </template>
 
 <style scoped>
-.pessoas-cima{
+button{
+    position: relative;
+    bottom: 10vh;
+    height: 6vh;
+    width: 17vw;
+    background-color: #2C2B2B;
+    border: 0;
+    cursor: pointer;
+    border-radius: 40px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.3vw;
+    z-index: 1;
+}
+
+button a{
+    color: #f48200;
+}
+
+.nome_e_funcao-pessoa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1vh;
+
+}
+
+.nome_e_funcao-pessoa h2 {
+    font-family: 'Inter', sans-serif;
+    color: black;
+    font-size: 1.8vw;
+}
+
+.nome_e_funcao-pessoa h6 {
+    font-family: 'Inter', sans-serif;
+    color: #f48200;
+    font-size: 1vw;
+}
+
+.pessoas-cima {
     margin-top: 10vh;
     width: 80%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    
-    
+
+
 }
 
-.pessoas-baixo{
+.pessoas-baixo {
     margin-top: 10vh;
     width: 40%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    
-    
+    margin-bottom: 20vh;
 }
-.img-pessoa{
+
+.img-pessoa {
     background-color: black;
-    height: 200px;
-    width: 200px;
+    height: 210px;
+    width: 210px;
     display: flex;
     border-radius: 100%;
-    margin-top: 3vh;
-}
-.card-pessoa{
-    background-color: #D9D9D9;
-    height: 40vh;
-    width: 18vw;
-    display:flex ;
-    justify-content: center;
+    margin-top: 5vh;
 }
 
-.conheca{
+.img-pessoa img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.card-pessoa {
+    background-color: #D9D9D9;
+    height: 48vh;
+    width: 18vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.conheca {
     color: #f48200;
     font-size: 3vw;
-    margin-bottom: 10vh;
 }
 
-.texto-grupo{
+.texto-grupo {
     width: 55%;
     height: 40vh;
     display: flex;
     float: left;
     flex-direction: column;
 }
-.texto-grupo .titulo-grupo{
+
+.texto-grupo .titulo-grupo {
     font-size: 4vw;
     color: black;
     text-align: left;
@@ -204,35 +298,39 @@
     margin-left: 2vw;
 }
 
-.texto-grupo .descricao-grupo{
-    margin-left:2vw;
+.texto-grupo .descricao-grupo {
+    margin-left: 2vw;
     margin-right: 13vw;
     margin-top: 10vh;
     text-align: left;
 }
-.texto-grupo .descricao-grupo p{
+
+.texto-grupo .descricao-grupo p {
     color: black;
 }
-.quem-somos{
-    margin-top: 20vh;
+
+.quem-somos {
+    margin-top: 30vh;
     margin-bottom: 10vh;
     height: 70vh;
     width: 90%;
-    background-color: #fcbb72 ; 
+    background-color: #fcbb72;
 }
 
-.img-grupo{
+.img-grupo {
     background-color: black;
     width: 45%;
     height: 70vh;
     display: flex;
     float: right;
 }
-.img-grupo img{
+
+.img-grupo img {
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
+
 .img-cima {
     position: relative;
     /* Para permitir que o gradiente fique sobre a imagem */
