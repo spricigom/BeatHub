@@ -38,7 +38,25 @@
 
 
         <main>
-            <div class="teste">
+            <div class="img-cima">
+                <img src="@/assets/instrumentos.png" alt="">
+            </div>
+
+
+
+            <div class="quem-somos">
+                <div class="texto-grupo">
+                    <div class="titulo-grupo">
+                        <h1><strong>Quem somos?</strong></h1>
+                    </div>
+                    <div class="descricao-grupo">
+                        <p>No Beathub, nossa missão é promover o desenvolvimento de jovens músicos que enfrentam dificuldades para adquirir seus próprios instrumentos. Nosso site é especialmente voltado para aqueles que desejam crescer profissionalmente na música, oferecendo suporte e oportunidades para alcançar seus objetivos.</p>
+                    </div>
+                   
+                </div>
+                <div class="img-grupo">
+
+                </div>
             </div>
         </main>
 
@@ -96,45 +114,108 @@
                 </div>
 
             </div>
-            
-  <div class="Copyright" >
-    © 2024 Copyright:
-    <a  href="https://beathub.com/">BeatHub.com</a>
-  </div>
+
+            <div class="Copyright">
+                © 2024 Copyright:
+                <a href="https://beathub.com/">BeatHub.com</a>
+            </div>
         </footer>
 
     </body>
 </template>
 
 <style scoped>
+.texto-grupo{
+    width: 55%;
+    height: 40vh;
+    display: flex;
+    float: left;
+    flex-direction: column;
+}
+.texto-grupo .titulo-grupo{
+    font-size: 4vw;
+    color: black;
+    text-align: left;
+    margin-top: 5vh;
+    margin-left: 5vw;
+}
 
-main{
-    height: 100vh;
+.texto-grupo .descricao-grupo{
+    margin-left:10vw ;
+    margin-right: 10vw;
+    color: black;
+}
+.quem-somos{
+    margin-top: 20vh;
+    margin-bottom: 30vh;
+    height: 70vh;
+    width: 90%;
+    background-color: #fcbb72 ; 
+}
+
+.img-grupo{
+    background-color: black;
+    width: 45%;
+    height: 70vh;
+    display: flex;
+    float: right;
+}
+.img-cima {
+    position: relative;
+    /* Para permitir que o gradiente fique sobre a imagem */
+    height: 70vh;
+    /* Defina a altura desejada */
+    width: 100%;
+    overflow: hidden;
+    /* Para evitar que o conteúdo transborde */
+}
+
+.img-cima::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 25%, #efefef);
+    z-index: 1;
+    /* Coloca o gradiente acima da imagem */
+}
+
+.img-cima img {
+    width: 100%;
+    height: 100%;
+    /* Use 100% para preencher a área da div */
+    object-fit: cover;
+    /* Mantém a proporção da imagem */
+    z-index: 0;
+    /* Coloca a imagem atrás do gradiente */
+    position: relative;
+    /* Para garantir que fique atrás do gradiente */
+}
+
+
+main {
     background-color: #efefef;
-    display: flex; 
+    display: flex;
     align-items: center;
     flex-direction: column;
 }
-.teste{
-    background-color: black;
-    height: 40%;
-    width: 100%;
-    background: linear-gradient(to top, #efefef 5%, black 95%);
-    background-image: ('@/assets/instrumentos.png');
-    position: relative;
-}
 
-.Copyright{
-    background-color:rgb(95, 95, 95);
+
+.Copyright {
+    background-color: rgb(95, 95, 95);
     color: white;
     height: 7vh;
     display: flex;
     padding-top: 2.3vh;
     justify-content: center;
 }
-.Copyright a{
+
+.Copyright a {
     color: white;
 }
+
 .icones-footer {
     width: 2.5vw;
     margin-top: 5vh;
@@ -216,7 +297,7 @@ input {
 
 }
 
-.regiao{
+.regiao {
     position: relative;
     left: 5vw;
     font-family: 'Inter', sans-serif;
@@ -295,6 +376,4 @@ body {
     width: 100vw;
     height: 120vh;
 }
-
-
 </style>
