@@ -55,8 +55,31 @@
                    
                 </div>
                 <div class="img-grupo">
-
+                    <img src="@/assets/grupo.jpeg" alt="">
                 </div>
+            </div>
+
+            <h1 class="conheca" > Conheça nossos colaboradores</h1>
+
+            <div class="pessoas-cima">
+                <div class="card-pessoa">
+                    <div class="img-pessoa">
+
+                    </div>
+                </div>
+                <div class="card-pessoa"><div class="img-pessoa"></div></div>
+                <div class="card-pessoa"><div class="img-pessoa"></div></div>
+                <div class="card-pessoa"><div class="img-pessoa"></div></div>
+            </div>
+
+            <div class="pessoas-baixo">
+                <div class="card-pessoa">
+                    <div class="img-pessoa">
+
+                    </div>
+                </div>
+                <div class="card-pessoa"><div class="img-pessoa"></div></div>
+                
             </div>
         </main>
 
@@ -125,6 +148,47 @@
 </template>
 
 <style scoped>
+.pessoas-cima{
+    margin-top: 10vh;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    
+}
+
+.pessoas-baixo{
+    margin-top: 10vh;
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    
+}
+.img-pessoa{
+    background-color: black;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    border-radius: 100%;
+    margin-top: 3vh;
+}
+.card-pessoa{
+    background-color: #D9D9D9;
+    height: 40vh;
+    width: 18vw;
+    display:flex ;
+    justify-content: center;
+}
+
+.conheca{
+    color: #f48200;
+    font-size: 3vw;
+    margin-bottom: 10vh;
+}
+
 .texto-grupo{
     width: 55%;
     height: 40vh;
@@ -137,17 +201,21 @@
     color: black;
     text-align: left;
     margin-top: 5vh;
-    margin-left: 5vw;
+    margin-left: 2vw;
 }
 
 .texto-grupo .descricao-grupo{
-    margin-left:10vw ;
-    margin-right: 10vw;
+    margin-left:2vw;
+    margin-right: 13vw;
+    margin-top: 10vh;
+    text-align: left;
+}
+.texto-grupo .descricao-grupo p{
     color: black;
 }
 .quem-somos{
     margin-top: 20vh;
-    margin-bottom: 30vh;
+    margin-bottom: 10vh;
     height: 70vh;
     width: 90%;
     background-color: #fcbb72 ; 
@@ -159,6 +227,11 @@
     height: 70vh;
     display: flex;
     float: right;
+}
+.img-grupo img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 .img-cima {
     position: relative;
