@@ -6,13 +6,22 @@ const products = ref(produtos)
 function getImage(productIndex) {
     return new URL(`../assets/${products.value[productIndex].img}`, import.meta.url).href
 }
+
+
+function addCarrinho(productId) {
+   const product = products.value.find(p => p.id === productId)
+   product.adicionado = !product.adicionado
+}
+
 </script>
 <template>
     <div class="row">
         <div v-for="produto, index in products" :key="produto.id" class="col produtos text-center">
             <div class="compra-e-coracao_produto">
                 <img src="@/assets/coracao.png" alt="" class="icones"  />
-                <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" style="opacity: .7;" />
+                <img src="@/assets/carrinho-de-compra-laranja.png" alt="" class="icones" style="opacity: .7;" @click="addCarrinho(produto.id)" v-if="produto.adicionado"/>
+                <img src="@/assets/carrinho-de-compra.png" alt="" class="icones"  @click="addCarrinho(produto.id)" v-else />
+                
             </div>
             <div class="img-produtos"> <img :src="getImage(index)" alt=""></div>
             <div>

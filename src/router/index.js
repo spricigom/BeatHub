@@ -25,11 +25,12 @@ const router = createRouter({
       path: '/Cadastro',
       name: 'Cadastro',
       component: () => import('../views/CadastroView.vue')
-    },
+    },{
       path: '/Carrinho',
       name: 'Carrinho',
       component: () => import('../views/CarrinhoView.vue')
     },
+    {
       path: '/Favorito',
       name: 'Favorito',
       component: () => import('../views/FavoritoView.vue')
