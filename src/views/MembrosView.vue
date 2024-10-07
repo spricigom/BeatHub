@@ -42,6 +42,7 @@
                 <img src="@/assets/instrumentos.png" alt="">
             </div>
             <div>
+                <img src="@/assets/sombraMusical.png" alt="">
                 <button><a href="#quem-somos">quem somos?</a></button>
             </div>
 
