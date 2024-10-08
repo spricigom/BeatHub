@@ -6,11 +6,11 @@ import { RouterLink } from 'vue-router'
 <template>
 
 <RouterLink to="/Inicio">Inicio </RouterLink>
-<RouterLink to="/produto">produto </RouterLink>
 <RouterLink to="/Cadastro">Cadastro </RouterLink>
-<RouterLink to="/CadastroFuncionario">CadastroFuncionario </RouterLink>
-
-
+<RouterLink to="/Carrinho">Carrinho </RouterLink>
+<RouterLink to="/Favorito">Favorito </RouterLink>
+<RouterLink to="/produto">Produto </RouterLink>
+<RouterLink to="/Membros">Membros </RouterLink>
 
 
 
