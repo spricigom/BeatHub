@@ -22,6 +22,11 @@ const router = createRouter({
       component: () => import('../views/ProdutoView.vue')
     },
     {
+      path: '/CadastroFuncionario',
+      name: 'CadastroFuncionario',
+      component: () => import('../views/CadastroFuncionarioView.vue')
+    },
+    {
       path: '/Cadastro',
       name: 'Cadastro',
       component: () => import('../views/CadastroView.vue')
@@ -35,6 +40,11 @@ const router = createRouter({
       path: '/Favorito',
       name: 'Favorito',
       component: () => import('../views/FavoritoView.vue')
+    },
+    {
+      path: '/Membros',
+      name: 'Membros',
+      component: () => import('../views/MembrosView.vue')
     }
   ]
 })
