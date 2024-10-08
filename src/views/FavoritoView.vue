@@ -1,4 +1,7 @@
-<script setup></script>
+<script setup>
+import { useProdutoStore } from '@/stores/produto';
+const produtoStore = useProdutoStore()
+</script>
 
 <template>
 
@@ -36,6 +39,8 @@
         </header>
         <hr class="hr" />
         <main>
+            ajfkajdkj
+            {{ produtoStore.produtosFavoritos }}
             <div class="carrinho-e-texto">
                 <img src="@/assets/coracao.png" alt="" id="carrinho">
                 <p>Adicione itens no seu favorito</p>

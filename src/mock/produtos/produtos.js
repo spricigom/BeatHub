@@ -1,5 +1,5 @@
 
-const produtos = [
+const MockProducts = [
     {
         id: 1,
         nome: 'Microfone SoundPro SP',
@@ -71,4 +71,4 @@ const produtos = [
         avaliacao:''
     }
 ]
-export default produtos;
+export default MockProducts;
