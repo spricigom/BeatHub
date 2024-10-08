@@ -18,10 +18,19 @@ export const useProdutoStore = defineStore('produto', () => {
 
     const produtosFavoritos = computed(() => produtos.value.filter(p => p.favoritado))
 
+    const addCarrinho = (id) => {
+        const product = produtos.value.find(p => p.id == id)
+        product.noCarrinho = !product.noCarrinho
+        // vai salvar no carrinho no localStorage ou algum outro lugar
+    }
+
+    const produtosCarrinho = computed(() => produtos.value.filter(p => p.noCarrinho))
     return {
         produtos,
         buscarTodosOsProdutos,
         favoritar,
-        produtosFavoritos
+        produtosFavoritos,
+        addCarrinho,
+        produtosCarrinho
     }
 })
