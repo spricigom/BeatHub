@@ -83,7 +83,7 @@
 
             <p class="subtitulo">(Apenas pessoas autorizadas)</p>
 
-            <img src="@/assets/funcionario.png" alt="" id="funcionaria">
+            <img src="@/assets/Funcionarios.png" alt="" id="funcionaria">
             
 
         </div>
