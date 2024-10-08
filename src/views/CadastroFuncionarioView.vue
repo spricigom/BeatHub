@@ -182,7 +182,7 @@ main {
 }
 
 .data .input {
-    width: 6vw;
+    width: 8vw;
 }
 
 .genero {
