@@ -4,25 +4,21 @@ import { useProdutoStore } from '@/stores/produto';
 const produtoStore = useProdutoStore()
 
 
-
 function favoritar(productId) {
     produtoStore.favoritar(productId)   
 }
-
 
 function getImage(productIndex) {
     return new URL(`../assets/${produtoStore.produtos[productIndex].img}`, import.meta.url).href
 }
 
+function addCarrinho(productId) {
+   produtoStore.addCarrinho(productId)
+}
+
 onMounted(async () => {
     await produtoStore.buscarTodosOsProdutos()
 })
-
-
-function addCarrinho(productId) {
-   const product = products.value.find(p => p.id === productId)
-   product.adicionado = !product.adicionado
-}
 
 </script>
 <template>
@@ -31,8 +27,8 @@ function addCarrinho(productId) {
             <div class="compra-e-coracao_produto">
                  <img src="@/assets/coracaoVermelho.png" alt="" class="icones" @click="favoritar(produto.id)" v-if="produto.favoritado" />
                 <img src="@/assets/coracao.png" alt="" class="icones" @click="favoritar(produto.id)" v-else>
-                <img src="@/assets/carrinho-de-compra-laranja.png" alt="" class="icones" style="opacity: .7;" @click="addCarrinho(produto.id)" v-if="produto.adicionado"/>
-                <img src="@/assets/carrinho-de-compra.png" alt="" class="icones"  @click="addCarrinho(produto.id)" v-else />
+                <img src="@/assets/carrinho-de-compra-laranja.png" alt="" class="icones" style="opacity: .7;" @click="addCarrinho(produto.id)" v-if="produto.noCarrinho"/>
+                <img src="@/assets/carrinho-de-compras.png" alt="" class="icones"  @click="addCarrinho(produto.id)" v-else />
                 
             </div>
             <div class="img-produtos"> <img :src="getImage(index)" alt=""></div>
