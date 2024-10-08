@@ -26,14 +26,61 @@ const router = createRouter({
       name: 'Cadastro',
       component: () => import('../views/CadastroView.vue')
     },
+    {
       path: '/Carrinho',
       name: 'Carrinho',
       component: () => import('../views/CarrinhoView.vue')
     },
+    {
       path: '/Favorito',
       name: 'Favorito',
       component: () => import('../views/FavoritoView.vue')
+    },
+    {
+      path: '/Cordas',
+      name: 'Cordas',
+      component: () => import('../views/CordasView.vue')
+    },
+    {
+      path: '/Caixas',
+      name: 'Caixas',
+      component: () => import('../views/CaixasView.vue')
     }
+    ,
+    {
+      path: '/Dj',
+      name: 'Dj',
+      component: () => import('../views/DjView.vue')
+    }
+
+    ,
+    {
+      path: '/Efeitos',
+      name: 'Efeitos',
+      component: () => import('../views/EfeitosView.vue')
+    }
+    ,
+    {
+      path: '/Microfone',
+      name: 'Microfone',
+      component: () => import('../views/MicrofoneView.vue')
+    }
+    ,
+    {
+      path: '/Teclados',
+      name: 'Teclados',
+      component: () => import('../views/TecladosView.vue')
+    },
+    {
+      path: '/Pedais',
+      name: 'Pedais',
+      component: () => import('../views/PedaisView.vue')
+    }
+
+
+
+
+    
   ]
 })
 
