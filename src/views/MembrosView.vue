@@ -79,6 +79,17 @@
                         <h6>Script e Componentes</h6>
                     </div>
                 </div>
+
+                <div class="card-pessoa">
+                    <div class="img-pessoa">
+                        <img src="@/assets/vargas.jpeg" alt="">
+                    </div>
+                   <div class="nome_e_funcao-pessoa">
+                        <h2><strong>Francisco Vargas</strong></h2>
+                        <h6>Script e Componentes</h6>
+                   </div>
+                </div>
+
                 <div class="card-pessoa">
                     <div class="img-pessoa">
                         <img src="@/assets/helo.jpeg" alt="">
@@ -88,15 +99,7 @@
                         <h6>Banco de Dados</h6>
                    </div>
                 </div>
-                <div class="card-pessoa">
-                    <div class="img-pessoa">
-
-                    </div>
-                   <div class="nome_e_funcao-pessoa">
-                        <h2><strong>Francisco Vargas</strong></h2>
-                        <h6>Script e Componentes</h6>
-                   </div>
-                </div>
+                
                 <div class="card-pessoa">
                     <div class="img-pessoa">
 
@@ -111,7 +114,7 @@
             <div class="pessoas-baixo">
                 <div class="card-pessoa">
                     <div class="img-pessoa">
-
+                        <img src="@/assets/luna.jpeg" alt="">
                     </div>
                    <div class="nome_e_funcao-pessoa">
                         <h2><strong>Luna Bolsoni</strong></h2>
