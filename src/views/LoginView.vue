@@ -39,13 +39,15 @@ const produtoStore = useProdutoStore()
         </header>
         <hr class="hr" />
         <main>
-            {{ produtoStore.produtosFavoritos }}
-            <div class="carrinho-e-texto">
-                <img src="@/assets/coracao.png" alt="" id="carrinho">
-                <p>Adicione itens no seu favorito</p>
-                <button><p id="texto_botao" >Voltar Para o Site</p></button>
+            <div class="pintura">
+                <img src="@/assets/pintura.jpg" alt="">
             </div>
-           
+            <div class="teste1">
+
+            </div>
+            <div class="teste2">
+
+            </div>
         </main>
 
 
@@ -113,6 +115,97 @@ const produtoStore = useProdutoStore()
 </template>
 
 <style scoped>
+.teste1{
+    position: relative;
+    /* Para permitir que o gradiente fique sobre a imagem */
+    height: 80vh;
+    /* Defina a altura desejada */
+    width: 70%;
+    overflow: hidden;
+    /* Para evitar que o conteúdo transborde */
+    position: relative;
+    bottom: 60vh;
+    right: 15vw;
+
+}
+
+.teste1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 25%, #efefef);
+    z-index: 1;
+    /* Coloca o gradiente acima da imagem */
+}
+.teste2{
+    position: relative;
+    /* Para permitir que o gradiente fique sobre a imagem */
+    height: 80vh;
+    /* Defina a altura desejada */
+    width: 70%;
+    overflow: hidden;
+    /* Para evitar que o conteúdo transborde */
+    position: relative;
+    bottom: 160vh;
+    right: 15vw;
+
+}
+
+.teste2::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, transparent 25%, #efefef);
+    z-index: 1;
+    /* Coloca o gradiente acima da imagem */
+}
+
+
+
+
+.pintura {
+    position: relative;
+    /* Para permitir que o gradiente fique sobre a imagem */
+    height: 80vh;
+    /* Defina a altura desejada */
+    width: 70%;
+    overflow: hidden;
+    /* Para evitar que o conteúdo transborde */
+    position: relative;
+    right: 15vw;
+}
+
+.pintura::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent 25%, #efefef);
+    z-index: 1;
+    /* Coloca o gradiente acima da imagem */
+}
+
+.pintura img {
+    width: 100%;
+    height: 100%;
+    /* Use 100% para preencher a área da div */
+    object-fit: cover;
+    /* Mantém a proporção da imagem */
+    z-index: 0;
+    /* Coloca a imagem atrás do gradiente */
+    position: relative;
+    /* Para garantir que fique atrás do gradiente */
+}
+
+
 #texto_botao{
     color: #f48200; 
     font-size: 1.2vw;
@@ -151,7 +244,7 @@ button {
     opacity: 0.8;
 }
 main{
-    height: 80vh;
+    height:320vh ;
     background-color: #efefef;
     display: flex; 
     align-items: center;
