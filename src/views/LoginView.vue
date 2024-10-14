@@ -48,6 +48,18 @@ const produtoStore = useProdutoStore()
             <div class="teste2">
 
             </div>
+            <!-- 
+            
+            -->
+            <div class="login">
+                <div class="email_e_senha">
+                    <form>
+                         <input type="email" placeholder="e-mail" class="input-underline">
+                    <input type="password" placeholder="senha" class="input-underline">  
+                    </form>
+                   
+                </div>
+            </div>
         </main>
 
 
@@ -115,6 +127,39 @@ const produtoStore = useProdutoStore()
 </template>
 
 <style scoped>
+.input-underline {
+            border: none; 
+            border-bottom: 1px solid #000; 
+            outline: none; 
+            padding: 5px; 
+            width: 70%; 
+            font-size: 16px;
+            transition: .2s ease;
+            background-color: #c0bebe;
+        }
+        
+        .input-underline:focus {
+            border-bottom: 1px solid #f48200;
+        }
+
+.login{
+    background-color: #c0bebe;
+    width: 35vw;
+    height: 50vh;
+    display: flex;
+    position: relative;
+    bottom: 230vh;
+    left: 25vw;
+    z-index: 1;
+    border-radius:1.3vw ;
+    flex-direction: row;
+}
+.login ::placeholder{
+    color: #000;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.5vw;
+}
+
 .teste1{
     position: relative;
     /* Para permitir que o gradiente fique sobre a imagem */
@@ -334,7 +379,7 @@ main{
     bottom: 15px
 }
 
-input {
+header input {
 
     display: flex;
     position: relative;
