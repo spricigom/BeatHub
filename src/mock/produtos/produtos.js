@@ -1,5 +1,5 @@
 
-const produtos = [
+const MockProducts = [
     {
         id: 1,
         nome: 'Microfone SoundPro SP',
@@ -70,8 +70,9 @@ const produtos = [
         img: 'gaitaBoca.png', 
     }
 ]
-
 const favoritos = produtos.filter(p => p.favoritado)
 
 export { favoritos }
 export default produtos;
+
+export default MockProducts;

@@ -1,4 +1,7 @@
-<script setup></script>
+<script setup>
+import { useProdutoStore } from '@/stores/produto';
+const produtoStore = useProdutoStore()
+</script>
 
 <template>
 
@@ -36,6 +39,7 @@
         </header>
         <hr class="hr" />
         <main>
+            {{ produtoStore.produtosCarrinho }}
             <div class="carrinho-e-texto">
                 <img src="@/assets/bag.png" alt="" id="carrinho">
                 <p>Adicione itens no seu carrinho</p>

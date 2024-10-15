@@ -22,6 +22,11 @@ const router = createRouter({
       component: () => import('../views/ProdutoView.vue')
     },
     {
+      path: '/CadastroFuncionario',
+      name: 'CadastroFuncionario',
+      component: () => import('../views/CadastroFuncionarioView.vue')
+    },
+    {
       path: '/Cadastro',
       name: 'Cadastro',
       component: () => import('../views/CadastroView.vue')
@@ -35,7 +40,57 @@ const router = createRouter({
       path: '/Favorito',
       name: 'Favorito',
       component: () => import('../views/FavoritoView.vue')
+    },
+    {
+      path: '/Cordas',
+      name: 'Cordas',
+      component: () => import('../views/CordasView.vue')
+    },
+    {
+      path: '/Caixas',
+      name: 'Caixas',
+      component: () => import('../views/CaixasView.vue')
     }
+    ,
+    {
+      path: '/Dj',
+      name: 'Dj',
+      component: () => import('../views/DjView.vue')
+    }
+
+    ,
+    {
+      path: '/Efeitos',
+      name: 'Efeitos',
+      component: () => import('../views/EfeitosView.vue')
+    }
+    ,
+      path: '/Membros',
+      name: 'Membros',
+      component: () => import('../views/MembrosView.vue')
+    }
+    ,
+    {
+      path: '/Microfone',
+      name: 'Microfone',
+      component: () => import('../views/MicrofoneView.vue')
+    }
+    ,
+    {
+      path: '/Teclados',
+      name: 'Teclados',
+      component: () => import('../views/TecladosView.vue')
+    },
+    {
+      path: '/Pedais',
+      name: 'Pedais',
+      component: () => import('../views/PedaisView.vue')
+    }
+
+
+
+
+    
   ]
 })
 
