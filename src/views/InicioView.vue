@@ -1,42 +1,16 @@
 <script setup>
 import NavFooter from '@/components/NavFooter.vue';
 import ListProduct from '@/components/ListProduct.vue';
+import HeaderComponente from '@/components/HeaderComponente.vue';
 </script>
 
 <template>
 
     <body>
-        <header>
-            <nav>
-                <ul class="navegacao">
-                    <li><a href="#">Cordas</a></li>
-                    <li><a href="#" id="amarelo">Caixas</a></li>
-                    <li><a href="#">DJ</a></li>
-                    <li><a href="#" id="amarelo">Efeitos</a></li>
-                    <li><a href="#">Microfone</a></li>
-                    <li><a href="#" id="amarelo">Teclados</a></li>
-                    <li><a href="#">Pedais</a></li>
-                </ul>
-            </nav>
-            <RouterLink to="/">
-                <img class="logo" src="@/assets/certa.png" alt="" />
-            </RouterLink>
+    
+    <HeaderComponente/>
 
-            <p class="regiao"><img src="@/assets/lugar-colocar.png" alt="" class="icones"
-                    style="opacity: .7; position: relative; bottom: .2vh;" />Selecione sua regiao</p>
-
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="O que você precisa?..." aria-label="Search"
-                    style=" background-color: #efefef; border: 1px solid #f48200; width: 17vw; border-radius: 300px;" />
-            </form>
-            <img src="@/assets/lupa.png" alt=""
-                style="width: 1vw; display: flex; position: relative; left: 4vw; bottom: 1vh;">
-
-            <div class="compra-e-coracao">
-                <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                <img src="@/assets/coracao.png" alt="" class="icones" />
-            </div>
-        </header>
+    
         <hr class="hr" />
         <main>
             <div id="carouselExample" class="carousel slide">
