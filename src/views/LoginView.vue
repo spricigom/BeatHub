@@ -42,15 +42,13 @@ const produtoStore = useProdutoStore()
             <div class="pintura">
                 <img src="@/assets/pintura.jpg" alt="">
             </div>
-            <div class="teste1">
+            <div class="gradiente1">
 
             </div>
-            <div class="teste2">
+            <div class="gradiente2">
 
             </div>
-            <!-- 
-            
-            -->
+
             <div class="login">
                 <h2>Fazer Login</h2>
                 <div class="email_e_senha">
@@ -59,7 +57,12 @@ const produtoStore = useProdutoStore()
                         <input type="password" placeholder="senha" class="input-underline">
                     </form>
                 </div>
-                    
+                <div class="pergunta">
+                    <p>Não é nosso cliente ainda? <br>Faça seu cadastro!</p>
+                    <p><a href="#">Cliente</a> - <a href="#">Funcionário</a></p>
+                </div>
+                <button>Entrar</button>
+
 
             </div>
         </main>
@@ -128,14 +131,46 @@ const produtoStore = useProdutoStore()
     </body>
 </template>
 
+
 <style scoped>
-.login h2{
+main{
+}
+.login button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 10vw;
+    margin-top: 2vh;
+}
+.pergunta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.pergunta p {
+    text-align: center;
+    color: #000;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 0;
+}
+
+.pergunta a {
+    color: #f48200;
+    margin-top: 1vh;
+}
+
+.login h2 {
     text-align: center;
     font-family: 'Josefin Sans', sans-serif;
     margin-top: 3vh;
     font-size: 1.2vw;
+
 }
-.email_e_senha{
+
+.email_e_senha {
     margin-top: 5vh;
     display: flex;
     text-align: center;
@@ -151,12 +186,12 @@ const produtoStore = useProdutoStore()
     transition: .2s ease;
     background-color: #c9c9c9;
     margin-bottom: 5vh;
-  
+
 }
 
 .input-underline:focus {
     border-bottom: 1px solid #f48200;
-    
+
 }
 
 .login {
@@ -170,14 +205,15 @@ const produtoStore = useProdutoStore()
     z-index: 1;
     border-radius: 1.3vw;
     flex-direction: column;
-    
+    margin-bottom: -230vh;
+
 }
 
 .login ::placeholder {
     color: #000;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1.4vw;
-   
+
 }
 
 
@@ -185,7 +221,7 @@ const produtoStore = useProdutoStore()
 
 
 
-.teste1 {
+.gradiente1 {
     position: relative;
     /* Para permitir que o gradiente fique sobre a imagem */
     height: 80vh;
@@ -196,10 +232,11 @@ const produtoStore = useProdutoStore()
     position: relative;
     bottom: 60vh;
     right: 15vw;
+    
 
 }
 
-.teste1::before {
+.gradiente1::before {
     content: '';
     position: absolute;
     top: 0;
@@ -211,7 +248,7 @@ const produtoStore = useProdutoStore()
     /* Coloca o gradiente acima da imagem */
 }
 
-.teste2 {
+.gradiente2 {
     position: relative;
     /* Para permitir que o gradiente fique sobre a imagem */
     height: 80vh;
@@ -225,7 +262,7 @@ const produtoStore = useProdutoStore()
 
 }
 
-.teste2::before {
+.gradiente2::before {
     content: '';
     position: absolute;
     top: 0;
