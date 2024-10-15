@@ -52,13 +52,15 @@ const produtoStore = useProdutoStore()
             
             -->
             <div class="login">
+                <h2>Fazer Login</h2>
                 <div class="email_e_senha">
                     <form>
-                         <input type="email" placeholder="e-mail" class="input-underline">
-                    <input type="password" placeholder="senha" class="input-underline">  
+                        <input type="email" placeholder="e-mail" class="input-underline">
+                        <input type="password" placeholder="senha" class="input-underline">
                     </form>
-                   
                 </div>
+                    
+
             </div>
         </main>
 
@@ -116,34 +118,49 @@ const produtoStore = useProdutoStore()
                 </div>
 
             </div>
-            
-  <div class="Copyright" >
-    © 2024 Copyright:
-    <a  href="https://beathub.com/">BeatHub.com</a>
-  </div>
+
+            <div class="Copyright">
+                © 2024 Copyright:
+                <a href="https://beathub.com/">BeatHub.com</a>
+            </div>
         </footer>
 
     </body>
 </template>
 
 <style scoped>
-.input-underline {
-            border: none; 
-            border-bottom: 1px solid #000; 
-            outline: none; 
-            padding: 5px; 
-            width: 70%; 
-            font-size: 16px;
-            transition: .2s ease;
-            background-color: #c0bebe;
-        }
-        
-        .input-underline:focus {
-            border-bottom: 1px solid #f48200;
-        }
+.login h2{
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-top: 3vh;
+    font-size: 1.2vw;
+}
+.email_e_senha{
+    margin-top: 5vh;
+    display: flex;
+    text-align: center;
+}
 
-.login{
-    background-color: #c0bebe;
+.input-underline {
+    border: none;
+    border-bottom: 1px solid #858585;
+    outline: none;
+    padding: 5px;
+    width: 29vw;
+    font-size: 16px;
+    transition: .2s ease;
+    background-color: #c9c9c9;
+    margin-bottom: 5vh;
+  
+}
+
+.input-underline:focus {
+    border-bottom: 1px solid #f48200;
+    
+}
+
+.login {
+    background-color: #c9c9c9;
     width: 35vw;
     height: 50vh;
     display: flex;
@@ -151,16 +168,24 @@ const produtoStore = useProdutoStore()
     bottom: 230vh;
     left: 25vw;
     z-index: 1;
-    border-radius:1.3vw ;
-    flex-direction: row;
-}
-.login ::placeholder{
-    color: #000;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 1.5vw;
+    border-radius: 1.3vw;
+    flex-direction: column;
+    
 }
 
-.teste1{
+.login ::placeholder {
+    color: #000;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.4vw;
+   
+}
+
+
+
+
+
+
+.teste1 {
     position: relative;
     /* Para permitir que o gradiente fique sobre a imagem */
     height: 80vh;
@@ -174,7 +199,7 @@ const produtoStore = useProdutoStore()
 
 }
 
-.teste1::before{
+.teste1::before {
     content: '';
     position: absolute;
     top: 0;
@@ -185,7 +210,8 @@ const produtoStore = useProdutoStore()
     z-index: 1;
     /* Coloca o gradiente acima da imagem */
 }
-.teste2{
+
+.teste2 {
     position: relative;
     /* Para permitir que o gradiente fique sobre a imagem */
     height: 80vh;
@@ -199,7 +225,7 @@ const produtoStore = useProdutoStore()
 
 }
 
-.teste2::before{
+.teste2::before {
     content: '';
     position: absolute;
     top: 0;
@@ -251,14 +277,15 @@ const produtoStore = useProdutoStore()
 }
 
 
-#texto_botao{
-    color: #f48200; 
+#texto_botao {
+    color: #f48200;
     font-size: 1.2vw;
     position: relative;
     top: 1vh;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 500;
 }
+
 button {
     height: 5vh;
     width: 15vw;
@@ -271,42 +298,47 @@ button {
 
 }
 
-.carrinho-e-texto{
+.carrinho-e-texto {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
     margin-top: 10vh;
 }
-.carrinho-e-texto p{
+
+.carrinho-e-texto p {
     color: #000000;
     font-weight: 700;
     font-size: 1.8vw;
     font-family: 'Josefin Sans', sans-serif;
 }
-#carrinho{
+
+#carrinho {
     width: 16vw;
     opacity: 0.8;
 }
-main{
-    height:320vh ;
+
+main {
+    height: 320vh;
     background-color: #efefef;
-    display: flex; 
+    display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.Copyright{
-    background-color:rgb(95, 95, 95);
+.Copyright {
+    background-color: rgb(95, 95, 95);
     color: white;
     height: 7vh;
     display: flex;
     padding-top: 2.3vh;
     justify-content: center;
 }
-.Copyright a{
+
+.Copyright a {
     color: white;
 }
+
 .icones-footer {
     width: 2.5vw;
     margin-top: 5vh;
@@ -388,7 +420,7 @@ header input {
 
 }
 
-.regiao{
+.regiao {
     position: relative;
     left: 5vw;
     font-family: 'Inter', sans-serif;
@@ -456,7 +488,4 @@ a {
 body {
     background-color: rgb(240, 240, 240);
 }
-
-
-
 </style>
