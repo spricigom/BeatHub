@@ -1,4 +1,5 @@
 <script setup>
+import { favoritos } from "@/mock"
 import { useProdutoStore } from '@/stores/produto';
 const produtoStore = useProdutoStore()
 </script>
@@ -46,7 +47,7 @@ const produtoStore = useProdutoStore()
                 <p>Adicione itens no seu favorito</p>
                 <button><p id="texto_botao" >Voltar Para o Site</p></button>
             </div>
-           
+            {{  favoritos }}
         </main>
 
 
