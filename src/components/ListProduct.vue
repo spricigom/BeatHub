@@ -1,26 +1,35 @@
 <script setup>
-import { ref } from "vue"
-import { produtos } from '@/mock';
-const products = ref(produtos)
+import { onMounted } from 'vue';
+import { useProdutoStore } from '@/stores/produto';
+const produtoStore = useProdutoStore()
 
 
 function favoritar(productId) {
-   const product = products.value.find(p => p.id === productId)
-   product.favoritado = !product.favoritado
+    produtoStore.favoritar(productId)   
 }
-
 
 function getImage(productIndex) {
-    return new URL(`../assets/${products.value[productIndex].img}`, import.meta.url).href
+    return new URL(`../assets/${produtoStore.produtos[productIndex].img}`, import.meta.url).href
 }
+
+function addCarrinho(productId) {
+   produtoStore.addCarrinho(productId)
+}
+
+onMounted(async () => {
+    await produtoStore.buscarTodosOsProdutos()
+})
+
 </script>
 <template>
     <div class="row">
-        <div v-for="produto, index in products" :key="produto.id" class="col produtos text-center">
+        <div v-for="produto, index in produtoStore.produtos" :key="produto.id" class="col produtos text-center">
             <div class="compra-e-coracao_produto">
-                <img src="@/assets/coracaoVermelho.png" alt="" class="icones" @click="favoritar(produto.id)" v-if="produto.favoritado" />
+                 <img src="@/assets/coracaoVermelho.png" alt="" class="icones" @click="favoritar(produto.id)" v-if="produto.favoritado" />
                 <img src="@/assets/coracao.png" alt="" class="icones" @click="favoritar(produto.id)" v-else>
-                <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" style="opacity: .7;" />
+                <img src="@/assets/carrinho-de-compra-laranja.png" alt="" class="icones" style="opacity: .7;" @click="addCarrinho(produto.id)" v-if="produto.noCarrinho"/>
+                <img src="@/assets/carrinho-de-compras.png" alt="" class="icones"  @click="addCarrinho(produto.id)" v-else />
+                
             </div>
             <div class="img-produtos"> <img :src="getImage(index)" alt=""></div>
             <div>

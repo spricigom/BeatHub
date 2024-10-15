@@ -1,4 +1,8 @@
-<script setup></script>
+<script setup>
+import { favoritos } from "@/mock"
+import { useProdutoStore } from '@/stores/produto';
+const produtoStore = useProdutoStore()
+</script>
 
 <template>
 
@@ -36,12 +40,14 @@
         </header>
         <hr class="hr" />
         <main>
+            ajfkajdkj
+            {{ produtoStore.produtosFavoritos }}
             <div class="carrinho-e-texto">
                 <img src="@/assets/coracao.png" alt="" id="carrinho">
                 <p>Adicione itens no seu favorito</p>
                 <button><p id="texto_botao" >Voltar Para o Site</p></button>
             </div>
-           
+            {{  favoritos }}
         </main>
 
 
