@@ -1,5 +1,5 @@
 
-const MockProducts = [
+export const MockProducts = [
     {
         id: 1,
         nome: 'Microfone SoundPro SP',
@@ -12,14 +12,13 @@ const MockProducts = [
         nome: 'Pedal Over Drive',
         preco: 'R$ 17,00 por mês',
         img: 'pedal-OverDrive.png', 
-        favoritado: true,
     },
     {
         id: 3,
         nome: 'Cubo Amplificador',
         preco: 'R$ 32,00 por mês',
         img: 'amplificador.png', 
-        favoritado: true,
+
     },
     {
         id: 4,
@@ -40,7 +39,6 @@ const MockProducts = [
         nome: 'Teclado musical 61 teclas',
         preco: 'R$ 35,00 por mês',
         img: 'teclado.png', 
-        favoritado: true,
     },
     {
         id: 7,
@@ -70,9 +68,4 @@ const MockProducts = [
         img: 'gaitaBoca.png', 
     }
 ]
-const favoritos = produtos.filter(p => p.favoritado)
-
-export { favoritos }
-export default produtos;
-
-export default MockProducts;
+export const favoritos = MockProducts.filter(p => p.favoritado)
