@@ -604,7 +604,6 @@
     margin-left: 12px;
     margin-right: 12px;
     margin-top: 4vh;
-    box-shadow: -.5px .5px .5px .5px rgb(150, 146, 146);
     margin-bottom: 8vh;
     border-radius: 2vw;
 
@@ -689,7 +688,6 @@
     justify-content: space-between;
     position: relative;
     left: 50%;
-    box-shadow: 1px 1px 5px 5px rgb(150, 146, 146);
     border-radius: 1vw;
 
 }
