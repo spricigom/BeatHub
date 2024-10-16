@@ -1,6 +1,5 @@
 <script setup>
-import { useProdutoStore } from '@/stores/produto';
-const produtoStore = useProdutoStore()
+
 </script>
 
 <template>
@@ -133,8 +132,7 @@ const produtoStore = useProdutoStore()
 
 
 <style scoped>
-main{
-}
+
 .login button{
     display: flex;
     align-items: center;
