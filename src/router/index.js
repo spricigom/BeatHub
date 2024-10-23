@@ -64,7 +64,7 @@ const router = createRouter({
       name: 'Efeitos',
       component: () => import('../views/EfeitosView.vue')
     }
-    ,
+  ,{
       path: '/Membros',
       name: 'Membros',
       component: () => import('../views/MembrosView.vue')
