@@ -1,5 +1,45 @@
 <script setup>
-import HeaderComponente from '@/components/HeaderComponente.vue';
+import { ref } from "vue";
+import { supabase } from "../lib/supabaseClient";
+//------------------------criação variaveis reativas------------------------//
+const cpf = ref([]);
+const name = ref([]);
+const gender = ref([]);
+const email = ref([]);
+const datebirth = ref('');
+const phonenumber = ref('');
+const password = ref([]);
+const passwordconfirmation = ref([]);
+const message = ref('');
+
+
+
+const insertData = async () => {
+    if (!name.value || !cpf.value || !gender.value || !email.value ||
+    !datebirth.value || !phonenumber.value || !password.value || !passwordconfirmation.value) {
+        message.value = "Por favor, preencha todos os campos."
+        return;
+    }
+ 
+    const {data: clientData, error: clientError} = await supabase
+    .from('cadastro_cliente')
+    .insert([{
+        cpf: cpf.value,
+        name: name.value,
+        gender: gender.value,
+        email: email.value,
+        datebirth: datebirth.value,
+        password: password.value,
+        passwordconfirmation: passwordconfirmation.value,
+        phonenumber:phonenumber.value
+        }])
+    if (clientError) {
+    console.error('Erro ao cadastrar cliente:', clientError.message)
+    message.value = `Erro ao cadastrar cliente: ${clientError.message}`
+    return
+  }
+}
+
 
 </script>
 
@@ -24,35 +64,35 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
 
 
         <div class="direita">
-            <form class="cadastro">
+            <form @submit.prevent="insertData"  class="cadastro">
                 <div class="campo_cadastro nome">
                     <p class="titulo_cadastro" id="cabecalho">Nome completo</p>
-                    <input class="input" type="text" placeholder="insira seu nome">
+                    <input class="input" type="text" v-model="name" placeholder="insira seu nome">
                 </div>
 
                 <div class="campo_cadastro data">
                     <p class="titulo_cadastro">Data de nascimento</p>
-                    <input class="input" type="date">
+                    <input class="input" type="date" v-model="datebirth">
                 </div>
 
                         <p>Genero</p>
 
                 <div class="genero">
 
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <div class="form-check" >
+                        <input class="form-check-input" type="radio" v-model="gender" name="flexRadioDefault" id="flexRadioDefault1">
                         <label class="form-check-label" for="flexRadioDefault1">
                             Masculino
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <input class="form-check-input" type="radio" v-model="gender" name="flexRadioDefault" id="flexRadioDefault2">
                         <label class="form-check-label" for="flexRadioDefault2">
                             Feminino
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                        <input class="form-check-input" type="radio" v-model="gender" name="flexRadioDefault" id="flexRadioDefault2"
                             checked>
                         <label class="form-check-label" for="flexRadioDefault2">
                             Prefiro não informar
@@ -68,23 +108,23 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
 
                 <div class="campo_cadastro">
                     <p class="titulo_cadastro">CPF</p>
-                    <input class="input" type="number" placeholder="___.___.___-__" >
+                    <input class="input" type="cpf" v-model="cpf" placeholder="___.___.___-__">
                 </div>
                 <div class="campo_cadastro">
                     <p class="titulo_cadastro">Telefone</p>
-                    <input class="input" type="number" placeholder="(__) _____-____">
+                    <input class="input" type="phonenumber" v-model="phonenumber" placeholder="(__) _____-____">
                 </div>
                 <div class="campo_cadastro">
                     <p class="titulo_cadastro">E-mail</p>
-                    <input class="input" type="email" placeholder="Ex: joaozinho@gmail.com">
+                    <input class="input" type="email" v-model="email" placeholder="Ex: joaozinho@gmail.com">
                 </div>
                 <div class="campo_cadastro">
                     <p class="titulo_cadastro">Senha</p>
-                    <input class="input" type="password">
+                    <input class="input" type="password" v-model="password">
                 </div>
                 <div class="campo_cadastro">
                     <p class="titulo_cadastro">Confirmação de Senha</p>
-                    <input class="input" type="password">
+                    <input class="input" type="password" v-model="passwordConfirmation">
                 </div>
 
                 
@@ -95,9 +135,9 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
 
 
 
-<button>Criar Conta</button>
+<button type="submit">Criar Conta</button>
 
-
+<p>{{ message }}</p>
 
 
 
