@@ -22,7 +22,7 @@
             </RouterLink>
 
             <p class="regiao"><img src="@/assets/lugar-colocar.png" alt="" class="icones"
-                    style="opacity: .7; position: relative; bottom: .2vh;" />Selecione sua regiao</p>
+                    style="opacity: .7; position: relative; bottom:aajasaskik .2vh;" />Selecione sua regiao</p>
 
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="O que você precisa?..." aria-label="Search"
@@ -54,6 +54,25 @@
                     <form>
                         <input type="email" placeholder="e-mail" class="input-underline">
                         <input type="password" placeholder="senha" class="input-underline">
+                        <p>Genero</p>
+
+                        <div class="tipo_pessoa">
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1" value="funcionario">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Funcionário
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault2" value="cliente">
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Cliente
+                                </label>
+                            </div>
+                        </div>
                     </form>
                 </div>
                 <div class="pergunta">
@@ -132,8 +151,7 @@
 
 
 <style scoped>
-
-.login button{
+.login button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -141,6 +159,7 @@
     left: 10vw;
     margin-top: 2vh;
 }
+
 .pergunta {
     display: flex;
     flex-direction: column;
@@ -230,7 +249,7 @@
     position: relative;
     bottom: 60vh;
     right: 15vw;
-    
+
 
 }
 
