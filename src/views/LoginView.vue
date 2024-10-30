@@ -1,7 +1,5 @@
 <script setup>
-import { favoritos } from "@/mock"
-import { useProdutoStore } from '@/stores/produto';
-const produtoStore = useProdutoStore()
+
 </script>
 
 <template>
@@ -40,13 +38,32 @@ const produtoStore = useProdutoStore()
         </header>
         <hr class="hr" />
         <main>
-            {{ produtoStore.produtosFavoritos }}
-            <div class="carrinho-e-texto">
-                <img src="@/assets/coracao.png" alt="" id="carrinho">
-                <p>Adicione itens no seu favorito</p>
-                <button><p id="texto_botao" >Voltar Para o Site</p></button>
+            <div class="pintura">
+                <img src="@/assets/pintura.jpg" alt="">
             </div>
-            {{  favoritos }}
+            <div class="gradiente1">
+
+            </div>
+            <div class="gradiente2">
+
+            </div>
+
+            <div class="login">
+                <h2>Fazer Login</h2>
+                <div class="email_e_senha">
+                    <form>
+                        <input type="email" placeholder="e-mail" class="input-underline">
+                        <input type="password" placeholder="senha" class="input-underline">
+                    </form>
+                </div>
+                <div class="pergunta">
+                    <p>Não é nosso cliente ainda? <br>Faça seu cadastro!</p>
+                    <p><a href="#">Cliente</a> - <a href="#">Funcionário</a></p>
+                </div>
+                <button>Entrar</button>
+
+
+            </div>
         </main>
 
 
@@ -103,25 +120,207 @@ const produtoStore = useProdutoStore()
                 </div>
 
             </div>
-            
-  <div class="Copyright" >
-    © 2024 Copyright:
-    <a  href="https://beathub.com/">BeatHub.com</a>
-  </div>
+
+            <div class="Copyright">
+                © 2024 Copyright:
+                <a href="https://beathub.com/">BeatHub.com</a>
+            </div>
         </footer>
 
     </body>
 </template>
 
+
 <style scoped>
-#texto_botao{
-    color: #f48200; 
+
+.login button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 10vw;
+    margin-top: 2vh;
+}
+.pergunta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.pergunta p {
+    text-align: center;
+    color: #000;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 0;
+}
+
+.pergunta a {
+    color: #f48200;
+    margin-top: 1vh;
+}
+
+.login h2 {
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-top: 3vh;
+    font-size: 1.2vw;
+
+}
+
+.email_e_senha {
+    margin-top: 5vh;
+    display: flex;
+    text-align: center;
+}
+
+.input-underline {
+    border: none;
+    border-bottom: 1px solid #858585;
+    outline: none;
+    padding: 5px;
+    width: 29vw;
+    font-size: 16px;
+    transition: .2s ease;
+    background-color: #c9c9c9;
+    margin-bottom: 5vh;
+
+}
+
+.input-underline:focus {
+    border-bottom: 1px solid #f48200;
+
+}
+
+.login {
+    background-color: #c9c9c9;
+    width: 35vw;
+    height: 50vh;
+    display: flex;
+    position: relative;
+    bottom: 230vh;
+    left: 25vw;
+    z-index: 1;
+    border-radius: 1.3vw;
+    flex-direction: column;
+    margin-bottom: -230vh;
+
+}
+
+.login ::placeholder {
+    color: #000;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.4vw;
+
+}
+
+
+
+
+
+
+.gradiente1 {
+    position: relative;
+    /* Para permitir que o gradiente fique sobre a imagem */
+    height: 80vh;
+    /* Defina a altura desejada */
+    width: 70%;
+    overflow: hidden;
+    /* Para evitar que o conteúdo transborde */
+    position: relative;
+    bottom: 60vh;
+    right: 15vw;
+    
+
+}
+
+.gradiente1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 25%, #efefef);
+    z-index: 1;
+    /* Coloca o gradiente acima da imagem */
+}
+
+.gradiente2 {
+    position: relative;
+    /* Para permitir que o gradiente fique sobre a imagem */
+    height: 80vh;
+    /* Defina a altura desejada */
+    width: 70%;
+    overflow: hidden;
+    /* Para evitar que o conteúdo transborde */
+    position: relative;
+    bottom: 160vh;
+    right: 15vw;
+
+}
+
+.gradiente2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, transparent 25%, #efefef);
+    z-index: 1;
+    /* Coloca o gradiente acima da imagem */
+}
+
+
+
+
+.pintura {
+    position: relative;
+    /* Para permitir que o gradiente fique sobre a imagem */
+    height: 80vh;
+    /* Defina a altura desejada */
+    width: 70%;
+    overflow: hidden;
+    /* Para evitar que o conteúdo transborde */
+    position: relative;
+    right: 15vw;
+}
+
+.pintura::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent 25%, #efefef);
+    z-index: 1;
+    /* Coloca o gradiente acima da imagem */
+}
+
+.pintura img {
+    width: 100%;
+    height: 100%;
+    /* Use 100% para preencher a área da div */
+    object-fit: cover;
+    /* Mantém a proporção da imagem */
+    z-index: 0;
+    /* Coloca a imagem atrás do gradiente */
+    position: relative;
+    /* Para garantir que fique atrás do gradiente */
+}
+
+
+#texto_botao {
+    color: #f48200;
     font-size: 1.2vw;
     position: relative;
     top: 1vh;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 500;
 }
+
 button {
     height: 5vh;
     width: 15vw;
@@ -134,42 +333,47 @@ button {
 
 }
 
-.carrinho-e-texto{
+.carrinho-e-texto {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
     margin-top: 10vh;
 }
-.carrinho-e-texto p{
+
+.carrinho-e-texto p {
     color: #000000;
     font-weight: 700;
     font-size: 1.8vw;
     font-family: 'Josefin Sans', sans-serif;
 }
-#carrinho{
+
+#carrinho {
     width: 16vw;
     opacity: 0.8;
 }
-main{
-    height: 80vh;
+
+main {
+    height: 320vh;
     background-color: #efefef;
-    display: flex; 
+    display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.Copyright{
-    background-color:rgb(95, 95, 95);
+.Copyright {
+    background-color: rgb(95, 95, 95);
     color: white;
     height: 7vh;
     display: flex;
     padding-top: 2.3vh;
     justify-content: center;
 }
-.Copyright a{
+
+.Copyright a {
     color: white;
 }
+
 .icones-footer {
     width: 2.5vw;
     margin-top: 5vh;
@@ -242,7 +446,7 @@ main{
     bottom: 15px
 }
 
-input {
+header input {
 
     display: flex;
     position: relative;
@@ -251,7 +455,7 @@ input {
 
 }
 
-.regiao{
+.regiao {
     position: relative;
     left: 5vw;
     font-family: 'Inter', sans-serif;
@@ -319,7 +523,4 @@ a {
 body {
     background-color: rgb(240, 240, 240);
 }
-
-
-
 </style>
