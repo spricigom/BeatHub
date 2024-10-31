@@ -1,4 +1,45 @@
 <script setup>
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+import { supabase } from "../lib/supabaseClient";
+
+const router = useRouter();
+const email = ref('');
+const password = ref('');
+const userType = ref('');
+
+const login = async () => {
+    // Verifica se os campos estão preenchidos
+    if (!email.value || !password.value || !userType.value) {
+        alert('Por favor, preencha todos os campos.');
+        return;
+    }
+
+    const { data, error } = await supabase
+        .from(userType.value === 'funcionario' ? 'cadastro_funcionario' : 'cadastro_cliente')
+        .select('*')
+        .eq('email', email.value)
+        .eq('senha', password.value); // Certifique-se de que a senha esteja sendo armazenada de forma segura (hash)
+
+    if (error) {
+        alert('Erro ao fazer login. Tente novamente.');
+        return;
+    }
+
+    if (data.length > 0) {
+        if (userType.value === 'funcionario') {
+            router.push('/produto'); // Redireciona para a página de produtos
+        } else {
+            router.push('/Carrinho'); // Redireciona para a página do carrinho
+        }
+        // Opcional: Limpar campos após o login
+        email.value = '';
+        password.value = '';
+        userType.value = '';
+    } else {
+        alert('Credenciais inválidas.');
+    }
+};
 
 </script>
 
@@ -51,28 +92,29 @@
             <div class="login">
                 <h2>Fazer Login</h2>
                 <div class="email_e_senha">
-                    <form>
-                        <input type="email" placeholder="e-mail" class="input-underline">
-                        <input type="password" placeholder="senha" class="input-underline">
-                        <p>Genero</p>
-
+                    <form @submit.prevent="login">
+                        <input type="email" placeholder="e-mail"  class="input-underline">
+                        <input type="password" placeholder="senha" v-model="password"class="input-underline">
                         <div class="tipo_pessoa">
 
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault1" value="funcionario">
+                                    id="flexRadioDefault1" userType.value="funcionario">
                                 <label class="form-check-label" for="flexRadioDefault1">
                                     Funcionário
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault2" value="cliente">
+                                    id="flexRadioDefault2" userType.value="cliente">
                                 <label class="form-check-label" for="flexRadioDefault2">
                                     Cliente
                                 </label>
                             </div>
                         </div>
+
+                        <button type="submit">Entrar</button>
+
                     </form>
                 </div>
                 <div class="pergunta">
