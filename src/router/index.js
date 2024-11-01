@@ -83,16 +83,6 @@ const router = createRouter({
       component: () => import('../views/AmplificadoresView.vue')
     }
     ,
-    {
-      path: '/Teclados',
-      name: 'Teclados',
-      component: () => import('../views/TecladosView.vue')
-    },
-    {
-      path: '/Pedais',
-      name: 'Pedais',
-      component: () => import('../views/PedaisView.vue')
-    }
   ]
 })
 
