@@ -1,5 +1,6 @@
 <script setup>
 import { RouterLink } from 'vue-router'
+
 </script>
 
 
@@ -12,6 +13,7 @@ import { RouterLink } from 'vue-router'
 <RouterLink to="/produto">Produto </RouterLink>
 <RouterLink to="/Membros">Membros </RouterLink>
 <RouterLink to="/CadastroFuncionario">Cadastro Funcionario </RouterLink>
+<RouterLink to="/Login">Login </RouterLink>
 
 
 

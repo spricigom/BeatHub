@@ -14,8 +14,6 @@ const router = createRouter({
       name: 'Inicio',
       component: () => import('../views/InicioView.vue')
     },
-
-
     {
       path: '/produto',
       name: 'produto',
@@ -42,50 +40,49 @@ const router = createRouter({
       component: () => import('../views/FavoritoView.vue')
     },
     {
-      path: '/Cordas',
-      name: 'Cordas',
-      component: () => import('../views/CordasView.vue')
+      path: '/Guitarra',
+      name: 'Guitarra',
+      component: () => import('../views/GuitarraView.vue')
     },
     {
-      path: '/Caixas',
-      name: 'Caixas',
-      component: () => import('../views/CaixasView.vue')
+      path: '/Baixo',
+      name: 'Baixo',
+      component: () => import('../views/BaixosView.vue')
     }
     ,
     {
-      path: '/Dj',
-      name: 'Dj',
-      component: () => import('../views/DjView.vue')
+      path: '/Teclado',
+      name: 'Teclado',
+      component: () => import('../views/TecladoView.vue')
     }
-
     ,
     {
-      path: '/Efeitos',
-      name: 'Efeitos',
-      component: () => import('../views/EfeitosView.vue')
+      path: '/Violão',
+      name: 'Violão',
+      component: () => import('../views/ViolaoView.vue')
     }
-    ,{
+    ,
+    {
+      path: '/Bateria',
+      name: 'Bateria',
+      component: () => import('../views/BateriaView.vue')
+    },
+    {
       path: '/Membros',
       name: 'Membros',
       component: () => import('../views/MembrosView.vue')
-    }
-    ,
-    {
-      path: '/Microfone',
-      name: 'Microfone',
-      component: () => import('../views/MicrofoneView.vue')
-    }
-    ,
-    {
-      path: '/Teclados',
-      name: 'Teclados',
-      component: () => import('../views/TecladosView.vue')
     },
     {
-      path: '/Pedais',
-      name: 'Pedais',
-      component: () => import('../views/PedaisView.vue')
+      path: '/Login',
+      name: 'Login',
+      component: () => import('../views/LoginView.vue')
     }
+    ,{
+      path: '/Amplificador',
+      name: 'Amplificador',
+      component: () => import('../views/AmplificadoresView.vue')
+    }
+    ,
   ]
 })
 
