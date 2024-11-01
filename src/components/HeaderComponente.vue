@@ -30,8 +30,8 @@
                 style="width: 1vw; display: flex; position: relative; left: 4vw; bottom: 1vh;">
 
             <div class="compra-e-coracao">
-                 <RouterLink to="/Favorito"><img src="@/assets/carrinho-de-compras.png" alt="" class="icones"   /></RouterLink>
-                 <RouterLink to="/Carrinho"><img src="@/assets/coracao.png" alt="" class="icones" /> </RouterLink>
+                 <RouterLink to="/Carrinho"><img src="@/assets/carrinho-de-compras.png" alt="" class="icones"   /></RouterLink>
+                 <RouterLink to="/Favorito"><img src="@/assets/coracao.png" alt="" class="icones" /> </RouterLink>
                 
             </div>
         </header>
