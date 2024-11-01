@@ -573,9 +573,11 @@
 }
 
 .compra-e-coracao_produto {
-    position: relative;
-    left: 5vw;
     margin-top: 1vw;
+    display: flex;
+    justify-content: space-between;
+    padding-left:.7vw ;
+    padding-right: .7vw;
 }
 
 .compra-e-coracao_produto .icones {
