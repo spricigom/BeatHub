@@ -49,8 +49,6 @@ const router = createRouter({
       name: 'Baixo',
       component: () => import('../views/BaixosView.vue')
     }
-
-
     ,
     {
       path: '/Teclado',
@@ -68,21 +66,33 @@ const router = createRouter({
       path: '/Bateria',
       name: 'Bateria',
       component: () => import('../views/BateriaView.vue')
-    }
-    ,{
+    },
+    {
       path: '/Membros',
       name: 'Membros',
       component: () => import('../views/MembrosView.vue')
+    },
+    {
+      path: '/Login',
+      name: 'Login',
+      component: () => import('../views/LoginView.vue')
     }
     ,{
       path: '/Amplificador',
       name: 'Amplificador',
       component: () => import('../views/AmplificadoresView.vue')
     }
-
-
-
-    
+    ,
+    {
+      path: '/Teclados',
+      name: 'Teclados',
+      component: () => import('../views/TecladosView.vue')
+    },
+    {
+      path: '/Pedais',
+      name: 'Pedais',
+      component: () => import('../views/PedaisView.vue')
+    }
   ]
 })
 

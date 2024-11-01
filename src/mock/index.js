@@ -1,4 +1,6 @@
-import MockProducts from "./produtos/produtos";
+
+import { MockProducts, favoritos } from "./produtos/produtos";
 export{
-    MockProducts,
+    favoritos,
+    MockProducts
 }
