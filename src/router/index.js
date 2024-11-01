@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import { supabase } from '../lib/supabaseClient';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -90,8 +91,16 @@ const router = createRouter({
       path: '/Pedais',
       name: 'Pedais',
       component: () => import('../views/PedaisView.vue')
+    },
+
+    { 
+      path: '/dashboard',
+      nome:'dashboard',//coloca o nome cararlho 
+      component: () => import('../views/Dashboard.vue'), 
+      meta: { requiresAuth: true } 
     }
   ]
-})
+});
+
 
 export default router

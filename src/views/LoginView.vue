@@ -3,44 +3,42 @@ import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { supabase } from "../lib/supabaseClient";
 
-const router = useRouter();
 const email = ref('');
 const password = ref('');
-const userType = ref('');
+const userType = ref('funcionario');
+const router = useRouter();
+const error = ref(null);
 
 const login = async () => {
-    // Verifica se os campos estão preenchidos
-    if (!email.value || !password.value || !userType.value) {
-        alert('Por favor, preencha todos os campos.');
-        return;
-    }
+    const table = userType.value === 'funcionario' ? 'cadastro_funcionario' : 'cadastro_cliente';
 
-    const { data, error } = await supabase
-        .from(userType.value === 'funcionario' ? 'cadastro_funcionario' : 'cadastro_cliente')
+    const { data, error: loginError } = await supabase
+        .from(table)
         .select('*')
         .eq('email', email.value)
-        .eq('senha', password.value); // Certifique-se de que a senha esteja sendo armazenada de forma segura (hash)
+        .eq('password', password.value)
+        .single();
 
-    if (error) {
-        alert('Erro ao fazer login. Tente novamente.');
-        return;
-    }
-
-    if (data.length > 0) {
-        if (userType.value === 'funcionario') {
-            router.push('/produto'); // Redireciona para a página de produtos
-        } else {
-            router.push('/Carrinho'); // Redireciona para a página do carrinho
-        }
-        // Opcional: Limpar campos após o login
-        email.value = '';
-        password.value = '';
-        userType.value = '';
+    if (loginError) {
+        error.value = 'Login falhou! Verifique suas credenciais.';
     } else {
-        alert('Credenciais inválidas.');
-    }
-};
+        error.value = null;
+        if (userType.value === 'funcionario') {
+            router.push('/CadastroFuncionario');
+        }
+        if (userType.value === 'cliente') {
+            router.push('/Carrinho');
 
+        }
+        console.log('Login bem-sucedido:', data);
+    }
+
+};
+/* funcao para logout
+  const logout = async () => {
+    await supabase.auth.signOut();
+    router.push('/Login'); // Redireciona para a página de login
+  };*/
 </script>
 
 <template>
@@ -93,35 +91,29 @@ const login = async () => {
                 <h2>Fazer Login</h2>
                 <div class="email_e_senha">
                     <form @submit.prevent="login">
-                        <input type="email" placeholder="e-mail"  class="input-underline">
-                        <input type="password" placeholder="senha" v-model="password"class="input-underline">
-                        <div class="tipo_pessoa">
-
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault1" userType.value="funcionario">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                    Funcionário
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault2" userType.value="cliente">
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    Cliente
-                                </label>
-                            </div>
+                        <input type="email" placeholder="e-mail" v-model="email" class="input-underline">
+                        <input type="password" placeholder="senha" v-model="password" class="input-underline">
+                        <div>
+                            <label>
+                                <input type="radio" v-model="userType" value="funcionario" />
+                                Funcionário
+                            </label>
+                            <label>
+                                <input type="radio" v-model="userType" value="cliente" />
+                                Cliente
+                            </label>
                         </div>
 
                         <button type="submit">Entrar</button>
 
                     </form>
+                    <p v-if="error">{{ error }}</p>
+
                 </div>
                 <div class="pergunta">
                     <p>Não é nosso cliente ainda? <br>Faça seu cadastro!</p>
                     <p><a href="#">Cliente</a> - <a href="#">Funcionário</a></p>
                 </div>
-                <button>Entrar</button>
 
 
             </div>
@@ -131,9 +123,6 @@ const login = async () => {
 
         <footer>
             <div class="footer">
-
-
-
                 <div class="cima-footer">
                     <img src="@/assets/certa.png" alt="" class="logo-footer">
                     <div class="redes-sociais">
@@ -179,15 +168,12 @@ const login = async () => {
                         </ul>
                     </div>
                 </div>
-
             </div>
-
             <div class="Copyright">
                 © 2024 Copyright:
                 <a href="https://beathub.com/">BeatHub.com</a>
             </div>
         </footer>
-
     </body>
 </template>
 
