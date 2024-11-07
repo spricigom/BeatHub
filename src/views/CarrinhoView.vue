@@ -1,41 +1,46 @@
 <script setup>
+import { onMounted } from "vue"
 import { useProdutoStore } from '@/stores/produto';
-const produtoStore = useProdutoStore()
 import HeaderComponente from '@/components/HeaderComponente.vue';
 import NavFooter from '@/components/NavFooter.vue';
+import ListProduct from '@/components/ListProduct.vue';
 
-
+const produtoStore = useProdutoStore()
 </script>
 
 <template>
 
     <body>
-        <HeaderComponente/>
+        <HeaderComponente />
         <hr class="hr" />
         <main>
-            {{ produtoStore.produtosCarrinho }}
-            <div class="carrinho-e-texto">
+            <ListProduct :produtos="produtoStore.produtosCarrinho" v-if="produtoStore.produtosCarrinho.length > 0" tipo="cart"/>
+            <div class="carrinho-e-texto" v-else>
                 <img src="@/assets/bag.png" alt="" id="carrinho">
                 <p>Adicione itens no seu carrinho</p>
-                <button><p id="texto_botao" >voltar para o site</p></button>
+                <button>
+                    <p id="texto_botao">voltar para o site</p>
+                </button>
             </div>
-           
+
         </main>
 
-<NavFooter/>
+
+        <NavFooter />
 
     </body>
 </template>
 
 <style scoped>
-#texto_botao{
-    color: #f48200; 
+#texto_botao {
+    color: #f48200;
     font-size: 1.2vw;
     position: relative;
     top: 1vh;
     font-family: 'Josefin Sans', sans-serif;
     width: 500;
 }
+
 button {
     height: 5vh;
     width: 15vw;
@@ -47,46 +52,52 @@ button {
     font-family: 'Josefin Sans', sans-serif;
 
 }
-button p{
+
+button p {
     color: #f48200;
 
 }
 
-.carrinho-e-texto{
+.carrinho-e-texto {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
     margin-top: 10vh;
 }
-.carrinho-e-texto p{
+
+.carrinho-e-texto p {
     color: #000000;
     font-weight: 700;
     font-size: 1.8vw;
     font-family: 'Josefin Sans', sans-serif;
 }
-#carrinho{
+
+#carrinho {
     width: 18vw;
 }
-main{
+
+main {
     height: 100vh;
     background-color: #efefef;
-    display: flex; 
+    display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.Copyright{
-    background-color:rgb(95, 95, 95);
+.Copyright {
+    background-color: rgb(95, 95, 95);
     color: white;
     height: 7vh;
     display: flex;
     padding-top: 2.3vh;
     justify-content: center;
 }
-.Copyright a{
+
+.Copyright a {
     color: white;
 }
+
 .icones-footer {
     width: 2.5vw;
     margin-top: 5vh;
@@ -168,7 +179,7 @@ input {
 
 }
 
-.regiao{
+.regiao {
     position: relative;
     left: 5vw;
     font-family: 'Inter', sans-serif;
@@ -247,6 +258,4 @@ body {
     width: 100vw;
     height: 120vh;
 }
-
-
 </style>
