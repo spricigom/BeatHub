@@ -1,31 +1,27 @@
 <script setup>
-import { favoritos } from "@/mock"
 import { useProdutoStore } from '@/stores/produto';
-const produtoStore = useProdutoStore()
 import HeaderComponente from '@/components/HeaderComponente.vue';
 import NavFooter from '@/components/NavFooter.vue';
+import ListProduct from '@/components/ListProduct.vue';
 
+const produtoStore = useProdutoStore()
 
 </script>
 
 <template>
-
-
-
-
     <body>
         
 <HeaderComponente/>
         
         <hr class="hr" />
         <main>
-            {{ produtoStore.produtosFavoritos }}
-            <div class="carrinho-e-texto">
+            <ListProduct :produtos="produtoStore.produtosFavoritos" v-if="produtoStore.produtosFavoritos.length > 0" tipo="favorite"/>
+                <div class="carrinho-e-texto">
                 <img src="@/assets/coracao.png" alt="" id="carrinho">
                 <p>Adicione itens no seu favorito</p>
                 <button><p id="texto_botao" >Voltar Para o Site</p></button>
             </div>
-            {{  favoritos }}
+
         </main>
 
 

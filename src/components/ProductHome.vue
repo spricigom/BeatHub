@@ -19,7 +19,8 @@ const props = defineProps([
             @click="$emit('carrinho', props.produto.id)" v-else />
 
     </div>
-    <div class="img-produtos"> <img :src="getImage(index)" alt=""></div>
+    <router-link to="produto" >
+    <div class="img-produtos"> <img :src="getImage(index)" alt="" ></div></router-link>
     <div>
         <h2 class="texto-produtos"> {{ props.produto?.nome }}</h2>
     </div>
