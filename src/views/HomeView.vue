@@ -14,6 +14,7 @@ import { RouterLink } from 'vue-router'
 <RouterLink to="/Membros">Membros </RouterLink>
 <RouterLink to="/CadastroFuncionario">Cadastro Funcionario </RouterLink>
 <RouterLink to="/Login">Login </RouterLink>
+<RouterLink to="/FormaPagamento">FormaPagamento </RouterLink>
 
 
 
