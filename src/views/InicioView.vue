@@ -1,8 +1,18 @@
+
 <script setup>
+import { onMounted } from "vue";
+import { useProdutoStore } from '@/stores/produto';
 import NavFooter from '@/components/NavFooter.vue';
 
 import ListProduct from '@/components/ListProduct.vue';
 import HeaderComponente from '@/components/HeaderComponente.vue';
+
+const produtoStore = useProdutoStore()
+
+onMounted(() => {
+    produtoStore.buscarTodosOsProdutos();
+});
+
 </script>
 
 <template>
@@ -39,24 +49,28 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
             </div>
             <div class="container text-center">
                 <div class="row">
+
                     <div class="col categorias">
                         <div class="texto-categoria">
                             <h5>Faça seu Login</h5>
                         </div>
-                        <img src="@/assets/user.png" alt="" />
+                        <RouterLink to="/Login">  <img src="@/assets/user.png" alt="" /></RouterLink>
                     </div>
 
                     <div class="col categorias">
                         <div class="texto-categoria">
                             <h5>Mais alugados</h5>
-                            <img src="@/assets/item.png" alt="" />
+                            <a href="#mais-alugados"><img src="@/assets/item.png" alt="" /></a>
+                            
                         </div>
                     </div>
 
                     <div class="col categorias">
                         <div class="texto-categoria">
-                            <h5>Sua localização</h5>
-                            <img src="@/assets/local.png" alt="" />
+                            <h5>Membros</h5>
+                            <RouterLink to="/Membros"><img src="@/assets/membros.png" alt="" /> </RouterLink>
+
+                            
                         </div>
                     </div>
 
@@ -171,8 +185,7 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
 
 
             <div class="container text-center">
-            
-                <ListProduct/>  
+                <ListProduct :produtos="produtoStore.produtos" tipo="home"/>  
             </div>
         </main>
 
@@ -383,7 +396,6 @@ body {
     height: 120vh;
 }
 
-/*Categorias em cima do carrossel*/
 .categorias {
     height: 35vh;
     width: 10vw;

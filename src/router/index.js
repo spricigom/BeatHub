@@ -1,28 +1,18 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: HomeView
-    },
-    {
-      path: '/Inicio',
-      name: 'Inicio',
+      name: '',
       component: () => import('../views/InicioView.vue')
     },
     {
       path: '/produto',
       name: 'produto',
       component: () => import('../views/ProdutoView.vue')
-    },
-    {
-      path: '/CadastroFuncionario',
-      name: 'CadastroFuncionario',
-      component: () => import('../views/CadastroFuncionarioView.vue')
     },
     {
       path: '/Cadastro',
@@ -76,13 +66,17 @@ const router = createRouter({
       path: '/Login',
       name: 'Login',
       component: () => import('../views/LoginView.vue')
-    }
-    ,{
+    },
+    {
       path: '/Amplificador',
       name: 'Amplificador',
       component: () => import('../views/AmplificadoresView.vue')
+    },
+    {
+      path: '/FormaPagamento',
+      name: 'FormaPagamento',
+      component: () => import('../views/FormaPagamentoView.vue')
     }
-    ,
   ]
 })
 
