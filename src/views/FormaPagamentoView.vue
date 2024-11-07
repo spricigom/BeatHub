@@ -1,6 +1,6 @@
 <script setup>
-
-
+import HeaderComponente from '@/components/HeaderComponente.vue';
+import NavFooter from '@/components/NavFooter.vue';
 </script>
 
 <template>

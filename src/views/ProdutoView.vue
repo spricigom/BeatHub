@@ -20,8 +20,8 @@ function pegarImagem(id) {
 <template>
 
     <body>
-        <HeaderComponente/>
-       
+        <HeaderComponente />
+
         <hr class="hr" />
 
         <main>
@@ -46,7 +46,7 @@ function pegarImagem(id) {
                         </div>
 
                         <div class="mais">
-                            
+
                             <img src="@/assets/teclado1-3.png" @click="pegarImagem(id)" class="mais-fotos">
                             <img src="@/assets/teclado1-2.png" alt="" class="mais-fotos">
                             <img src="@/assets/teclado1-4.png" alt="" class="mais-fotos">
@@ -94,7 +94,8 @@ function pegarImagem(id) {
                         </form>
                     </div>
 
-                    <button>ALUGUE</button>
+                    <RouterLink to="/FormaPagamento"> <button>ALUGUE</button>
+                    </RouterLink>
 
 
                 </div>
@@ -220,8 +221,8 @@ function pegarImagem(id) {
         </main>
 
 
-        
-<NavFooter/>
+
+        <NavFooter />
     </body>
 </template>
 
