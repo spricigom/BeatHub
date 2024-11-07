@@ -1,9 +1,4 @@
 <script setup>
-import { favoritos } from "@/mock"
-import { useProdutoStore } from '@/stores/produto';
-const produtoStore = useProdutoStore()
-import HeaderComponente from '@/components/HeaderComponente.vue';
-import NavFooter from '@/components/NavFooter.vue';
 
 
 </script>
