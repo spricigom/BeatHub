@@ -97,7 +97,7 @@
 
                 <div class="campo_cadastro">
                     <p class="titulo_cadastro">CPF</p>
-                    <input class="input" type="number" placeholder="___.___.___-__">
+                    <input class="input" type="number" placeholder="___.___.___-__" >
                 </div>
                 <div class="campo_cadastro">
                     <p class="titulo_cadastro">Telefone</p>
@@ -115,6 +115,8 @@
                     <p class="titulo_cadastro">Confirmação de Senha</p>
                     <input class="input" type="password">
                 </div>
+
+                
 
 
 
