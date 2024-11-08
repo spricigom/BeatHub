@@ -19,7 +19,11 @@ const produtoStore = useProdutoStore()
                 <div class="carrinho-e-texto">
                 <img src="@/assets/coracao.png" alt="" id="carrinho">
                 <p>Adicione itens no seu favorito</p>
-                <button><p id="texto_botao" >Voltar Para o Site</p></button>
+                <RouterLink to="/">
+                    <button>
+                        <p id="texto_botao">voltar para o site</p>
+                    </button>
+                </RouterLink>
             </div>
 
         </main>

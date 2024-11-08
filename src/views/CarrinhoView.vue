@@ -4,6 +4,7 @@ import { useProdutoStore } from '@/stores/produto';
 import HeaderComponente from '@/components/HeaderComponente.vue';
 import NavFooter from '@/components/NavFooter.vue';
 import ListProduct from '@/components/ListProduct.vue';
+import { RouterLink } from "vue-router";
 
 const produtoStore = useProdutoStore()
 </script>
@@ -14,13 +15,17 @@ const produtoStore = useProdutoStore()
         <HeaderComponente />
         <hr class="hr" />
         <main>
-            <ListProduct :produtos="produtoStore.produtosCarrinho" v-if="produtoStore.produtosCarrinho.length > 0" tipo="cart"/>
+            <ListProduct :produtos="produtoStore.produtosCarrinho" v-if="produtoStore.produtosCarrinho.length > 0"
+                tipo="cart" />
             <div class="carrinho-e-texto" v-else>
                 <img src="@/assets/bag.png" alt="" id="carrinho">
                 <p>Adicione itens no seu carrinho</p>
-                <button>
-                    <p id="texto_botao">voltar para o site</p>
-                </button>
+                <RouterLink to="/">
+                    <button>
+                        <p id="texto_botao">voltar para o site</p>
+                    </button>
+                </RouterLink>
+
             </div>
 
         </main>

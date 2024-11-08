@@ -9,7 +9,7 @@ const props = defineProps([
 </script>
 
 <template>
-    <div class="container">
+    <div class="esquerda">
         <div class="img-produtos"> <img :src="getImage(index)" alt=""></div>
         <div class="nomePreco">
             <div>
@@ -25,13 +25,32 @@ const props = defineProps([
             <img src="@/assets/coracao.png" alt="" class="icones" @click="$emit('favorito', props.produto.id)" v-else>
         </div>
     </div>
+    <div class="direita">
+        <div class="teste">
+
+        </div>
+    </div>
 </template>
 
 <style scoped>
-
-.container {
+template{
     display: flex;
     flex-direction: row;
+}
+.direita {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: blue;
+}
+.teste{
+    background-color: red;
+    height: 40vh;
+    width: 20vw;
+}
+.esquerda {
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
