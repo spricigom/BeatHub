@@ -71,4 +71,38 @@ const MockProducts = [
         avaliacao:''
     }
 ]
-export default MockProducts;
+
+
+
+const MockProducts2 = [
+    {
+        id: 11,
+        nome: 'Ukulele Concert Us23 Spring',
+        preco: 'R$ 17,00 por mês',
+        img: 'ukelele.png', 
+        avaliacao:''
+    },
+    {
+        id: 12,
+        nome: 'Violão Di Giorgio Master',
+        preco: 'R$ 17,00 por mês',
+        img: 'violao.png', 
+        avaliacao:''
+    },
+    {
+        id: 13,
+        nome: 'Guitarra elétrica SG',
+        preco: 'R$ 17,00 por mês',
+        img: 'guitarra.png', 
+        avaliacao:''
+    },
+    {
+        id: 14,
+        nome: 'Baixo Strinberg JBS50',
+        preco: 'R$ 17,00 por mês',
+        img: 'baixo.png', 
+        avaliacao:''
+    },
+
+]
+export default MockProducts ;MockProducts2;

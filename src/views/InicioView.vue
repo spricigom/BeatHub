@@ -1,6 +1,7 @@
 <script setup>
 import NavFooter from '@/components/NavFooter.vue';
 import ListProduct from '@/components/ListProduct.vue';
+import MaisVendidos from '@/components/MaisVendidos.vue';
 </script>
 
 <template>
@@ -192,6 +193,10 @@ import ListProduct from '@/components/ListProduct.vue';
                     </div>
                 </div>
             </div>
+
+
+            <MaisVendidos/>
+        
 
 
 
