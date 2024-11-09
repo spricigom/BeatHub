@@ -1,7 +1,8 @@
 <script setup>
 import { useProdutoStore } from '@/stores/produto';
-import ProductHome from '@/components/ProductHome.vue'
-import ProductCart from '@/components/ProductCart.vue'
+import ProductHome from '@/components/ProductHome.vue';
+import ProductCart from '@/components/ProductCart.vue';
+import ProductFavorite from '@/components/ProductFavorite.vue';
 
 const props = defineProps([
     'produtos',
@@ -25,7 +26,7 @@ function addCarrinho(productId) {
         <div v-for="produto, index in props.produtos" :key="produto.id" class="col produtos text-center">
             <ProductHome @favorito="favoritar" @imagem="getImage" @carrinho="addCarrinho" :produto="produto" :index="index" v-if="props.tipo == 'home'" />
             <ProductCart @favorito="favoritar" @imagem="getImage" @carrinho="addCarrinho" :produto="produto" :index="index" v-if="props.tipo == 'cart'" />
-            <ProductFavorite @favorito="favoritar" @imagem="getImage" @carrinho="addCarrinho" :produto="produto" :index="index" v-if="props.tipo == 'favorite'" />
+            <ProductFavorite @favorito="favoritar" @imagem="getImage" @carrinho="addCarrinho" :produto="produto" :index="index" v-if="props.tipo == 'favorite'"/>
         </div>
     </div>
 </template>

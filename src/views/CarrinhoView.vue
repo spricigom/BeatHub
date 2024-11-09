@@ -83,7 +83,6 @@ button p {
 }
 
 main {
-    height: 100vh;
     background-color: #efefef;
     display: flex;
     align-items: center;
