@@ -434,6 +434,7 @@
     flex-direction: column;
     align-items: center;
     margin-top: -10vw;
+    margin-bottom: 20vh;
 }
 
 .Copyright {
