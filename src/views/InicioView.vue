@@ -59,37 +59,36 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col categorias">
-                        <div class="texto-categoria">
-                            <h5>Faça seu Login</h5>
-                        </div>
-                        <img src="@/assets/user.png" alt="" />
+            <div class="fundo-categorias">
+                <div class=" categorias">
+                    <div class="texto-categoria">
+                        <h5>Faça seu Login</h5>
                     </div>
+                    <img src="@/assets/user.png" alt="" />
+                </div>
 
-                    <div class="col categorias">
-                        <div class="texto-categoria">
-                            <h5>Mais alugados</h5>
-                            <img src="@/assets/item.png" alt="" />
-                        </div>
-                    </div>
-
-                    <div class="col categorias">
-                        <div class="texto-categoria">
-                            <h5>Sua localização</h5>
-                            <img src="@/assets/local.png" alt="" />
-                        </div>
-                    </div>
-
-                    <div class="col categorias">
-                        <div class="texto-categoria">
-                            <h5>Categorias</h5>
-                        </div>
-                        <img src="@/assets/categoria.png" alt="" />
+                <div class=" categorias">
+                    <div class="texto-categoria">
+                        <h5>Mais alugados</h5>
+                        <img src="@/assets/item.png" alt="" />
                     </div>
                 </div>
+
+                <div class=" categorias">
+                    <div class="texto-categoria">
+                        <h5>Sua localização</h5>
+                        <img src="@/assets/local.png" alt="" />
+                    </div>
+                </div>
+
+                <div class=" categorias">
+                    <div class="texto-categoria">
+                        <h5>Categorias</h5>
+                    </div>
+                    <img src="@/assets/categoria.png" alt="" />
+                </div>
             </div>
+
 
             <h2 id="amarelo" style="margin-left: 10vw;position: relative;bottom: 1vh;">Os mais alugados</h2>
             <div class="campo">
@@ -192,16 +191,13 @@
 
 
 
-            <div class="container text-center">
-                <div class="row">
-
-                    <div class="col produtos">
-
+            <div class=" fundo">
+                <div class="linha">
+                    <div class=" produtos">
                         <div class="compra-e-coracao_produto">
                             <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
                             <img src="@/assets/coracao.png" alt="" class="icones" />
                         </div>
-
                         <div class="img-produtos">
                             <img src="@/assets/microfone.png" alt="" />
                         </div>
@@ -214,11 +210,13 @@
                             <h5>R$ 42,00 por mes</h5>
                         </div>
                         <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos dir2">
-
                     </div>
 
 
-                    <div class="col produtos">
+
+
+
+                    <div class=" produtos">
                         <div class="compra-e-coracao_produto">
                             <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
                             <img src="@/assets/coracao.png" alt="" class="icones" />
@@ -237,7 +235,7 @@
                         </div>
                         <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos dir2">
                     </div>
-                    <div class="col produtos">
+                    <div class=" produtos">
                         <div class="compra-e-coracao_produto">
                             <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
                             <img src="@/assets/coracao.png" alt="" class="icones" />
@@ -256,7 +254,7 @@
                         </div>
                         <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos dir2">
                     </div>
-                    <div class="col produtos">
+                    <div class=" produtos">
                         <div class="compra-e-coracao_produto">
                             <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
                             <img src="@/assets/coracao.png" alt="" class="icones" />
@@ -275,14 +273,14 @@
                         </div>
                         <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos dir2">
                     </div>
-                    <div class="col produtos">
+                    <div class=" produtos">
                         <div class="compra-e-coracao_produto">
                             <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
                             <img src="@/assets/coracao.png" alt="" class="icones" />
                         </div>
 
                         <div class="img-produtos">
-                            <img src="@/assets/pandeiro.png" alt="" />
+                            <img src="@/assets/pandeiro.png" alt="" width="100%" />
                         </div>
                         <h2 class="texto-produtos">Pandeiro 12 Knight</h2>
                         <img src="@/assets/estrelas.png" alt="" class="esq1">
@@ -295,8 +293,9 @@
                         <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos dir2">
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col produtos">
+
+                <div class="linha">
+                    <div class=" produtos">
                         <div class="compra-e-coracao_produto">
                             <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
                             <img src="@/assets/coracao.png" alt="" class="icones" />
@@ -315,7 +314,7 @@
                         </div>
                         <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos dir2">
                     </div>
-                    <div class="col produtos">
+                    <div class=" produtos">
                         <div class="compra-e-coracao_produto">
                             <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
                             <img src="@/assets/coracao.png" alt="" class="icones" />
@@ -334,7 +333,7 @@
                         </div>
                         <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos dir2">
                     </div>
-                    <div class="col produtos">
+                    <div class=" produtos">
                         <div class="compra-e-coracao_produto">
                             <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
                             <img src="@/assets/coracao.png" alt="" class="icones" />
@@ -353,7 +352,7 @@
                         </div>
                         <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos dir2">
                     </div>
-                    <div class="col produtos">
+                    <div class=" produtos">
                         <div class="compra-e-coracao_produto">
                             <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
                             <img src="@/assets/coracao.png" alt="" class="icones" />
@@ -372,7 +371,7 @@
                         </div>
                         <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos dir2">
                     </div>
-                    <div class="col produtos">
+                    <div class=" produtos">
                         <div class="compra-e-coracao_produto">
                             <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
                             <img src="@/assets/coracao.png" alt="" class="icones" />
@@ -450,28 +449,54 @@
                 </div>
 
             </div>
-            
-  <div class="Copyright" >
-    © 2024 Copyright:
-    <a  href="https://beathub.com/">BeatHub.com</a>
-  </div>
+
+            <div class="Copyright">
+                © 2024 Copyright:
+                <a href="https://beathub.com/">BeatHub.com</a>
+            </div>
         </footer>
 
     </body>
 </template>
 
 <style scoped>
-.Copyright{
-    background-color:rgb(95, 95, 95);
+.linha{
+    width: 88vw;
+    margin-bottom: 10vh;
+    display: flex;
+    flex-direction: row;
+    height: 50vh;
+    justify-content: space-around;
+}
+
+.fundo-categorias {
+    position: relative;
+    bottom: 20vh;
+    display: flex;
+    justify-content: center;
+
+}
+
+.fundo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -10vw;
+}
+
+.Copyright {
+    background-color: rgb(95, 95, 95);
     color: white;
     height: 7vh;
     display: flex;
     padding-top: 2.3vh;
     justify-content: center;
 }
-.Copyright a{
+
+.Copyright a {
     color: white;
 }
+
 .icones-footer {
     width: 2.5vw;
     margin-top: 5vh;
@@ -576,7 +601,7 @@
     margin-top: 1vw;
     display: flex;
     justify-content: space-between;
-    padding-left:.7vw ;
+    padding-left: .7vw;
     padding-right: .7vw;
 }
 
@@ -603,13 +628,13 @@
 .produtos {
     background-color: white;
     height: 45vh;
+    width: 15vw;
     margin-left: 12px;
     margin-right: 12px;
     margin-top: 4vh;
     margin-bottom: 8vh;
-    border-radius: 2vw;
-
-
+    border-radius: 0.44rem;
+    text-align: center;
 }
 
 
@@ -670,7 +695,7 @@
     height: 64vh;
     width: 19vw;
     background-color: white;
-    border-radius: 1vw;
+    border-radius: 0.44rem;
 
 }
 
@@ -696,6 +721,7 @@
 
 * {
     padding: 0;
+    margin: 0;
 }
 
 /*estilos do header */
@@ -715,7 +741,7 @@ input {
 
 }
 
-.regiao{
+.regiao {
     position: relative;
     left: 5vw;
     font-family: 'Inter', sans-serif;
@@ -782,15 +808,16 @@ a {
 /*estilos do carrossel */
 body {
     background-color: rgb(240, 240, 240);
+    overflow-x: hidden;
 }
 
 .carousel {
-    margin-top: -5vh;
+    margin-top: -3vh;
 }
 
 #carouselExample .carousel-item::before {
     content: '';
-    background: linear-gradient(0deg, rgb(240, 240, 240) 50%, transparent 69%);
+    background: linear-gradient(0deg, rgb(240, 240, 240) 50%, transparent 73%);
     display: block;
     position: absolute;
     top: 0;
@@ -801,7 +828,7 @@ body {
 /*Categorias em cima do carrossel*/
 .categorias {
     height: 35vh;
-    width: 10vw;
+    width: 13vw;
     margin-left: 4vw;
     margin-right: 4vw;
     background-color: white;
@@ -809,11 +836,12 @@ body {
     padding: 1vw;
     cursor: pointer;
     display: flex;
-    display: inline-block;
+    flex-direction: column;
     position: relative;
     bottom: 6.5vh;
     box-shadow: 1px 1px 5px 5px rgb(150, 146, 146);
-    justify-content: center;
+    text-align: center;
+    align-items: center;
 }
 
 .categorias img {
