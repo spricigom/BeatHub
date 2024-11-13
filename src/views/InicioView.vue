@@ -91,104 +91,83 @@
 
 
             <h2 id="amarelo" style="margin-left: 10vw;position: relative;bottom: 1vh;">Os mais alugados</h2>
+            
+            
+            
+            
             <div class="campo">
-                <div class="mais-alugados text-center">
+               
+               
+                <div class="mais-alugados">
                     <div class="compra-e-coracao2">
                         <img src="@/assets/coracao.png" alt="" class="icones" />
                         <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                    </div>
-
-                    <img src="@/assets/ukulele.png" alt="" class="produtos-MaisAlugados" />
-                    <h2>Ukulele Concert Us23 Spring</h2>
-
-                    <div class="conteudo1">
-                        <img src="@/assets/estrelas.png" alt="" class="estrelas" />
-                        <div class="avaliacao">
-                            <h6>130 avaliações</h6>
+                    </div>                    
+                    <img src="@/assets/ukulele.png" alt="" class="img-maisAlugados" />
+                    <div class="conteudo">                        
+                        <div class="nome-maisAlugados">
+                            <h2>Ukulele Concert Us23 Spring</h2>
                         </div>
-                    </div>
-
-                    <div class="conteudo2">
                         <div class="preco">
                             <h5>R$ 17,00 por mês</h5>
+                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe" />
                         </div>
-                        <img src="@/assets/compartilhe.png" alt="" class="compartilhe" />
                     </div>
                 </div>
 
-                <div class="mais-alugados text-center">
+                <div class="mais-alugados">
                     <div class="compra-e-coracao2">
                         <img src="@/assets/coracao.png" alt="" class="icones" />
                         <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                    </div>
-
-                    <img src="@/assets/violao.png" alt="" class="produtos-MaisAlugados" />
-                    <h2>Violão Di Giorgio Master</h2>
-
-                    <div class="conteudo1">
-                        <img src="@/assets/estrelas.png" alt="" class="estrelas" />
-                        <div class="avaliacao">
-                            <h6>130 avaliações</h6>
+                    </div>                    
+                    <img src="@/assets/violao.png" alt="" class="img-maisAlugados" />
+                    <div class="conteudo">                        
+                        <div class="nome-maisAlugados">
+                            <h2>Violão Di Giorgio Master</h2>
                         </div>
-                    </div>
-
-                    <div class="conteudo2">
                         <div class="preco">
                             <h5>R$ 17,00 por mês</h5>
+                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe" />
                         </div>
-                        <img src="@/assets/compartilhe.png" alt="" class="compartilhe" />
                     </div>
                 </div>
 
-                <div class="mais-alugados text-center">
+                <div class="mais-alugados">
                     <div class="compra-e-coracao2">
                         <img src="@/assets/coracao.png" alt="" class="icones" />
                         <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                    </div>
-
-                    <img src="@/assets/guitarra.png" alt="" class="produtos-MaisAlugados" />
-                    <h2>Guitarra elétrica SG</h2>
-
-                    <div class="conteudo1">
-                        <img src="@/assets/estrelas.png" alt="" class="estrelas" />
-                        <div class="avaliacao">
-                            <h6>130 avaliações</h6>
+                    </div>                    
+                    <img src="@/assets/guitarra.png" alt="" class="img-maisAlugados" />
+                    <div class="conteudo">                        
+                        <div class="nome-maisAlugados">
+                            <h2>Guitarra elétrica SG</h2>
                         </div>
-                    </div>
-
-                    <div class="conteudo2">
                         <div class="preco">
                             <h5>R$ 17,00 por mês</h5>
+                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe" />
                         </div>
-                        <img src="@/assets/compartilhe.png" alt="" class="compartilhe" />
                     </div>
                 </div>
 
-                <div class="mais-alugados text-center">
+                <div class="mais-alugados">
                     <div class="compra-e-coracao2">
                         <img src="@/assets/coracao.png" alt="" class="icones" />
                         <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                    </div>
-
-                    <img src="@/assets/baixo.png" alt="" class="produtos-MaisAlugados" />
-                    <h2>Baixo Strinberg JBS50</h2>
-
-                    <div class="conteudo1">
-                        <img src="@/assets/estrelas.png" alt="" class="estrelas" />
-                        <div class="avaliacao">
-                            <h6>130 avaliações</h6>
+                    </div>                    
+                    <img src="@/assets/baixo.png" alt="" class="img-maisAlugados" />
+                    <div class="conteudo">                        
+                        <div class="nome-maisAlugados">
+                            <h2>Baixo Strinberg JBS50</h2>
                         </div>
-                    </div>
-
-                    <div class="conteudo2">
                         <div class="preco">
                             <h5>R$ 17,00 por mês</h5>
+                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe" />
                         </div>
-                        <img src="@/assets/compartilhe.png" alt="" class="compartilhe" />
                     </div>
                 </div>
+
+
             </div>
-
 
 
             <div class="fundo">
@@ -204,7 +183,7 @@
             <h2 class="texto-produtos">Microfone SoundPro SP</h2>
             <div class="preco-produtos">
                 <h5>R$ 42,00 por mes</h5>                      
-                <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos">
+                <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
             </div>
         </div>
 
@@ -219,7 +198,7 @@
             <h2 class="texto-produtos">Pedal Guitarra OverTone</h2>
             <div class="preco-produtos">
                 <h5>R$ 17,00 por mes</h5>
-                <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos">
+                <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
             </div>
         </div>
 
@@ -234,7 +213,7 @@
             <h2 class="texto-produtos">Cubo Amplificador</h2>
             <div class="preco-produtos">
                 <h5>R$ 32,00 por mes</h5>
-                <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos">
+                <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
             </div>
         </div>
 
@@ -249,7 +228,7 @@
             <h2 class="texto-produtos">Ukulele</h2>
             <div class="preco-produtos">
                 <h5>R$ 24,00 por mes</h5>
-                <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos">
+                <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
             </div>
         </div>
 
@@ -264,7 +243,7 @@
             <h2 class="texto-produtos">Pandeiro 12 Knight</h2>
             <div class="preco-produtos">
                 <h5>R$ 32,00 por mes</h5>
-                <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos">
+                <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
             </div>
         </div>
     </div>
@@ -281,7 +260,7 @@
             <h2 class="texto-produtos">Teclado musical 61 teclas</h2>
             <div class="preco-produtos">
                 <h5>R$ 35,00 por mes</h5>
-                <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos">
+                <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
             </div>
         </div>
 
@@ -296,7 +275,7 @@
             <h2 class="texto-produtos">Trompete Werill Master</h2>
             <div class="preco-produtos">
                 <h5>R$ 69,00 por mes</h5>
-                <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos">
+                <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
             </div>
         </div>
 
@@ -311,7 +290,7 @@
             <h2 class="texto-produtos">Bateria Acústica</h2>
             <div class="preco-produtos">
                 <h5>R$ 287,00 por mes</h5>
-                <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos">
+                <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
             </div>
         </div>
 
@@ -326,7 +305,7 @@
             <h2 class="texto-produtos">Prato Hi Hat</h2>
             <div class="preco-produtos">
                 <h5>R$ 42,00 por mes</h5>
-                <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos">
+                <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
             </div>
         </div>
 
@@ -341,7 +320,7 @@
             <h2 class="texto-produtos">Gaita de boca harmônica</h2>
             <div class="preco-produtos">
                 <h5>R$ 17,00 por mes</h5>
-                <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos">
+                <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
             </div>
         </div>
     </div>
@@ -413,6 +392,77 @@
 </template>
 
 <style scoped>
+.nome-maisAlugados h2{
+    font-size: 1.1vw;
+    margin-top: 4vh;
+    font-family: 'Inter',  sans-serif;
+    font-weight: 600;
+}
+.nome-maisAlugados{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.compartilhe {
+    width: 1.2vw;
+}
+
+.img-maisAlugados {
+   display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    height: 20vh;
+}
+
+.img-maisAlugados{
+    width: 10vw;
+    height: 45vh;
+    object-fit: contain;
+}
+
+.conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.preco {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: 'Inter', 'sans serif';
+    width: 100%;
+} .preco h5{
+    font-size: 1.1vw;
+    font-weight: 400;
+    margin-top: 1vh;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1vh
+}
+.mais-alugados {
+    height: 64vh;
+    width: 19vw;
+    background-color: white;
+    border-radius: 0.44rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.compra-e-coracao2 {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    width: 80%;
+}
+
 .linha{
     width: 88vw;
     display: flex;
@@ -612,34 +662,14 @@
 
 
 
-.conteudo2 {
-    margin-top: 5vh;
-}
-
-
-.compra-e-coracao2 {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 1vw;
-    margin-top: 3vh;
-    margin-right: 1vw;
-}
-
-.preco {
-    display: flex;
-    float: left;
-    margin-left: 3vw;
-    font-family: 'Inter', 'sans serif';
-}
 
 
 
-.compartilhe {
-    display: flex;
-    float: right;
-    margin-right: 3vw;
-    width: 1.2vw;
-}
+
+
+
+
+
 
 
 
@@ -659,18 +689,7 @@
 }
 
 
-.produtos-MaisAlugados {
-    width: 130px;
-    height: 321px;
-}
 
-.mais-alugados {
-    height: 64vh;
-    width: 19vw;
-    background-color: white;
-    border-radius: 0.44rem;
-
-}
 
 .mais-alugados h2 {
     margin-top: 2vh;
