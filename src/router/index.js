@@ -42,27 +42,27 @@ const router = createRouter({
       component: () => import('../views/FavoritoView.vue')
     },
     {
-      path: '/Cordas',
-      name: 'Cordas',
-      component: () => import('../views/CordasView.vue')
+      path: '/Guitarras',
+      name: 'Guitarras',
+      component: () => import('../views/GuitarraView.vue')
     },
     {
       path: '/Caixas',
       name: 'Caixas',
-      component: () => import('../views/CaixasView.vue')
+      component: () => import('../views/BaixosView.vue')
     }
     ,
     {
       path: '/Dj',
       name: 'Dj',
-      component: () => import('../views/DjView.vue')
+      component: () => import('../views/AmplificadoresView.vue')
     }
 
     ,
     {
       path: '/Efeitos',
       name: 'Efeitos',
-      component: () => import('../views/EfeitosView.vue')
+      component: () => import('../views/TecladosView.vue')
     }
     ,{
       path: '/Membros',
@@ -78,13 +78,13 @@ const router = createRouter({
     {
       path: '/Microfone',
       name: 'Microfone',
-      component: () => import('../views/MicrofoneView.vue')
+      component: () => import('../views/VioloesView.vue')
     }
     ,
     {
       path: '/Teclados',
       name: 'Teclados',
-      component: () => import('../views/TecladosView.vue')
+      component: () => import('../views/BateriasView.vue')
     },
     {
       path: '/Pedais',

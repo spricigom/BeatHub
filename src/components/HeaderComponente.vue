@@ -6,13 +6,14 @@
     <header>
             <nav>
                 <ul class="navegacao">
-                    <li><RouterLink to="/Cordas">Cordas </RouterLink></li>
-                    <li><RouterLink to="/Caixas" id="amarelo">Caixas </RouterLink></li>
-                    <li><RouterLink to="/Dj">Dj</RouterLink></li>
-                    <li><RouterLink to="/Efeitos" id="amarelo">Efeitos </RouterLink></li>
-                    <li><RouterLink to="/Microfone">Microfone </RouterLink></li>
-                    <li><RouterLink to="/Teclados" id="amarelo">Teclados</RouterLink></li>
+                    <li><RouterLink to="/Guitarras">Guitarras </RouterLink></li>
+                    <li><RouterLink to="/Caixas" id="amarelo">Baixos </RouterLink></li>
+                    <li><RouterLink to="/Dj">Amplificadores</RouterLink></li>
+                    <li><RouterLink to="/Efeitos" id="amarelo">Teclado </RouterLink></li>
+                    <li><RouterLink to="/Microfone">Violões </RouterLink></li>
+                    <li><RouterLink to="/Teclados" id="amarelo">Baterias</RouterLink></li>
                     <li><RouterLink to="/Pedais">Pedais</RouterLink></li>
+
                 </ul>
             </nav>
             <RouterLink to="/">
