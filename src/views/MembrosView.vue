@@ -1,5 +1,4 @@
 <script setup>
-import HeaderComponente from '@/components/HeaderComponente.vue';
 import NavFooter from '@/components/NavFooter.vue';
 
 </script>
@@ -7,8 +6,7 @@ import NavFooter from '@/components/NavFooter.vue';
 <template>
 
     <body>
-        <HeaderComponente/>
-        
+
         <hr class="hr" />
 
 
@@ -18,7 +16,8 @@ import NavFooter from '@/components/NavFooter.vue';
             </div>
             <div class="fundo-topo">
                 <h1>Sobre a <span>BeatHub</span> </h1>
-                <h6>Descubra como a Beathub foi criada e como nossos colaboradores nos ajudam a cada dia desenvolvermos melhorias para nossos clientes.</h6>
+                <h6>Descubra como a Beathub foi criada e como nossos colaboradores nos ajudam a cada dia desenvolvermos
+                    melhorias para nossos clientes.</h6>
                 <button><a href="#quem-somos">Quem Somos?</a></button>
             </div>
 
@@ -43,87 +42,88 @@ import NavFooter from '@/components/NavFooter.vue';
             </div>
 
             <h1 class="conheca"> Conheça nossos colaboradores</h1>
+            <div class="pessoas-total">
+                <div class="pessoas-cima">
+                    <div class="card-pessoa">
+                        <div class="img-pessoa">
 
-            <div class="pessoas-cima">
-                <div class="card-pessoa">
-                    <div class="img-pessoa">
-
+                        </div>
+                        <div class="nome_e_funcao-pessoa">
+                            <h2><strong>Emili Spricigo</strong></h2>
+                            <h6>Script e Componentes</h6>
+                        </div>
                     </div>
-                    <div class="nome_e_funcao-pessoa">
-                        <h2><strong>Emili Spricigo</strong></h2>
-                        <h6>Script e Componentes</h6>
+
+                    <div class="card-pessoa">
+                        <div class="img-pessoa">
+                            <img src="@/assets/vargas.jpeg" alt="">
+                        </div>
+                        <div class="nome_e_funcao-pessoa">
+                            <h2><strong>Francisco Vargas</strong></h2>
+                            <h6>Script e Componentes</h6>
+                        </div>
+                    </div>
+
+                    <div class="card-pessoa">
+                        <div class="img-pessoa">
+                            <img src="@/assets/helo.jpeg" alt="">
+                        </div>
+                        <div class="nome_e_funcao-pessoa">
+                            <h2><strong>Heloísa Milena</strong></h2>
+                            <h6>Banco de Dados</h6>
+                        </div>
+                    </div>
+
+                    <div class="card-pessoa">
+                        <div class="img-pessoa">
+
+                        </div>
+                        <div class="nome_e_funcao-pessoa">
+                            <h2><strong>Luiz Eduardo</strong></h2>
+                            <h6>Telas no Vue</h6>
+                        </div>
                     </div>
                 </div>
 
-                <div class="card-pessoa">
-                    <div class="img-pessoa">
-                        <img src="@/assets/vargas.jpeg" alt="">
+                <div class="pessoas-baixo">
+                    <div class="card-pessoa">
+                        <div class="img-pessoa">
+                            <img src="@/assets/luna.jpeg" alt="">
+                        </div>
+                        <div class="nome_e_funcao-pessoa">
+                            <h2><strong>Luna Bolsoni</strong></h2>
+                            <h6>Telas no Figma</h6>
+                        </div>
                     </div>
-                   <div class="nome_e_funcao-pessoa">
-                        <h2><strong>Francisco Vargas</strong></h2>
-                        <h6>Script e Componentes</h6>
-                   </div>
-                </div>
+                    <div class="card-pessoa">
+                        <div class="img-pessoa">
 
-                <div class="card-pessoa">
-                    <div class="img-pessoa">
-                        <img src="@/assets/helo.jpeg" alt="">
+                        </div>
+                        <div class="nome_e_funcao-pessoa">
+                            <h2><strong>Sara Kozoski</strong></h2>
+                            <h6>Requisitos</h6>
+                        </div>
                     </div>
-                   <div class="nome_e_funcao-pessoa">
-                        <h2><strong>Heloísa Milena</strong></h2>
-                        <h6>Banco de Dados</h6>
-                   </div>
-                </div>
-                
-                <div class="card-pessoa">
-                    <div class="img-pessoa">
 
-                    </div>
-                   <div class="nome_e_funcao-pessoa">
-                        <h2><strong>Luiz Eduardo</strong></h2>
-                        <h6>Telas no Vue</h6>
-                   </div>
                 </div>
-            </div>
-
-            <div class="pessoas-baixo">
-                <div class="card-pessoa">
-                    <div class="img-pessoa">
-                        <img src="@/assets/luna.jpeg" alt="">
-                    </div>
-                   <div class="nome_e_funcao-pessoa">
-                        <h2><strong>Luna Bolsoni</strong></h2>
-                        <h6>Telas no Figma</h6>
-                   </div>
-                </div>
-                <div class="card-pessoa">
-                    <div class="img-pessoa">
-
-                    </div>
-                   <div class="nome_e_funcao-pessoa">
-                        <h2><strong>Sara Kozoski</strong></h2>
-                        <h6>Requisitos</h6>
-                   </div>
-                </div>
-
             </div>
         </main>
 
 
 
-        
-<NavFooter/>
+
+        <NavFooter />
     </body>
 </template>
 
 <style scoped>
-
-
-.fundo-topo{
+.fundo-topo {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza horizontalmente */
-    justify-content: center; /* Centraliza verticalmente */
+    align-items: center;
+    /* Centraliza horizontalmente */
+    justify-content: center;
+    /* Centraliza verticalmente */
     width: 30vw;
     color: black;
     text-align: center;
@@ -131,13 +131,15 @@ import NavFooter from '@/components/NavFooter.vue';
     bottom: 45vh;
     z-index: 1;
 }
-.fundo-topo h1{
+
+.fundo-topo h1 {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 800;
     font-size: 3.5vw;
     margin-bottom: 4vh;
 }
-.fundo-topo h6{
+
+.fundo-topo h6 {
     color: #292929;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1.5;
@@ -160,12 +162,12 @@ button {
     align-items: center;
 }
 
-span{
+span {
     color: #f48200;
 }
 
 
-button a{
+button a {
     color: #f48200;
 }
 
@@ -504,5 +506,70 @@ body {
     top: 0;
     width: 100vw;
     height: 120vh;
+}
+
+@media(max-width:320px) {
+    .fundo-topo {
+        width: 80vw;
+    }
+
+    .fundo-topo h1 {
+        font-size: 2.3rem;
+    }
+
+    .fundo-topo h6 {
+        font-size: 1.5rem;
+    }
+
+    .fundo-topo button {
+        width: 50vw;
+        height: 7vh;
+        font-size: 1.2rem;
+    }
+
+    .quem-somos {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+    }
+
+    .texto-grupo {
+        height: auto;
+        width: 100vw;
+        padding: 1rem;
+    }
+
+    .texto-grupo .descricao-grupo {
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    .quem-somos .img-grupo {
+        width: auto;
+    }
+    .pessoas-total {
+        width: 100vw;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .pessoas-total .pessoas-cima .pessoas-baixo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card-pessoa{
+        width: 90vw;
+    }
+    .img-pessoa{
+        width: 60vw;
+    }
+    .nome_e_funcao-pessoa{
+        
+    }
 }
 </style>

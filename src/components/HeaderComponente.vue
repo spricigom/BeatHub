@@ -117,4 +117,10 @@ a {
 
 .compra-e-coracao .icones {
     margin-right: 1.5vw;
-}</style>
+}
+
+@media (max-width:320px){
+
+    
+}
+</style>
