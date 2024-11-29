@@ -30,8 +30,9 @@ import NavFooter from '@/components/NavFooter.vue';
                     </form>
                 </div>
                 <div class="pergunta">
-                    <p>Não é nosso cliente ainda? <br>Faça seu cadastro!</p>
-                    <p><a href="#">Cliente</a> - <a href="#">Funcionário</a></p>
+                    <p>Não é nosso cliente ainda? <br>Faça seu <RouterLink to="/Cadastro">cadastro! </RouterLink></p>
+                    
+                   
                 </div>
                 <button>Entrar</button>
 
