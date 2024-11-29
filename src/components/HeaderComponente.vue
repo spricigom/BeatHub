@@ -8,11 +8,10 @@
                 <ul class="navegacao">
                     <li><RouterLink to="/Guitarras">Guitarras </RouterLink></li>
                     <li><RouterLink to="/Caixas" id="amarelo">Baixos </RouterLink></li>
-                    <li><RouterLink to="/Dj">Amplificadores</RouterLink></li>
+                    <li><RouterLink to="/Pedais">Pedais</RouterLink></li>
                     <li><RouterLink to="/Efeitos" id="amarelo">Teclado </RouterLink></li>
                     <li><RouterLink to="/Microfone">Violões </RouterLink></li>
                     <li><RouterLink to="/Teclados" id="amarelo">Baterias</RouterLink></li>
-                    <li><RouterLink to="/Pedais">Pedais</RouterLink></li>
 
                 </ul>
             </nav>
@@ -21,7 +20,7 @@
             </RouterLink>
 
             <p class="regiao"><img src="@/assets/lugar-colocar.png" alt="" class="icones"
-                    style="opacity: .7; position: relative; bottom: .2vh;" />Selecione sua regiao</p>
+                    style="opacity: .7; position: relative; bottom: .2vh;"/>Selecione sua regiao</p>
 
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="O que você precisa?..." aria-label="Search"
