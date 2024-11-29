@@ -4,7 +4,7 @@ import { onMounted } from "vue";
 import { useProdutoStore } from '@/stores/produto';
 import NavFooter from '@/components/NavFooter.vue';
 
-import ListProduct from '@/components/ListProduct.vue';
+import ListHome from '@/components/ListHome.vue';
 import HeaderComponente from '@/components/HeaderComponente.vue';
 
 const produtoStore = useProdutoStore()
@@ -185,7 +185,7 @@ onMounted(() => {
 
 
             <div class="container text-center">
-                <ListProduct :produtos="produtoStore.produtos" tipo="home"/>  
+                <ListHome :produtos="produtoStore.produtos" tipo="home"/>  
             </div>
         </main>
 

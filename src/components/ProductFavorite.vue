@@ -20,9 +20,8 @@ const props = defineProps([
             </div>
         </div>
         <div class="compra-e-coracao_produto">
-            <img src="@/assets/carrinho-de-compra-laranja.png" alt="" class="icones" @click="$emit('carrinho', props.produto.id)"
-                v-if="props.produto?.favoritado" />
-            <img src="@/assets/carrinho-de-compra.png" alt="" class="icones" @click="$emit('caririnho', props.produto.id)" v-else>
+            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" @click="$emit('carrinho', props.produto.id)" v-if="props.produto?.favoritado" />
+            <img src="@/assets/carrinho-de-compra-laranja.png" alt="" class="icones" @click="$emit('carrinho', props.produto.id)" v-else>
         </div>
     </div>
 </template>
