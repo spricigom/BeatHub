@@ -20,7 +20,7 @@
             </RouterLink>
 
             <p class="regiao"><img src="@/assets/lugar-colocar.png" alt="" class="icones"
-                    style="opacity: .7; position: relative; bottom: .2vh;" />Selecione sua regiao</p>
+                    style="opacity: .7; position: relative; bottom: .2vh;"/>Selecione sua regiao</p>
 
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="O que você precisa?..." aria-label="Search"
