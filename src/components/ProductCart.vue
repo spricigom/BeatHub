@@ -9,6 +9,7 @@ const props = defineProps([
 </script>
 
 <template>
+    
     <div class="produto">
         <div class="img-produtos"> <img :src="getImage(index)" alt=""></div>
         <div class="nomePreco">
