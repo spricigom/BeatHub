@@ -6,13 +6,13 @@
     <header>
             <nav>
                 <ul class="navegacao">
-                    <li><RouterLink to="/Guitarras">Guitarras </RouterLink></li>
-                    <li><RouterLink to="/Caixas" id="amarelo">Baixos </RouterLink></li>
-                    <li><RouterLink to="/Pedais">Pedais</RouterLink></li>
-                    <li><RouterLink to="/Efeitos" id="amarelo">Teclado </RouterLink></li>
-                    <li><RouterLink to="/Microfone">Violões </RouterLink></li>
-                    <li><RouterLink to="/Teclados" id="amarelo">Baterias</RouterLink></li>
-
+                    <li><RouterLink to="/Guitarra">Guitarra </RouterLink></li>
+                    <li><RouterLink to="/Baixo" id="amarelo">Baixo </RouterLink></li>
+                  <li><RouterLink to="/Amplificador">Amplificador</RouterLink></li>
+                    <li><RouterLink to="/Teclado" id="amarelo">Teclado </RouterLink></li>
+                    <li><RouterLink to="/Violão">Violão </RouterLink></li>
+                    <li><RouterLink to="/Bateria" id="amarelo">Bateria</RouterLink></li>
+                   
                 </ul>
             </nav>
             <RouterLink to="/">
@@ -30,8 +30,9 @@
                 style="width: 1vw; display: flex; position: relative; left: 4vw; bottom: 1vh;">
 
             <div class="compra-e-coracao">
-                <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                <img src="@/assets/coracao.png" alt="" class="icones" />
+                 <RouterLink to="/Carrinho"><img src="@/assets/carrinho-de-compras.png" alt="" class="icones"   /></RouterLink>
+                 <RouterLink to="/Favorito"><img src="@/assets/coracao.png" alt="" class="icones" /> </RouterLink>
+                
             </div>
         </header>
 </template>

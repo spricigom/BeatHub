@@ -1,41 +1,50 @@
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+import { supabase } from "../lib/supabaseClient";
+//------------------------criação variaveis reativas------------------------//
+const cpf = ref([]);
+const name = ref([]);
+const gender = ref([]);
+const email = ref([]);
+const datebirth = ref('');
+const phonenumber = ref('');
+const password = ref([]);
+const passwordconfirmation = ref([]);
+const message = ref('');
+
+const insertData = async () => {
+    if (!name.value || !cpf.value || !gender.value || !email.value ||
+        !datebirth.value || !phonenumber.value || !password.value || !passwordconfirmation.value) {
+        message.value = "Por favor, preencha todos os campos."
+        return;
+    }
+
+    const { error: clientError } = await supabase
+        .from('cadastro_cliente')
+        .insert([{
+            cpf: cpf.value,
+            name: name.value,
+            gender: gender.value,
+            email: email.value,
+            datebirth: datebirth.value,
+            password: password.value,
+            passwordconfirmation: passwordconfirmation.value,
+            phonenumber: phonenumber.value
+        }])
+    if (clientError) {
+        console.error('Erro ao cadastrar cliente:', clientError.message)
+        message.value = `Erro ao cadastrar cliente: ${clientError.message}`
+        return
+    }
+}
+
+
+</script>
 
 <template>
 
-    <body>
-        <header>
-            <nav>
-                <ul class="navegacao">
-                    <li><a href="#">Cordas</a></li>
-                    <li><a href="#" id="amarelo">Caixas</a></li>
-                    <li><a href="#">DJ</a></li>
-                    <li><a href="#" id="amarelo">Efeitos</a></li>
-                    <li><a href="#">Microfone</a></li>
-                    <li><a href="#" id="amarelo">Teclados</a></li>
-                    <li><a href="#">Pedais</a></li>
-                </ul>
-            </nav>
-            <RouterLink to="/">
-                <img class="logo" src="@/assets/certa.png" alt="" />
-            </RouterLink>
+<HeaderComponente/>
 
-            <p class="regiao"><img src="@/assets/lugar-colocar.png" alt="" class="icones"
-                    style="opacity: .7; position: relative; bottom: .2vh;" />Selecione sua regiao</p>
-
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="O que você precisa?..." aria-label="Search"
-                    style=" background-color: #efefef; border: 1px solid #f48200; width: 17vw; border-radius: 300px;" />
-            </form>
-            <img src="@/assets/lupa.png" alt=""
-                style="width: 1vw; display: flex; position: relative; left: 4vw; bottom: 1vh;">
-
-            <div class="compra-e-coracao">
-                <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                <img src="@/assets/coracao.png" alt="" class="icones" />
-            </div>
-        </header>
-        <hr class="hr" />
-    </body>
     <main>
         <div class="esquerda">
             <div class="titulo">
@@ -48,92 +57,75 @@
             <div class="Hub">
                 <h1>HUB</h1>
             </div>
-            
         </div>
-
-
         <div class="direita">
-            <form class="cadastro">
+            <form @submit.prevent="insertData" class="cadastro">
                 <div class="campo_cadastro nome">
                     <p class="titulo_cadastro" id="cabecalho">Nome completo</p>
-                    <input class="input" type="text" placeholder="insira seu nome">
+                    <input class="input" type="text" v-model="name" placeholder="insira seu nome">
                 </div>
 
                 <div class="campo_cadastro data">
                     <p class="titulo_cadastro">Data de nascimento</p>
-                    <input class="input" type="date">
+                    <input class="input" type="date" v-model="datebirth">
                 </div>
 
-                        <p>Genero</p>
+                <p>Genero</p>
 
                 <div class="genero">
 
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <input class="form-check-input" type="radio" v-model="gender" name="flexRadioDefault"
+                            id="flexRadioDefault1" value="Masculino">
                         <label class="form-check-label" for="flexRadioDefault1">
                             Masculino
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <input class="form-check-input" type="radio" v-model="gender" name="flexRadioDefault"
+                            id="flexRadioDefault2" value="Feminino">
                         <label class="form-check-label" for="flexRadioDefault2">
                             Feminino
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
-                            checked>
+                        <input class="form-check-input" type="radio" v-model="gender" name="flexRadioDefault"
+                            id="flexRadioDefault2" checked value="Prefiro nao informar">
                         <label class="form-check-label" for="flexRadioDefault2">
                             Prefiro não informar
                         </label>
                     </div>
-
-
-
-
                 </div>
-
-
 
                 <div class="campo_cadastro">
                     <p class="titulo_cadastro">CPF</p>
-                    <input class="input" type="number" placeholder="___.___.___-__">
+                    <input class="input" type="cpf" v-model="cpf" placeholder="___.___.___-__">
                 </div>
                 <div class="campo_cadastro">
                     <p class="titulo_cadastro">Telefone</p>
-                    <input class="input" type="number" placeholder="(__) _____-____">
+                    <input class="input" type="phonenumber" v-model="phonenumber" placeholder="(__) _____-____">
                 </div>
                 <div class="campo_cadastro">
                     <p class="titulo_cadastro">E-mail</p>
-                    <input class="input" type="email" placeholder="Ex: joaozinho@gmail.com">
+                    <input class="input" type="email" v-model="email" placeholder="Ex: joaozinho@gmail.com">
                 </div>
                 <div class="campo_cadastro">
                     <p class="titulo_cadastro">Senha</p>
-                    <input class="input" type="password">
+                    <input class="input" type="password" v-model="password">
                 </div>
                 <div class="campo_cadastro">
                     <p class="titulo_cadastro">Confirmação de Senha</p>
-                    <input class="input" type="password">
+                    <input class="input" type="password" v-model="passwordConfirmation">
                 </div>
 
+                <button type="submit">Criar Conta</button>
 
-
-
-
-
-
-<button>Criar Conta</button>
-
-
-
-
-
-
+                <p>{{ message }}</p>
 
             </form>
         </div>
     </main>
-    
+
 </template>
 
 <style scoped>
@@ -161,6 +153,7 @@ main {
     justify-content: center;
     margin-top: 6vh;
 }
+
 .Beat {
     display: flex;
     justify-content: center;
@@ -168,11 +161,13 @@ main {
     color: black;
     font-family: 'Josefin Sans', sans-serif;
 }
-.Beat h1{
+
+.Beat h1 {
     font-size: 3vw;
     font-weight: 500;
 }
-.Hub{
+
+.Hub {
     display: flex;
     justify-content: center;
     position: relative;
@@ -180,10 +175,12 @@ main {
     color: #f48200;
     font-family: 'Josefin Sans', sans-serif;
 }
-.Hub h1{
+
+.Hub h1 {
     font-size: 3vw;
     font-weight: 500;
 }
+
 .titulo h1 {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 1000;
@@ -261,19 +258,21 @@ main {
     justify-content: space-between;
 }
 
-.genero input{
+.genero input {
     background-color: #D9D9D9;
 }
-.genero :checked{
+
+.genero :checked {
     background-color: #f48200;
     border: #f8bb75;
 }
-label{
-    font-family: 'Josefin Sans',  sans-serif;
+
+label {
+    font-family: 'Josefin Sans', sans-serif;
     font-weight: 700;
 }
 
-button{
+button {
     border: 0;
     background-color: #2C2B2B;
     color: #f48200;
@@ -286,6 +285,7 @@ button{
     margin-left: 5vw;
     margin-bottom: 5vh;
 }
+
 /*estilos da direita */
 
 
