@@ -32,7 +32,7 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                         <div class="img-produtos">
                             <img src="@/assets/baixo1.jpg" alt="" />
                         </div>
-                        <h2 class="texto-produtos">Microfone SoundPro SP</h2>
+                        <h2 class="texto-produtos">Flea Jazz Bass®</h2>
                         <div class="preco-produtos">
                             <h5>R$ 42,00 por mes</h5>
                             <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
@@ -47,7 +47,7 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                         <div class="img-produtos">
                             <img src="@/assets/baixo2.jpg" alt="" />
                         </div>
-                        <h2 class="texto-produtos">Pedal Guitarra OverTone</h2>
+                        <h2 class="texto-produtos">American Ultra II Meteora® Bass</h2>
                         <div class="preco-produtos">
                             <h5>R$ 17,00 por mes</h5>
                             <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
@@ -62,7 +62,7 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                         <div class="img-produtos">
                             <img src="@/assets/baixo3.jpg" alt="" />
                         </div>
-                        <h2 class="texto-produtos">Cubo Amplificador</h2>
+                        <h2 class="texto-produtos">Duff McKagan Deluxe Precision Bass®</h2>
                         <div class="preco-produtos">
                             <h5>R$ 32,00 por mes</h5>
                             <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
@@ -77,7 +77,7 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                         <div class="img-produtos">
                             <img src="@/assets/baixo4.jpg" alt="" />
                         </div>
-                        <h2 class="texto-produtos">Ukulele</h2>
+                        <h2 class="texto-produtos">Player II Mustang® Bass PJ</h2>
                         <div class="preco-produtos">
                             <h5>R$ 24,00 por mes</h5>
                             <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
@@ -92,7 +92,7 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                         <div class="img-produtos">
                             <img src="@/assets/baixo5.jpg" alt="" width="100%" />
                         </div>
-                        <h2 class="texto-produtos">Pandeiro 12 Knight</h2>
+                        <h2 class="texto-produtos">Player Plus Active Jazz Bass®</h2>
                         <div class="preco-produtos">
                             <h5>R$ 32,00 por mes</h5>
                             <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
@@ -109,7 +109,7 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                         <div class="img-produtos">
                             <img src="@/assets/baixo6.jpg" alt="" />
                         </div>
-                        <h2 class="texto-produtos">Teclado musical 61 teclas</h2>
+                        <h2 class="texto-produtos">Vintera® II '50s Precision Bass®</h2>
                         <div class="preco-produtos">
                             <h5>R$ 35,00 por mes</h5>
                             <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
@@ -124,7 +124,7 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                         <div class="img-produtos">
                             <img src="@/assets/baixo7.jpg" alt="" />
                         </div>
-                        <h2 class="texto-produtos">Trompete Werill Master</h2>
+                        <h2 class="texto-produtos">Troy Sanders Precision Bass®</h2>
                         <div class="preco-produtos">
                             <h5>R$ 69,00 por mes</h5>
                             <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
@@ -139,7 +139,7 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                         <div class="img-produtos">
                             <img src="@/assets/baixo8.jpg" alt="" />
                         </div>
-                        <h2 class="texto-produtos">Bateria Acústica</h2>
+                        <h2 class="texto-produtos">American Performer Mustang® Bass</h2>
                         <div class="preco-produtos">
                             <h5>R$ 287,00 por mes</h5>
                             <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
@@ -154,7 +154,7 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                         <div class="img-produtos">
                             <img src="@/assets/baixo9.jpg" alt="" />
                         </div>
-                        <h2 class="texto-produtos">Prato Hi Hat</h2>
+                        <h2 class="texto-produtos">Classic Vibe '70s Jazz Bass® V</h2>
                         <div class="preco-produtos">
                             <h5>R$ 42,00 por mes</h5>
                             <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
@@ -169,7 +169,7 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                         <div class="img-produtos">
                             <img src="@/assets/baixo10.jpg" alt="" />
                         </div>
-                        <h2 class="texto-produtos">Gaita de boca harmônica</h2>
+                        <h2 class="texto-produtos">Tony Franklin Fretless Precision Bass®</h2>
                         <div class="preco-produtos">
                             <h5>R$ 17,00 por mes</h5>
                             <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
@@ -505,7 +505,7 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
 
 .produtos {
     background-color: white;
-    height: 45vh;
+    height: 47vh;
     width: 15vw;
     margin-left: 12px;
     margin-right: 12px;

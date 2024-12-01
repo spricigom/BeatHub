@@ -68,9 +68,9 @@ const router = createRouter({
       component: () => import('../views/LoginView.vue')
     },
     {
-      path: '/Amplificador',
-      name: 'Amplificador',
-      component: () => import('../views/AmplificadoresView.vue')
+      path: '/Pedais',
+      name: 'Pedais',
+      component: () => import('../views/PedaisView.vue')
     },
     {
       path: '/FormaPagamento',
