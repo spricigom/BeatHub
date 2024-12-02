@@ -1,30 +1,47 @@
 <script setup>
-import HeaderComponente from '@/components/HeaderComponente.vue';
-import { ref } from "vue";
-import { supabase } from "../lib/supabaseClient";
+import HeaderComponente from '@/components/HeaderComponente.vue'
+import { ref } from 'vue'
+import { supabase } from '../lib/supabaseClient'
 
 //------------------------criação variaveis reativas------------------------//
-const cpf = ref([]);
-const name = ref([]);
-const gender = ref([]);
-const email = ref([]);
-const datebirth = ref('');
-const phonenumber = ref('');
-const password = ref([]);
-const passwordconfirmation = ref([]);
-const message = ref('');
+const cpf = ref([])
+const name = ref([])
+const gender = ref([])
+const email = ref([])
+const datebirth = ref('')
+const phonenumber = ref('')
+const password = ref([])
+const passwordconfirmation = ref([])
+const message = ref('')
+
+const id = ref([])
+const ddi = ref('')
+const ddd = ref('')
+const telefone = ref('')
+
+const CEP = ref('')
+const rua = ref([])
+const num = ref('')
+const bairro = ref([])
+const cidade = ref([])
 
 const insertData = async () => {
-    if (!name.value || !cpf.value || !gender.value || !email.value ||
-        !datebirth.value || !phonenumber.value || !password.value || !passwordconfirmation.value) {
-        message.value = "Por favor, preencha todos os campos."
-        return;
+    if (
+        !name.value ||
+        !cpf.value ||
+        !gender.value ||
+        !email.value ||
+        !datebirth.value ||
+        !phonenumber.value ||
+        !password.value ||
+        !passwordconfirmation.value
+    ) {
+        message.value = 'Por favor, preencha todos os campos.'
+        return
     }
 
-    const { error: clientError } = await supabase
-        //alteração no nome    
-        .from('cliente')
-        .insert([{
+    const { error: clientError } = await supabase.from('cliente').insert([
+        {
             cpf: cpf.value,
             name: name.value,
             gender: gender.value,
@@ -33,79 +50,63 @@ const insertData = async () => {
             password: password.value,
             passwordconfirmation: passwordconfirmation.value,
             phonenumber: phonenumber.value
-        }])
-        if (clientError) {
+        }
+    ])
+    if (clientError) {
         console.error('Erro ao cadastrar cliente:', clientError.message)
         message.value = `Erro ao cadastrar cliente: ${clientError.message}`
         return
     }
 
-    const { error: telefoneError } = await supabase
-        .from(telefone)
-        .insert([{
+    const { error: telefoneError } = await supabase.from(telefone).insert([
+        {
             id: id.value,
             ddi: ddi.value,
             ddd: ddd.value,
-            telefone: telefone.value,
-        }]
-    
-    )
+            telefone: telefone.value
+        }
+    ])
 
-    const id = ref([]);
-    const ddi = ref('');
-    const ddd = ref('');
-    const telefone = ref('');
-
-      if (telefoneError) {
+    if (telefoneError) {
         console.error('Erro ao cadastrar telefone:', telefoneError.message)
         message.value = `Erro ao cadastrar telefone: ${telefoneError.message}`
         return
     }
-    
+
     if (!id.value || !ddi.value || !ddd.value || !telefone.value) {
-        message.value = "Por favor, preencha todos os campos."
+        message.value = 'Por favor, preencha todos os campos.'
         return
     }
 
-
-
     if (!CEP.value || !rua.value || !num.value || !bairro.value || !cidade.value) {
-        message.value = "Por favor, preencha todos os campos."
-        return;
+        message.value = 'Por favor, preencha todos os campos.'
+        return
     }
 
-    const { error: enderecoError } = await supabase
-        .from(endereco)
-        .insert([{
+    const { error: enderecoError } = await supabase.from('endereco').insert([
+        {
             CEP: CEP.value,
             rua: rua.value,
             num: num.value,
             bairro: bairro.value,
-            cidade: cidade.value,
-        }])
-        if (!CEP.value || !rua.value || !num.value || !bairro.value || !cidade.value) {
-        message.value = "Por favor, preencha todos os campos."
-        return;
-    
-        const CEP = ref('');
-        const rua = ref([]);
-        const num = ref('');
-        const bairro = ref([]);
-        const cidade = ref([]);
-        
-
-        if (enderecoError) {
-            console.error('Erro ao cadastrar endereço:', enderecoError.message)
-            message.value = `Erro ao cadastrar endereço: ${enderecoError.message}`
-            return
+            cidade: cidade.value
         }
+    ])
+
+    if (!CEP.value || !rua.value || !num.value || !bairro.value || !cidade.value) {
+        message.value = 'Por favor, preencha todos os campos.'
+        return
+    }
+
+    if (enderecoError) {
+        console.error('Erro ao cadastrar endereço:', enderecoError.message)
+        message.value = `Erro ao cadastrar endereço: ${enderecoError.message}`
+        return
     }
 }
-
 </script>
 
 <template>
-
     <HeaderComponente />
 
     <main>
@@ -113,103 +114,118 @@ const insertData = async () => {
             <div class="titulo">
                 <h1>FAÇA O SEU CADASTRO!</h1>
             </div>
-            <img src="@/assets/banda.png" alt="" id="banda">
+            <img src="@/assets/banda.png" alt="" id="banda" />
             <div class="Beat">
                 <h1>BEAT</h1>
             </div>
             <div class="Hub">
                 <h1>HUB</h1>
             </div>
-
         </div>
-
 
         <div class="direita">
             <form class="cadastro" @submit="insertData">
-
                 <div class="campo_cadastro nome">
                     <p class="titulo_cadastro" id="cabecalho">Nome completo</p>
-                    <input class="input" type="text" v-model="name" placeholder="insira seu nome">
+                    <input class="input" type="text" v-model="name" placeholder="insira seu nome" />
                 </div>
 
                 <div class="campo_cadastro data">
                     <p class="titulo_cadastro">Data de nascimento</p>
-                    <input class="input" type="date" v-model="datebirth" placeholder="insira sua data de nascimento">
+                    <input class="input" type="date" v-model="datebirth" placeholder="insira sua data de nascimento" />
                 </div>
 
                 <p>Genero</p>
 
-                <div class="genero" >
-
+                <div class="genero">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" v-model="gender" name="flexRadioDefault" id="flexRadioDefault1">
+                        <input class="form-check-input" type="radio" v-model="gender" name="flexRadioDefault"
+                            id="flexRadioDefault1" />
                         <label class="form-check-label" value="masculino" for="flexRadioDefault1">
                             Masculino
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" v-model="gender" name="flexRadioDefault" id="flexRadioDefault2">
+                        <input class="form-check-input" type="radio" v-model="gender" name="flexRadioDefault"
+                            id="flexRadioDefault2" />
                         <label class="form-check-label" value="feminino" for="flexRadioDefault2">
                             Feminino
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" v-model="gender"name="flexRadioDefault" id="flexRadioDefault2"
-                            checked>
+                        <input class="form-check-input" type="radio" v-model="gender" name="flexRadioDefault"
+                            id="flexRadioDefault2" checked />
                         <label class="form-check-label" value="prefiro não informar" for="flexRadioDefault2">
                             Prefiro não informar
                         </label>
-                        
                     </div>
-
-
-
-
                 </div>
-
-
 
                 <div class="campo_cadastro">
                     <p class="titulo_cadastro">CPF</p>
-                    <input class="input" type="number" v-model="cpf" placeholder="___.___.___-__">
+                    <input class="input" type="number" v-model="cpf" placeholder="___.___.___-__" />
                 </div>
                 <div class="campo_cadastro">
                     <p class="titulo_cadastro">Telefone</p>
-                    <input class="input" type="number" v-model="phonenunber" placeholder="(__) _____-____">
+                    <input class="input" type="number" v-model="phonenunber" placeholder="(__) _____-____" />
                 </div>
                 <div class="campo_cadastro">
                     <p class="titulo_cadastro">E-mail</p>
-                    <input class="input" type="email" v-model="email" placeholder="Ex: joaozinho@gmail.com">
+                    <input class="input" type="email" v-model="email" placeholder="Ex: joaozinho@gmail.com" />
                 </div>
                 <div class="campo_cadastro">
                     <p class="titulo_cadastro">Senha</p>
-                    <input class="input" type="password" v-model="password">
+                    <input class="input" type="password" v-model="password" />
                 </div>
                 <div class="campo_cadastro">
                     <p class="titulo_cadastro">Confirmação de Senha</p>
-                    <input class="input" type="password" v-model="passwordconfirmation">
+                    <input class="input" type="password" v-model="passwordconfirmation" />
                 </div>
 
+                <div class="campo_cadastro nome">
+                    <p class="titulo_cadastro">ddd</p>
+                    <input class="input" type="number" v-model="ddd" placeholder="informe seu DDD" />
+                </div>
 
+                <div class="campo_cadastro nome">
+                    <p class="titulo_cadastro">ddi</p>
+                    <input class="input" type="number" v-model="ddd" placeholder="informe seu DDI" />
+                </div>
 
+                <div class="campo_cadastro nome">
+                    <p class="titulo_cadastro">Telefone</p>
+                    <input class="input" type="number" v-model="telefone" placeholder="informe seu telefone" />
+                </div>
 
+                <div class="campo_cadastro nome">
+                    <p class="titulo_cadastro">CEP</p>
+                    <input class="input" type="number" v-model="CEP" placeholder="informe seu CEP" />
+                </div>
 
+                <div class="campo_cadastro nome">
+                    <p class="titulo_cadastro">Rua</p>
+                    <input class="input" type="text" v-model="rua" placeholder="informe sua rua" />
+                </div>
 
+                <div class="campo_cadastro nome">
+                    <p class="titulo_cadastro">Número</p>
+                    <input class="input" type="number" v-model="num" placeholder="informe seu número" />
+                </div>
 
+                <div class="campo_cadastro nome">
+                    <p class="titulo_cadastro">Bairro</p>
+                    <input class="input" type="text" v-model="bairro" placeholder="informe seu bairro" />
+                </div>
 
+                <div class="campo_cadastro nome">
+                    <p class="titulo_cadastro">Cidade</p>
+                    <input class="input" type="text" v-model="cidade" placeholder="informe seu município" />
+                </div>
 
                 <button type="submit">Criar Conta</button>
-
-
-
-
-
-
-
             </form>
         </div>
     </main>
-
 </template>
 
 <style scoped>
@@ -221,7 +237,6 @@ main {
     margin-top: -4vh;
     display: flex;
     background: #efefef;
-
 }
 
 /*estilos da esquerda */
@@ -280,8 +295,6 @@ main {
 
 /*estilos da esquerda */
 
-
-
 /*estilos da direita */
 .direita {
     background: #f8bb75;
@@ -300,7 +313,7 @@ main {
     border: none;
     height: 8vh;
     width: 15vw;
-    border-radius: .7vw;
+    border-radius: 0.7vw;
 }
 
 .direita ::placeholder {
@@ -313,7 +326,7 @@ main {
 .direita p {
     font-family: 'Josefin Sans', sans-serif;
     color: black;
-    margin-bottom: -.1vh;
+    margin-bottom: -0.1vh;
     font-weight: 650;
     font-size: 1.2vw;
 }
@@ -343,7 +356,7 @@ main {
 }
 
 .genero input {
-    background-color: #D9D9D9;
+    background-color: #d9d9d9;
 }
 
 .genero :checked {
@@ -358,7 +371,7 @@ label {
 
 button {
     border: 0;
-    background-color: #2C2B2B;
+    background-color: #2c2b2b;
     color: #f48200;
     width: 20vw;
     height: 6vh;
@@ -372,24 +385,19 @@ button {
 
 /*estilos da direita */
 
-
-
-
 /*estilos do header */
 .logo {
     width: 8vw;
     cursor: pointer;
     position: relative;
-    bottom: 15px
+    bottom: 15px;
 }
 
 header input {
-
     display: flex;
     position: relative;
     left: 7vw;
     bottom: 1.1vh;
-
 }
 
 .regiao {
