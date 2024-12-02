@@ -29,7 +29,7 @@ function showMsg(msg) {
     isVisible.value = true;
     setTimeout(() => {
         isVisible.value = false;
-    }, 3000);
+    }, 5000);
 }
 </script>
 
@@ -49,15 +49,17 @@ function showMsg(msg) {
 .modal {
     display: none;
     position: fixed;
-    top: 85%;
+    top: 3%;
     left: 50%;
     transform: translate(-50%, 0%);
     z-index: 3;
-    padding: 0 10px;
+    width: 16vw;
+    height: 8vh;
+    padding-top: 2.5vh;
+    padding-left: 1ex;
     border-radius: 10px;
-    background-color: black;
+    background-color: rgb(255, 42, 42);
     color: white;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     animation: fadeIn 1s;
 }
 .modal.show {
@@ -65,11 +67,11 @@ function showMsg(msg) {
 }
 @keyframes fadeIn {
     from {
-        top: 100%;
+        top: 0%;
         opacity: 0;
     }
     to {
-        top: 85%;
+        top: 3%;
         opacity: 1;
     }
 }
