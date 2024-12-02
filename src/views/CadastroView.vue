@@ -2,6 +2,7 @@
 import HeaderComponente from '@/components/HeaderComponente.vue';
 import { ref } from "vue";
 import { supabase } from "../lib/supabaseClient";
+
 //------------------------criação variaveis reativas------------------------//
 const cpf = ref([]);
 const name = ref([]);
@@ -33,27 +34,38 @@ const insertData = async () => {
             passwordconfirmation: passwordconfirmation.value,
             phonenumber: phonenumber.value
         }])
-
-
-    if (!id.value || !ddi.value || !ddd.value || !telefone.value) {
-        message.value = "Por favor, preencha todos os campos."
-        return;
+        if (clientError) {
+        console.error('Erro ao cadastrar cliente:', clientError.message)
+        message.value = `Erro ao cadastrar cliente: ${clientError.message}`
+        return
     }
 
-
-    const { error: clientError } = await supabase
+    const { error: telefoneError } = await supabase
         .from(telefone)
         .insert([{
             id: id.value,
             ddi: ddi.value,
             ddd: ddd.value,
             telefone: telefone.value,
-        }])
+        }]
+    
+    )
 
     const id = ref([]);
     const ddi = ref('');
     const ddd = ref('');
     const telefone = ref('');
+
+      if (telefoneError) {
+        console.error('Erro ao cadastrar telefone:', telefoneError.message)
+        message.value = `Erro ao cadastrar telefone: ${telefoneError.message}`
+        return
+    }
+    
+    if (!id.value || !ddi.value || !ddd.value || !telefone.value) {
+        message.value = "Por favor, preencha todos os campos."
+        return
+    }
 
 
 
@@ -62,7 +74,7 @@ const insertData = async () => {
         return;
     }
 
-    const { error: clientError } = await supabase
+    const { error: enderecoError } = await supabase
         .from(endereco)
         .insert([{
             CEP: CEP.value,
@@ -71,18 +83,22 @@ const insertData = async () => {
             bairro: bairro.value,
             cidade: cidade.value,
         }])
+        if (!CEP.value || !rua.value || !num.value || !bairro.value || !cidade.value) {
+        message.value = "Por favor, preencha todos os campos."
+        return;
+    
+        const CEP = ref('');
+        const rua = ref([]);
+        const num = ref('');
+        const bairro = ref([]);
+        const cidade = ref([]);
+        
 
-    const CEP = ref('');
-    const rua = ref([]);
-    const num = ref('');
-    const bairro = ref([]);
-    const cidade = ref([]);
-
-
-    if (clientError) {
-        console.error('Erro ao cadastrar cliente:', clientError.message)
-        message.value = `Erro ao cadastrar cliente: ${clientError.message}`
-        return
+        if (enderecoError) {
+            console.error('Erro ao cadastrar endereço:', enderecoError.message)
+            message.value = `Erro ao cadastrar endereço: ${enderecoError.message}`
+            return
+        }
     }
 }
 
@@ -109,7 +125,8 @@ const insertData = async () => {
 
 
         <div class="direita">
-            <form class="cadastro">
+            <form class="cadastro" @submit="insertData">
+
                 <div class="campo_cadastro nome">
                     <p class="titulo_cadastro" id="cabecalho">Nome completo</p>
                     <input class="input" type="text" v-model="name" placeholder="insira seu nome">
@@ -117,31 +134,32 @@ const insertData = async () => {
 
                 <div class="campo_cadastro data">
                     <p class="titulo_cadastro">Data de nascimento</p>
-                    <input class="input" type="date">
+                    <input class="input" type="date" v-model="datebirth" placeholder="insira sua data de nascimento">
                 </div>
 
                 <p>Genero</p>
 
-                <div class="genero">
+                <div class="genero" >
 
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
+                        <input class="form-check-input" type="radio" v-model="gender" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" value="masculino" for="flexRadioDefault1">
                             Masculino
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                        <label class="form-check-label" for="flexRadioDefault2">
+                        <input class="form-check-input" type="radio" v-model="gender" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="form-check-label" value="feminino" for="flexRadioDefault2">
                             Feminino
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                        <input class="form-check-input" type="radio" v-model="gender"name="flexRadioDefault" id="flexRadioDefault2"
                             checked>
-                        <label class="form-check-label" for="flexRadioDefault2">
+                        <label class="form-check-label" value="prefiro não informar" for="flexRadioDefault2">
                             Prefiro não informar
                         </label>
+                        
                     </div>
 
 
@@ -153,23 +171,23 @@ const insertData = async () => {
 
                 <div class="campo_cadastro">
                     <p class="titulo_cadastro">CPF</p>
-                    <input class="input" type="number" placeholder="___.___.___-__">
+                    <input class="input" type="number" v-model="cpf" placeholder="___.___.___-__">
                 </div>
                 <div class="campo_cadastro">
                     <p class="titulo_cadastro">Telefone</p>
-                    <input class="input" type="number" placeholder="(__) _____-____">
+                    <input class="input" type="number" v-model="phonenunber" placeholder="(__) _____-____">
                 </div>
                 <div class="campo_cadastro">
                     <p class="titulo_cadastro">E-mail</p>
-                    <input class="input" type="email" placeholder="Ex: joaozinho@gmail.com">
+                    <input class="input" type="email" v-model="email" placeholder="Ex: joaozinho@gmail.com">
                 </div>
                 <div class="campo_cadastro">
                     <p class="titulo_cadastro">Senha</p>
-                    <input class="input" type="password">
+                    <input class="input" type="password" v-model="password">
                 </div>
                 <div class="campo_cadastro">
                     <p class="titulo_cadastro">Confirmação de Senha</p>
-                    <input class="input" type="password">
+                    <input class="input" type="password" v-model="passwordconfirmation">
                 </div>
 
 
@@ -180,7 +198,7 @@ const insertData = async () => {
 
 
 
-                <button>Criar Conta</button>
+                <button type="submit">Criar Conta</button>
 
 
 
