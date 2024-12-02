@@ -28,14 +28,15 @@ function addCarrinho(productId) {
 <style scoped>
 .produtos {
     background-color: white;
-    min-width: 14.5vw;
-    height: 47vh;
+    height: 45vh;
+    width: 15vw;
     margin-left: 12px;
     margin-right: 12px;
     margin-top: 4vh;
-    box-shadow: -.5px .5px .5px .5px rgb(150, 146, 146);
     margin-bottom: 8vh;
-    border-radius: 2vw;
+    border-radius: 0.44rem;
+    text-align: center;
+    justify-content: center;
 
 }
 </style>

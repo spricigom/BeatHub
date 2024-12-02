@@ -47,7 +47,6 @@ onMounted(() => {
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-
             <div class="container text-center">
                 <div class="row">
 
@@ -56,11 +55,7 @@ onMounted(() => {
                             <h5>Faça seu Login</h5>
                         </div>
                         <RouterLink to="/Login">  <img src="@/assets/user.png" alt="" /></RouterLink>
-
                     </div>
-                    <img src="@/assets/user.png" alt="" />
-                </div>
-
 
                     <div class="col categorias">
                         <div class="texto-categoria">
@@ -68,10 +63,9 @@ onMounted(() => {
                             <a href="#mais-alugados"><img src="@/assets/item.png" alt="" /></a>
                             
                         </div>
-
                     </div>
-                </div>
-        <div class="col categorias">
+
+                    <div class="col categorias">
                         <div class="texto-categoria">
                             <h5>Membros</h5>
                             <RouterLink to="/Membros"><img src="@/assets/membros.png" alt="" /> </RouterLink>
@@ -79,102 +73,120 @@ onMounted(() => {
                             
                         </div>
                     </div>
-                </div>
 
-                <div class=" categorias">
-                    <div class="texto-categoria">
-                        <h5>Categorias</h5>
+                    <div class="col categorias">
+                        <div class="texto-categoria">
+                            <h5>Categorias</h5>
+                        </div>
+                        <img src="@/assets/categoria.png" alt="" />
                     </div>
-                    <img src="@/assets/categoria.png" alt="" />
                 </div>
             </div>
-
 
             <h2 id="amarelo" style="margin-left: 10vw;position: relative;bottom: 1vh;">Os mais alugados</h2>
-            
-            
-            
-            
             <div class="campo">
-               
-               
-                <div class="mais-alugados">
+                <div class="mais-alugados text-center">
                     <div class="compra-e-coracao2">
                         <img src="@/assets/coracao.png" alt="" class="icones" />
                         <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                    </div>                    
-                    <img src="@/assets/ukulele.png" alt="" class="img-maisAlugados" />
-                    <div class="conteudo">                        
-                        <div class="nome-maisAlugados">
-                            <h2>Ukulele Concert Us23 Spring</h2>
+                    </div>
+
+                    <img src="@/assets/ukulele.png" alt="" class="produtos-MaisAlugados" />
+                    <h2>Ukulele Concert Us23 Spring</h2>
+
+                    <div class="conteudo1">
+                        <img src="@/assets/estrelas.png" alt="" class="estrelas" />
+                        <div class="avaliacao">
+                            <h6>130 avaliações</h6>
                         </div>
+                    </div>
+
+                    <div class="conteudo2">
                         <div class="preco">
                             <h5>R$ 17,00 por mês</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe" />
                         </div>
+                        <img src="@/assets/compartilhe.png" alt="" class="compartilhe" />
                     </div>
                 </div>
 
-                <div class="mais-alugados">
+                <div class="mais-alugados text-center">
                     <div class="compra-e-coracao2">
                         <img src="@/assets/coracao.png" alt="" class="icones" />
                         <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                    </div>                    
-                    <img src="@/assets/violao.png" alt="" class="img-maisAlugados" />
-                    <div class="conteudo">                        
-                        <div class="nome-maisAlugados">
-                            <h2>Violão Di Giorgio Master</h2>
+                    </div>
+
+                    <img src="@/assets/violao.png" alt="" class="produtos-MaisAlugados" />
+                    <h2>Violão Di Giorgio Master</h2>
+
+                    <div class="conteudo1">
+                        <img src="@/assets/estrelas.png" alt="" class="estrelas" />
+                        <div class="avaliacao">
+                            <h6>130 avaliações</h6>
                         </div>
+                    </div>
+
+                    <div class="conteudo2">
                         <div class="preco">
                             <h5>R$ 17,00 por mês</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe" />
                         </div>
+                        <img src="@/assets/compartilhe.png" alt="" class="compartilhe" />
                     </div>
                 </div>
 
-                <div class="mais-alugados">
+                <div class="mais-alugados text-center">
                     <div class="compra-e-coracao2">
                         <img src="@/assets/coracao.png" alt="" class="icones" />
                         <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                    </div>                    
-                    <img src="@/assets/guitarra.png" alt="" class="img-maisAlugados" />
-                    <div class="conteudo">                        
-                        <div class="nome-maisAlugados">
-                            <h2>Guitarra elétrica SG</h2>
+                    </div>
+
+                    <img src="@/assets/guitarra.png" alt="" class="produtos-MaisAlugados" />
+                    <h2>Guitarra elétrica SG</h2>
+
+                    <div class="conteudo1">
+                        <img src="@/assets/estrelas.png" alt="" class="estrelas" />
+                        <div class="avaliacao">
+                            <h6>130 avaliações</h6>
                         </div>
+                    </div>
+
+                    <div class="conteudo2">
                         <div class="preco">
                             <h5>R$ 17,00 por mês</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe" />
                         </div>
+                        <img src="@/assets/compartilhe.png" alt="" class="compartilhe" />
                     </div>
                 </div>
 
-                <div class="mais-alugados">
+                <div class="mais-alugados text-center">
                     <div class="compra-e-coracao2">
                         <img src="@/assets/coracao.png" alt="" class="icones" />
                         <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                    </div>                    
-                    <img src="@/assets/baixo.png" alt="" class="img-maisAlugados" />
-                    <div class="conteudo">                        
-                        <div class="nome-maisAlugados">
-                            <h2>Baixo Strinberg JBS50</h2>
-                        </div>
-                        <div class="preco">
-                            <h5>R$ 17,00 por mês</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe" />
+                    </div>
+
+                    <img src="@/assets/baixo.png" alt="" class="produtos-MaisAlugados" />
+                    <h2>Baixo Strinberg JBS50</h2>
+
+                    <div class="conteudo1">
+                        <img src="@/assets/estrelas.png" alt="" class="estrelas" />
+                        <div class="avaliacao">
+                            <h6>130 avaliações</h6>
                         </div>
                     </div>
-                </div>
 
+                    <div class="conteudo2">
+                        <div class="preco">
+                            <h5>R$ 17,00 por mês</h5>
+                        </div>
+                        <img src="@/assets/compartilhe.png" alt="" class="compartilhe" />
+                    </div>
+                </div>
             </div>
-            <h2 class="texto-produtos">Gaita de boca harmônica</h2>
-            <div class="preco-produtos">
-                <h5>R$ 17,00 por mes</h5>
-                <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
+
+
+
+            <div class="container text-center">
+                <ListHome :produtos="produtoStore.produtos" tipo="home"/>  
             </div>
-        </div>
-    </div>
-</div>
         </main>
 
         <NavFooter/>
@@ -184,180 +196,6 @@ onMounted(() => {
 
 
 
-
-
-    </body>
-</template>
-
-<style scoped>
-.nome-maisAlugados h2{
-    font-size: 1.1vw;
-    margin-top: 4vh;
-    font-family: 'Inter',  sans-serif;
-    font-weight: 600;
-}
-.nome-maisAlugados{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-}
-.compartilhe {
-    width: 1.2vw;
-}
-
-.img-maisAlugados {
-   display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    height: 20vh;
-}
-
-.img-maisAlugados{
-    width: 10vw;
-    height: 45vh;
-    object-fit: contain;
-}
-
-.conteudo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.preco {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    font-family: 'Inter', 'sans serif';
-    width: 100%;
-} .preco h5{
-    font-size: 1.1vw;
-    font-weight: 400;
-    margin-top: 1vh;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 1vh
-}
-.mais-alugados {
-    height: 64vh;
-    width: 19vw;
-    background-color: white;
-    border-radius: 0.44rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.compra-e-coracao2 {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 1vw;
-    margin-right: 1vw;
-    width: 80%;
-}
-
-.linha{
-    width: 88vw;
-    display: flex;
-    flex-direction: row;
-    height: 50vh;
-    justify-content: space-around;
-}
-
-.fundo-categorias {
-    position: relative;
-    bottom: 20vh;
-    display: flex;
-    justify-content: center;
-
-}
-
-.fundo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: -10vw;
-    margin-bottom: 20vh;
-}
-
-.Copyright {
-    background-color: rgb(95, 95, 95);
-    color: white;
-    height: 7vh;
-    display: flex;
-    padding-top: 2.3vh;
-    justify-content: center;
-}
-
-.Copyright a {
-    color: white;
-}
-
-.icones-footer {
-    width: 2.5vw;
-    margin-top: 5vh;
-    margin-left: 1vw
-}
-
-.redes-sociais {
-    width: 20vw;
-    height: 10vh;
-}
-
-.colunas-footer {
-    height: 10vh;
-    width: 10vw;
-    display: inline-block;
-    margin-top: 5vh;
-    margin-bottom: 15vh;
-
-}
-
-.colunas-footer ul li {
-    list-style: none;
-    color: white;
-    font-family: 'Inter', 'sans serif';
-    font-size: 1vw;
-    text-align: center;
-    margin-top: 1vh;
-    width: 12vw;
-    position: relative;
-    right: 1vw;
-
-}
-
-.colunas-footer h2 {
-    font-size: 1.2vw;
-    font-family: 'Inter', 'sans serif';
-    color: white;
-    text-align: center
-}
-
-.cima-footer {
-    display: flex;
-    justify-content: space-around;
-    padding-top: 5vh
-}
-
-.logo-footer {
-    width: 8vw;
-}
-
-.baixo-footer {
-    display: flex;
-    justify-content: space-around;
-}
-
-.footer {
-    width: 100%;
-    background-color: #9b9a9a;
-}
-
 </template>
 
 <style scoped>
@@ -366,113 +204,41 @@ onMounted(() => {
     position: relative;
     bottom: 17vh;
 }
-
-
-.esq1 {
-    float: left;
-    position: relative;
-    width: 6.5vw;
-    left: 1vw;
-}
-
-.dir1 {
-    float: right;
-    position: relative;
-    right: 1vw;
-}
-
-.esq2 {
-    float: left;
-    width: 10vw;
-    position: relative;
-    left: 1.3vw;
-}
-
-.esq2 h5 {
-    font-size: 1.1vw;
-}
-
-.dir2 {
-    float: right;
-    position: relative;
-    right: 2.5vw;
-    margin-top: .5vh;
-}
-
-.compartilhe-produtos {
-    width: 1.3vw;
-}
-
-.compra-e-coracao_produto {
-    margin-top: 1vw;
+.compra-e-coracao2 {
     display: flex;
     justify-content: space-between;
-    padding-left: .7vw;
-    padding-right: .7vw;
+    margin-left: 1vw;
+    margin-top: 3vh;
+    margin-right: 1vw;
 }
-
-.compra-e-coracao_produto .icones {
-    margin-right: .3vw;
+.conteudo2 {
+    margin-top: 5vh;
+}.icones {
+    width: 1.5vw;
 }
-
-.texto-produtos {
-    font-size: 1.1vw;
-    margin-top: 4vh;
-    font-family: 'Inter',  sans-serif;
-    font-weight: 600;
-}
-
-.img-produtos {
-    height: 25vh;
-    margin-top: 1vh;
-}
-
-.img-produtos img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-.preco-produtos{
+.compra-e-coracao2 {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    
-}
-.preco-produtos h5{
-    font-size: 1.1vw;
-    font-weight: 400;
-    margin-top: 1vh;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 1vh
-
-   
+    justify-content: space-between;
+    margin-left: 1vw;
+    margin-top: 3vh;
+    margin-right: 1vw;
 }
 
-.produtos {
-    background-color: white;
-    height: 45vh;
-    width: 15vw;
-    margin-left: 12px;
-    margin-right: 12px;
-    margin-top: 4vh;
-    margin-bottom: 8vh;
-    border-radius: 0.44rem;
-    text-align: center;
-    justify-content: center;
+.preco {
+    display: flex;
+    float: left;
+    margin-left: 3vw;
+    font-family: 'Inter', 'sans serif';
 }
 
 
 
-
-
-
-
-
-
-
-
+.compartilhe {
+    display: flex;
+    float: right;
+    margin-right: 3vw;
+    width: 1.2vw;
+}
 
 
 
@@ -492,7 +258,18 @@ onMounted(() => {
 }
 
 
+.produtos-MaisAlugados {
+    width: 130px;
+    height: 321px;
+}
 
+.mais-alugados {
+    height: 64vh;
+    width: 19vw;
+    background-color: white;
+    border-radius: 1vw;
+
+}
 
 .mais-alugados h2 {
     margin-top: 2vh;
@@ -510,13 +287,13 @@ onMounted(() => {
     justify-content: space-between;
     position: relative;
     left: 50%;
+    box-shadow: 1px 1px 5px 5px rgb(150, 146, 146);
     border-radius: 1vw;
 
 }
 
 * {
     padding: 0;
-    margin: 0;
 }
 
 /*estilos do header */
@@ -536,7 +313,7 @@ input {
 
 }
 
-.regiao {
+.regiao{
     position: relative;
     left: 5vw;
     font-family: 'Inter', sans-serif;
@@ -603,16 +380,15 @@ a {
 /*estilos do carrossel */
 body {
     background-color: rgb(240, 240, 240);
-    overflow-x: hidden;
 }
 
 .carousel {
-    margin-top: -3vh;
+    margin-top: -5vh;
 }
 
 #carouselExample .carousel-item::before {
     content: '';
-    background: linear-gradient(0deg, rgb(240, 240, 240) 50%, transparent 73%);
+    background: linear-gradient(0deg, rgb(240, 240, 240) 50%, transparent 69%);
     display: block;
     position: absolute;
     top: 0;
@@ -622,7 +398,7 @@ body {
 
 .categorias {
     height: 35vh;
-    width: 13vw;
+    width: 10vw;
     margin-left: 4vw;
     margin-right: 4vw;
     background-color: white;
@@ -630,12 +406,11 @@ body {
     padding: 1vw;
     cursor: pointer;
     display: flex;
-    flex-direction: column;
+    display: inline-block;
     position: relative;
     bottom: 6.5vh;
     box-shadow: 1px 1px 5px 5px rgb(150, 146, 146);
-    text-align: center;
-    align-items: center;
+    justify-content: center;
 }
 
 .categorias img {
