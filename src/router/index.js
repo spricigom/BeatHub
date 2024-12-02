@@ -8,6 +8,7 @@ const router = createRouter({
       path: '/',
       name: '',
       component: () => import('../views/InicioView.vue')
+
     },
     {
       path: '/produto',
@@ -76,6 +77,7 @@ const router = createRouter({
       path: '/FormaPagamento',
       name: 'FormaPagamento',
       component: () => import('../views/FormaPagamentoView.vue')
+
     }
   ]
 })
