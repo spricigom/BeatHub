@@ -12,7 +12,10 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
+    "@supabase/supabase-js": "^2.45.6",
     "bootstrap": "^5.3.3",
+    "pinia": "^2.2.4",
+    "supabase": "^1.207.9",
     "vue": "^3.4.29",
     "vue-router": "^4.3.3"
   },
@@ -23,6 +26,7 @@
     "eslint": "^8.57.0",
     "eslint-plugin-vue": "^9.23.0",
     "prettier": "^3.2.5",
-    "vite": "^5.3.1"
+    "vite": "^5.3.1",
+    "vite-plugin-vue-devtools": "^7.6.7"
   }
 }

@@ -1,39 +1,27 @@
-<script setup></script>
+
+<script setup>
+import { onMounted } from "vue";
+import { useProdutoStore } from '@/stores/produto';
+import NavFooter from '@/components/NavFooter.vue';
+
+import ListHome from '@/components/ListHome.vue';
+import HeaderComponente from '@/components/HeaderComponente.vue';
+
+const produtoStore = useProdutoStore()
+
+onMounted(() => {
+    produtoStore.buscarTodosOsProdutos();
+});
+
+</script>
 
 <template>
 
     <body>
-        <header>
-            <nav>
-                <ul class="navegacao">
-                    <li><a href="#">Cordas</a></li>
-                    <li><a href="#" id="amarelo">Caixas</a></li>
-                    <li><a href="#">DJ</a></li>
-                    <li><a href="#" id="amarelo">Efeitos</a></li>
-                    <li><a href="#">Microfone</a></li>
-                    <li><a href="#" id="amarelo">Teclados</a></li>
-                    <li><a href="#">Pedais</a></li>
-                </ul>
-            </nav>
-            <RouterLink to="/">
-                <img class="logo" src="@/assets/certa.png" alt="" />
-            </RouterLink>
+    
+    <HeaderComponente/>
 
-            <p class="regiao"><img src="@/assets/lugar-colocar.png" alt="" class="icones"
-                    style="opacity: .7; position: relative; bottom: .2vh;" />Selecione sua regiao</p>
-
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="O que você precisa?..." aria-label="Search"
-                    style=" background-color: #efefef; border: 1px solid #f48200; width: 17vw; border-radius: 300px;" />
-            </form>
-            <img src="@/assets/lupa.png" alt=""
-                style="width: 1vw; display: flex; position: relative; left: 4vw; bottom: 1vh;">
-
-            <div class="compra-e-coracao">
-                <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                <img src="@/assets/coracao.png" alt="" class="icones" />
-            </div>
-        </header>
+    
         <hr class="hr" />
         <main>
             <div id="carouselExample" class="carousel slide">
@@ -59,25 +47,37 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-            <div class="fundo-categorias">
-                <div class=" categorias">
-                    <div class="texto-categoria">
-                        <h5>Faça seu Login</h5>
+
+            <div class="container text-center">
+                <div class="row">
+
+                    <div class="col categorias">
+                        <div class="texto-categoria">
+                            <h5>Faça seu Login</h5>
+                        </div>
+                        <RouterLink to="/Login">  <img src="@/assets/user.png" alt="" /></RouterLink>
+
                     </div>
                     <img src="@/assets/user.png" alt="" />
                 </div>
 
-                <div class=" categorias">
-                    <div class="texto-categoria">
-                        <h5>Mais alugados</h5>
-                        <img src="@/assets/item.png" alt="" />
+
+                    <div class="col categorias">
+                        <div class="texto-categoria">
+                            <h5>Mais alugados</h5>
+                            <a href="#mais-alugados"><img src="@/assets/item.png" alt="" /></a>
+                            
+                        </div>
+
                     </div>
                 </div>
+        <div class="col categorias">
+                        <div class="texto-categoria">
+                            <h5>Membros</h5>
+                            <RouterLink to="/Membros"><img src="@/assets/membros.png" alt="" /> </RouterLink>
 
-                <div class=" categorias">
-                    <div class="texto-categoria">
-                        <h5>Sua localização</h5>
-                        <img src="@/assets/local.png" alt="" />
+                            
+                        </div>
                     </div>
                 </div>
 
@@ -166,156 +166,6 @@
                     </div>
                 </div>
 
-
-            </div>
-
-
-            <div class="fundo">
-    <div class="linha">
-        <div class="produtos">
-            <div class="compra-e-coracao_produto">
-                <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                <img src="@/assets/coracao.png" alt="" class="icones" />
-            </div>
-            <div class="img-produtos">
-                <img src="@/assets/microfone.png" alt="" />
-            </div>
-            <h2 class="texto-produtos">Microfone SoundPro SP</h2>
-            <div class="preco-produtos">
-                <h5>R$ 42,00 por mes</h5>                      
-                <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-            </div>
-        </div>
-
-        <div class="produtos">
-            <div class="compra-e-coracao_produto">
-                <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                <img src="@/assets/coracao.png" alt="" class="icones" />
-            </div>
-            <div class="img-produtos">
-                <img src="@/assets/pedal-OverDrive.png" alt="" />
-            </div>
-            <h2 class="texto-produtos">Pedal Guitarra OverTone</h2>
-            <div class="preco-produtos">
-                <h5>R$ 17,00 por mes</h5>
-                <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-            </div>
-        </div>
-
-        <div class="produtos">
-            <div class="compra-e-coracao_produto">
-                <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                <img src="@/assets/coracao.png" alt="" class="icones" />
-            </div>
-            <div class="img-produtos">
-                <img src="@/assets/amplificador.png" alt="" />
-            </div>
-            <h2 class="texto-produtos">Cubo Amplificador</h2>
-            <div class="preco-produtos">
-                <h5>R$ 32,00 por mes</h5>
-                <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-            </div>
-        </div>
-
-        <div class="produtos">
-            <div class="compra-e-coracao_produto">
-                <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                <img src="@/assets/coracao.png" alt="" class="icones" />
-            </div>
-            <div class="img-produtos">
-                <img src="@/assets/ukulele2.png" alt="" />
-            </div>
-            <h2 class="texto-produtos">Ukulele</h2>
-            <div class="preco-produtos">
-                <h5>R$ 24,00 por mes</h5>
-                <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-            </div>
-        </div>
-
-        <div class="produtos">
-            <div class="compra-e-coracao_produto">
-                <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                <img src="@/assets/coracao.png" alt="" class="icones" />
-            </div>
-            <div class="img-produtos">
-                <img src="@/assets/pandeiro.png" alt="" width="100%" />
-            </div>
-            <h2 class="texto-produtos">Pandeiro 12 Knight</h2>
-            <div class="preco-produtos">
-                <h5>R$ 32,00 por mes</h5>
-                <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-            </div>
-        </div>
-    </div>
-
-    <div class="linha">
-        <div class="produtos">
-            <div class="compra-e-coracao_produto">
-                <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                <img src="@/assets/coracao.png" alt="" class="icones" />
-            </div>
-            <div class="img-produtos">
-                <img src="@/assets/teclado.png" alt="" />
-            </div>
-            <h2 class="texto-produtos">Teclado musical 61 teclas</h2>
-            <div class="preco-produtos">
-                <h5>R$ 35,00 por mes</h5>
-                <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-            </div>
-        </div>
-
-        <div class="produtos">
-            <div class="compra-e-coracao_produto">
-                <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                <img src="@/assets/coracao.png" alt="" class="icones" />
-            </div>
-            <div class="img-produtos">
-                <img src="@/assets/trompete.png" alt="" />
-            </div>
-            <h2 class="texto-produtos">Trompete Werill Master</h2>
-            <div class="preco-produtos">
-                <h5>R$ 69,00 por mes</h5>
-                <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-            </div>
-        </div>
-
-        <div class="produtos">
-            <div class="compra-e-coracao_produto">
-                <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                <img src="@/assets/coracao.png" alt="" class="icones" />
-            </div>
-            <div class="img-produtos">
-                <img src="@/assets/bateria.png" alt="" />
-            </div>
-            <h2 class="texto-produtos">Bateria Acústica</h2>
-            <div class="preco-produtos">
-                <h5>R$ 287,00 por mes</h5>
-                <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-            </div>
-        </div>
-
-        <div class="produtos">
-            <div class="compra-e-coracao_produto">
-                <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                <img src="@/assets/coracao.png" alt="" class="icones" />
-            </div>
-            <div class="img-produtos">
-                <img src="@/assets/prato.png" alt="" />
-            </div>
-            <h2 class="texto-produtos">Prato Hi Hat</h2>
-            <div class="preco-produtos">
-                <h5>R$ 42,00 por mes</h5>
-                <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-            </div>
-        </div>
-
-        <div class="produtos">
-            <div class="compra-e-coracao_produto">
-                <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                <img src="@/assets/coracao.png" alt="" class="icones" />
-            </div>
-            <div class="img-produtos">
-                <img src="@/assets/gaitaBoca.png" alt="" />
             </div>
             <h2 class="texto-produtos">Gaita de boca harmônica</h2>
             <div class="preco-produtos">
@@ -327,66 +177,14 @@
 </div>
         </main>
 
+        <NavFooter/>
+        
+    </body>
 
 
-        <footer>
-            <div class="footer">
 
 
 
-                <div class="cima-footer">
-                    <img src="@/assets/certa.png" alt="" class="logo-footer">
-                    <div class="redes-sociais">
-                        <img src="@/assets/facebook.png" alt="" class="icones-footer">
-                        <img src="@/assets/instagram (1).png" alt="" class="icones-footer">
-                        <img src="@/assets/twitter.png" alt="" class="icones-footer">
-                        <img src="@/assets/whatsapp (1).png" alt="" class="icones-footer">
-                        <img src="@/assets/youtube.png" alt="" class="icones-footer">
-                    </div>
-                </div>
-                <hr style="border: 1px solid black; margin-top: 5vh;">
-                <div class="baixo-footer">
-                    <div class="colunas-footer">
-                        <h2><strong>Categorias</strong></h2>
-                        <ul>
-                            <li>Mais vendidos</li>
-                            <li>produtos</li>
-                            <li>Promoções</li>
-                        </ul>
-                    </div>
-                    <div class="colunas-footer">
-                        <h2><strong>Empresa</strong></h2>
-                        <ul>
-                            <li>Quem somos?</li>
-                            <li>Por que BeatHub?</li>
-                            <li>Trabalhe conosco</li>
-                        </ul>
-                    </div>
-                    <div class="colunas-footer">
-                        <h2><strong>Guia de compras</strong></h2>
-                        <ul>
-                            <li>Meios de pagamentos</li>
-                            <li>Compre com pontos</li>
-                            <li>Cartão de crédito</li>
-                        </ul>
-                    </div>
-                    <div class="colunas-footer">
-                        <h2><strong>Ajuda</strong></h2>
-                        <ul>
-                            <li>Sua conta</li>
-                            <li>Frete e prazo de entrega</li>
-                            <li>Devolução e reembolso</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="Copyright">
-                © 2024 Copyright:
-                <a href="https://beathub.com/">BeatHub.com</a>
-            </div>
-        </footer>
 
     </body>
 </template>
@@ -560,10 +358,15 @@
     background-color: #9b9a9a;
 }
 
+</template>
+
+<style scoped>
+
 .container {
     position: relative;
     bottom: 17vh;
 }
+
 
 .esq1 {
     float: left;
@@ -817,7 +620,6 @@ body {
     height: 120vh;
 }
 
-/*Categorias em cima do carrossel*/
 .categorias {
     height: 35vh;
     width: 13vw;
