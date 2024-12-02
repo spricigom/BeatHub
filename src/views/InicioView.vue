@@ -6,6 +6,7 @@ import NavFooter from '@/components/NavFooter.vue';
 
 import ListProduct from '@/components/ListProduct.vue';
 import HeaderComponente from '@/components/HeaderComponente.vue';
+import { RouterLink } from "vue-router";
 
 const produtoStore = useProdutoStore()
 
@@ -187,6 +188,8 @@ onMounted(() => {
             <div class="container text-center">
                 <ListProduct :produtos="produtoStore.produtos" tipo="home"/>  
             </div>
+            <RouterLink to="/compartilhe">compartilhe</RouterLink>
+            
         </main>
 
         <NavFooter/>
@@ -199,7 +202,57 @@ onMounted(() => {
 </template>
 
 <style scoped>
+.modal{
+    display: none ;
+    position: fixed;
+    top: 85%;
+    left:50%;
+    transform: translate(-50%,0%);
+    z-index: 3;
+    padding: 0 10px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    box-shadow: 0px 4px 4px rgba(0,0,0,.25);
+    animation: fadeIn 1s ;
+}
+@keyframes fadeIn {
+    from{
+        top: 100%;
+        opacity: 0;
+    }
+    to{
+        top:85%;
+        opacity: 1;
+    }
+}
+.testee{
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 40vh;
+    width: 100%;
+}
+.testee button{
+    padding: 6px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 1px solid gold;
+    outline: none;
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+    transition: .1s;
+}
+.testee button:hover{
+    border: 1px solid transparent;
+    background-color: gold;
+    color: white;
+    box-shadow: 0px 4px 4px rgba(0,0,0,.25);
 
+}
 .container {
     position: relative;
     bottom: 17vh;
