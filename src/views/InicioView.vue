@@ -184,7 +184,7 @@ onMounted(() => {
 
 
 
-            <div class="container text-center">
+            <div class=" text-center">
                 <ListHome :produtos="produtoStore.produtos" tipo="home"/>  
             </div>
         </main>

@@ -25,18 +25,28 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
             <div class="fundo">
                 <div class="linha">
                     <div class="produtos">
+
+
                         <div class="compra-e-coracao_produto">
                             <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
                             <img src="@/assets/coracao.png" alt="" class="icones" />
                         </div>
+
+
                         <div class="img-produtos">
                             <img src="@/assets/microfone.png" alt="" />
                         </div>
+
+
                         <h2 class="texto-produtos">Microfone SoundPro SP</h2>
+
+                        
                         <div class="preco-produtos">
                             <h5>R$ 42,00 por mes</h5>
                             <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
                         </div>
+
+
                     </div>
 
                     <div class="produtos">
