@@ -15,18 +15,22 @@ const produtoStore = useProdutoStore()
         <HeaderComponente />
         <hr class="hr" />
         <main>
-            <ListProduct :produtos="produtoStore.produtosCarrinho" v-if="produtoStore.produtosCarrinho.length > 0"
-                tipo="cart" />
-            <div class="carrinho-e-texto" v-else>
-                <img src="@/assets/bag.png" alt="" id="carrinho">
-                <p>Adicione itens no seu carrinho</p>
-                <RouterLink to="/">
-                    <button>
-                        <p id="texto_botao">voltar para o site</p>
-                    </button>
-                </RouterLink>
 
-            </div>
+                    <ListProduct :produtos="produtoStore.produtosCarrinho" v-if="produtoStore.produtosCarrinho.length > 0"
+                    tipo="cart" class="lista" />
+                
+
+                <div class="carrinho-e-texto" v-else>
+                    <img src="@/assets/bag.png" alt="" id="carrinho">
+                    <p>Adicione itens no seu carrinho</p>
+                    <RouterLink to="/">
+                        <button>
+                            <p id="texto_botao">voltar para o site</p>
+                        </button>
+                    </RouterLink>
+
+                </div>
+
 
         </main>
 
@@ -37,6 +41,7 @@ const produtoStore = useProdutoStore()
 </template>
 
 <style scoped>
+
 #texto_botao {
     color: #f48200;
     font-size: 1.2vw;

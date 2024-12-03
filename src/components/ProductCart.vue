@@ -12,23 +12,47 @@ const props = defineProps([
     
     <div class="produto">
         <div class="img-produtos"> <img :src="getImage(index)" alt=""></div>
-        <div class="nomePreco">
-            <div>
-                <h2 class="texto-produtos"> {{ props.produto?.nome }}</h2>
-            </div>
-            <div class="preco">
-                <h5>{{ props.produto?.preco }} </h5>
-            </div>
+        
+        <div class="texto-e-preco">
+            <h2 class="texto-produtos"> {{ props.produto?.nome }}</h2>
+          
+            <h5>{{ props.produto?.preco }} </h5>
         </div>
-        <div class="compra-e-coracao_produto">
+      
+        <div class="funcoes">
+ <div class="compra-e-coracao_produto">
             <img src="@/assets/coracaoVermelho.png" alt="" class="icones" @click="$emit('favorito', props.produto.id)"
                 v-if="props.produto?.favoritado" />
             <img src="@/assets/coracao.png" alt="" class="icones" @click="$emit('favorito', props.produto.id)" v-else>
+        </div>  
+        <img src="@/assets/lixeira.png" alt="" id="lixeira">
         </div>
+       
     </div>
 </template>
 
 <style scoped>
+.funcoes{
+    display: flex;
+    position: relative;
+    left: 10vw;
+}
+#lixeira{
+    width: 1.5vw;
+    opacity: .7;
+    margin-left: .4vw;
+}
+.texto-e-preco{
+    display: flex;
+    justify-content: baseline;
+    flex-wrap: wrap;
+    padding-left: 1vw ;
+    width: 15vw;
+}
+.texto-e-preco h2, h5{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+}
 template{
     display: flex;
     flex-direction: row;
@@ -38,15 +62,13 @@ template{
     display: flex;
     flex-direction: row;
     width: 32.69rem;
-    height: 6.38rem    ;
-    margin-right: 2vw;
+    height: 13vh   ;
     align-items: center;
 }
 
 .img-produtos {
-    background-color: green;
-    width: 4.75rem;
-    height: 4.75rem;
+    width: 6.75rem;
+    height: 6.75rem;
     display: flex;
     margin-left: 1vw;
 }
@@ -74,14 +96,11 @@ template{
     margin-top: 2vh;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 500;
-    color: red;
-
 }
 
 .compra-e-coracao_produto {
     display: flex;
-    justify-content: space-between;
-   
+    justify-content: space-between;   
 }
 
 .icones {

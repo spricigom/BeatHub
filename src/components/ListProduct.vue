@@ -21,22 +21,48 @@ function addCarrinho(productId) {
 
 </script>
 <template>
-        <div v-for="produto, in props.produtos" :key="produto.id" class="col produtos text-center">
-            <ProductCart @favorito="favoritar" @imagem="getImage" @carrinho="addCarrinho" :produto="produto" :index="produto.id" v-if="props.tipo == 'cart'" />
-            <ProductFavorite @favorito="favoritar" @imagem="getImage" @carrinho="addCarrinho" :produto="produto" :index="produto.id" v-if="props.tipo == 'favorite'"/>
+    <div class="lista">
+        <h2 class="texto-carrinho">Itens no carrinho</h2>
+        
+        <div class="centro">
+            <hr style="width: 90%; border: 1px solid;" >
+<div v-for="produto, in props.produtos" :key="produto.id" class="col produtos text-center">
+            <ProductCart @favorito="favoritar" @imagem="getImage" @carrinho="addCarrinho" :produto="produto"
+                :index="produto.id" v-if="props.tipo == 'cart'" />
+            <ProductFavorite @favorito="favoritar" @imagem="getImage" @carrinho="addCarrinho" :produto="produto"
+                :index="produto.id" v-if="props.tipo == 'favorite'" />
         </div>
+        </div>
+        
+    </div>
+
 </template>
 <style scoped>
+.texto-carrinho{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 800;
+    margin-top: 3vh;
+    margin-left:2vw;
+
+}
 .produtos {
     background-color: white;
-    min-width: 14.5vw;
+    width: 40vw;
     height: 47vh;
     margin-left: 12px;
     margin-right: 12px;
-    margin-top: 4vh;
-    box-shadow: -.5px .5px .5px .5px rgb(150, 146, 146);
-    margin-bottom: 8vh;
-    border-radius: 2vw;
+    margin-bottom: 3vh;
 
+}
+.centro{
+  display: flex;
+    align-items: center;  
+    flex-direction: column;
+
+}
+.lista {
+    margin-bottom:30vh ;
+    background-color: #e9e9e9;
+    width: 43vw;
 }
 </style>
