@@ -47,7 +47,7 @@ function addCarrinho(productId) {
 }
 .produtos {
     background-color: white;
-    width: 40vw;
+    width: 35vw;
     height: 47vh;
     margin-left: 12px;
     margin-right: 12px;
@@ -62,7 +62,8 @@ function addCarrinho(productId) {
 }
 .lista {
     margin-bottom:30vh ;
-    background-color: #e9e9e9;
-    width: 43vw;
+    background-color: #dfdfdfe9;
+    width: 38vw;
+    height: auto;
 }
 </style>

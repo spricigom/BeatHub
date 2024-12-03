@@ -35,7 +35,7 @@ const props = defineProps([
 .funcoes{
     display: flex;
     position: relative;
-    left: 10vw;
+    left: 7vw;
 }
 #lixeira{
     width: 1.5vw;

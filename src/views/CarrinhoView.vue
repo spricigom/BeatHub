@@ -14,22 +14,44 @@ const produtoStore = useProdutoStore()
     <body>
         <HeaderComponente />
         <hr class="hr" />
+
         <main>
 
-                    <ListProduct :produtos="produtoStore.produtosCarrinho" v-if="produtoStore.produtosCarrinho.length > 0"
-                    tipo="cart" class="lista" />
-                
 
-                <div class="carrinho-e-texto" v-else>
-                    <img src="@/assets/bag.png" alt="" id="carrinho">
-                    <p>Adicione itens no seu carrinho</p>
-                    <RouterLink to="/">
-                        <button>
-                            <p id="texto_botao">voltar para o site</p>
-                        </button>
-                    </RouterLink>
+
+            <div class="teste">
+                <div class="esquerda">
+                    <div  v-if="produtoStore.produtosCarrinho.length > 0">
+                       <ListProduct :produtos="produtoStore.produtosCarrinho"
+                        tipo="cart" />  
+                    </div>
+                        
+                    <div class="carrinho-e-texto" v-else>
+                        <img src="@/assets/bag.png" alt="" id="carrinho">
+                        <p>Adicione itens no seu carrinho</p>
+                        <RouterLink to="/">
+                            <button>
+                                <p id="texto_botao">voltar para o site</p>
+                            </button>
+                        </RouterLink>
+
+                    </div>
+
+
+                    
 
                 </div>
+
+
+                <div class="direita">
+                    <div class="finalizar">
+                        <h2>Finalize Seu Aluguel</h2>
+                        <button>Alugue</button>
+                    </div>
+                </div>
+            </div>
+
+
 
 
         </main>
@@ -41,6 +63,41 @@ const produtoStore = useProdutoStore()
 </template>
 
 <style scoped>
+.finalizar {
+    background-color: #dfdfdfe9;
+    width: 30vw;
+    height: 40vh;
+    margin-top: 15vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.finalizar h2{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 500;
+    margin-bottom: 5vh;
+}
+.teste {
+    display: flex;
+    width: 100%;
+}
+
+.esquerda {
+    display: flex;
+    float: left;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.direita {
+    display: flex;
+    float: right;
+    width: 50%;
+    justify-content: center;
+
+}
 
 #texto_botao {
     color: #f48200;
@@ -74,6 +131,9 @@ button p {
     align-items: center;
     flex-direction: column;
     margin-top: 10vh;
+    margin-bottom: 30vh;
+    position: relative;
+    left: 22vw;
 }
 
 .carrinho-e-texto p {
