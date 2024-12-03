@@ -4,26 +4,24 @@ import { ref } from 'vue'
 import { supabase } from '../lib/supabaseClient'
 
 //------------------------criação variaveis reativas------------------------//
-const cpf = ref([])
-const name = ref([])
-const gender = ref([])
-const email = ref([])
-const datebirth = ref('')
-const phonenumber = ref('')
-const password = ref([])
-const passwordconfirmation = ref([])
-const message = ref('')
 
-const id = ref([])
-const ddi = ref('')
-const ddd = ref('')
-const telefone = ref('')
+const novoUsuario = reactive({
+    cpf: '',
+    name: '',
+    gender: '',
+    email: '',
+    datebirth: '',
+    password: '',
+    passwordconfirmation:'',
+    message: '',
+})
 
-const CEP = ref('')
-const rua = ref([])
-const num = ref('')
-const bairro = ref([])
-const cidade = ref([])
+const telefoneUsuario = reactive({
+DDD: '',
+DDI: '',
+numero: '',
+
+})
 
 const insertData = async () => {
     if (
@@ -32,7 +30,6 @@ const insertData = async () => {
         !gender.value ||
         !email.value ||
         !datebirth.value ||
-        !phonenumber.value ||
         !password.value ||
         !passwordconfirmation.value
     ) {
@@ -49,7 +46,6 @@ const insertData = async () => {
             datebirth: datebirth.value,
             password: password.value,
             passwordconfirmation: passwordconfirmation.value,
-            phonenumber: phonenumber.value
         }
     ])
     if (clientError) {
@@ -127,7 +123,7 @@ const insertData = async () => {
             <form class="cadastro" @submit="insertData">
                 <div class="campo_cadastro nome">
                     <p class="titulo_cadastro" id="cabecalho">Nome completo</p>
-                    <input class="input" type="text" v-model="name" placeholder="insira seu nome" />
+                    <input class="input" type="text" v-model="novoUsuario.name" placeholder="insira seu nome" />
                 </div>
 
                 <div class="campo_cadastro data">
@@ -166,10 +162,6 @@ const insertData = async () => {
                     <input class="input" type="number" v-model="cpf" placeholder="___.___.___-__" />
                 </div>
                 <div class="campo_cadastro">
-                    <p class="titulo_cadastro">Telefone</p>
-                    <input class="input" type="number" v-model="phonenunber" placeholder="(__) _____-____" />
-                </div>
-                <div class="campo_cadastro">
                     <p class="titulo_cadastro">E-mail</p>
                     <input class="input" type="email" v-model="email" placeholder="Ex: joaozinho@gmail.com" />
                 </div>
@@ -183,13 +175,13 @@ const insertData = async () => {
                 </div>
 
                 <div class="campo_cadastro nome">
-                    <p class="titulo_cadastro">ddd</p>
+                    <p class="titulo_cadastro">DDD</p>
                     <input class="input" type="number" v-model="ddd" placeholder="informe seu DDD" />
                 </div>
 
                 <div class="campo_cadastro nome">
-                    <p class="titulo_cadastro">ddi</p>
-                    <input class="input" type="number" v-model="ddd" placeholder="informe seu DDI" />
+                    <p class="titulo_cadastro">DDI</p>
+                    <input class="input" type="number" v-model="ddi" placeholder="informe seu DDI" />
                 </div>
 
                 <div class="campo_cadastro nome">
