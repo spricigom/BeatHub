@@ -7,7 +7,7 @@ import ListHome from '@/components/ListHome.vue';
 import HeaderComponente from '@/components/HeaderComponente.vue';
 
 const produtoStore = useProdutoStore();
-const mostrarLocalizacao = ref(false);  // Estado para controlar a visibilidade da div de localização
+const mostrarLocalizacao = ref(false);
 
 onMounted(() => {
     produtoStore.buscarTodosOsProdutos();
@@ -98,7 +98,6 @@ const esconderDivLocalizacao = () => {
         </div>
       </div>
 
-      <!-- Div de Localização que será mostrada -->
       <div v-if="mostrarLocalizacao" class="localizacao-modal">
         <div class="modal-overlay" @click="esconderDivLocalizacao"></div> <!-- Fecha ao clicar no fundo -->
         <div class="localizacao-content">

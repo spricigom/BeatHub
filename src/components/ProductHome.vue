@@ -5,24 +5,12 @@ const props = defineProps([
     "index"
 ]);
 const shareProduct = () => {
-    if (navigator.share) {
-        const productUrl = `${window.location.origin}/produto/${props.produto?.id}`;
-        const shareData = {
-            title: props.produto?.nome || "Confira este produto!",
-            text: `Dê uma olhada no ${props.produto?.nome}. Está disponível por apenas ${props.produto?.preco}!`,
-            url: productUrl
-        };
+    const productUrl = `${window.location.origin}/produto/${props.produto?.id}`;
+    const message = encodeURIComponent(`Confira este incrível produto: ${props.produto?.nome}! 🎉\nPreço: R$${props.produto?.preco}\nAcesse agora: ${productUrl}`);
+    const whatsappUrl = `https://api.whatsapp.com/send?text=${message}`;
 
-        navigator.share(shareData)
-            .then(() => {
-                console.log("Compartilhamento realizado com sucesso!");
-            })
-            .catch((error) => {
-                console.error("Erro ao compartilhar:", error);
-            });
-    } else {
-        alert("O compartilhamento não é suportado neste dispositivo.");
-    }
+    // Redirecionar para WhatsApp
+    window.open(whatsappUrl, "_blank");
 };
 
 const fallbackShare = () => {

@@ -17,6 +17,18 @@ function addCarrinho(productId) {
     produtoStore.addCarrinho(productId)
 }
 
+const shareProduct = () => {
+    const productUrl = `${window.location.origin}/produto/${props.produto?.id}`;
+    const message = encodeURIComponent(`Confira este incrível produto: ${props.produto?.nome}! 🎉\nPreço: R$${props.produto?.preco}\nAcesse agora: ${productUrl}`);
+    const whatsappUrl = `https://api.whatsapp.com/send?text=${message}`;
+
+    // Redirecionar para WhatsApp
+    window.open(whatsappUrl, "_blank");
+};
+
+
+
+
 </script>
 <template>
     <div class="fundo">
