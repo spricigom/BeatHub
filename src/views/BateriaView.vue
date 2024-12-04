@@ -30,11 +30,11 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                             <img src="@/assets/coracao.png" alt="" class="icones" />
                         </div>
                         <div class="img-produtos">
-                            <img src="@/assets/microfone.png" alt="" />
+                            <img src="@/assets/bateria1.webp" alt="" />
                         </div>
-                        <h2 class="texto-produtos">Microfone SoundPro SP</h2>
+                        <h2 class="texto-produtos">Bateria Gretsch</h2>
                         <div class="preco-produtos">
-                            <h5>R$ 42,00 por mes</h5>
+                            <h5>R$ 92,00 por mes</h5>
                             <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
                         </div>
                     </div>
@@ -45,11 +45,11 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                             <img src="@/assets/coracao.png" alt="" class="icones" />
                         </div>
                         <div class="img-produtos">
-                            <img src="@/assets/pedal-OverDrive.png" alt="" />
+                            <img src="@/assets/bateria2.webp" alt="" />
                         </div>
-                        <h2 class="texto-produtos">Pedal Guitarra OverTone</h2>
+                        <h2 class="texto-produtos">Bateria Recording Custom</h2>
                         <div class="preco-produtos">
-                            <h5>R$ 17,00 por mes</h5>
+                            <h5>R$ 77,00 por mes</h5>
                             <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
                         </div>
                     </div>
@@ -60,11 +60,11 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                             <img src="@/assets/coracao.png" alt="" class="icones" />
                         </div>
                         <div class="img-produtos">
-                            <img src="@/assets/amplificador.png" alt="" />
+                            <img src="@/assets/bateria33.jpeg" alt="" />
                         </div>
-                        <h2 class="texto-produtos">Cubo Amplificador</h2>
+                        <h2 class="texto-produtos">Bateria American Musical</h2>
                         <div class="preco-produtos">
-                            <h5>R$ 32,00 por mes</h5>
+                            <h5>R$ 72,00 por mes</h5>
                             <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
                         </div>
                     </div>
@@ -75,11 +75,11 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                             <img src="@/assets/coracao.png" alt="" class="icones" />
                         </div>
                         <div class="img-produtos">
-                            <img src="@/assets/ukulele2.png" alt="" />
+                            <img src="@/assets/bateria4.webp" alt="" />
                         </div>
-                        <h2 class="texto-produtos">Ukulele</h2>
+                        <h2 class="texto-produtos">Bateria D'one Grestch</h2>
                         <div class="preco-produtos">
-                            <h5>R$ 24,00 por mes</h5>
+                            <h5>R$ 84,00 por mes</h5>
                             <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
                         </div>
                     </div>
@@ -90,11 +90,11 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                             <img src="@/assets/coracao.png" alt="" class="icones" />
                         </div>
                         <div class="img-produtos">
-                            <img src="@/assets/pandeiro.png" alt="" width="100%" />
+                            <img src="@/assets/bateria5.webp" alt="" width="100%" />
                         </div>
-                        <h2 class="texto-produtos">Pandeiro 12 Knight</h2>
+                        <h2 class="texto-produtos">Bateria Well Drums</h2>
                         <div class="preco-produtos">
-                            <h5>R$ 32,00 por mes</h5>
+                            <h5>R$ 31,00 por mes</h5>
                             <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
                         </div>
                     </div>
@@ -107,9 +107,24 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                             <img src="@/assets/coracao.png" alt="" class="icones" />
                         </div>
                         <div class="img-produtos">
-                            <img src="@/assets/teclado.png" alt="" />
+                            <img src="@/assets/bateria6.webp" alt="" />
                         </div>
-                        <h2 class="texto-produtos">Teclado musical 61 teclas</h2>
+                        <h2 class="texto-produtos">Bateria Fusion Df22cb</h2>
+                        <div class="preco-produtos">
+                            <h5>R$ 38,00 por mes</h5>
+                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
+                        </div>
+                    </div>
+
+                    <div class="produtos">
+                        <div class="compra-e-coracao_produto">
+                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
+                            <img src="@/assets/coracao.png" alt="" class="icones" />
+                        </div>
+                        <div class="img-produtos">
+                            <img src="@/assets/bateria7.webp" alt="" />
+                        </div>
+                        <h2 class="texto-produtos">Bateria AudioTek</h2>
                         <div class="preco-produtos">
                             <h5>R$ 35,00 por mes</h5>
                             <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
@@ -122,11 +137,11 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                             <img src="@/assets/coracao.png" alt="" class="icones" />
                         </div>
                         <div class="img-produtos">
-                            <img src="@/assets/trompete.png" alt="" />
+                            <img src="@/assets/bateria8.jpeg" alt="" />
                         </div>
-                        <h2 class="texto-produtos">Trompete Werill Master</h2>
+                        <h2 class="texto-produtos">Bateria Tama Stagestar</h2>
                         <div class="preco-produtos">
-                            <h5>R$ 69,00 por mes</h5>
+                            <h5>R$ 20,00 por mes</h5>
                             <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
                         </div>
                     </div>
@@ -137,11 +152,11 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                             <img src="@/assets/coracao.png" alt="" class="icones" />
                         </div>
                         <div class="img-produtos">
-                            <img src="@/assets/bateria.png" alt="" />
+                            <img src="@/assets/bateria9.jpeg" alt="" />
                         </div>
-                        <h2 class="texto-produtos">Bateria Acústica</h2>
+                        <h2 class="texto-produtos">Bateria Bumbo 20</h2>
                         <div class="preco-produtos">
-                            <h5>R$ 287,00 por mes</h5>
+                            <h5>R$ 44,00 por mes</h5>
                             <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
                         </div>
                     </div>
@@ -152,26 +167,11 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                             <img src="@/assets/coracao.png" alt="" class="icones" />
                         </div>
                         <div class="img-produtos">
-                            <img src="@/assets/prato.png" alt="" />
+                            <img src="@/assets/bateria10.webp" alt="" />
                         </div>
-                        <h2 class="texto-produtos">Prato Hi Hat</h2>
+                        <h2 class="texto-produtos">Bateria Power ROckers</h2>
                         <div class="preco-produtos">
-                            <h5>R$ 42,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/gaitaBoca.png" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Gaita de boca harmônica</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 17,00 por mes</h5>
+                            <h5>R$ 10,00 por mes</h5>
                             <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
                         </div>
                     </div>
