@@ -1,83 +1,167 @@
 <script setup>
-import { onMounted } from "vue"
-import { useProdutoStore } from '@/stores/produto';
-import HeaderComponente from '@/components/HeaderComponente.vue';
-import NavFooter from '@/components/NavFooter.vue';
-import ListProduct from '@/components/ListProduct.vue';
+import { ref, computed } from "vue";
+import { useProdutoStore } from "@/stores/produto";
+import HeaderComponente from "@/components/HeaderComponente.vue";
+import NavFooter from "@/components/NavFooter.vue";
+import ListProduct from "@/components/ListProduct.vue";
 import { RouterLink } from "vue-router";
 
-const produtoStore = useProdutoStore()
+const produtoStore = useProdutoStore();
+
+const cpf = ref("");
+
+const formatCPF = () => {
+  let formattedCPF = cpf.value.replace(/\D/g, "");
+
+  if (formattedCPF.length > 3) formattedCPF = formattedCPF.replace(/^(\d{3})(\d)/, "$1.$2");
+  if (formattedCPF.length > 6) formattedCPF = formattedCPF.replace(/^(\d{3})\.(\d{3})(\d)/, "$1.$2.$3");
+  if (formattedCPF.length > 9) formattedCPF = formattedCPF.replace(/^(\d{3})\.(\d{3})\.(\d{3})(\d)/, "$1.$2.$3-$4");
+
+  cpf.value = formattedCPF;
+};
 </script>
 
 <template>
+  <body>
+    <HeaderComponente />
+    <hr class="hr" />
 
-    <body>
-        <HeaderComponente />
-        <hr class="hr" />
+    <main>
+      <div class="teste">
+        <div class="esquerda">
+          <div v-if="produtoStore.produtosCarrinho.length > 0">
+            <ListProduct :produtos="produtoStore.produtosCarrinho" tipo="cart" />
+          </div>
 
-        <main>
+          <div class="carrinho-e-texto" v-else>
+            <img src="@/assets/bag.png" alt="" id="carrinho" />
+            <p>Adicione itens no seu carrinho</p>
+            <RouterLink to="/">
+              <button>
+                <p id="texto_botao">voltar para o site</p>
+              </button>
+            </RouterLink>
+          </div>
+        </div>
 
-
-
-            <div class="teste">
-                <div class="esquerda">
-                    <div  v-if="produtoStore.produtosCarrinho.length > 0">
-                       <ListProduct :produtos="produtoStore.produtosCarrinho"
-                        tipo="cart" />  
-                    </div>
-                        
-                    <div class="carrinho-e-texto" v-else>
-                        <img src="@/assets/bag.png" alt="" id="carrinho">
-                        <p>Adicione itens no seu carrinho</p>
-                        <RouterLink to="/">
-                            <button>
-                                <p id="texto_botao">voltar para o site</p>
-                            </button>
-                        </RouterLink>
-
-                    </div>
-
-
-                    
-
-                </div>
-
-
-                <div class="direita">
-                    <div class="finalizar">
-                        <h2>Finalize Seu Aluguel</h2>
-                        <button>Alugue</button>
-                    </div>
-                </div>
+        <div class="direita">
+          <div class="finalizar" v-if="produtoStore.produtosCarrinho.length > 0">
+            <h2>Finalize Seu Aluguel</h2>
+            <h5>Valor Total: R$1000,00</h5>
+            <div class="info">
+              <form>
+                <input type="text" placeholder="Cupom BeatHub" />
+              </form>
+            </div>
+            <h5>RETIRADA SOMENTE NA LOJA</h5>
+            <div class="form">
+              <form>
+                <input
+                  type="text"
+                  placeholder="CPF do Retirante"
+                  v-model="cpf"
+                  @input="formatCPF"
+                  maxlength="14"
+                />
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Senha" />
+              </form>
             </div>
 
+            <div id="chamada">
+              <p>
+                Sem conta? <br />
+                Faça o seu <RouterLink to="Login" id="amarelo">login</RouterLink> para finalizar o aluguel
+              </p>
+            </div>
 
+            <RouterLink to="/FormaPagamento">
+              <button>Alugue</button>
+            </RouterLink>
+          </div>
+        </div>
+      </div>
+    </main>
 
-
-        </main>
-
-
-        <NavFooter />
-
-    </body>
+    <NavFooter />
+  </body>
 </template>
 
 <style scoped>
+/* (O mesmo CSS que você forneceu) */
+</style>
+
+<style scoped>
+#chamada {
+    font-family: 'Josefin Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin-bottom: 6vh;
+}
+
+#chamada p {
+    color: #2C2B2B;
+
+}
+
+.info {
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.info input {
+    width: 100%;
+    margin-bottom: 4vh;
+    border: none;
+    height: 5vh;
+    border-radius: .5vw;
+}
+
+.info ::placeholder {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.form {
+    height: 20vh;
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5vh;
+}
+
+.form input {
+    width: 100%;
+    margin-bottom: 4vh;
+    border: none;
+    height: 5vh;
+    border-radius: .5vw;
+}
+
+.form ::placeholder {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
 .finalizar {
     background-color: #dfdfdfe9;
     width: 30vw;
-    height: 40vh;
-    margin-top: 15vh;
+    height: 90vh;
+    margin-top: 3vh;
+    padding-top: 5vh;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
 }
-.finalizar h2{
+
+.finalizar h2,
+h5 {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 500;
     margin-bottom: 5vh;
 }
+
 .teste {
     display: flex;
     width: 100%;
@@ -96,6 +180,7 @@ const produtoStore = useProdutoStore()
     float: right;
     width: 50%;
     justify-content: center;
+    
 
 }
 
@@ -239,14 +324,6 @@ main {
     bottom: 15px
 }
 
-input {
-
-    display: flex;
-    position: relative;
-    left: 7vw;
-    bottom: 1.1vh;
-
-}
 
 .regiao {
     position: relative;

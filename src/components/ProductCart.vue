@@ -35,7 +35,7 @@ const props = defineProps([
 .funcoes{
     display: flex;
     position: relative;
-    left: 7vw;
+    left: 5vw;
 }
 #lixeira{
     width: 1.5vw;
@@ -46,8 +46,8 @@ const props = defineProps([
     display: flex;
     justify-content: baseline;
     flex-wrap: wrap;
-    padding-left: 1vw ;
-    width: 15vw;
+    padding-left: 3vw ;
+    width: 17vw;
 }
 .texto-e-preco h2, h5{
     font-family: 'Josefin Sans', sans-serif;
@@ -67,8 +67,7 @@ template{
 }
 
 .img-produtos {
-    width: 6.75rem;
-    height: 6.75rem;
+    width: 5vw;
     display: flex;
     margin-left: 1vw;
 }
@@ -135,11 +134,6 @@ template{
     width: 10vw;
 }
 
-.preco h5 {
-    font-size: 1.1vw;
-    color: blue;
-    
-}
 
 
 </style>

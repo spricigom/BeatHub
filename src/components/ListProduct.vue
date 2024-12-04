@@ -65,5 +65,7 @@ function addCarrinho(productId) {
     background-color: #dfdfdfe9;
     width: 38vw;
     height: auto;
+    padding-top: 1vh;
+    margin-top: 3vh;
 }
 </style>
