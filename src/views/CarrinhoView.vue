@@ -87,9 +87,6 @@ const formatCPF = () => {
   </body>
 </template>
 
-<style scoped>
-/* (O mesmo CSS que você forneceu) */
-</style>
 
 <style scoped>
 #chamada {
