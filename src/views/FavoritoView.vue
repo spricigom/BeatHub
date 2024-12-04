@@ -16,7 +16,7 @@ const produtoStore = useProdutoStore()
         <hr class="hr" />
         <main>
             <ListProduct :produtos="produtoStore.produtosFavoritos" v-if="produtoStore.produtosFavoritos.length > 0" tipo="favorite"/>
-                <div class="carrinho-e-texto">
+                <div class="carrinho-e-texto" v-else>
                 <img src="@/assets/coracao.png" alt="" id="carrinho">
                 <p>Adicione itens no seu favorito</p>
                 <RouterLink to="/">
