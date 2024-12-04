@@ -30,9 +30,9 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                             <img src="@/assets/coracao.png" alt="" class="icones" />
                         </div>
                         <div class="img-produtos">
-                            <img src="@/assets/microfone.png" alt="" />
+                            <img src="@/assets/guitarra1.png" alt="" />
                         </div>
-                        <h2 class="texto-produtos">Microfone SoundPro SP</h2>
+                        <h2 class="texto-produtos">Masterbuilt John Frusciante Stratocaster®</h2>
                         <div class="preco-produtos">
                             <h5>R$ 42,00 por mes</h5>
                             <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
@@ -45,9 +45,9 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                             <img src="@/assets/coracao.png" alt="" class="icones" />
                         </div>
                         <div class="img-produtos">
-                            <img src="@/assets/pedal-OverDrive.png" alt="" />
+                            <img src="@/assets/guitarra2.jpg" alt="" />
                         </div>
-                        <h2 class="texto-produtos">Pedal Guitarra OverTone</h2>
+                        <h2 class="texto-produtos">Fender® x Hello Kitty® Pink Stratocaster®</h2>
                         <div class="preco-produtos">
                             <h5>R$ 17,00 por mes</h5>
                             <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
@@ -60,9 +60,9 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                             <img src="@/assets/coracao.png" alt="" class="icones" />
                         </div>
                         <div class="img-produtos">
-                            <img src="@/assets/amplificador.png" alt="" />
+                            <img src="@/assets/guitarra3.jpg" alt="" />
                         </div>
-                        <h2 class="texto-produtos">Cubo Amplificador</h2>
+                        <h2 class="texto-produtos">Player II Jazzmaster®</h2>
                         <div class="preco-produtos">
                             <h5>R$ 32,00 por mes</h5>
                             <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
@@ -75,9 +75,9 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                             <img src="@/assets/coracao.png" alt="" class="icones" />
                         </div>
                         <div class="img-produtos">
-                            <img src="@/assets/ukulele2.png" alt="" />
+                            <img src="@/assets/guitarra4.jpg" alt="" />
                         </div>
-                        <h2 class="texto-produtos">Ukulele</h2>
+                        <h2 class="texto-produtos">Jimmy Page Telecaster®</h2>
                         <div class="preco-produtos">
                             <h5>R$ 24,00 por mes</h5>
                             <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
@@ -90,9 +90,9 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                             <img src="@/assets/coracao.png" alt="" class="icones" />
                         </div>
                         <div class="img-produtos">
-                            <img src="@/assets/pandeiro.png" alt="" width="100%" />
+                            <img src="@/assets/guitarra5.jpg" alt="" width="100%" />
                         </div>
-                        <h2 class="texto-produtos">Pandeiro 12 Knight</h2>
+                        <h2 class="texto-produtos">Kurt Cobain Jaguar® Left-Hand</h2>
                         <div class="preco-produtos">
                             <h5>R$ 32,00 por mes</h5>
                             <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
@@ -107,9 +107,9 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                             <img src="@/assets/coracao.png" alt="" class="icones" />
                         </div>
                         <div class="img-produtos">
-                            <img src="@/assets/teclado.png" alt="" />
+                            <img src="@/assets/guitarra6.jpg" alt="" />
                         </div>
-                        <h2 class="texto-produtos">Teclado musical 61 teclas</h2>
+                        <h2 class="texto-produtos">American Performer Stratocaster® HSS</h2>
                         <div class="preco-produtos">
                             <h5>R$ 35,00 por mes</h5>
                             <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
@@ -122,9 +122,9 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                             <img src="@/assets/coracao.png" alt="" class="icones" />
                         </div>
                         <div class="img-produtos">
-                            <img src="@/assets/trompete.png" alt="" />
+                            <img src="@/assets/guitarra7.jpg" alt="" />
                         </div>
-                        <h2 class="texto-produtos">Trompete Werill Master</h2>
+                        <h2 class="texto-produtos">Eric Clapton Stratocaster®</h2>
                         <div class="preco-produtos">
                             <h5>R$ 69,00 por mes</h5>
                             <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
@@ -137,9 +137,9 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                             <img src="@/assets/coracao.png" alt="" class="icones" />
                         </div>
                         <div class="img-produtos">
-                            <img src="@/assets/bateria.png" alt="" />
+                            <img src="@/assets/guitarra8.jpg" alt="" />
                         </div>
-                        <h2 class="texto-produtos">Bateria Acústica</h2>
+                        <h2 class="texto-produtos">Jimi Hendrix Stratocaster®</h2>
                         <div class="preco-produtos">
                             <h5>R$ 287,00 por mes</h5>
                             <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
@@ -152,9 +152,9 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                             <img src="@/assets/coracao.png" alt="" class="icones" />
                         </div>
                         <div class="img-produtos">
-                            <img src="@/assets/prato.png" alt="" />
+                            <img src="@/assets/guitarra9.jpg" alt="" />
                         </div>
-                        <h2 class="texto-produtos">Prato Hi Hat</h2>
+                        <h2 class="texto-produtos">H.E.R. Stratocaster®</h2>
                         <div class="preco-produtos">
                             <h5>R$ 42,00 por mes</h5>
                             <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
@@ -167,9 +167,9 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                             <img src="@/assets/coracao.png" alt="" class="icones" />
                         </div>
                         <div class="img-produtos">
-                            <img src="@/assets/gaitaBoca.png" alt="" />
+                            <img src="@/assets/guitarra10.jpg" alt="" />
                         </div>
-                        <h2 class="texto-produtos">Gaita de boca harmônica</h2>
+                        <h2 class="texto-produtos">Tom Morello Stratocaster®</h2>
                         <div class="preco-produtos">
                             <h5>R$ 17,00 por mes</h5>
                             <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
