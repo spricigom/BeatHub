@@ -9,15 +9,22 @@ const produtoStore = useProdutoStore()
 </script>
 
 <template>
+
     <body>
-        
-<HeaderComponente/>
-        
+
+        <HeaderComponente />
+
         <hr class="hr" />
         <main>
-            <ListProduct :produtos="produtoStore.produtosFavoritos" v-if="produtoStore.produtosFavoritos.length > 0" tipo="favorite"/>
-                <div class="carrinho-e-texto" v-else>
-                <img src="@/assets/coracao.png" alt="" id="carrinho">
+
+            <div class="teste">
+                <div class="esquerda">
+                    <div v-if="produtoStore.produtosFavoritos.length > 0">
+                        <ListProduct :produtos="produtoStore.produtosFavoritos" tipo="favorite" />
+
+                    </div>
+                    <div class="carrinho-e-texto" v-else>
+                <img src="@/assets/bag.png" alt="" id="carrinho">
                 <p>Adicione itens no seu favorito</p>
                 <RouterLink to="/">
                     <button>
@@ -25,25 +32,131 @@ const produtoStore = useProdutoStore()
                     </button>
                 </RouterLink>
             </div>
+                </div>
+                <div class="direita">
+          <div class="finalizar" v-if="produtoStore.produtosFavoritos.length > 0">
+            <h2>Finalize Seu Aluguel</h2>
+            
+            <RouterLink to="/Carrinho">
+              <button>Alugue</button>
+            </RouterLink>
+          </div>
+        </div>
+            </div>
+           
+           
 
         </main>
 
 
 
-        
-<NavFooter/>
+
+        <NavFooter />
     </body>
 </template>
 
 <style scoped>
-#texto_botao{
-    color: #f48200; 
+#chamada {
+    font-family: 'Josefin Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin-bottom: 6vh;
+}
+
+#chamada p {
+    color: #2C2B2B;
+
+}
+
+.info {
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.info input {
+    width: 100%;
+    margin-bottom: 4vh;
+    border: none;
+    height: 5vh;
+    border-radius: .5vw;
+}
+
+.info ::placeholder {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.form {
+    height: 20vh;
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5vh;
+}
+
+.form input {
+    width: 100%;
+    margin-bottom: 4vh;
+    border: none;
+    height: 5vh;
+    border-radius: .5vw;
+}
+
+.form ::placeholder {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.finalizar {
+    background-color: #dfdfdfe9;
+    width: 30vw;
+    height: 30vh;
+    margin-top: 3vh;
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.finalizar h2,
+h5 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 500;
+    margin-bottom: 5vh;
+}
+
+.teste {
+    display: flex;
+    width: 100%;
+}
+
+.esquerda {
+    display: flex;
+    float: left;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.direita {
+    display: flex;
+    float: right;
+    width: 50%;
+    justify-content: center;
+    
+
+}
+
+#texto_botao {
+    color: #f48200;
     font-size: 1.2vw;
     position: relative;
     top: 1vh;
     font-family: 'Josefin Sans', sans-serif;
-    font-weight: 500;
+    width: 500;
 }
+
 button {
     height: 5vh;
     width: 15vw;
@@ -56,42 +169,53 @@ button {
 
 }
 
-.carrinho-e-texto{
+button p {
+    color: #f48200;
+
+}
+
+.carrinho-e-texto {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
     margin-top: 10vh;
+    margin-bottom: 30vh;
+    position: relative;
+    left: 22vw;
 }
-.carrinho-e-texto p{
+
+.carrinho-e-texto p {
     color: #000000;
     font-weight: 700;
     font-size: 1.8vw;
     font-family: 'Josefin Sans', sans-serif;
 }
-#carrinho{
-    width: 16vw;
-    opacity: 0.8;
+
+#carrinho {
+    width: 18vw;
 }
-main{
-    height: 80vh;
+
+main {
     background-color: #efefef;
-    display: flex; 
+    display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.Copyright{
-    background-color:rgb(95, 95, 95);
+.Copyright {
+    background-color: rgb(95, 95, 95);
     color: white;
     height: 7vh;
     display: flex;
     padding-top: 2.3vh;
     justify-content: center;
 }
-.Copyright a{
+
+.Copyright a {
     color: white;
 }
+
 .icones-footer {
     width: 2.5vw;
     margin-top: 5vh;
@@ -164,16 +288,8 @@ main{
     bottom: 15px
 }
 
-input {
 
-    display: flex;
-    position: relative;
-    left: 7vw;
-    bottom: 1.1vh;
-
-}
-
-.regiao{
+.regiao {
     position: relative;
     left: 5vw;
     font-family: 'Inter', sans-serif;
@@ -243,5 +359,13 @@ body {
 }
 
 
-
+#carouselExample .carousel-item::before {
+    content: '';
+    background: linear-gradient(0deg, rgb(240, 240, 240) 50%, transparent 69%);
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 120vh;
+}
 </style>
