@@ -30,7 +30,7 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                             <img src="@/assets/coracao.png" alt="" class="icones" />
                         </div>
                         <div class="img-produtos">
-                            <img src="@/assets/microfone.png" alt="" />
+                            <img src="@/assets/pedal1.png" alt="" />
                         </div>
                         <h2 class="texto-produtos">Microfone SoundPro SP</h2>
                         <div class="preco-produtos">
@@ -45,7 +45,7 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                             <img src="@/assets/coracao.png" alt="" class="icones" />
                         </div>
                         <div class="img-produtos">
-                            <img src="@/assets/pedal-OverDrive.png" alt="" />
+                            <img src="@/assets/pedal2.webp" alt="" />
                         </div>
                         <h2 class="texto-produtos">Pedal Guitarra OverTone</h2>
                         <div class="preco-produtos">
@@ -60,7 +60,7 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                             <img src="@/assets/coracao.png" alt="" class="icones" />
                         </div>
                         <div class="img-produtos">
-                            <img src="@/assets/amplificador.png" alt="" />
+                            <img src="@/assets/pedal3.png" alt="" />
                         </div>
                         <h2 class="texto-produtos">Cubo Amplificador</h2>
                         <div class="preco-produtos">
@@ -75,7 +75,7 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                             <img src="@/assets/coracao.png" alt="" class="icones" />
                         </div>
                         <div class="img-produtos">
-                            <img src="@/assets/ukulele2.png" alt="" />
+                            <img src="@/assets/pedal4.webp" alt="" />
                         </div>
                         <h2 class="texto-produtos">Ukulele</h2>
                         <div class="preco-produtos">
@@ -90,7 +90,7 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                             <img src="@/assets/coracao.png" alt="" class="icones" />
                         </div>
                         <div class="img-produtos">
-                            <img src="@/assets/pandeiro.png" alt="" width="100%" />
+                            <img src="@/assets/pedal5.webp" alt="" width="100%" />
                         </div>
                         <h2 class="texto-produtos">Pandeiro 12 Knight</h2>
                         <div class="preco-produtos">
@@ -107,7 +107,7 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                             <img src="@/assets/coracao.png" alt="" class="icones" />
                         </div>
                         <div class="img-produtos">
-                            <img src="@/assets/teclado.png" alt="" />
+                            <img src="@/assets/pedal6.webp" alt="" />
                         </div>
                         <h2 class="texto-produtos">Teclado musical 61 teclas</h2>
                         <div class="preco-produtos">
@@ -122,7 +122,7 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                             <img src="@/assets/coracao.png" alt="" class="icones" />
                         </div>
                         <div class="img-produtos">
-                            <img src="@/assets/trompete.png" alt="" />
+                            <img src="@/assets/pedal7.webp" alt="" />
                         </div>
                         <h2 class="texto-produtos">Trompete Werill Master</h2>
                         <div class="preco-produtos">
@@ -137,7 +137,7 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                             <img src="@/assets/coracao.png" alt="" class="icones" />
                         </div>
                         <div class="img-produtos">
-                            <img src="@/assets/bateria.png" alt="" />
+                            <img src="@/assets/pedal8.webp" alt="" />
                         </div>
                         <h2 class="texto-produtos">Bateria Acústica</h2>
                         <div class="preco-produtos">
@@ -152,7 +152,7 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                             <img src="@/assets/coracao.png" alt="" class="icones" />
                         </div>
                         <div class="img-produtos">
-                            <img src="@/assets/prato.png" alt="" />
+                            <img src="@/assets/pedal9.png" alt="" />
                         </div>
                         <h2 class="texto-produtos">Prato Hi Hat</h2>
                         <div class="preco-produtos">
@@ -167,7 +167,7 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                             <img src="@/assets/coracao.png" alt="" class="icones" />
                         </div>
                         <div class="img-produtos">
-                            <img src="@/assets/gaitaBoca.png" alt="" />
+                            <img src="@/assets/pedal10.webp" alt="" />
                         </div>
                         <h2 class="texto-produtos">Gaita de boca harmônica</h2>
                         <div class="preco-produtos">

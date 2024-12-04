@@ -8,7 +8,7 @@
                 <ul class="navegacao">
                     <li><RouterLink to="/Guitarra">Guitarra </RouterLink></li>
                     <li><RouterLink to="/Baixo" id="amarelo">Baixo </RouterLink></li>
-                  <li><RouterLink to="/Pedal">Pedais</RouterLink></li>
+                    <li><RouterLink to="/Pedais">Pedais </RouterLink></li>
                     <li><RouterLink to="/Teclado" id="amarelo">Teclado </RouterLink></li>
                     <li><RouterLink to="/Violão">Violão </RouterLink></li>
                     <li><RouterLink to="/Bateria" id="amarelo">Bateria</RouterLink></li>
