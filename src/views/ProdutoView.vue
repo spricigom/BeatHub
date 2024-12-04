@@ -218,6 +218,24 @@ function pegarImagem(id) {
                     </div>
                 </div>
             </div>
+
+
+
+            <div class="teste">
+                <div class="carousel">
+                    <div class="slides">
+                        <div class="slide active">Slide 1 Content</div>
+                        <div class="slide">Slide 2 Content</div>
+                        <div class="slide">Slide 3 Content</div>
+                    </div>
+                    <div class="indicators">
+                        <img src="@/assets/teclado1-2.png" class="indicator active" data-slide="1" />
+                        <img src="@/assets/teclado1-3.png" class="indicator" data-slide="2" />
+                        <img src="@/assets/teclado1-4.png" class="indicator" data-slide="3" />
+                    </div>
+                </div>
+
+            </div>
         </main>
 
 
@@ -227,6 +245,44 @@ function pegarImagem(id) {
 </template>
 
 <style scoped>
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+.indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.indicator {
+    width: 50px;
+    height: 50px;
+    opacity: 0.5;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: opacity 0.3s ease;
+}
+
+.indicator.active {
+    opacity: 1;
+    border: 2px solid #fff;
+}
+
 .avaliacao_recomenda {
     display: flex;
     justify-content: space-evenly;
