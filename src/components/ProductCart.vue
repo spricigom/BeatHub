@@ -26,7 +26,7 @@ const props = defineProps([
                 <img src="@/assets/coracao.png" alt="" class="icones" @click="$emit('favorito', props.produto.id)"
                     v-else>
             </div>
-            <img src="@/assets/lixeira.png" alt="" id="lixeira">
+            <img src="@/assets/lixeira.png" alt="" id="lixeira" @click="$emit('delete', props.produto.id)">
         </div>
 
     </div>

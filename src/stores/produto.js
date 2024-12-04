@@ -25,12 +25,17 @@ export const useProdutoStore = defineStore('produto', () => {
     }
 
     const produtosCarrinho = computed(() => produtos.value.filter(p => p.noCarrinho))
+
+    const removerProduto = (productId) => {
+        produtos.value = produtos.value.filter(produto => produto.id !== productId);
+    }
     return {
         produtos,
         buscarTodosOsProdutos,
         favoritar,
         produtosFavoritos,
         addCarrinho,
-        produtosCarrinho
+        produtosCarrinho,
+        removerProduto,
     }
 })

@@ -18,7 +18,9 @@ function favoritar(productId) {
 function addCarrinho(productId) {
     produtoStore.addCarrinho(productId)
 }
-
+function removerProduto(productId) {
+    produtoStore.removerProduto(productId);
+}
 </script>
 <template>
     <div class="lista">
@@ -27,9 +29,9 @@ function addCarrinho(productId) {
         <div class="centro">
             <hr style="width: 90%; border: 1px solid;">
             <div v-for="produto, in props.produtos" :key="produto.id" class="col produtos text-center">
-                <ProductCart @favorito="favoritar" @imagem="getImage" @carrinho="addCarrinho" :produto="produto"
+                <ProductCart @favorito="favoritar" @imagem="getImage" @carrinho="addCarrinho" @delete="removerProduto" :produto="produto"
                     :index="produto.id" v-if="props.tipo == 'cart'" />
-                <ProductFavorite @favorito="favoritar" @imagem="getImage" @carrinho="addCarrinho" :produto="produto"
+                <ProductFavorite @favorito="favoritar" @imagem="getImage" @carrinho="addCarrinho"  @delete="removerProduto"  :produto="produto"
                     :index="produto.id" v-if="props.tipo == 'favorite'" />
             </div>
         </div>
