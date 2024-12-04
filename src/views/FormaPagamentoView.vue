@@ -15,38 +15,11 @@ import NavFooter from '@/components/NavFooter.vue';
         <hr class="hr" />
         <main>
             <div class="fundo">
-                <div class="padrao">
-                    <div class="titulo-e-cartoes">
-                        <h2>Informacoes do Cartao</h2>
-                        <div class="cartoes"></div>
-                    </div>
-                    <form class="formulario">
-                        <div class="especial">
-                            <input type="number" placeholder="Numero do Cartao" id="um">
-                            <input type="number" placeholder="CVV" id="dois">
-                        </div>
-                        <input type="text" placeholder="Data de Validade (MM/AA)">
-                        <input type="text" placeholder="Nome no Cartao">
-
-                    </form>
+                <h2>Pagamento Via Pix</h2>
+                <div class="qr">
+                    <img src="@/assets/pixx.jpg" alt="">
                 </div>
-
-                <div class="padrao">
-                    <div class="titulo-e-cartoes">
-                        <h2>Endereco da cobranca</h2>
-                    </div>
-                    <form class="formulario">
-                        <input type="text" placeholder="Estado">                      
-                        <input type="text" placeholder="Cidade">
-                        <div class="especial">
-                            <input type="text" placeholder="Rua" id="um">
-                            <input type="text" placeholder="Numero" id="dois">
-                        </div>
-
-
-                    </form>
-                    <button>Alugar</button>
-                </div>
+                <button>ok</button>
             </div>
         </main>
 
@@ -58,7 +31,27 @@ import NavFooter from '@/components/NavFooter.vue';
 </template>
 
 <style scoped>
-button{
+.fundo h2{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2.5vw;
+    margin-bottom: 3vh;
+}
+.qr {
+    width: 35vw;
+    height: 35vw;
+    display: flex;
+    margin-left: 1vw;
+    background-color: black;
+}
+
+.qr img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+button {
     border: 0;
     background-color: #2C2B2B;
     color: white;
@@ -66,20 +59,24 @@ button{
     height: 6vh;
     font-family: 'Josefin Sans', sans-serif;
     border-radius: 3vw;
-    margin-top: 7vh; 
-    margin-left: 20vh; 
+    margin-top: 7vh;
+
 }
-.especial{
+
+.especial {
     display: flex;
     flex-direction: row;
 }
-#um{
+
+#um {
     width: 65%;
 }
-#dois{
+
+#dois {
     width: 20%;
     margin-left: 2vw;
 }
+
 ::placeholder {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1vw;
@@ -116,11 +113,15 @@ button{
 
 
 .fundo {
-    width: 40vw;
+    width: 80vw;
     height: 110vh;
     background-color: #c4c4c4;
     border-radius: 1.5vw;
     margin-bottom: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 7vh;
 }
 
 main {
