@@ -20,7 +20,7 @@ const produtoStore = useProdutoStore()
             <div class="teste">
                 <div class="esquerda">
                     <div v-if="produtoStore.produtosFavoritos.length > 0">
-                        <ListProduct :produtos="produtoStore.produtosFavoritos" tipo="cart" />
+                        <ListProduct :produtos="produtoStore.produtosFavoritos" tipo="favorite" />
 
                     </div>
                     <div class="carrinho-e-texto" v-else>
@@ -37,7 +37,7 @@ const produtoStore = useProdutoStore()
           <div class="finalizar" v-if="produtoStore.produtosFavoritos.length > 0">
             <h2>Finalize Seu Aluguel</h2>
             
-            <RouterLink to="/FormaPagamento">
+            <RouterLink to="/Carrinho">
               <button>Alugue</button>
             </RouterLink>
           </div>
