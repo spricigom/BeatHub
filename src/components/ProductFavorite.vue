@@ -19,12 +19,12 @@ const props = defineProps([
 
         <div class="funcoes">
             <div class="compra-e-coracao_produto">
-                <img src="@/assets/carrinho-de-compras.png" alt="" class="icones"
-                    @click="$emit('carrinho', props.produto.id)" v-if="props.produto?.noCarrinho" />
                 <img src="@/assets/carrinho-de-compra-laranja.png" alt="" class="icones"
+                    @click="$emit('carrinho', props.produto.id)" v-if="props.produto?.noCarrinho" />
+                <img src="@/assets/carrinho-de-compras.png" alt="" class="icones"
                     @click="$emit('carrinho', props.produto.id)" v-else>
             </div>
-            <img src="@/assets/lixeira.png" alt="" id="lixeira">
+            <img src="@/assets/lixeira.png" alt="" id="lixeira" @click="$emit('delete', props.produto.id)">
         </div>
 
     </div>
