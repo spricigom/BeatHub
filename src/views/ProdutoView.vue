@@ -102,140 +102,91 @@ function pegarImagem(id) {
 
             </div>
             <h1 id="interesse">itens que talvez você tenha interesse</h1>
-            <div class="recomenda" style="display: flex; flex-direction: row;">
+            <div class="fundoo">
+                <div class="linha">
+                    <div class="produtos">
+                        <div class="compra-e-coracao_produto">
+                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
+                            <img src="@/assets/coracao.png" alt="" class="icones" />
+                        </div>
+                        <div class="img-produtos">
+                            <img src="@/assets/guitarra1.png" alt="" />
+                        </div>
+                        <h2 class="texto-produtos">Masterbuilt John Frusciante Stratocaster®</h2>
+                        <div class="preco-produtos">
+                            <h5>R$ 42,00 por mes</h5>
+                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
+                        </div>
+                    </div>
 
-                <div class="produto">
-                    <div class="compra-e-coracao_produto">
-                        <img src="@/assets/coracao.png" alt="" class="icones">
-                        <img src="@/assets/carrinho-de-compras.png" alt="" class="icones">
-                    </div>
-                    <div class="img-produtos">
-                        <img src="@/assets/tambor2.png" alt="">
-                    </div>
-                    <div class="text-produto">
-                        <p>Muslady tambor de percussão</p>
+                    <div class="produtos">
+                        <div class="compra-e-coracao_produto">
+                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
+                            <img src="@/assets/coracao.png" alt="" class="icones" />
+                        </div>
+                        <div class="img-produtos">
+                            <img src="@/assets/guitarra2.jpg" alt="" />
+                        </div>
+                        <h2 class="texto-produtos">Fender® x Hello Kitty® Pink Stratocaster®</h2>
+                        <div class="preco-produtos">
+                            <h5>R$ 17,00 por mes</h5>
+                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
+                        </div>
                     </div>
 
-                    <div class="avaliacao_recomenda">
-                        <img src="@/assets/estrelas.png" alt="" style=" display: flex; position: relative; bottom: 1vh">
-                        <p style="color: rgb(105, 105, 105);">130 avaliações</p>
+                    <div class="produtos">
+                        <div class="compra-e-coracao_produto">
+                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
+                            <img src="@/assets/coracao.png" alt="" class="icones" />
+                        </div>
+                        <div class="img-produtos">
+                            <img src="@/assets/guitarra3.jpg" alt="" />
+                        </div>
+                        <h2 class="texto-produtos">Player II Jazzmaster®</h2>
+                        <div class="preco-produtos">
+                            <h5>R$ 32,00 por mes</h5>
+                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
+                        </div>
                     </div>
-                    <div class="valor_recomenda">
-                        <p>R$ 61,00 por mês</p>
-                        <img src="@/assets/compartilhe.png" alt="" class="icones"
-                            style=" display: flex; position: relative; bottom: 1vh;">
+
+                    <div class="produtos">
+                        <div class="compra-e-coracao_produto">
+                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
+                            <img src="@/assets/coracao.png" alt="" class="icones" />
+                        </div>
+                        <div class="img-produtos">
+                            <img src="@/assets/guitarra4.jpg" alt="" />
+                        </div>
+                        <h2 class="texto-produtos">Jimmy Page Telecaster®</h2>
+                        <div class="preco-produtos">
+                            <h5>R$ 24,00 por mes</h5>
+                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
+                        </div>
+                    </div>
+
+                    <div class="produtos">
+                        <div class="compra-e-coracao_produto">
+                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
+                            <img src="@/assets/coracao.png" alt="" class="icones" />
+                        </div>
+                        <div class="img-produtos">
+                            <img src="@/assets/guitarra5.jpg" alt="" width="100%" />
+                        </div>
+                        <h2 class="texto-produtos">Kurt Cobain Jaguar® Left-Hand</h2>
+                        <div class="preco-produtos">
+                            <h5>R$ 32,00 por mes</h5>
+                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
+                        </div>
                     </div>
                 </div>
 
-
-
-                <div class="produto">
-                    <div class="compra-e-coracao_produto">
-                        <img src="@/assets/coracao.png" alt="" class="icones">
-                        <img src="@/assets/carrinho-de-compras.png" alt="" class="icones">
-                    </div>
-                    <div class="img-produtos">
-                        <img src="@/assets/trompete.png" alt="">
-                    </div>
-                    <div class="text-produto">
-                        <p>Muslady tambor de percussão</p>
-                    </div>
-
-                    <div class="avaliacao_recomenda">
-                        <img src="@/assets/estrelas.png" alt="" style=" display: flex; position: relative; bottom: 1vh">
-                        <p style="color: rgb(105, 105, 105);">130 avaliações</p>
-                    </div>
-                    <div class="valor_recomenda">
-                        <p>R$ 60,00 por mês</p>
-                        <img src="@/assets/compartilhe.png" alt="" class="icones"
-                            style=" display: flex; position: relative; bottom: 1vh">
-                    </div>
-                </div>
-                <div class="produto">
-                    <div class="compra-e-coracao_produto">
-                        <img src="@/assets/coracao.png" alt="" class="icones">
-                        <img src="@/assets/carrinho-de-compras.png" alt="" class="icones">
-                    </div>
-                    <div class="img-produtos">
-                        <img src="@/assets/bateria.png" alt="">
-                    </div>
-                    <div class="text-produto">
-                        <p>Muslady tambor de percussão</p>
-                    </div>
-
-                    <div class="avaliacao_recomenda">
-                        <img src="@/assets/estrelas.png" alt="" style=" display: flex; position: relative; bottom: 1vh">
-                        <p style="color: rgb(105, 105, 105);">130 avaliações</p>
-                    </div>
-                    <div class="valor_recomenda">
-                        <p>R$ 60,00 por mês</p>
-                        <img src="@/assets/compartilhe.png" alt="" class="icones"
-                            style=" display: flex; position: relative; bottom: 1vh">
-                    </div>
-                </div>
-                <div class="produto">
-                    <div class="compra-e-coracao_produto">
-                        <img src="@/assets/coracao.png" alt="" class="icones">
-                        <img src="@/assets/carrinho-de-compras.png" alt="" class="icones">
-                    </div>
-                    <div class="img-produtos">
-                        <img src="@/assets/prato.png" alt="">
-                    </div>
-                    <div class="text-produto">
-                        <p>Muslady tambor de percussão</p>
-                    </div>
-
-                    <div class="avaliacao_recomenda">
-                        <img src="@/assets/estrelas.png" alt="" style=" display: flex; position: relative; bottom: 1vh">
-                        <p style="color: rgb(105, 105, 105);">130 avaliações</p>
-                    </div>
-                    <div class="valor_recomenda">
-                        <p>R$ 60,00 por mês</p>
-                        <img src="@/assets/compartilhe.png" alt="" class="icones"
-                            style=" display: flex; position: relative; bottom: 1vh">
-                    </div>
-                </div>
-                <div class="produto">
-                    <div class="compra-e-coracao_produto">
-                        <img src="@/assets/coracao.png" alt="" class="icones">
-                        <img src="@/assets/carrinho-de-compras.png" alt="" class="icones">
-                    </div>
-                    <div class="img-produtos">
-                        <img src="@/assets/gaitaBoca.png" alt="">
-                    </div>
-                    <div class="text-produto">
-                        <p>Muslady tambor de percussão</p>
-                    </div>
-
-                    <div class="avaliacao_recomenda">
-                        <img src="@/assets/estrelas.png" alt="" style=" display: flex; position: relative; bottom: 1vh">
-                        <p style="color: rgb(105, 105, 105);">130 avaliações</p>
-                    </div>
-                    <div class="valor_recomenda">
-                        <p>R$ 60,00 por mês</p>
-                        <img src="@/assets/compartilhe.png" alt="" class="icones"
-                            style=" display: flex; position: relative; bottom: 1vh">
-                    </div>
-                </div>
+                
+                
             </div>
 
 
 
-            <div class="teste">
-                <div class="carousel">
-                    <div class="slides">
-                        <div class="slide active">Slide 1 Content</div>
-                        <div class="slide">Slide 2 Content</div>
-                        <div class="slide">Slide 3 Content</div>
-                    </div>
-                    <div class="indicators">
-                        <img src="@/assets/teclado1-2.png" class="indicator active" data-slide="1" />
-                        <img src="@/assets/teclado1-3.png" class="indicator" data-slide="2" />
-                        <img src="@/assets/teclado1-4.png" class="indicator" data-slide="3" />
-                    </div>
-                </div>
-
-            </div>
+           
         </main>
 
 
@@ -245,6 +196,57 @@ function pegarImagem(id) {
 </template>
 
 <style scoped>
+.preco-produtos {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+
+}
+
+.preco-produtos h5 {
+    font-size: 1.1vw;
+    font-weight: 400;
+    margin-top: 1vh;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1vh
+}
+.texto-produtos {
+    font-size: 1.1vw;
+    margin-top: 4vh;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+.fundoo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20vh;
+}
+
+.produtos {
+    background-color: white;
+    height: 48vh;
+    width: 15vw;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 4vh;
+    margin-bottom: 8vh;
+    border-radius: 0.44rem;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.linha {
+    width: 88vw;
+    display: flex;
+    flex-direction: row;
+    height: 50vh;
+    justify-content: space-around;
+}
+
 .carousel {
     position: relative;
     width: 100%;

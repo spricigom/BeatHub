@@ -53,7 +53,11 @@ const formatCPF = () => {
                 <input type="text" placeholder="Cupom BeatHub" />
               </form>
             </div>
-            <h5>RETIRADA SOMENTE NA LOJA</h5>
+            <div class="local-retirada">
+                <h5>RETIRADA SOMENTE NA LOJA</h5>
+            <p>Rua dos Sonhos, 42, Centro - Joinville</p>
+            </div>
+
             <div class="form">
               <form>
                 <input
@@ -89,6 +93,22 @@ const formatCPF = () => {
 
 
 <style scoped>
+.local-retirada{
+    margin-bottom: 5vh;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+
+}
+.local-retirada h5{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 500;
+}
+.local-retirada p{
+    color: #000000;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 500;
+}
 #chamada {
     font-family: 'Josefin Sans', sans-serif;
     display: flex;
@@ -144,7 +164,7 @@ const formatCPF = () => {
 .finalizar {
     background-color: #dfdfdfe9;
     width: 30vw;
-    height: 90vh;
+    height: 95vh;
     margin-top: 3vh;
     padding-top: 5vh;
     display: flex;
@@ -152,8 +172,8 @@ const formatCPF = () => {
     align-items: center;
 }
 
-.finalizar h2,
-h5 {
+.finalizar h2
+ {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 500;
     margin-bottom: 5vh;

@@ -206,6 +206,7 @@ const esconderDivLocalizacao = () => {
         </div>
       </div>
       <ListHome :produtos="produtoStore.produtos" tipo="home"/>  
+
     </main>
 
     <NavFooter />

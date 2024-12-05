@@ -19,20 +19,17 @@
                 <img class="logo" src="@/assets/certa.png" alt="" />
             </RouterLink>
 
-            <p class="regiao"><img src="@/assets/lugar-colocar.png" alt="" class="icones"
-                    style="opacity: .7; position: relative; bottom: .2vh;"/>Selecione sua regiao</p>
-
+            
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="O que você precisa?..." aria-label="Search"
                     style=" background-color: #efefef; border: 1px solid #f48200; width: 17vw; border-radius: 300px;" />
             </form>
             <img src="@/assets/lupa.png" alt=""
-                style="width: 1vw; display: flex; position: relative; left: 4vw; bottom: 1vh;">
+                style="width: 1vw; display: flex; position: relative;  bottom: 1vh;">
 
             <div class="compra-e-coracao">
                  <RouterLink to="/Carrinho"><img src="@/assets/carrinho-de-compras.png" alt="" class="icones"   /></RouterLink>
-                 <RouterLink to="/Favorito"><img src="@/assets/coracao.png" alt="" class="icones" /> </RouterLink>
-                
+                 <RouterLink to="/Favorito"><img src="@/assets/coracao.png" alt="" class="icones" /> </RouterLink>    
             </div>
         </header>
 </template>
@@ -82,6 +79,10 @@ header {
     list-style: none;
     position: relative;
     right: 8vw;
+    width: 32vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .navegacao li {
