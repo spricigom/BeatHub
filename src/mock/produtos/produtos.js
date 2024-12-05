@@ -36,9 +36,9 @@ export const MockProducts = [
     },
     {
         id: 6,
-        nome: 'Teclado musical 61 teclas',
+        nome: 'Fender x Hello Kitty Pink Stratocaster',
         preco: 35.00 ,
-        img: 'teclado.png', 
+        img: 'guitarra2.jpg', 
     },
     {
         id: 7,

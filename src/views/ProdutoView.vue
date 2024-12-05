@@ -1,5 +1,4 @@
 <script setup>
-
 import HeaderComponente from '@/components/HeaderComponente.vue';
 import NavFooter from '@/components/NavFooter.vue';
 
@@ -42,13 +41,13 @@ import NavFooter from '@/components/NavFooter.vue';
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="@/assets/teclado.png" class="d-block w-100" alt="@/assets/teclado.png">
+                                <img src="@/assets/guitarra2.jpg" class="d-block w-100" alt="@/assets/hello1-1.jpg">
                             </div>
                             <div class="carousel-item">
-                                <img src="@/assets/teclado.png" class="d-block w-100" alt="@/assets/teclado.png">
+                                <img src="@/assets/hello1-2.jpg" class="d-block w-100" alt="@/assets/hello1-1.jpg">
                             </div>
                             <div class="carousel-item">
-                                <img src="@/assets/teclado.png" class="d-block w-100" alt="@/assets/teclado.png">
+                                <img src="@/assets/hello-1-3.jpg" class="d-block w-100" alt="@/assets/teclado.png">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -70,7 +69,7 @@ import NavFooter from '@/components/NavFooter.vue';
 
 
                 <div class="centro">
-                    <h4 class="titulo-produto">Teclado Piano Musical 61 Teclas 500 Ritmos E 80 Músicas - MXT</h4>
+                    <h4 class="titulo-produto">Fender® x Hello Kitty® Pink Stratocaster®</h4>
 
                     <div class="avaliacao">
 
@@ -79,11 +78,8 @@ import NavFooter from '@/components/NavFooter.vue';
                     <h6 id="esquerda">130 avaliações</h6>
 
                     <div class="descricao">
-                        <p>O teclado musical MT-4500 é uma sinfonia de inovação e versatilidade. </p>
-                        <p>61 teclas sensíveis à velocidade, proporciona uma experiência de toque expressiva. </p>
-                        <p>Seu design elegante abriga uma biblioteca de 500 timbres e ritmos autênticos, de pianos a
-                            sintetizadores, oferecendo possibilidades sonoras ilimitadas.</p>
-                        <p>Possui 3 modos de aprendizagem e metrônomo.</p>
+                        <p>Diga olá ao mundo vibrante da Hello Kitty com a coleção Fender x Hello Kitty, celebrando uma colaboração icônica que transcende gerações. Esta coleção mescla a estética ousada e colorida da Hello Kitty com a excelência confiável dos equipamentos Fender, proporcionando desempenho incomparável e estilo elegante. Toque seu instrumento em um estilo lúdico e deixe a Hello Kitty acompanhá-lo em sua jornada musical!
+                        </p>
                     </div>
 
                 </div>
@@ -126,15 +122,14 @@ import NavFooter from '@/components/NavFooter.vue';
                             <img src="@/assets/coracao.png" alt="" class="icones" />
                         </div>
                         <div class="img-produtos">
-                            <img src="@/assets/guitarra2.jpg" alt="" />
+                            <img src="@/assets/guitarra10.jpg" alt="" />
                         </div>
-                        <h2 class="texto-produtos">Fender® x Hello Kitty® Pink Stratocaster®</h2>
+                        <h2 class="texto-produtos">Tom Morello Stratocaster®</h2>
                         <div class="preco-produtos">
                             <h5>R$ 17,00 por mes</h5>
                             <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
                         </div>
                     </div>
-
                     <div class="produtos">
                         <div class="compra-e-coracao_produto">
                             <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
@@ -197,15 +192,22 @@ import NavFooter from '@/components/NavFooter.vue';
 </template>
 
 <style scoped>
+.carousel-item img {
+    width: 20vw;
+    height: 50vh;
+    background-color: white;
+    object-fit: contain;  /* ou 'contain', dependendo do seu caso */
+}
+
 .esquerda{
     width: 30vw;
 }
 .carousel {
-    margin-top: 5vh;
-    padding: 2vw;
     width: 10vw;
-   
+    display: flex;
+
 }
+
 
 .preco-produtos {
     display: flex;
@@ -449,7 +451,7 @@ import NavFooter from '@/components/NavFooter.vue';
 }
 
 .centro p {
-    font-size: .8vw;
+    font-size: 1vw;
     color: #3C3C3C;
     margin-top: 1vh;
     font-family: 'Josefin Sans', sans-serif;
