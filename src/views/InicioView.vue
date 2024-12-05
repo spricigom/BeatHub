@@ -9,6 +9,7 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
 const produtoStore = useProdutoStore();
 const mostrarLocalizacao = ref(false);
 
+
 onMounted(() => {
     produtoStore.buscarTodosOsProdutos();
 });
@@ -118,16 +119,9 @@ const esconderDivLocalizacao = () => {
           <img src="@/assets/ukulele.png" alt="" class="produtos-MaisAlugados" />
           <h2>Ukulele Concert Us23 Spring</h2>
 
-          <div class="conteudo1">
-            <img src="@/assets/estrelas.png" alt="" class="estrelas" />
-            <div class="avaliacao">
-              <h6>130 avaliações</h6>
-            </div>
-          </div>
-
           <div class="conteudo2">
             <div class="preco">
-              <h5>R$ 17,00 por mês</h5>
+              <h5>R$ 20,00 por mês</h5>
             </div>
             <img src="@/assets/compartilhe.png" alt="" class="compartilhe" />
           </div>
@@ -142,16 +136,9 @@ const esconderDivLocalizacao = () => {
           <img src="@/assets/violao.png" alt="" class="produtos-MaisAlugados" />
           <h2>Violão Di Giorgio Master</h2>
 
-          <div class="conteudo1">
-            <img src="@/assets/estrelas.png" alt="" class="estrelas" />
-            <div class="avaliacao">
-              <h6>130 avaliações</h6>
-            </div>
-          </div>
-
           <div class="conteudo2">
             <div class="preco">
-              <h5>R$ 17,00 por mês</h5>
+              <h5>R$ 25,00 por mês</h5>
             </div>
             <img src="@/assets/compartilhe.png" alt="" class="compartilhe" />
           </div>
@@ -166,16 +153,9 @@ const esconderDivLocalizacao = () => {
           <img src="@/assets/guitarra.png" alt="" class="produtos-MaisAlugados" />
           <h2>Guitarra elétrica SG</h2>
 
-          <div class="conteudo1">
-            <img src="@/assets/estrelas.png" alt="" class="estrelas" />
-            <div class="avaliacao">
-              <h6>130 avaliações</h6>
-            </div>
-          </div>
-
           <div class="conteudo2">
             <div class="preco">
-              <h5>R$ 17,00 por mês</h5>
+              <h5>R$ 38,00 por mês</h5>
             </div>
             <img src="@/assets/compartilhe.png" alt="" class="compartilhe" />
           </div>
@@ -190,16 +170,9 @@ const esconderDivLocalizacao = () => {
           <img src="@/assets/baixo.png" alt="" class="produtos-MaisAlugados" />
           <h2>Baixo Strinberg JBS50</h2>
 
-          <div class="conteudo1">
-            <img src="@/assets/estrelas.png" alt="" class="estrelas" />
-            <div class="avaliacao">
-              <h6>130 avaliações</h6>
-            </div>
-          </div>
-
           <div class="conteudo2">
             <div class="preco">
-              <h5>R$ 17,00 por mês</h5>
+              <h5>R$ 27,00 por mês</h5>
             </div>
             <img src="@/assets/compartilhe.png" alt="" class="compartilhe" />
           </div>
@@ -264,7 +237,7 @@ body {
     margin-right: 1vw;
 }
 .conteudo2 {
-    margin-top: 5vh;
+    margin-top: 2vh;
 }.icones {
     width: 1.5vw;
 }
@@ -339,7 +312,7 @@ body {
     justify-content: space-between;
     position: relative;
     left: 50%;
-    box-shadow: 1px 1px 5px 5px rgb(150, 146, 146);
+
     border-radius: 1vw;
 
 }

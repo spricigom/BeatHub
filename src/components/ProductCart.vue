@@ -16,7 +16,7 @@ const props = defineProps([
         <div class="texto-e-preco">
             <h2 class="texto-produtos"> {{ props.produto?.nome }}</h2>
 
-            <h5>{{ props.produto?.preco }} </h5>
+            <h5>R${{ props.produto?.preco }}por mês </h5>
         </div>
 
         <div class="funcoes">
@@ -26,7 +26,7 @@ const props = defineProps([
                 <img src="@/assets/coracao.png" alt="" class="icones" @click="$emit('favorito', props.produto.id)"
                     v-else>
             </div>
-            <img src="@/assets/lixeira.png" alt="" id="lixeira">
+            <img src="@/assets/lixeira.png" alt="" id="lixeira" @click="$emit('delete', props.produto.id)">
         </div>
 
     </div>

@@ -47,7 +47,7 @@ const fallbackShare = () => {
     </div>
 
     <div class="preco-produtos">
-        <h5>{{ props.produto?.preco }} </h5>
+        <h5>R${{ props.produto?.preco }} por mês</h5>
         <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos" @click="shareProduct">
     </div>
 </template>

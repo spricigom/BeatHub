@@ -10,6 +10,7 @@ const produtoStore = useProdutoStore();
 
 const cpf = ref("");
 
+// Função para formatar CPF
 const formatCPF = () => {
   let formattedCPF = cpf.value.replace(/\D/g, "");
 
@@ -19,6 +20,27 @@ const formatCPF = () => {
 
   cpf.value = formattedCPF;
 };
+
+
+const valorTotal = computed(() => {
+ 
+  const total = produtoStore.produtosCarrinho.reduce((total, produto) => {
+    let preco = produto.preco;
+
+    
+    preco = parseFloat(preco);
+
+    if (isNaN(preco) || preco <= 0) {
+      return total;  
+    }
+
+    return total + preco;
+  }, 0);
+
+  return total.toFixed(2);  
+});
+
+
 </script>
 
 <template>
@@ -35,7 +57,7 @@ const formatCPF = () => {
 
           <div class="carrinho-e-texto" v-else>
             <img src="@/assets/bag.png" alt="" id="carrinho" />
-            <p>Adicione itens no seu carrinho</p>
+            <p>Adicione itens no seu carrinho</p><p></p>
             <RouterLink to="/">
               <button>
                 <p id="texto_botao">voltar para o site</p>
@@ -47,7 +69,7 @@ const formatCPF = () => {
         <div class="direita">
           <div class="finalizar" v-if="produtoStore.produtosCarrinho.length > 0">
             <h2>Finalize Seu Aluguel</h2>
-            <h5>Valor Total: R$1000,00</h5>
+            <h5><h5>Valor Total: R${{ valorTotal }}</h5></h5>
             <div class="info">
               <form>
                 <input type="text" placeholder="Cupom BeatHub" />

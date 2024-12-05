@@ -16,12 +16,6 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
             
             <h2 id="amarelo" style="position: relative;bottom: 1vh;">Baixos</h2>
 
-
-
-
-
-
-
             <div class="fundo">
                 <div class="linha">
                     <div class="produtos">
@@ -179,9 +173,8 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
             </div>
         </main>
 
+        <NavFooter/>
 
-
-        <NavFooter />
 
     </body>
 </template>
@@ -284,79 +277,6 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
     flex-direction: column;
     align-items: center;
     margin-bottom: 20vh;
-}
-
-.Copyright {
-    background-color: rgb(95, 95, 95);
-    color: white;
-    height: 7vh;
-    display: flex;
-    padding-top: 2.3vh;
-    justify-content: center;
-}
-
-.Copyright a {
-    color: white;
-}
-
-.icones-footer {
-    width: 2.5vw;
-    margin-top: 5vh;
-    margin-left: 1vw
-}
-
-.redes-sociais {
-    width: 20vw;
-    height: 10vh;
-}
-
-.colunas-footer {
-    height: 10vh;
-    width: 10vw;
-    display: inline-block;
-    margin-top: 5vh;
-    margin-bottom: 15vh;
-
-}
-
-.colunas-footer ul li {
-    list-style: none;
-    color: white;
-    font-family: 'Inter', 'sans serif';
-    font-size: 1vw;
-    text-align: center;
-    margin-top: 1vh;
-    width: 12vw;
-    position: relative;
-    right: 1vw;
-
-}
-
-.colunas-footer h2 {
-    font-size: 1.2vw;
-    font-family: 'Inter', 'sans serif';
-    color: white;
-    text-align: center
-}
-
-.cima-footer {
-    display: flex;
-    justify-content: space-around;
-    padding-top: 5vh
-}
-
-.logo-footer {
-    width: 8vw;
-}
-
-.baixo-footer {
-    display: flex;
-    justify-content: space-around;
-}
-
-.footer {
-    width: 100%;
-    background-color: #9b9a9a;
 }
 
 .container {
