@@ -109,7 +109,7 @@ const esconderDivLocalizacao = () => {
 
       <h2 id="amarelo" style="margin-left: 10vw;position: relative;bottom: 1vh;">Os mais alugados</h2>
       <div class="campo">
-        <div class="mais-alugados text-center">
+        <div class="mais-alugados text-center" id="mais-alugados">
           <div class="compra-e-coracao2">
             <img src="@/assets/coracao.png" alt="" class="icones" />
             <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
@@ -242,7 +242,7 @@ body {
 
 .localizacao-content {
   background-color: rgb(202, 202, 202);
-  padding: 20px;
+  padding: 4vw;
   border-radius: 8px;
   text-align: center;
   z-index: 1;

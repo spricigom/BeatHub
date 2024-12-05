@@ -162,6 +162,7 @@ h5 {
 .teste {
     display: flex;
     width: 100%;
+    height: 120vh;
 }
 
 .esquerda {
@@ -169,7 +170,6 @@ h5 {
     float: left;
     width: 50%;
     justify-content: center;
-    align-items: center;
 }
 
 .direita {
@@ -177,7 +177,6 @@ h5 {
     float: right;
     width: 50%;
     justify-content: center;
-    
 
 }
 
