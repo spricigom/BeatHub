@@ -21,6 +21,7 @@ async function cadastrarUsuario() {
         return;
     }
 
+    // eslint-disable-next-line no-unused-vars
     const { data: userData, error: userError } = await supabase
         .from('usuarios')
         .insert([{
