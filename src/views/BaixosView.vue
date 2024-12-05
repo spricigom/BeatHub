@@ -172,7 +172,9 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                 </div>
             </div>
         </main>
+
         <NavFooter/>
+
 
     </body>
 </template>

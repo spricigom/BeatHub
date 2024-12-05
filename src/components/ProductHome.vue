@@ -15,7 +15,7 @@ const shareProduct = () => {
 
 const fallbackShare = () => {
     const productUrl = `${window.location.origin}/produto/${props.produto?.id}`;
-    const shareText = `Confira este produto: ${props.produto?.nome}\nPreço: ${props.produto?.preco}\nLink: ${productUrl}`;
+    const shareText = `Confira este produto: ${props.produto?.nome}\nPreço: ${props.produto?.preco}\nLink: http://localhost:5173/produto`;
     
     navigator.clipboard.writeText(shareText).then(() => {
         alert("Os detalhes do produto foram copiados para a área de transferência!");
