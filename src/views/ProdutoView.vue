@@ -40,17 +40,36 @@ function pegarImagem(id) {
                     </div>
 
 
-                    <div class="product-gallery">
-                        <div class="img-produto">
-                            <img id="main-image" src="@/assets/teclado.png" alt="">
+                    <div id="carouselExampleIndicators" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
                         </div>
-
-                        <div class="mais">
-
-                            <img src="@/assets/teclado1-3.png" @click="pegarImagem(id)" class="mais-fotos">
-                            <img src="@/assets/teclado1-2.png" alt="" class="mais-fotos">
-                            <img src="@/assets/teclado1-4.png" alt="" class="mais-fotos">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="@/assets/teclado.png" class="d-block w-100" alt="@/assets/teclado.png">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="@/assets/teclado.png" class="d-block w-100" alt="@/assets/teclado.png">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="@/assets/teclado.png" class="d-block w-100" alt="@/assets/teclado.png">
+                            </div>
                         </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
 
                 </div>
@@ -180,13 +199,13 @@ function pegarImagem(id) {
                     </div>
                 </div>
 
-                
-                
+
+
             </div>
 
 
 
-           
+
         </main>
 
 
@@ -196,6 +215,16 @@ function pegarImagem(id) {
 </template>
 
 <style scoped>
+.esquerda{
+    width: 30vw;
+}
+.carousel {
+    margin-top: 5vh;
+    padding: 2vw;
+    width: 10vw;
+   
+}
+
 .preco-produtos {
     display: flex;
     justify-content: space-evenly;
@@ -212,12 +241,14 @@ function pegarImagem(id) {
     align-items: center;
     padding-bottom: 1vh
 }
+
 .texto-produtos {
     font-size: 1.1vw;
     margin-top: 4vh;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
 }
+
 .fundoo {
     display: flex;
     flex-direction: column;
@@ -369,7 +400,7 @@ function pegarImagem(id) {
     margin-top: 10vh;
 }
 
-button {
+.direita button {
     height: 5vh;
     width: 17vw;
     background-color: #2C2B2B;
