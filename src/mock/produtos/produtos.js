@@ -22,7 +22,7 @@ export const MockProducts = [
     },
     {
         id: 4,
-        nome: 'Ukulele',
+        nome: 'Ukulele Classic',
         preco :24.00 ,
         img: 'ukulele2.png', 
         

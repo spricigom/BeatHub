@@ -1,19 +1,10 @@
 <script setup>
-import { ref } from 'vue';
+
 import HeaderComponente from '@/components/HeaderComponente.vue';
 import NavFooter from '@/components/NavFooter.vue';
 
 
 
-
-const imagemExibida = ref('@/assets/teclado.png');
-const imagensSecundarias = ['@/assets/teclado1-2.png', '@/assets/teclado1-3.png', '@/assets/teclado1-4.png'];
-
-function pegarImagem(id) {
-    const urlImagemExibida = imagemExibida.value;
-    imagemExibida.value = imagensSecundarias[id]
-    imagensSecundarias.push(urlImagemExibida)
-}
 
 </script>
 
@@ -102,15 +93,6 @@ function pegarImagem(id) {
                         <h2 class="preco">R$45,00 por mês</h2>
                         <h5 class="forma_pagamento">No pix</h5>
 
-                    </div>
-
-
-
-                    <div class="cep">
-                        <h5 class="frete">calcule seu cep</h5>
-                        <form class="input_cep">
-                            <input placeholder="Insira seu cep...">
-                        </form>
                     </div>
 
                     <RouterLink to="/FormaPagamento"> <button>ALUGUE</button>
