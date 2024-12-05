@@ -29,13 +29,18 @@ const toggleModal = () => {
                 <h4>A reserva do seu instrumento já está feita!</h4>
                 <p>Pagamento realizado com sucesso!</p>
                 <p id="retirada">RETIRADA SOMENTE NA LOJA</p>
-                <button @click="toggleModal">Fechar</button>
+                <button @click="toggleModal" style="width: 10vw;"><RouterLink to="/" id="routerlink">Voltar ao site</RouterLink></button>
             </div>
         </div>
     </body>
 </template>
 
 <style scoped>
+.modal-content #routerlink{
+    text-decoration: none;
+    color: white;
+}
+
 #retirada{
     font-family: 'Josefin Sans', sans-serif;
     font-size: .8vw;

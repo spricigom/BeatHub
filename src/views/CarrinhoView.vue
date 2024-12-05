@@ -232,9 +232,9 @@ button p {
     align-items: center;
     flex-direction: column;
     margin-top: 10vh;
-    margin-bottom: 30vh;
+    margin-bottom: 65vh;
     position: relative;
-    left: 22vw;
+    left: 25vw;
 }
 
 .carrinho-e-texto p {
