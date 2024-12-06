@@ -15,7 +15,7 @@ const shareProduct = () => {
 
 const fallbackShare = () => {
     const productUrl = `${window.location.origin}/produto/${props.produto?.id}`;
-    const shareText = `Confira este produto: ${props.produto?.nome}\nPreço: ${props.produto?.preco}\nLink: ${productUrl}`;
+    const shareText = `Confira este produto: ${props.produto?.nome}\nPreço: ${props.produto?.preco}\nLink: http://localhost:5173/produto`;
     
     navigator.clipboard.writeText(shareText).then(() => {
         alert("Os detalhes do produto foram copiados para a área de transferência!");
@@ -47,7 +47,7 @@ const fallbackShare = () => {
     </div>
 
     <div class="preco-produtos">
-        <h5>{{ props.produto?.preco }} </h5>
+        <h5>R${{ props.produto?.preco }} por mês</h5>
         <img src="@/assets/compartilhe.png" alt="" class="compartilhe-produtos" @click="shareProduct">
     </div>
 </template>

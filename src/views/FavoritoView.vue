@@ -24,11 +24,11 @@ const produtoStore = useProdutoStore()
 
                     </div>
                     <div class="carrinho-e-texto" v-else>
-                <img src="@/assets/bag.png" alt="" id="carrinho">
+                <img src="@/assets/coracao.png" alt="" id="carrinho" style="opacity: .7;">
                 <p>Adicione itens no seu favorito</p>
                 <RouterLink to="/">
                     <button>
-                        <p id="texto_botao">voltar para o site</p>
+                        <p id="texto_botao">Voltar para o site</p>
                     </button>
                 </RouterLink>
             </div>
@@ -36,7 +36,6 @@ const produtoStore = useProdutoStore()
                 <div class="direita">
           <div class="finalizar" v-if="produtoStore.produtosFavoritos.length > 0">
             <h2>Finalize Seu Aluguel</h2>
-            
             <RouterLink to="/Carrinho">
               <button>Alugue</button>
             </RouterLink>
@@ -182,7 +181,7 @@ button p {
     margin-top: 10vh;
     margin-bottom: 30vh;
     position: relative;
-    left: 22vw;
+    left: 25vw;
 }
 
 .carrinho-e-texto p {

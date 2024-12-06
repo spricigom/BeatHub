@@ -1,6 +1,5 @@
 <script setup>
 import NavFooter from '@/components/NavFooter.vue';
-import ListProduct from '@/components/ListProduct.vue';
 import HeaderComponente from '@/components/HeaderComponente.vue';
 </script>
 
@@ -180,67 +179,8 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
         </main>
 
 
-
-        <footer>
-            <div class="footer">
-
-
-
-                <div class="cima-footer">
-                    <img src="@/assets/certa.png" alt="" class="logo-footer">
-                    <div class="redes-sociais">
-                        <img src="@/assets/facebook.png" alt="" class="icones-footer">
-                        <img src="@/assets/instagram (1).png" alt="" class="icones-footer">
-                        <img src="@/assets/twitter.png" alt="" class="icones-footer">
-                        <img src="@/assets/whatsapp (1).png" alt="" class="icones-footer">
-                        <img src="@/assets/youtube.png" alt="" class="icones-footer">
-                    </div>
-                </div>
-                <hr style="border: 1px solid black; margin-top: 5vh;">
-                <div class="baixo-footer">
-                    <div class="colunas-footer">
-                        <h2><strong>Categorias</strong></h2>
-                        <ul>
-                            <li>Mais vendidos</li>
-                            <li>produtos</li>
-                            <li>Promoções</li>
-                        </ul>
-                    </div>
-                    <div class="colunas-footer">
-                        <h2><strong>Empresa</strong></h2>
-                        <ul>
-                            <li>Quem somos?</li>
-                            <li>Por que BeatHub?</li>
-                            <li>Trabalhe conosco</li>
-                        </ul>
-                    </div>
-                    <div class="colunas-footer">
-                        <h2><strong>Guia de compras</strong></h2>
-                        <ul>
-                            <li>Meios de pagamentos</li>
-                            <li>Compre com pontos</li>
-                            <li>Cartão de crédito</li>
-                        </ul>
-                    </div>
-                    <div class="colunas-footer">
-                        <h2><strong>Ajuda</strong></h2>
-                        <ul>
-                            <li>Sua conta</li>
-                            <li>Frete e prazo de entrega</li>
-                            <li>Devolução e reembolso</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="Copyright">
-                © 2024 Copyright:
-                <a href="https://beathub.com/">BeatHub.com</a>
-            </div>
-        </footer>
-
-    </body>
+        <NavFooter />
+</body>
 </template>
 
 <style scoped>

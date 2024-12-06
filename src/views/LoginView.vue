@@ -1,14 +1,40 @@
 <script setup>
 import HeaderComponente from '@/components/HeaderComponente.vue';
 import NavFooter from '@/components/NavFooter.vue';
+import { reactive } from 'vue';
+import { supabase } from '../lib/supabaseClient';
+import router from '@/router/index';
+const usuarioLogin = reactive({
+    email: '',
+    password: '',
+    errorMessage: '',
+});
+
+async function fazerLogin() {
+    try {
+        const { error, data } = await supabase.from('usuarios').select('*').eq('email', usuarioLogin.email)
+        .eq('password', usuarioLogin.password);
+
+        if (error) {
+            usuarioLogin.errorMessage = 'Login ou senha incorretos!';
+            console.error('Erro ao fazer login:', error.message);
+        } else {
+            alert('Login realizado com sucesso!');
+            console.log('Dados do usuário:', data);
+        router.push(`/`)
+        }
+    } catch (err) {
+        console.error('Erro inesperado ao fazer login:', err.message);
+    }
+}
 
 </script>
 
 <template>
 
     <body>
-        <HeaderComponente/>
-        
+        <HeaderComponente />
+
         <hr class="hr" />
         <main>
             <div class="pintura">
@@ -24,17 +50,23 @@ import NavFooter from '@/components/NavFooter.vue';
             <div class="login">
                 <h2>Fazer Login</h2>
                 <div class="email_e_senha">
-                    <form>
-                        <input type="email" placeholder="e-mail" class="input-underline">
-                        <input type="password" placeholder="senha" class="input-underline">
+                    <form @submit.prevent="fazerLogin">
+                        <input type="email" placeholder="e-mail" class="input-underline" v-model="usuarioLogin.email"
+                            required>
+                        <input type="password" placeholder="senha" class="input-underline"
+                            v-model="usuarioLogin.password" required>
+                        <p v-if="usuarioLogin.errorMessage" class="error-message">
+                            {{ usuarioLogin.errorMessage }}
+                        </p>
+                        <button type="submit">Entrar</button>
                     </form>
                 </div>
                 <div class="pergunta">
-                    <p>Não é nosso cliente ainda? <br>Faça seu <RouterLink to="/Cadastro">cadastro! </RouterLink></p>
-                    
-                   
+                    <p>Não é nosso cliente ainda? <br>Faça seu <RouterLink to="/Cadastro">cadastro! </RouterLink>
+                    </p>
+
+
                 </div>
-                <button>Entrar</button>
 
 
             </div>
@@ -42,15 +74,14 @@ import NavFooter from '@/components/NavFooter.vue';
 
 
 
-       
-<NavFooter/>
+
+        <NavFooter />
     </body>
 </template>
 
 
 <style scoped>
-
-.login button{
+.login button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,6 +89,7 @@ import NavFooter from '@/components/NavFooter.vue';
     left: 10vw;
     margin-top: 2vh;
 }
+
 .pergunta {
     display: flex;
     flex-direction: column;
@@ -147,7 +179,7 @@ import NavFooter from '@/components/NavFooter.vue';
     position: relative;
     bottom: 60vh;
     right: 15vw;
-    
+
 
 }
 
@@ -440,4 +472,12 @@ a {
 body {
     background-color: rgb(240, 240, 240);
 }
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+
 </style>

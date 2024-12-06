@@ -17,36 +17,20 @@
         <hr style="border: 1px solid black; margin-top: 5vh;">
         <div class="baixo-footer">
             <div class="colunas-footer">
-                <h2><strong>Categorias</strong></h2>
-                <ul>
-                    <li>Mais vendidos</li>
-                    <li>produtos</li>
-                    <li>Promoções</li>
-                </ul>
+                <h2><strong>Membros</strong></h2>
+                
             </div>
             <div class="colunas-footer">
-                <h2><strong>Empresa</strong></h2>
-                <ul>
-                    <li>Quem somos?</li>
-                    <li>Por que BeatHub?</li>
-                    <li>Trabalhe conosco</li>
-                </ul>
+                <h2><strong>Cadastro</strong></h2>
+                
             </div>
             <div class="colunas-footer">
-                <h2><strong>Guia de compras</strong></h2>
-                <ul>
-                    <li>Meios de pagamentos</li>
-                    <li>Compre com pontos</li>
-                    <li>Cartão de crédito</li>
-                </ul>
+                <h2><strong>Favoritos</strong></h2>
+                
             </div>
             <div class="colunas-footer">
-                <h2><strong>Ajuda</strong></h2>
-                <ul>
-                    <li>Sua conta</li>
-                    <li>Frete e prazo de entrega</li>
-                    <li>Devolução e reembolso</li>
-                </ul>
+                <h2><strong>Carrinho</strong></h2>
+                
             </div>
         </div>
 
@@ -54,7 +38,7 @@
     
 <div class="Copyright" >
 © 2024 Copyright:
-<a  href="https://beathub.com/">BeatHub.com</a>
+<a  href="http://localhost:5173/">BeatHub.com</a>
 </div>
 </footer>
 </template>
@@ -74,7 +58,8 @@
 .icones-footer {
     width: 2.5vw;
     margin-top: 5vh;
-    margin-left: 1vw
+    margin-left: 1vw;
+    cursor: pointer
 } 
 
  .redes-sociais {
@@ -87,7 +72,6 @@
     width: 10vw;
     display: inline-block;
     margin-top: 5vh;
-    margin-bottom: 15vh;
 
 }
 

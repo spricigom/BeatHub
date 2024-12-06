@@ -10,6 +10,7 @@ const produtoStore = useProdutoStore();
 
 const cpf = ref("");
 
+// Função para formatar CPF
 const formatCPF = () => {
   let formattedCPF = cpf.value.replace(/\D/g, "");
 
@@ -19,6 +20,27 @@ const formatCPF = () => {
 
   cpf.value = formattedCPF;
 };
+
+
+const valorTotal = computed(() => {
+ 
+  const total = produtoStore.produtosCarrinho.reduce((total, produto) => {
+    let preco = produto.preco;
+
+    
+    preco = parseFloat(preco);
+
+    if (isNaN(preco) || preco <= 0) {
+      return total;  
+    }
+
+    return total + preco;
+  }, 0);
+
+  return total.toFixed(2);  
+});
+
+
 </script>
 
 <template>
@@ -35,7 +57,7 @@ const formatCPF = () => {
 
           <div class="carrinho-e-texto" v-else>
             <img src="@/assets/bag.png" alt="" id="carrinho" />
-            <p>Adicione itens no seu carrinho</p>
+            <p>Adicione itens no seu carrinho</p><p></p>
             <RouterLink to="/">
               <button>
                 <p id="texto_botao">voltar para o site</p>
@@ -47,13 +69,17 @@ const formatCPF = () => {
         <div class="direita">
           <div class="finalizar" v-if="produtoStore.produtosCarrinho.length > 0">
             <h2>Finalize Seu Aluguel</h2>
-            <h5>Valor Total: R$1000,00</h5>
+            <h5><h5>Valor Total: R${{ valorTotal }}</h5></h5>
             <div class="info">
               <form>
                 <input type="text" placeholder="Cupom BeatHub" />
               </form>
             </div>
-            <h5>RETIRADA SOMENTE NA LOJA</h5>
+            <div class="local-retirada">
+                <h5>RETIRADA SOMENTE NA LOJA</h5>
+            <p>Rua dos Sonhos, 42, Centro - Joinville</p>
+            </div>
+
             <div class="form">
               <form>
                 <input
@@ -89,6 +115,22 @@ const formatCPF = () => {
 
 
 <style scoped>
+.local-retirada{
+    margin-bottom: 5vh;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+
+}
+.local-retirada h5{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 500;
+}
+.local-retirada p{
+    color: #000000;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 500;
+}
 #chamada {
     font-family: 'Josefin Sans', sans-serif;
     display: flex;
@@ -144,7 +186,7 @@ const formatCPF = () => {
 .finalizar {
     background-color: #dfdfdfe9;
     width: 30vw;
-    height: 90vh;
+    height: 95vh;
     margin-top: 3vh;
     padding-top: 5vh;
     display: flex;
@@ -152,8 +194,8 @@ const formatCPF = () => {
     align-items: center;
 }
 
-.finalizar h2,
-h5 {
+.finalizar h2
+ {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 500;
     margin-bottom: 5vh;
@@ -162,6 +204,7 @@ h5 {
 .teste {
     display: flex;
     width: 100%;
+    height: 120vh;
 }
 
 .esquerda {
@@ -169,7 +212,6 @@ h5 {
     float: left;
     width: 50%;
     justify-content: center;
-    align-items: center;
 }
 
 .direita {
@@ -177,7 +219,6 @@ h5 {
     float: right;
     width: 50%;
     justify-content: center;
-    
 
 }
 
@@ -213,9 +254,9 @@ button p {
     align-items: center;
     flex-direction: column;
     margin-top: 10vh;
-    margin-bottom: 30vh;
+    margin-bottom: 65vh;
     position: relative;
-    left: 22vw;
+    left: 25vw;
 }
 
 .carrinho-e-texto p {
