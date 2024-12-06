@@ -1,7 +1,7 @@
 <script setup>
 import { useProdutoStore } from '@/stores/produto';
-import ProductHome from '@/components/ProductHome.vue'
-import ProductCart from '@/components/ProductCart.vue'
+import ProductCart from '@/components/ProductCart.vue';
+import ProductFavorite from '@/components/ProductFavorite.vue';
 
 const props = defineProps([
     'produtos',
@@ -18,28 +18,60 @@ function favoritar(productId) {
 function addCarrinho(productId) {
     produtoStore.addCarrinho(productId)
 }
-
+function removerProduto(productId) {
+    produtoStore.removerProduto(productId);
+}
 </script>
 <template>
-    <div class="row">
-        <div v-for="produto, index in props.produtos" :key="produto.id" class="col produtos text-center">
-            <ProductHome @favorito="favoritar" @imagem="getImage" @carrinho="addCarrinho" :produto="produto" :index="index" v-if="props.tipo == 'home'" />
-            <ProductCart @favorito="favoritar" @imagem="getImage" @carrinho="addCarrinho" :produto="produto" :index="index" v-if="props.tipo == 'cart'" />
-            <ProductFavorite @favorito="favoritar" @imagem="getImage" @carrinho="addCarrinho" :produto="produto" :index="index" v-if="props.tipo == 'favorite'" />
+    <div class="lista">
+        <h2 class="texto-carrinho">Itens no carrinho</h2>
+
+        <div class="centro">
+            <hr style="width: 90%; border: 1px solid;">
+            <div v-for="produto, in props.produtos" :key="produto.id" class="col produtos text-center">
+                <ProductCart @favorito="favoritar" @imagem="getImage" @carrinho="addCarrinho" @delete="removerProduto" :produto="produto"
+                    :index="produto.id" v-if="props.tipo == 'cart'" />
+                <ProductFavorite @favorito="favoritar" @imagem="getImage" @carrinho="addCarrinho"  @delete="removerProduto"  :produto="produto"
+                    :index="produto.id" v-if="props.tipo == 'favorite'" />
+            </div>
         </div>
+
     </div>
+
 </template>
+
 <style scoped>
+.texto-carrinho {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 800;
+    margin-top: 3vh;
+    margin-left: 2vw;
+
+}
+
 .produtos {
     background-color: white;
-    min-width: 14.5vw;
+    width: 35vw;
     height: 47vh;
     margin-left: 12px;
     margin-right: 12px;
-    margin-top: 4vh;
-    box-shadow: -.5px .5px .5px .5px rgb(150, 146, 146);
-    margin-bottom: 8vh;
-    border-radius: 2vw;
+    margin-bottom: 3vh;
 
+}
+
+.centro {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.lista {
+    margin-bottom: 30vh;
+    background-color: #dfdfdfe9;
+    width: 38vw;
+    height: auto;
+    padding-top: 1vh;
+    margin-top: 3vh;
 }
 </style>

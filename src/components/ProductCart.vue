@@ -9,52 +9,103 @@ const props = defineProps([
 </script>
 
 <template>
-    <div class="container">
+
+    <div class="produto">
         <div class="img-produtos"> <img :src="getImage(index)" alt=""></div>
-        <div class="nomePreco">
-            <div>
-                <h2 class="texto-produtos"> {{ props.produto?.nome }}</h2>
-            </div>
-            <div class="esq2">
-                <h5>{{ props.produto?.preco }} </h5>
-            </div>
+
+        <div class="texto-e-preco">
+            <h2 class="texto-produtos"> {{ props.produto?.nome }}</h2>
+
+            <h5>R${{ props.produto?.preco }}por mês </h5>
         </div>
-        <div class="compra-e-coracao_produto">
-            <img src="@/assets/coracaoVermelho.png" alt="" class="icones" @click="$emit('favorito', props.produto.id)"
-                v-if="props.produto?.favoritado" />
-            <img src="@/assets/coracao.png" alt="" class="icones" @click="$emit('favorito', props.produto.id)" v-else>
+
+        <div class="funcoes">
+            <div class="compra-e-coracao_produto">
+                <img src="@/assets/coracaoVermelho.png" alt="" class="icones"
+                    @click="$emit('favorito', props.produto.id)" v-if="props.produto?.favoritado" />
+                <img src="@/assets/coracao.png" alt="" class="icones" @click="$emit('favorito', props.produto.id)"
+                    v-else>
+            </div>
+            <img src="@/assets/lixeira.png" alt="" id="lixeira" @click="$emit('delete', props.produto.id)">
         </div>
+
     </div>
 </template>
 
 <style scoped>
+.funcoes {
+    display: flex;
+    position: relative;
+    left: 5vw;
+}
 
-.container {
+#lixeira {
+    width: 1.5vw;
+    opacity: .7;
+    margin-left: .4vw;
+}
+
+.texto-e-preco {
+    display: flex;
+    justify-content: baseline;
+    flex-wrap: wrap;
+    padding-left: 3vw;
+    width: 17vw;
+}
+
+.texto-e-preco h2,
+h5 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+}
+
+template {
     display: flex;
     flex-direction: row;
+}
+
+.produto {
+    display: flex;
+    flex-direction: row;
+    width: 32.69rem;
+    height: 13vh;
     align-items: center;
+}
+
+.img-produtos {
+    width: 5vw;
+    display: flex;
+    margin-left: 1vw;
+}
+
+.img-produtos img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .nomePreco {
     display: flex;
     flex-direction: column;
-    margin-left: 5%;
-    margin-right: 5%;
-    row-gap: 5%;
+    font-family: 'Josefin Sans', sans-serif;
+    padding-left: 2vw;
+    background-color: yellow;
+    width: 20vw;
+    height: 100px;
+
+
 }
 
 .texto-produtos {
     font-size: 1.2vw;
     margin-top: 2vh;
-
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 500;
 }
 
 .compra-e-coracao_produto {
-    margin-top: 1vw;
     display: flex;
     justify-content: space-between;
-    padding-left: .7vw;
-    padding-right: .7vw;
 }
 
 .icones {
@@ -84,24 +135,8 @@ const props = defineProps([
     width: 6.5vw;
 }
 
-.esq2 {
+.preco {
     float: left;
     width: 10vw;
-    position: relative;
-    left: .5vw;
-}
-
-.esq2 h5 {
-    font-size: 1.1vw;
-}
-
-.img-produtos {
-    height: 25vh;
-}
-
-.img-produtos img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
 }
 </style>

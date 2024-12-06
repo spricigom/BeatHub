@@ -3,68 +3,68 @@ export const MockProducts = [
     {
         id: 1,
         nome: 'Microfone SoundPro SP',
-        preco: 'R$ 42,00 por mês',
+        preco:42.00,
         img: 'microfone.png', 
         
     },
     {
         id: 2,
         nome: 'Pedal Over Drive',
-        preco: 'R$ 17,00 por mês',
+        preco :17.00 ,
         img: 'pedal-OverDrive.png', 
     },
     {
         id: 3,
         nome: 'Cubo Amplificador',
-        preco: 'R$ 32,00 por mês',
+        preco :32.00 ,
         img: 'amplificador.png', 
 
     },
     {
         id: 4,
-        nome: 'Ukulele',
-        preco: 'R$ 24,00 por mês',
+        nome: 'Ukulele Classic',
+        preco :24.00 ,
         img: 'ukulele2.png', 
         
     },
     {
         id: 5,
         nome: 'Pandeiro',
-        preco: ' R$ 32,00 por mês',
+        preco:32.00 ,
         img: 'pandeiro.png', 
         
     },
     {
         id: 6,
-        nome: 'Teclado musical 61 teclas',
-        preco: 'R$ 35,00 por mês',
-        img: 'teclado.png', 
+        nome: 'Fender x Hello Kitty Pink Stratocaster',
+        preco: 35.00 ,
+        img: 'guitarra2.jpg', 
     },
     {
         id: 7,
         nome: 'Trompete Werill Master',
-        preco: 'R$ 69,00 por mês',
+        preco :69.00 ,
         img: 'trompete.png', 
         
     },
     {
         id: 8,
         nome: 'Bateria Acústica',
-        preco: ' R$ 287,00 por mês',
+        preco: 287.00 ,
         img: 'bateria.png', 
         
     },
     {
         id: 9,
         nome: 'Prato Hi Hat',
-        preco: ' R$ 42,00 por mês',
+        preco: 42.00 ,
         img: 'prato.png', 
         
     },
     {
         id: 10,
         nome: 'Gaita de boca harmônica',
-        preco: 'R$ 17,00 por mês',
+        preco: 17.00 ,
         img: 'gaitaBoca.png', 
     }
 ]

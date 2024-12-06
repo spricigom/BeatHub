@@ -8,6 +8,7 @@ const router = createRouter({
       path: '/',
       name: '',
       component: () => import('../views/InicioView.vue')
+
     },
     {
       path: '/produto',
@@ -68,14 +69,21 @@ const router = createRouter({
       component: () => import('../views/LoginView.vue')
     },
     {
-      path: '/Amplificador',
-      name: 'Amplificador',
-      component: () => import('../views/AmplificadoresView.vue')
+      path: '/Pedais',
+      name: 'Pedais',
+      component: () => import('../views/PedaisView.vue')
     },
     {
       path: '/FormaPagamento',
       name: 'FormaPagamento',
       component: () => import('../views/FormaPagamentoView.vue')
+
+    },
+    {
+      path: '/teste',
+      name: 'teste',
+      component: () => import('../views/teste.vue')
+
     }
   ]
 })
