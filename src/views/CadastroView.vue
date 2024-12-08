@@ -21,7 +21,7 @@ async function cadastrarUsuario() {
         return;
     }
 
-    // eslint-disable-next-line no-unused-vars
+   
     const { data: userData, error: userError } = await supabase
         .from('usuarios')
         .insert([{
@@ -34,6 +34,15 @@ async function cadastrarUsuario() {
             password: novoUsuario.password,
             message: novoUsuario.message,
         }]);
+        /*const { data: userData, error: userError } = await supabase
+        .from('endereco')
+        .insert([{
+            cep: enderecoUsuario.cep,
+            rua: enderecoUsuario.name,
+            numero: enderecoUsuario.gender,
+            bairro: enderecoUsuario.email,
+            cidade: enderecoUsuario.number,
+        }]);*/
 
     alert('Usuário cadastrado com sucesso!');
 }
@@ -105,6 +114,26 @@ async function cadastrarUsuario() {
           <p class="titulo_cadastro">Confirmação de Senha</p>
           <input class="input" type="password" v-model="novoUsuario.passwordconfirmation" />
         </div>
+          <!-- <p class="titulo_cadastro">CEP</p>
+          <input class="input" type="number" v-model="enderecoUsuario.cep" />
+        </div>
+        <div class="campo_cadastro">
+          <p class="titulo_cadastro">Rua</p>
+          <input class="input" type="text" v-model="enderecoUsuario.rua" />
+        </div>
+        <div class="campo_cadastro">
+          <p class="titulo_cadastro">Número e/ou bloco</p>
+          <input class="input" type="text" v-model="enderecoUsuario.numero" />
+        </div>
+        <div class="campo_cadastro">
+          <p class="titulo_cadastro">Bairro</p>
+          <input class="input" type="text" v-model="enderecoUsuario.bairro" />
+        </div>
+        <div class="campo_cadastro">
+          <p class="titulo_cadastro">Cidade</p>
+          <input class="input" type="text" v-model="enderecoUsuario.cidade" />
+        </div>
+        -->
 
         <button type="submit">Criar Conta</button>
       </form>
