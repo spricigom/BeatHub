@@ -322,61 +322,10 @@ body {
 }
 
 /*estilos do header */
-.logo {
-    width: 8vw;
-    cursor: pointer;
-    position: relative;
-    bottom: 15px
-}
 
-input {
 
-    display: flex;
-    position: relative;
-    left: 7vw;
-    bottom: 1.1vh;
 
-}
 
-.regiao{
-    position: relative;
-    left: 5vw;
-    font-family: 'Inter', sans-serif;
-    color: #595959;
-    font-size: 1vw;
-}
-
-::placeholder {
-    padding-left: 20px;
-    font-family: 'Inter', sans-serif;
-    font-size: 1.8vh;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 10%;
-    height: 20vh;
-    background-color: #efefef;
-}
-
-.navegacao {
-    list-style: none;
-    position: relative;
-    right: 8vw;
-}
-
-.navegacao li {
-    display: inline-block;
-    padding: 0px 10px;
-}
-
-a {
-    text-decoration: none;
-    color: #595959;
-    font-family: 'Josefin Sans', sans-serif;
-}
 
 #amarelo {
     color: #f48200;

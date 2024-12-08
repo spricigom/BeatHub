@@ -1,85 +1,155 @@
-
-
 <script setup></script>
 
 <template>
     <header>
-            <nav>
-                <ul class="navegacao">
-                    <li><RouterLink to="/Guitarra">Guitarra </RouterLink></li>
-                    <li><RouterLink to="/Baixo" id="amarelo">Baixo </RouterLink></li>
-                    <li><RouterLink to="/Pedais">Pedais </RouterLink></li>
-                    <li><RouterLink to="/Teclado" id="amarelo">Teclado </RouterLink></li>
-                    <li><RouterLink to="/Violão">Violão </RouterLink></li>
-                    <li><RouterLink to="/Bateria" id="amarelo">Bateria</RouterLink></li>
-                   
-                </ul>
-            </nav>
+        <div class="esquerda">
             <RouterLink to="/">
                 <img class="logo" src="@/assets/certa.png" alt="" />
             </RouterLink>
 
-            
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="O que você precisa?..." aria-label="Search"
-                    style=" background-color: #efefef; border: 1px solid #f48200; width: 17vw; border-radius: 300px;" />
-            </form>
-            <img src="@/assets/lupa.png" alt=""
-                style="width: 1vw; display: flex; position: relative;  bottom: 1vh;">
+            <nav>
+                <ul class="navegacao">
+                    <li>
+                        <RouterLink to="/Guitarra">Guitarra </RouterLink>
+                    </li>
+                    <li>
+                        <RouterLink to="/Baixo" id="amarelo">Baixo </RouterLink>
+                    </li>
+                    <li>
+                        <RouterLink to="/Pedais">Pedais </RouterLink>
+                    </li>
+                    <li>
+                        <RouterLink to="/Teclado" id="amarelo">Teclado </RouterLink>
+                    </li>
+                    <li>
+                        <RouterLink to="/Violão">Violão </RouterLink>
+                    </li>
+                    <li>
+                        <RouterLink to="/Bateria" id="amarelo">Bateria</RouterLink>
+                    </li>
 
-            <div class="compra-e-coracao">
-                 <RouterLink to="/Carrinho"><img src="@/assets/carrinho-de-compras.png" alt="" class="icones"   /></RouterLink>
-                 <RouterLink to="/Favorito"><img src="@/assets/coracao.png" alt="" class="icones" /> </RouterLink>    
+                </ul>
+            </nav>
+        </div>
+
+
+        <div class="direita">
+            <div class="login">
+                <h6 id="amarelo">login</h6>
+                <span class="pi pi-user" style="font-size: 1.5vw; color: #f48200;"></span>
             </div>
-        </header>
+            <div class="busca">
+                <input class="busca-texto" type="text" placeholder="Pesquise">
+                <a class="busca-botao" href="#">
+                    <span class="pi pi-search"></span>
+
+                </a>
+            </div>
+            <!--
+            <div class="compra-e-coracao">
+                <RouterLink to="/Carrinho"><span class="pi pi-shopping-cart"></span> </RouterLink>
+                <RouterLink to="/Favorito"><span class="pi pi-heart"></span> </RouterLink>
+
+            </div>
+            -->
+        </div>
+
+
+    </header>
 </template>
 
 
 <style scoped>
-.logo {
-    width: 8vw;
-    cursor: pointer;
-    position: relative;
-    bottom: 15px
+.busca {
+background: #efefef;
+border-radius: 40px;
+height: 42px;
+border: 1px solid #f48200;
+padding-left: 1vw;
 }
 
-input {
+.busca-botao {
+color: #f48200;
+height: 40px;
+width: 40px;
+float: right;
+border-radius: 50%;
+background: #efefef;
+display: flex;
+justify-content: center;
+align-items: center;
+}
 
+.busca-texto {
+border: none;
+background: none;
+outline: none;
+float: left;
+padding: 0;
+color: #f48200;
+font-size: 16px;
+line-height: 40px;
+width: 6vw;
+}
+.busca ::placeholder{
+    color: #f48200;
+}
+.login{    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 5.5vw;
+}
+.login h6{
+    font-weight: 500;
+    font-family: 'Josefin Sans', sans-serif;
     display: flex;
     position: relative;
-    left: 7vw;
-    bottom: 1.1vh;
-
+    top: .5vh;
 }
-
-.regiao{
+.direita{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 18vw;
+    margin-right: 2vw;
+    text-align: center;
     position: relative;
-    left: 5vw;
-    font-family: 'Inter', sans-serif;
-    color: #595959;
-    font-size: 1vw;
+    bottom: 1vh;
+}
+.esquerda {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 38vw;
+    margin-left: 3vw;
 }
 
-::placeholder {
-    padding-left: 20px;
-    font-family: 'Inter', sans-serif;
-    font-size: 1.8vh;
+.logo {
+    width: 5.5vw;
+    cursor: pointer;
+    bottom: 15px;
+    position: relative;
+    bottom: 1.5vh;
 }
+
+
+
+
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 10%;
     height: 20vh;
     background-color: #efefef;
 }
 
 .navegacao {
     list-style: none;
-    position: relative;
-    right: 8vw;
-    width: 32vw;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -87,12 +157,12 @@ header {
 
 .navegacao li {
     display: inline-block;
-    padding: 0px 10px;
+    padding: 0px 20px;
 }
 
 a {
     text-decoration: none;
-    color: #595959;
+    color: #000;
     font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -110,12 +180,9 @@ a {
     width: 1.5vw;
 }
 
-.compra-e-coracao {
-    position: relative;
-    left: 7vw;
-    bottom: 1.3vh;
-}
+
 
 .compra-e-coracao .icones {
     margin-right: 1.5vw;
-}</style>
+}
+</style>

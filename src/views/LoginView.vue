@@ -395,14 +395,7 @@ main {
     bottom: 15px
 }
 
-header input {
 
-    display: flex;
-    position: relative;
-    left: 7vw;
-    bottom: 1.1vh;
-
-}
 
 .regiao {
     position: relative;
@@ -418,14 +411,6 @@ header input {
     font-size: 1.8vh;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 10%;
-    height: 20vh;
-    background-color: #efefef;
-}
 
 .navegacao {
     list-style: none;

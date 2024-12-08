@@ -275,12 +275,6 @@ button {
   bottom: 15px;
 }
 
-header input {
-  display: flex;
-  position: relative;
-  left: 7vw;
-  bottom: 1.1vh;
-}
 
 .regiao {
   position: relative;
@@ -288,21 +282,6 @@ header input {
   font-family: 'Inter', sans-serif;
   color: #595959;
   font-size: 1vw;
-}
-
-header ::placeholder {
-  padding-left: 20px;
-  font-family: 'Inter', sans-serif;
-  font-size: 1.8vh;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 10%;
-  height: 20vh;
-  background-color: #efefef;
 }
 
 .navegacao {
