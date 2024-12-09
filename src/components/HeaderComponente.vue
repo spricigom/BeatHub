@@ -341,7 +341,7 @@ header{
     justify-content: space-between;
     align-items: center;
     height: 20vh;
-    width: 100vw;
+    width: 100%;
     background: #f48200;
 
 
