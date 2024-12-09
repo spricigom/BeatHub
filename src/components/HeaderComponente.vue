@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import { RouterLink } from 'vue-router';
 
 const menuOpen = ref(false);
 
@@ -38,8 +39,8 @@ function toggleMenu() {
                     </button>
                 </div>
                 <div class="botoes-header">
-                    <span style="color: white; font-size: 1.3rem;" class="pi pi-shopping-cart"></span>
-                    <span style="color: white; font-size: 1.3rem;" class="pi pi-heart"></span>
+                    <RouterLink to="/Carrinho"><span style="color: white; font-size: 1.3rem;" class="pi pi-shopping-cart"></span></RouterLink> 
+                    <RouterLink to="/Favoritos"> <span style="color: white; font-size: 1.3rem;" class="pi pi-heart"></span></RouterLink>
                 </div>
 
                 <div class="icone-menu">
@@ -236,18 +237,7 @@ header{
     margin-bottom: 17vh;
 
 }
-.baixo{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    padding: 1rem 0;
-    background-color: #f48200;
-    position: relative;
-    bottom: 2rem;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);    
 
-
-}
 .hr {
     /* margin: 1rem 0; */
     color: inherit;
@@ -340,13 +330,23 @@ header{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 20vh;
+    height: 15vh;
     width: 100%;
     background: #f48200;
 
 
 }
+.baixo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    background-color: #f48200;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);   
+    z-index: 0; 
 
+
+}
 .busca {
     background: #f48200;
     border-radius: 40px;
