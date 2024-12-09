@@ -336,7 +336,6 @@ main {
     flex-direction: column;
 }
 
-
 .Copyright {
     background-color: rgb(95, 95, 95);
     color: white;
@@ -509,5 +508,256 @@ body {
     top: 0;
     width: 100vw;
     height: 120vh;
+}
+
+@media (max-width: 1024px) {
+
+.fundo-topo h1 {
+    font-size: 5vw;
+    margin-top: 70px;
+}
+
+.fundo-topo h6 {
+    font-size: 2.5vw;
+}
+
+.fundo-topo {
+    width: 50vw;
+}
+
+.button {
+    font-size: 1.5vw;
+}
+
+.quem-somos {
+    margin-top:1px;
+    margin-bottom: 10vh;
+    height: 50vh;
+}
+
+.texto-grupo {
+    width:60%;
+    height: 80vh;
+   
+}
+.descricao-grupo{
+    width: 400px;
+    height: 150px;
+}
+
+.img-cima {
+    height: 50vh;
+}
+
+.card-pessoa {
+    width: 18vw;
+  height: 280px;
+    margin-bottom: 2vw;
+    margin-right: 30px;
+}
+
+.img-pessoa {
+    height: 171px;
+    width: 171px;
+    margin-top: 20px;
+}
+
+.img-grupo {
+    width: 40%;
+    height: 50vh;
+
+}
+
+.pessoas-cima, .pessoas-baixo {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+  justify-content: center;
+}
+
+.conheca {
+    font-size: 3.5vw;
+}
+}
+
+/* Para telas de 720px (tablets ou dispositivos com telas médias) */
+@media (max-width: 720px) {
+
+.fundo-topo h1 {
+    font-size: 6vw;
+}
+
+.fundo-topo h6 {
+    font-size: 3vw;
+}
+
+.fundo-topo {
+    width: 60vw;
+}
+
+.button {
+    font-size: 2vw;
+}
+
+.quem-somos {
+    margin-top: 15vh;
+    margin-bottom: 8vh;
+    height: 50vh;
+}
+
+.texto-grupo {
+    width: 70%;
+}
+
+.img-cima {
+    height: 45vh;
+}
+
+.card-pessoa {
+    width: 45vw;
+    margin-bottom: 3vh;
+}
+
+.img-pessoa {
+    height: 180px;
+    width: 180px;
+}
+
+.img-grupo {
+    width: 60%;
+    height: 60vh;
+}
+
+.pessoas-cima, .pessoas-baixo {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.conheca {
+    font-size: 4vw;
+}
+}
+
+/* Para telas de 480px (smartphones menores) */
+@media (max-width: 480px) {
+
+.fundo-topo h1 {
+    font-size: 8vw;
+}
+
+.fundo-topo h6 {
+    font-size: 4vw;
+}
+
+.fundo-topo {
+    width: 80vw;
+   
+}
+
+.button {
+    font-size: 2.5vw;
+}
+
+.quem-somos {
+    margin-top: 10vh;
+    margin-bottom: 6vh;
+    height: 45vh;
+}
+
+.texto-grupo {
+    width: 85%;
+}
+
+.img-cima {
+    height: 35vh;
+}
+
+.card-pessoa {
+    width: 80vw;
+    margin-bottom: 3vh;
+}
+
+.img-pessoa {
+    height: 150px;
+    width: 150px;
+}
+
+.img-grupo {
+    width: 80%;
+    height: 50vh;
+}
+
+.pessoas-cima, .pessoas-baixo {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.conheca {
+    font-size: 5vw;
+}
+}
+
+/* Para telas de 320px (smartphones pequenos) */
+@media (max-width: 320px) {
+
+.fundo-topo h1 {
+    font-size: 10vw;
+}
+
+.fundo-topo h6 {
+    font-size: 5vw;
+}
+
+.fundo-topo {
+    width: 90vw;
+}
+
+.button {
+    font-size: 3vw;
+}
+
+.quem-somos {
+    margin-top: 5vh;
+    margin-bottom: 4vh;
+    height: 40vh;
+}
+
+.texto-grupo {
+    width: 90%;
+}
+
+.img-cima {
+    height: 30vh;
+}
+
+.card-pessoa {
+    width: 90vw;
+    margin-bottom: 4vh;
+}
+
+.img-pessoa {
+    height: 120px;
+    width: 120px;
+}
+
+.img-grupo {
+    width: 90%;
+    height: 45vh;
+}
+
+.pessoas-cima, .pessoas-baixo {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.conheca {
+    font-size: 6vw;
+}
 }
 </style>
