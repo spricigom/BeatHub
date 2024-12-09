@@ -35,7 +35,7 @@ async function fazerLogin() {
     <body>
         <HeaderComponente />
 
-        <hr class="hr" />
+       
         <main>
             <div class="pintura">
                 <img src="@/assets/pintura.jpg" alt="">
@@ -433,11 +433,7 @@ a {
     color: #f48200;
 }
 
-.hr {
-    position: relative;
-    bottom: 5vh;
-    border: 1px solid black;
-}
+
 
 .icones {
     width: 1.5vw;

@@ -305,11 +305,7 @@ a {
   color: #f48200;
 }
 
-.hr {
-  position: relative;
-  bottom: 5vh;
-  border: 1px solid black;
-}
+
 
 .icones {
   width: 1.5vw;

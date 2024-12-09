@@ -11,7 +11,7 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
         <HeaderComponente />
 
 
-        <hr class="hr" />
+    
         <main>
             
             <h2 id="amarelo" style="position: relative;bottom: 1vh;">Pedais</h2>
@@ -636,11 +636,6 @@ a {
     padding-left: 7vw;
 }
 
-.hr {
-    position: relative;
-    bottom: 5vh;
-    border: 1px solid black;
-}
 
 .icones {
     width: 1.5vw;

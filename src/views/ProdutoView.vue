@@ -12,7 +12,7 @@ import NavFooter from '@/components/NavFooter.vue';
     <body>
         <HeaderComponente />
 
-        <hr class="hr" />
+
 
         <main>
             <div class="fundo">
@@ -760,12 +760,6 @@ a {
 
 #amarelo {
     color: #f48200;
-}
-
-.hr {
-    position: relative;
-    bottom: 5vh;
-    border: 1px solid black;
 }
 
 .icones {

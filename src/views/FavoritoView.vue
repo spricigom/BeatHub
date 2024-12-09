@@ -14,7 +14,7 @@ const produtoStore = useProdutoStore()
 
         <HeaderComponente />
 
-        <hr class="hr" />
+      
         <main>
 
             <div class="teste">
@@ -321,12 +321,6 @@ a {
 
 #amarelo {
     color: #f48200;
-}
-
-.hr {
-    position: relative;
-    bottom: 5vh;
-    border: 1px solid black;
 }
 
 .icones {
