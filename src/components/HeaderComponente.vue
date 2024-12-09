@@ -330,9 +330,10 @@ header{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 15vh;
+    height: 12vh;
     width: 100%;
     background: #f48200;
+    padding-top: 3vh;
 
 
 }
@@ -344,6 +345,7 @@ header{
     background-color: #f48200;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);   
     z-index: 0; 
+    height: 5vh;
 
 
 }
