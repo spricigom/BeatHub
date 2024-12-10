@@ -1,14 +1,18 @@
 import { computed, ref } from "vue";
 import { defineStore } from "pinia";
-import { MockProducts } from '@/mock';
-
+import { supabase } from "@/lib/supabaseClient";
 export const useProdutoStore = defineStore('produto', () => {
     const produtos = ref([]);
-
-
-    const buscarTodosOsProdutos = async () => {
-        produtos.value = MockProducts; // vai buscar no servidor
+    
+  const buscarTodosOsProdutos  = async () => {
+    const { data, error } = await supabase.from('produtos').select('*');
+    if (error) {
+      console.error('Erro ao buscar produtos:', error.message);
+    } else {
+      produtos.value = data;
+      
     }
+  };
 
     const favoritar = (id) => {
         const product = produtos.value.find(p => p.id == id)
@@ -29,7 +33,71 @@ export const useProdutoStore = defineStore('produto', () => {
     const removerProduto = (productId) => {
         produtos.value = produtos.value.filter(produto => produto.id !== productId);
     }
+
+
+    const produtoGuitarra = async () => {
+    const { data, error } = await supabase.from('produtos').select('*').eq('categoria', 'guitarra');
+    if (error) {
+      console.error('Erro ao carregar produtos do catálogo:', error);
+    } else {
+      produtos.value = data;
+      console.log(produtos)
+    }}
+
+
+
+    const produtoBaixo = async () => {
+        const { data, error } = await supabase.from('produtos').select('*').eq('categoria', 'baixo');
+        if (error) {
+          console.error('Erro ao carregar produtos do catálogo:', error);
+        } else {
+          produtos.value = data;
+          console.log(produtos)
+        }}
+
+    const produtoPedais = async () => {
+        const { data, error } = await supabase.from('produtos').select('*').eq('categoria', 'pedais');
+        if (error) {
+          console.error('Erro ao carregar produtos do catálogo:', error);
+        } else {
+          produtos.value = data;
+          console.log(produtos)
+        }}
+
+    const produtoTeclado = async () => {
+        const { data, error } = await supabase.from('produtos').select('*').eq('categoria', 'teclado');
+        if (error) {
+          console.error('Erro ao carregar produtos do catálogo:', error);
+        } else {
+          produtos.value = data;
+          console.log(produtos)
+        }}
+
+    const produtoViolao = async () => {
+        const { data, error } = await supabase.from('produtos').select('*').eq('categoria', 'violao');
+        if (error) {
+          console.error('Erro ao carregar produtos do catálogo:', error);
+        } else {
+          produtos.value = data;
+          console.log(produtos)
+        }}
+
+    const produtoBateria = async () => {
+        const { data, error } = await supabase.from('produtos').select('*').eq('catalog', 'bateria');
+        if (error) {
+          console.error('Erro ao carregar produtos do catálogo:', error);
+        } else {
+          produtos.value = data;
+          console.log(produtos)
+        }}
+
     return {
+        produtoBaixo,
+        produtoPedais,
+        produtoTeclado,
+        produtoViolao,
+        produtoBateria,
+        produtoGuitarra,
         produtos,
         buscarTodosOsProdutos,
         favoritar,

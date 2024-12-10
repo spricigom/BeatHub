@@ -2,6 +2,15 @@
 import NavFooter from '@/components/NavFooter.vue';
 import ListProduct from '@/components/ListProduct.vue';
 import HeaderComponente from '@/components/HeaderComponente.vue';
+import { useProdutoStore } from '@/stores/produto';
+import { onMounted } from 'vue';
+
+const produtoStore = useProdutoStore();
+
+onMounted( async()=> {
+    await produtoStore.produtoBaixo();
+})
+
 </script>
 
 <template>
@@ -171,6 +180,7 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                     </div>
                 </div>
             </div>
+
         </main>
 
         <NavFooter/>
