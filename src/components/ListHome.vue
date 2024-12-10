@@ -63,14 +63,15 @@ template{
 }
 .produtos {
     background-color: white;
-    height: 45vh;
-    width: 15vw;
-
+    width: 18vw;
     margin-top: 4vh;
     margin-bottom: 8vh;
     border-radius: 0.44rem;
     text-align: center;
     justify-content: center;
+    border: 1px #b4b4b4 solid;
+    padding: 1rem;
 
 }
+
 </style>

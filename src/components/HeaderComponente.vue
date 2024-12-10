@@ -40,7 +40,7 @@ function toggleMenu() {
                 </div>
                 <div class="botoes-header">
                     <RouterLink to="/Carrinho"><span style="color: white; font-size: 1.3rem;" class="pi pi-shopping-cart"></span></RouterLink> 
-                    <RouterLink to="/Favoritos"> <span style="color: white; font-size: 1.3rem;" class="pi pi-heart"></span></RouterLink>
+                    <RouterLink to="/Favorito"> <span style="color: white; font-size: 1.3rem;" class="pi pi-heart"></span></RouterLink>
                 </div>
 
                 <div class="icone-menu">

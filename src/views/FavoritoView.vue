@@ -196,10 +196,11 @@ button p {
 }
 
 main {
-    background-color: #efefef;
+    background-color: white;
     display: flex;
     align-items: center;
     flex-direction: column;
+    z-index: 999
 }
 
 .Copyright {
