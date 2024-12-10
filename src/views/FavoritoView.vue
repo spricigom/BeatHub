@@ -339,18 +339,5 @@ a {
 }
 
 /*estilos do carrossel */
-body {
-    background-color: rgb(240, 240, 240);
-}
 
-
-#carouselExample .carousel-item::before {
-    content: '';
-    background: linear-gradient(0deg, rgb(240, 240, 240) 50%, transparent 69%);
-    display: block;
-    position: absolute;
-    top: 0;
-    width: 100vw;
-    height: 120vh;
-}
 </style>

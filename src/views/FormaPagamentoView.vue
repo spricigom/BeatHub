@@ -96,9 +96,7 @@ button {
     flex-direction: column;
 }
 
-body {
-    background-color: rgb(240, 240, 240);
-}
+
 
 /* Adicionando o fundo desfocado */
 .blur-background {
