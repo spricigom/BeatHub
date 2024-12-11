@@ -4,13 +4,13 @@ import { getImage } from '@/utils/getProductImage'
 import NavFooter from '@/components/NavFooter.vue';
 import { useRoute } from 'vue-router';
 import { useProdutoStore } from '@/stores/produto';
-import { onMounted,ref } from 'vue'
+import { ref, onBeforeMount } from 'vue'
 const router = useRoute();
 const produtoStore = useProdutoStore();
 const produto = ref({});
-const idProduto = router.params.id;
+const idProduto = router.params?.id;
 
-onMounted(() => {
+onBeforeMount(() => {
     produto.value = produtoStore.getProdutoById(idProduto);
     console.log(produto);
 });
@@ -50,7 +50,7 @@ onMounted(() => {
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img :src="getImage(produto.img)" alt="">                             </div>
+                                <img :src="getImage(produto?.id)" alt="">                             </div>
                             <div class="carousel-item">
                                 <img src="@/assets/hello1-2.jpg" class="d-block w-100" alt="@/assets/hello1-1.jpg">
                             </div>
@@ -77,7 +77,7 @@ onMounted(() => {
 
 
                 <div class="centro">
-                    <h4 class="titulo-produto">{{ produto.nome }}</h4>
+                    <h4 class="titulo-produto">{{ produto?.nome }}</h4>
 
                     <div class="avaliacao">
 
@@ -87,7 +87,7 @@ onMounted(() => {
 
                     <div class="descricao">
                         <p>
-                            {{ produto.descricao }}
+                            {{ produto?.descricao }}
                         </p>
                     </div>
 
@@ -95,7 +95,7 @@ onMounted(() => {
 
                 <div class="direita">
                     <div class="valor">
-                <h2 class="preco">R${{ produto.preco }},00 por mês</h2>
+                <h2 class="preco">R${{ produto?.preco }},00 por mês</h2>
                         <h5 class="forma_pagamento">No pix</h5>
 
                     </div>

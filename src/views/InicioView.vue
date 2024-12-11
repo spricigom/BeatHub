@@ -8,10 +8,10 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
 
 const produtoStore = useProdutoStore();
 const mostrarLocalizacao = ref(false);
-const dynamicImage = ref('/assets/imagem1.png'); // Caminho inicial da imagem
+// const dynamicImage = ref('/assets/imagem1.png'); // Caminho inicial da imagem
 
-onMounted(() => {
-  produtoStore.buscarTodosOsProdutos();
+onMounted(async() => {
+  await  produtoStore.buscarTodosOsProdutos();
 });
 
 const mostrarDivLocalizacao = () => {
@@ -22,11 +22,11 @@ const esconderDivLocalizacao = () => {
   mostrarLocalizacao.value = false;
 };
 
-// Função para trocar a imagem
-function changeImage(url) {
-  console.log("Changing image to:", url); // Log para depuração
-  dynamicImage.value = url;
-}
+// // Função para trocar a imagem
+// function changeImage(url) {
+//   console.log("Changing image to:", url); // Log para depuração
+//   dynamicImage.value = url;
+// }
 </script>
 
 
@@ -122,7 +122,7 @@ function changeImage(url) {
           </div>
         </div>
         <div class="right">
-          <img src="dynamicImage" alt="Imagem dinâmica" style="max-height: 150px; border-radius: 10px;">
+          <!-- <img src="dynamicImage" alt="Imagem dinâmica" style="max-height: 150px; border-radius: 10px;"> -->
         </div>
       </div>
       <ListHome :produtos="produtoStore.produtos" tipo="home" />
