@@ -75,9 +75,9 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                             <img src="@/assets/coracao.png" alt="" class="icones" />
                         </div>
                         <div class="img-produtos">
-                            <img src="@/assets/piano4.jpg" alt="" />
+                            <img src="@/assets/piano4.avif" alt="" />
                         </div>
-                        <h2 class="texto-produtos">teclado 4Pss</h2>
+                        <h2 class="texto-produtos">Teclado 4Pss</h2>
                         <div class="preco-produtos">
                             <h5>R$ 24,00 por mes</h5>
                             <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
