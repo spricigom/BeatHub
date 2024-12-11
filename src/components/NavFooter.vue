@@ -45,7 +45,7 @@
 <style scoped>
 
 .Copyright{
-    background-color:rgb(95, 95, 95);
+    background-color:#F48200;
     color: white;
     height: 7vh;
     display: flex;
@@ -63,7 +63,7 @@
 } 
 
  .redes-sociais {
-    width: 20vw;
+    width: 30vw;
     height: 10vh;
 } 
 
@@ -71,7 +71,6 @@
     height: 10vh;
     width: 10vw;
     display: inline-block;
-    margin-top: 5vh;
 
 }
 
@@ -112,13 +111,81 @@
 
 .footer {
     width: 100%;
-    background-color: #9b9a9a;
+    background-color: #F48200;
 } 
 
 * {
     padding: 0;
 }
+@media(max-width: 1280px){
+    .cima-footer  {
+        margin: 0;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        justify-items: baseline;
+        align-items: center;
+        flex-direction: column;
 
+    }
+    .cima-footer .logo-footer {
+        padding: 10px;
+        width: 15vh;
+    }
+    .icones-footer{
+    width: 2vh;
+
+}
+
+    .baixo-footer {
+        margin: 0;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        justify-items: baseline;
+        flex-direction: column;
+        align-items: center;
+    }
+    .baixo-footer h2{
+        font-size: 2vh 
+    }
+
+}
+@media (max-width: 412px){
+    .cima-footer  {
+        margin: 0;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        justify-items: baseline;
+        align-items: center;
+        flex-direction: column;
+
+    }
+    .cima-footer .logo-footer {
+        padding: 10px;
+        width: 15vh;
+    }
+
+.icones-footer{
+    width: 3vh;
+
+}
+
+    .baixo-footer {
+        margin: 0;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        justify-items: baseline;
+        flex-direction: column;
+        align-items: center;
+    }
+    .baixo-footer h2{
+        font-size: 2vh 
+    }
+
+}
 
 </style>
 

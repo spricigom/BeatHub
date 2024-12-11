@@ -21,7 +21,7 @@ onMounted(() => {
     <body>
         <HeaderComponente />
 
-        <hr class="hr" />
+
 
         <main>
             <div class="fundo">
@@ -749,14 +749,6 @@ input {
     font-size: 1.8vh;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 10%;
-    height: 20vh;
-    background-color: #efefef;
-}
 
 .navegacao {
     list-style: none;
@@ -777,12 +769,6 @@ a {
 
 #amarelo {
     color: #f48200;
-}
-
-.hr {
-    position: relative;
-    bottom: 5vh;
-    border: 1px solid black;
 }
 
 .icones {

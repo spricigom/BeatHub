@@ -79,10 +79,14 @@ template {
 }
 
 .img-produtos img {
-    width: 100%;
-    height: 100%;
+    width: 5vw; /* Ajuste conforme necessário */
+    height: 10vh; /* Adicione altura fixa, se necessário */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centraliza a imagem */
     object-fit: contain;
 }
+
 
 .nomePreco {
     display: flex;
@@ -92,7 +96,7 @@ template {
     background-color: yellow;
     width: 20vw;
     height: 100px;
-
+    
 
 }
 

@@ -56,6 +56,7 @@ function removerProduto(productId) {
     margin-left: 12px;
     margin-right: 12px;
     margin-bottom: 3vh;
+    border-color: 1px solid black
 
 }
 

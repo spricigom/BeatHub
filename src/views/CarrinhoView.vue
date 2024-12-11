@@ -46,7 +46,7 @@ const valorTotal = computed(() => {
 <template>
   <body>
     <HeaderComponente />
-    <hr class="hr" />
+
 
     <main>
       <div class="teste">
@@ -271,7 +271,7 @@ button p {
 }
 
 main {
-    background-color: #efefef;
+    background-color: white;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -377,15 +377,6 @@ main {
     font-size: 1.8vh;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 10%;
-    height: 20vh;
-    background-color: #efefef;
-}
-
 .navegacao {
     list-style: none;
     position: relative;
@@ -407,12 +398,6 @@ a {
     color: #f48200;
 }
 
-.hr {
-    position: relative;
-    bottom: 5vh;
-    border: 1px solid black;
-}
-
 .icones {
     width: 1.5vw;
 }
@@ -428,18 +413,5 @@ a {
 }
 
 /*estilos do carrossel */
-body {
-    background-color: rgb(240, 240, 240);
-}
 
-
-#carouselExample .carousel-item::before {
-    content: '';
-    background: linear-gradient(0deg, rgb(240, 240, 240) 50%, transparent 69%);
-    display: block;
-    position: absolute;
-    top: 0;
-    width: 100vw;
-    height: 120vh;
-}
 </style>

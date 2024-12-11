@@ -1,7 +1,7 @@
 <script setup>
-import HeaderComponente from '@/components/HeaderComponente.vue'
-import { reactive } from 'vue'
-import { supabase } from '../lib/supabaseClient'
+import { reactive } from 'vue';
+import HeaderComponente from '@/components/HeaderComponente.vue';
+import { supabase } from '../lib/supabaseClient';
 
 const novoUsuario = reactive({
   cpf: '',
@@ -13,104 +13,181 @@ const novoUsuario = reactive({
   password: '',
   passwordconfirmation: '',
   message: '',
-})
+});
+
+const enderecoUsuario = reactive({
+  cep: '',
+  rua: '',
+  numero: '',
+  bairro: '',
+  cidade: '',
+});
+
+// Função para buscar o endereço a partir do CEP
+async function buscarEnderecoPorCEP() {
+  if (enderecoUsuario.cep.length === 8) { // Verifica se o CEP tem 8 caracteres
+    try {
+      const response = await fetch(`https://viacep.com.br/ws/${enderecoUsuario.cep}/json/`);
+      const data = await response.json();
+
+      if (data.erro) {
+        alert('CEP não encontrado!');
+        return;
+      }
+      console.log(data);
+
+      // Preencher os campos com os dados retornados
+      enderecoUsuario.rua = data.logradouro || '';
+      enderecoUsuario.bairro = data.bairro || '';
+      enderecoUsuario.cidade = data.localidade || '';
+    } catch (error) {
+      console.error('Erro ao buscar o endereço:', error);
+      alert('Ocorreu um erro ao buscar o CEP');
+    }
+  }
+}
 
 async function cadastrarUsuario() {
-    if (novoUsuario.password !== novoUsuario.passwordconfirmation) {
-        alert('As senhas não coincidem!');
-        return;
-    }
+  if (novoUsuario.password !== novoUsuario.passwordconfirmation) {
+    alert('As senhas não coincidem!');
+    return;
+  }
 
-    // eslint-disable-next-line no-unused-vars
-    const { data: userData, error: userError } = await supabase
-        .from('usuarios')
-        .insert([{
-            cpf: novoUsuario.cpf,
-            name: novoUsuario.name,
-            gender: novoUsuario.gender,
-            email: novoUsuario.email,
-            number: novoUsuario.number,
-            datebirth: novoUsuario.datebirth,
-            password: novoUsuario.password,
-            message: novoUsuario.message,
-        }]);
+  const { data: userData, error: userError } = await supabase
+    .from('usuarios')
+    .insert([
+      {
+        cpf: novoUsuario.cpf,
+        name: novoUsuario.name,
+        gender: novoUsuario.gender,
+        email: novoUsuario.email,
+        number: novoUsuario.number,
+        datebirth: novoUsuario.datebirth,
+        password: novoUsuario.password,
+        message: novoUsuario.message,
+      },
+    ]);
 
-    alert('Usuário cadastrado com sucesso!');
+  if (userError) {
+    alert('Erro ao cadastrar usuário!');// Função para buscar o endereço a par// Função para buscar o endereço a partir do CEPtir do CEP
+    return;
+  }
+
+  const { data: enderecoData, error: enderecoError } = await supabase
+    .from('endereco')
+    .insert([
+      {
+        cep: enderecoUsuario.cep,
+        rua: enderecoUsuario.rua,
+        numero: enderecoUsuario.numero,
+        bairro: enderecoUsuario.bairro,
+        cidade: enderecoUsuario.cidade,
+      },
+    ]);
+
+  if (enderecoError) {
+    alert('Erro ao cadastrar endereço!');
+    return;
+  }
+
+  alert('Usuário cadastrado com sucesso!');
 }
 </script>
 
+
 <template>
-  <HeaderComponente />
+    <HeaderComponente />
+    
+    <main>
+      <div class="esquerda">
+        <div class="titulo">
+          <h1>FAÇA O SEU CADASTRO!</h1>
+        </div>
+        <img src="@/assets/banda.png" alt="" id="banda" />
+        <div class="Beat">
+          <h1>BEAT</h1>
+        </div>
+        <div class="Hub">
+          <h1>HUB</h1>
+        </div>
+      </div>
   
-  <main>
-    <div class="esquerda">
-      <div class="titulo">
-        <h1>FAÇA O SEU CADASTRO!</h1>
-      </div>
-      <img src="@/assets/banda.png" alt="" id="banda" />
-      <div class="Beat">
-        <h1>BEAT</h1>
-      </div>
-      <div class="Hub">
-        <h1>HUB</h1>
-      </div>
-    </div>
-
-    <div class="direita">
-      <form class="cadastro" @submit.prevent="cadastrarUsuario">
-        <div class="campo_cadastro nome">
-          <p class="titulo_cadastro" id="cabecalho">Nome completo</p>
-          <input class="input" type="text" v-model="novoUsuario.name" placeholder="insira seu nome" />
-        </div>
-
-        <div class="campo_cadastro data">
-          <p class="titulo_cadastro">Data de nascimento</p>
-          <input class="input" type="date" v-model="novoUsuario.datebirth" placeholder="insira sua data de nascimento" />
-        </div>
-
-        <p>Gênero</p>
-
-        <div class="genero">
-          <div class="form-check">
-            <input class="form-check-input" type="radio" v-model="novoUsuario.gender" value="masculino" id="flexRadioDefault1" />
-            <label class="form-check-label" for="flexRadioDefault1">Masculino</label>
+      <div class="direita">
+        <form class="cadastro" @submit.prevent="cadastrarUsuario">
+          <div class="campo_cadastro nome">
+            <p class="titulo_cadastro" id="cabecalho">Nome completo</p>
+            <input class="input" type="text" v-model="novoUsuario.name" placeholder="insira seu nome" />
           </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" v-model="novoUsuario.gender" value="feminino" id="flexRadioDefault2" />
-            <label class="form-check-label" for="flexRadioDefault2">Feminino</label>
+  
+          <div class="campo_cadastro data">
+            <p class="titulo_cadastro">Data de nascimento</p>
+            <input class="input" type="date" v-model="novoUsuario.datebirth" placeholder="insira sua data de nascimento" />
           </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" v-model="novoUsuario.gender" value="prefiro não informar" id="flexRadioDefault3" />
-            <label class="form-check-label" for="flexRadioDefault3">Prefiro não informar</label>
+  
+          <p>Gênero</p>
+  
+          <div class="genero">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" v-model="novoUsuario.gender" value="masculino" id="flexRadioDefault1" />
+              <label class="form-check-label" for="flexRadioDefault1">Masculino</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" v-model="novoUsuario.gender" value="feminino" id="flexRadioDefault2" />
+              <label class="form-check-label" for="flexRadioDefault2">Feminino</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" v-model="novoUsuario.gender" value="prefiro não informar" id="flexRadioDefault3" />
+              <label class="form-check-label" for="flexRadioDefault3">Prefiro não informar</label>
+            </div>
           </div>
-        </div>
-
-        <div class="campo_cadastro">
-          <p class="titulo_cadastro">CPF</p>
-          <input class="input" type="text" v-model="novoUsuario.cpf" placeholder="___.___.___-__" />
-        </div>
-        <div class="campo_cadastro">
-          <p class="titulo_cadastro">E-mail</p>
-          <input class="input" type="email" v-model="novoUsuario.email" placeholder="Ex: joaozinho@gmail.com" />
-        </div>
-        <div class="campo_cadastro">
-          <p class="titulo_cadastro">Telefone</p>
-          <input class="input" type="phonenumber" v-model="novoUsuario.number" placeholder="Digite seu telefone" />
-        </div>
-        <div class="campo_cadastro">
-          <p class="titulo_cadastro">Senha</p>
-          <input class="input" type="password" v-model="novoUsuario.password" />
-        </div>
-        <div class="campo_cadastro">
-          <p class="titulo_cadastro">Confirmação de Senha</p>
-          <input class="input" type="password" v-model="novoUsuario.passwordconfirmation" />
-        </div>
-
-        <button type="submit">Criar Conta</button>
-      </form>
-    </div>
-  </main>
-</template>
+  
+          <div class="campo_cadastro">
+            <p class="titulo_cadastro">CPF</p>
+            <input class="input" type="text" v-model="novoUsuario.cpf" placeholder="___.___.___-__" />
+          </div>// Função para buscar o endereço a partir do CEP
+          <div class="campo_cadastro">
+            <p class="titulo_cadastro">E-mail</p>
+            <input class="input" type="email" v-model="novoUsuario.email" placeholder="Ex: joaozinho@gmail.com" />
+          </div>
+          <div class="campo_cadastro">
+            <p class="titulo_cadastro">Telefone</p>
+            <input class="input" type="phonenumber" v-model="novoUsuario.number" placeholder="Digite seu telefone" />
+          </div>
+          <div class="campo_cadastro">
+            <p class="titulo_cadastro">Senha</p>
+            <input class="input" type="password" v-model="novoUsuario.password" />
+          </div>
+          <div class="campo_cadastro">
+            <p class="titulo_cadastro">Confirmação de Senha</p>
+            <input class="input" type="password" v-model="novoUsuario.passwordconfirmation" />
+          </div>
+          <div>
+            <p class="titulo_cadastro">CEP</p>
+            <input class="input" type="text" v-model="enderecoUsuario.cep" @blur="buscarEnderecoPorCEP" placeholder="Digite o CEP" />
+          </div>
+          <div class="campo_cadastro">
+            <p class="titulo_cadastro">Rua</p>
+            <input class="input" type="text" v-model="enderecoUsuario.rua" />
+          </div>
+          <div class="campo_cadastro">
+            <p class="titulo_cadastro">Número e/ou bloco</p>
+            <input class="input" type="text" v-model="enderecoUsuario.numero" />
+          </div>
+          <div class="campo_cadastro">
+            <p class="titulo_cadastro">Bairro</p>
+            <input class="input" type="text" v-model="enderecoUsuario.bairro" />
+          </div>
+          <div class="campo_cadastro">
+            <p class="titulo_cadastro">Cidade</p>
+            <input class="input" type="text" v-model="enderecoUsuario.cidade" />
+          </div>
+  
+          <button type="submit">Criar Conta</button>
+        </form>
+      </div>
+    </main>
+  </template>
+  
 
 <style scoped>
 </style>
@@ -128,7 +205,19 @@ main {
   background: #efefef;
 }
 
+@media (max-width:1087px){
+    .direita .input{
+      width:20vh;
+    }
+}
+@media (max-width:799px){
 
+  .direita .input{
+    width:13vh;
+    box-sizing: border-box;
+    padding: 3px;
+  }
+  }
 .esquerda {
   background-color: #efefef;
   width: 55%;
@@ -227,9 +316,7 @@ main {
   width: 33vw;
 }
 
-.data .input {
-  width: 6vw;
-}
+
 
 .genero {
   width: 70%;
@@ -275,12 +362,6 @@ button {
   bottom: 15px;
 }
 
-header input {
-  display: flex;
-  position: relative;
-  left: 7vw;
-  bottom: 1.1vh;
-}
 
 .regiao {
   position: relative;
@@ -288,21 +369,6 @@ header input {
   font-family: 'Inter', sans-serif;
   color: #595959;
   font-size: 1vw;
-}
-
-header ::placeholder {
-  padding-left: 20px;
-  font-family: 'Inter', sans-serif;
-  font-size: 1.8vh;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 10%;
-  height: 20vh;
-  background-color: #efefef;
 }
 
 .navegacao {
@@ -326,11 +392,7 @@ a {
   color: #f48200;
 }
 
-.hr {
-  position: relative;
-  bottom: 5vh;
-  border: 1px solid black;
-}
+
 
 .icones {
   width: 1.5vw;
