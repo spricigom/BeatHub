@@ -75,7 +75,7 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
                             <img src="@/assets/coracao.png" alt="" class="icones" />
                         </div>
                         <div class="img-produtos">
-                            <img src="@/assets/piano4.jpg" alt="" />
+                            <img src="@/assets/piano4.avif" alt="" />
                         </div>
                         <h2 class="texto-produtos">Teclado 4Pss</h2>
                         <div class="preco-produtos">
