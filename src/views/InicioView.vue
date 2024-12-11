@@ -6,34 +6,33 @@ import NavFooter from '@/components/NavFooter.vue';
 import ListHome from '@/components/ListHome.vue';
 import HeaderComponente from '@/components/HeaderComponente.vue';
 
+
 const produtoStore = useProdutoStore();
-const mostrarLocalizacao = ref(false);
-const dynamicImage = ref('/assets/imagem1.png'); // Caminho inicial da imagem
+const selectedImage = ref('image1'); // Armazena qual imagem está selecionada
+
 
 onMounted(() => {
   produtoStore.buscarTodosOsProdutos();
 });
 
-const mostrarDivLocalizacao = () => {
-  mostrarLocalizacao.value = true;
-};
 
-const esconderDivLocalizacao = () => {
-  mostrarLocalizacao.value = false;
+// Função para selecionar a imagem
+const selectImage = (image) => {
+  console.log("Selected image:", image); // Log para depuração
+  selectedImage.value = image;
 };
-
-// Função para trocar a imagem
-function changeImage(url) {
-  console.log("Changing image to:", url); // Log para depuração
-  dynamicImage.value = url;
-}
 </script>
+
+
 
 
 <template>
 
+
   <body>
     <HeaderComponente />
+
+
 
 
     <main>
@@ -45,8 +44,10 @@ function changeImage(url) {
             <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
           </div>
 
+
           <img src="@/assets/ukulele.png" alt="" class="produtos-MaisAlugados" />
           <h2>Ukulele Concert Us23 Spring</h2>
+
 
           <div class="conteudo2">
             <div class="preco">
@@ -56,14 +57,17 @@ function changeImage(url) {
           </div>
         </div>
 
+
         <div class="mais-alugados text-center">
           <div class="compra-e-coracao2">
             <img src="@/assets/coracao.png" alt="" class="icones" />
             <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
           </div>
 
+
           <img src="@/assets/violao.png" alt="" class="produtos-MaisAlugados" />
           <h2>Violão Di Giorgio Master</h2>
+
 
           <div class="conteudo2">
             <div class="preco">
@@ -73,14 +77,17 @@ function changeImage(url) {
           </div>
         </div>
 
+
         <div class="mais-alugados text-center">
           <div class="compra-e-coracao2">
             <img src="@/assets/coracao.png" alt="" class="icones" />
             <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
           </div>
 
+
           <img src="@/assets/guitarra.png" alt="" class="produtos-MaisAlugados" />
           <h2>Guitarra elétrica SG</h2>
+
 
           <div class="conteudo2">
             <div class="preco">
@@ -90,14 +97,17 @@ function changeImage(url) {
           </div>
         </div>
 
+
         <div class="mais-alugados text-center">
           <div class="compra-e-coracao2">
             <img src="@/assets/coracao.png" alt="" class="icones" />
             <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
           </div>
 
+
           <img src="@/assets/baixo.png" alt="" class="produtos-MaisAlugados" />
           <h2>Baixo Strinberg JBS50</h2>
+
 
           <div class="conteudo2">
             <div class="preco">
@@ -109,63 +119,104 @@ function changeImage(url) {
       </div>
 
 
-      
-      
-      <div class="container">
+
+
+      <div class="fundo-v-if">
+
+        <div class="right">
+          <!-- Exibição condicional das imagens -->
+          <div class="v-if-cima" v-if="selectedImage === 'image1'">
+            <div class="texto-v-if">
+              <div class="titulo-v-iv">
+                <h2>PAGAMENTOS</h2>
+              </div>
+
+              <p class="descricao-v-if">Nossas formas de pagamento variam em pix e cartão em nossa loja fisica.</p>
+              <p class="descricao-v-if">Sem taxas por venda!</p>
+            </div>
+
+            <img src="@/assets/logo.png" alt="Imagem 1" style="max-height: 150px; border-radius: 10px;">
+          </div>
+
+          <img v-if="selectedImage === 'image2'" src="@/assets/teclado.png" alt="Imagem 2"
+            style="max-height: 150px; border-radius: 10px;">
+          <img v-if="selectedImage === 'image3'" src="@/assets/teclado1-2.png" alt="Imagem 3"
+            style="max-height: 150px; border-radius: 10px;">
+        </div>
         <div class="left">
-          <p>Escolha uma imagem:</p>
           <div class="buttons">
-            <!-- Alteração: Caminhos diretos para a pasta public/assets -->
-            <button @click="changeImage('@/assets/logo.png')">Imagem 1</button>
-            <button @click="changeImage('@/assets/teclado1-2.png')">Imagem 2</button>
-            <button @click="changeImage('@/assets/teclado.png')">Imagem 3</button>
+            <!-- Botões que alteram a imagem exibida -->
+            <button @click="selectImage('image1')">Imagem 1</button>
+            <button @click="selectImage('image2')">Imagem 2</button>
+            <button @click="selectImage('image3')">Imagem 3</button>
           </div>
         </div>
-        <div class="right">
-          <img src="dynamicImage" alt="Imagem dinâmica" style="max-height: 150px; border-radius: 10px;">
-        </div>
       </div>
+
+
       <ListHome :produtos="produtoStore.produtos" tipo="home" />
 
+
     </main>
+
 
     <NavFooter />
   </body>
 </template>
 
+
 <style scoped>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
+.descricao-v-if {
+  width: 40vw;
 }
-main{
-  margin: 0;
-  padding: 0
+
+.titulo-v-iv {
+  margin-bottom: 10vh;
 }
-.container {
+
+.titulo-v-iv h2 {
+  font-family: 'Kameron', sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.v-if-cima {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  width: 90vw;
+  height: 30vh;
+  padding: 2vw;
+}
+
+.fundo-v-if {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  background-color: #f48200;
-  width: 100vw;
-  height: 200px;
+  background-color: #fca746;
+  width: 100%;
+  height: 70vh;
   padding: 20px;
   box-sizing: border-box;
 }
 
+
 .left {
   color: white;
 }
+
 
 .left p {
   margin: 0 0 10px;
   font-size: 18px;
 }
 
+
 .left .buttons {
   display: flex;
   gap: 10px;
 }
+
 
 .left button {
   background-color: white;
@@ -177,18 +228,33 @@ main{
   border-radius: 5px;
 }
 
+
 .left button:hover {
   background-color: #ffe5d1;
 }
+
 
 .right img {
   max-height: 150px;
   border-radius: 10px;
 }
 
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+main {
+  margin: 0;
+  padding: 0
+}
+
+
 body {
   position: relative;
 }
+
 
 .localizacao-modal {
   position: fixed;
@@ -202,6 +268,7 @@ body {
   z-index: 1000;
 }
 
+
 .modal-overlay {
   position: absolute;
   top: 0;
@@ -213,6 +280,7 @@ body {
   z-index: -1;
 }
 
+
 .localizacao-content {
   background-color: rgb(202, 202, 202);
   padding: 4vw;
@@ -222,15 +290,18 @@ body {
   font-family: 'Josefin Sans', sans-serif;
 }
 
+
 .localizacao-content p {
   color: black;
 }
+
 
 .container {
   position: relative;
   bottom: 17vh;
 }
 
+
 .compra-e-coracao2 {
   display: flex;
   justify-content: space-between;
@@ -238,14 +309,17 @@ body {
   margin-top: 3vh;
   margin-right: 1vw;
 }
+
 
 .conteudo2 {
   margin-top: 2vh;
 }
 
+
 .icones {
   width: 1.5vw;
 }
+
 
 .compra-e-coracao2 {
   display: flex;
@@ -254,6 +328,7 @@ body {
   margin-top: 3vh;
   margin-right: 1vw;
 }
+
 
 .preco {
   display: flex;
@@ -261,6 +336,9 @@ body {
   margin-left: 3vw;
   font-family: 'Inter', 'sans serif';
 }
+
+
+
 
 
 
@@ -274,11 +352,18 @@ body {
 
 
 
+
+
+
+
 .estrelas {
   display: flex;
   float: left;
   margin-left: 2.5vw;
 }
+
+
+
 
 
 
@@ -289,10 +374,13 @@ body {
 }
 
 
+
+
 .produtos-MaisAlugados {
   width: 130px;
   height: 321px;
 }
+
 
 .mais-alugados {
   height: 64vh;
@@ -300,13 +388,16 @@ body {
   background-color: white;
   border-radius: 1vw;
 
+
 }
+
 
 .mais-alugados h2 {
   margin-top: 2vh;
   font-size: 1.3vw;
   font-family: 'Inter', 'sans-serif';
 }
+
 
 .campo {
   background-color: white;
@@ -319,15 +410,24 @@ body {
   position: relative;
   left: 50%;
 
+
   border-radius: 1vw;
 
+
 }
+
 
 * {
   padding: 0;
 }
 
+
 /*estilos do header */
+
+
+
+
+
 
 
 
@@ -339,15 +439,20 @@ body {
 
 
 
+
+
+
 .icones {
   width: 1.5vw;
 }
+
 
 .compra-e-coracao {
   position: relative;
   left: 7vw;
   bottom: 1.3vh;
 }
+
 
 .compra-e-coracao .icones {
   margin-right: 1.5vw;
