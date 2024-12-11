@@ -1,7 +1,16 @@
 <script setup>
 import NavFooter from '@/components/NavFooter.vue';
 import ListProduct from '@/components/ListProduct.vue';
+import ListHome from '@/components/ListHome.vue';
 import HeaderComponente from '@/components/HeaderComponente.vue';
+import { useProdutoStore } from '@/stores/produto';
+import { onMounted } from 'vue';
+
+const produtoStore = useProdutoStore();
+
+onMounted(async () => {
+    await produtoStore.produtoPedais();
+})
 </script>
 
 <template>
@@ -16,177 +25,10 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
             
             <h2 id="amarelo" style="position: relative;bottom: 1vh;">Pedais</h2>
 
-
-
-
-
-
-
             <div class="fundo">
-                <div class="linha">
-                    <div class="produtos">
-
-
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-
-
-                        <div class="img-produtos">
-                            <img src="@/assets/pedal1.png" alt="" />
-                        </div>
-
-
-                        <h2 class="texto-produtos">Microfone SoundPro SP</h2>
-
-                        
-                        <div class="preco-produtos">
-                            <h5>R$ 42,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-
-
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/pedal2.webp" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Pedal Guitarra OverTone</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 17,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/pedal3.png" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Cubo Amplificador</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 32,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/pedal4.webp" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Ukulele</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 24,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/pedal5.webp" alt="" width="100%" />
-                        </div>
-                        <h2 class="texto-produtos">Pandeiro 12 Knight</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 32,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="linha">
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/pedal6.webp" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Teclado musical 61 teclas</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 35,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/pedal7.webp" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Trompete Werill Master</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 69,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/pedal8.webp" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Bateria Acústica</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 287,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/pedal9.png" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Prato Hi Hat</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 42,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/pedal10.webp" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Gaita de boca harmônica</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 17,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-                </div>
+                <ListHome :produtos="produtoStore.produtos" tipo="home"/>
             </div>
+
         </main>
 
 

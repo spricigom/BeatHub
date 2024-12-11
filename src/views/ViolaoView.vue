@@ -2,6 +2,15 @@
 import NavFooter from '@/components/NavFooter.vue';
 import ListProduct from '@/components/ListProduct.vue';
 import HeaderComponente from '@/components/HeaderComponente.vue';
+import { useProdutoStore } from '@/stores/produto';
+import { onMounted } from 'vue';
+import ListHome from '@/components/ListHome.vue';
+
+const produtoStore = useProdutoStore();
+
+onMounted(async () => {
+    await produtoStore.produtoViolao();
+})
 </script>
 
 <template>
@@ -16,167 +25,10 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
             
             <h2 id="amarelo" style="position: relative;bottom: 1vh;">Violões</h2>
 
-
-
-
-
-
-
             <div class="fundo">
-                <div class="linha">
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/violao1.webp" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Violao Yamaha C8OII</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 42,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/violao2.webp" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Violao Yamaha C40M</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 17,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/violao3.webp" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">violao Yamaha F-130</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 32,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/violao4.webp" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Violao Phoenix Nylon NL4BK</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 24,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/violao5.webp" alt="" width="100%" />
-                        </div>
-                        <h2 class="texto-produtos">Violao Infantil Vogga VCA85</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 32,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="linha">
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/violao6.jpg" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Violao Giannini Classico </h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 35,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/violao7.webp" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Violao Giannini DG1</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 69,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/violao8.webp" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Violao Fender ACB</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 287,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/violao9.webp" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Violao Memphis Ac39R</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 42,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/violao10.webp" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Violao Modena Nylon</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 17,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-                </div>
+                <ListHome :produtos="produtoStore.produtos" tipo="home"/>
             </div>
+            
         </main>
 
 

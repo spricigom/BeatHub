@@ -4,8 +4,11 @@ import { supabase } from "@/lib/supabaseClient";
 export const useProdutoStore = defineStore('produto', () => {
     const produtos = ref([]);
     
-  const buscarTodosOsProdutos  = async () => {
-    const { data, error } = await supabase.from('produtos').select('*');
+    const getProdutoById = (id) => produtos.value.find(p => p.id == id)
+
+  
+    const buscarTodosOsProdutos  = async () => {
+    const { data, error } = await supabase.from('produtos').select('*').eq('categoria', 'principal');
     if (error) {
       console.error('Erro ao buscar produtos:', error.message);
     } else {
@@ -56,7 +59,7 @@ export const useProdutoStore = defineStore('produto', () => {
         }}
 
     const produtoPedais = async () => {
-        const { data, error } = await supabase.from('produtos').select('*').eq('categoria', 'pedais');
+        const { data, error } = await supabase.from('produtos').select('*').eq('categoria', 'pedal');
         if (error) {
           console.error('Erro ao carregar produtos do catálogo:', error);
         } else {
@@ -83,7 +86,7 @@ export const useProdutoStore = defineStore('produto', () => {
         }}
 
     const produtoBateria = async () => {
-        const { data, error } = await supabase.from('produtos').select('*').eq('catalog', 'bateria');
+        const { data, error } = await supabase.from('produtos').select('*').eq('categoria', 'bateria');
         if (error) {
           console.error('Erro ao carregar produtos do catálogo:', error);
         } else {
@@ -92,6 +95,7 @@ export const useProdutoStore = defineStore('produto', () => {
         }}
 
     return {
+        getProdutoById,
         produtoBaixo,
         produtoPedais,
         produtoTeclado,
