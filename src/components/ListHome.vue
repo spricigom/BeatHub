@@ -64,7 +64,7 @@ template {
 .produtos {
     background-color: white;
     width: 15vw;
-    height: 48vh;
+    height: 52vh;
     margin-top: 4vh;
     margin-bottom: 8vh;
     border-radius: 0.44rem;
@@ -75,7 +75,7 @@ template {
     padding-bottom: 1rem;
     position: relative;
     transition: transform 0.3s ease-in-out;
-    overflow: hidden;
+    
 }
 
 .produtos:hover {
