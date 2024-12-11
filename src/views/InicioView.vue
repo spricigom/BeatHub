@@ -143,11 +143,12 @@ const selectImage = (image) => {
           <div class="v-if-cima"  v-if="selectedImage === 'image2'">
             <div class="texto-v-if">
               <div class="titulo-v-iv">
-                <h2>PAGAMENTOS</h2>
+                <h2>SOBRE NÓS</h2>
               </div>
 
-              <p class="descricao-v-if">Nossas formas de pagamento variam em pix e cartão em nossa loja fisica.</p>
-              <p class="descricao-v-if">Sem taxas por venda!</p>
+              <p class="descricao-v-if">Conheça um pouco da nossa equipe 
+                e como a Beathub se desenvolveu.</p>
+              <h4 class="descricao-v-if"><RouterLink to="/Membros">Clique aqui</RouterLink></h4>
             </div>
 
             <div class="img-v-if">
@@ -156,12 +157,18 @@ const selectImage = (image) => {
 
           <div class="v-if-cima" v-if="selectedImage === 'image3'" >
             <div class="texto-v-if">
-              <div class="titulo-v-iv">
-                <h2>PAGAMENTOS</h2>
+              <div class="titulo-v-iv-endereco">
+                <h2>ENDEREÇO</h2>
               </div>
 
-              <p class="descricao-v-if">Nossas formas de pagamento variam em pix e cartão em nossa loja fisica.</p>
-              <p class="descricao-v-if">Sem taxas por venda!</p>
+              <p class="descricao-v-if">Nossas lojas</p>
+              <p class="descricao-v-if">RETIRADA DO INSTRUMENTO APENAS NA LOJA FISÍCA!</p>
+              <ul>
+                <li>Rua: Rua dos Sonhos</li>
+                <li>Número: 42</li>
+                <li>Bairro: Centro</li>
+                <li>Cidade: Joinville</li>
+              </ul>
             </div>
 
             <div class="img-v-if">
@@ -191,7 +198,8 @@ const selectImage = (image) => {
 
     </main>
 
-
+    h4
+    h4
     <NavFooter />
   </body>
 </template>
@@ -199,11 +207,10 @@ const selectImage = (image) => {
 
 <style scoped>
 
-
 .img-v-if{
   background-color: red;
-  width: 12vw;
-  height: 26vh;
+  width: 300px;
+  height: 300px;
   position: relative;
   top: 13vh;
   right: 15vw;
@@ -212,7 +219,7 @@ const selectImage = (image) => {
 .img-v-if img {
   width: 100%; /* A largura da imagem será igual à largura da div */
   height: 100%; /* A altura da imagem será igual à altura da div */
-  object-fit: contain; /* A imagem será redimensionada para caber completamente na div sem distorção */
+  object-fit: cover; /* A imagem será redimensionada para caber completamente na div sem distorção */
   border-radius: 10px; /* Mantém o arredondamento */
 }
 .descricao-v-if {
@@ -221,6 +228,12 @@ const selectImage = (image) => {
   font-family: 'Kanit', sans-serif;
   font-size: 1.3vw;
   color: black;
+}
+
+.descricao-v-if a{
+  color:#fff;
+  text-decoration:none ;
+  font-size: 1.7vw;
 }
 
 .titulo-v-iv {
@@ -243,6 +256,12 @@ const selectImage = (image) => {
   height: 30vh;
   padding: 2vw;
 }
+.v-if-cima ul{
+  list-style: none;
+  color: white;
+  font-family: 'Kameron', sans-serif;
+  font-size: 1.3vw;
+}
 
 .fundo-v-if {
   display: flex;
@@ -254,6 +273,7 @@ const selectImage = (image) => {
   padding-left: 20vw;
   padding-right: 20vw;
   box-sizing: border-box;
+  margin-bottom: 20vh;
 }
 
 
@@ -262,6 +282,7 @@ const selectImage = (image) => {
   position: relative;
   right: 34vw;
   top: 10vh;
+  padding-left: 15vw;
 }
 
 
@@ -273,19 +294,22 @@ const selectImage = (image) => {
 
 .left .buttons {
   display: flex;
-  gap: 10px;
+  gap: 3vw;
+  margin-left: 2vw;
 }
 
 
 .left button {
-  background-color: #E7E7E7;
+  background-color: white;
   color: black;
   border: none;
-  padding: 10px 20px;
+  padding: 10px 40px;
   font-size: 16px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 17px;
   transition: .3s;
+  font-family: 'Poppins', sans-serif;
+
 }
 
 
