@@ -66,6 +66,9 @@ export const MockProducts = [
         preco :69.00 ,
         descricao:'O Trompete Werill Master é um modelo de trompete de alta qualidade, projetado para músicos que buscam um instrumento com excelente desempenho tanto em performances profissionais quanto em ambientes educacionais. A marca Werill é conhecida por produzir trompetes com boa projeção sonora, afinação precisa e materiais duráveis, com um acabamento refinado. O modelo Master geralmente apresenta tubos em latão de alta qualidade, válvulas bem construídas e uma resposta rápida, o que facilita a execução de passagens rápidas e notas agudas. É um trompete versátil, adequado para diversos estilos musicais, como jazz, música clássica e até fanfarras. O Werill Master é uma boa escolha para músicos intermediários e avançados que procuram um trompete com características profissionais a um preço acessível.',
         img: 'trompete.png', 
+        img2:'trompete-2.webp',
+        img3:'trompete-3.webp',
+        img4:'trompete-4.webp'
         
     },
     {
@@ -74,14 +77,20 @@ export const MockProducts = [
         preco: 200.00 ,
         descricao:'A bateria acústica é um conjunto de instrumentos de percussão composto por tambores (como o bumbo, caixa, tonéis), pratos e acessórios (como hi-hat, crash e ride), usados em diversos estilos musicais. O som é gerado pela vibração das peles tensionadas dos tambores e pelo impacto das baquetas nos pratos. A bateria acústica é apreciada por sua sonoridade rica e dinâmica, sendo essencial em performances ao vivo, gravações e em estúdios. Ela oferece ao baterista total controle sobre o timbre e a intensidade do som.',
         img: 'bateria.png', 
+        img2:'bateria-2.webp',
+        img3:'bateria-3.webp',
+        img4:'bateria-4.webp'
         
     },
     {
         id: 9,
-        nome: 'Pratos Fanfarra 18" em Latão',
+        nome: 'Pratos Fanfarra 18" em Latão',//mudado
         preco: 42.00 ,
         descricao: 'Os Pratos de Fanfarra 18" em Latão são instrumentos de percussão projetados especialmente para fanfarras e bandas marciais. Com um diâmetro de 18 polegadas, esses pratos oferecem um som claro e projetado para cortes nítidos, essenciais para marcar o ritmo em desfiles e performances ao vivo. O latão é um material comum na fabricação desses pratos devido à sua durabilidade, resistência e boa projeção sonora. Eles produzem um som brilhante e intenso, ideal para situações de grande exposição sonora, como em paradas, cerimônias e outros eventos ao ar livre. Esses pratos geralmente são mais leves do que os usados em baterias tradicionais, facilitando o manuseio durante movimentos rápidos e dinâmicos.',
         img: 'prato.webp', 
+        img2:'prato-2.webp',
+        img3:'prato-3.webp',
+        img4:'prato-4.webp'
         
     },
     {
@@ -90,6 +99,9 @@ export const MockProducts = [
         preco: 17.00 ,
         descricao: 'A gaita de boca harmônica, também conhecida simplesmente como gaita, é um pequeno instrumento de sopro composto por uma série de palhetas de metal montadas em uma estrutura de madeira ou plástico. Ao soprar ou aspirar através dos buracos na gaita, as palhetas vibram, produzindo sons de diferentes notas. As gaitas de boca são muito populares em estilos musicais como blues, rock, folk e country, sendo apreciadas por sua portabilidade e facilidade de uso. Existem diferentes tipos de harmônicas, como diatônicas (para tocar em uma escala específica) e ** cromáticas** (que oferecem uma gama maior de notas, incluindo sustenidos e bemóis), permitindo uma grande versatilidade musical.',
         img: 'gaitaBoca.png', 
+        img2:'gaita-2.jepg',
+        img3:'gaita-3.jepg',
+        img4:'gaita-4.jepg'
     },
     {//guitarras
         id: 11,
@@ -97,6 +109,9 @@ export const MockProducts = [
         preco:  42.00 ,
         descricao:'John Frusciante, guitarrista do Red Hot Chili Peppers desde 1988, é famoso por seu estilo único e sua guitarra preferida, uma Stratocaster® Sunburst de 1962. Para uma tiragem limitada, a Fender Custom Shop, liderada por Paul Waller, replicou meticulosamente essa guitarra, incluindo detalhes como acabamento envelhecido, desgastes no corpo e marcas de uso. A réplica inclui um corpo de amieiro de duas peças, braço de bordo "C" dos anos 60 e escala de jacarandá, além de captadores Stratocaster® feitos à mão por Abigail Ybarra e um sistema de cancelamento de zumbido. Outros recursos premium incluem trastes 6105, tremolo vintage, afinadores vintage e certificado de autenticidade.',
         img: 'guitarra1.png', 
+        img2: 'guitarra1-2.png',
+        img3: 'guitarra1-3.png',
+        img4: 'guitarra1-4.png' 
     },
     {
         id: 12,
@@ -104,7 +119,9 @@ export const MockProducts = [
         preco: 17.00 ,
         descricao: 'A Fender Hello Kitty Pink Stratocaster é uma guitarra elétrica que combina o design clássico da famosa Stratocaster com um toque único e lúdico inspirado na personagem Hello Kitty, da Sanrio. Lançada como um modelo especial, ela apresenta um acabamento rosa brilhante, com detalhes exclusivos da Hello Kitty, como adesivos e uma imagem da personagem no headstock (a parte superior do braço). Além de seu visual atraente, o modelo mantém a qualidade e o som característicos da Fender, com três captadores single-coil, que proporcionam um som claro e brilhante, ideal para uma ampla gama de estilos musicais, como pop, rock e música alternativa. A Fender Hello Kitty Pink Stratocaster é uma guitarra voltada para fãs da marca, colecionadores e músicos que buscam um instrumento com um design diferenciado, mas com o desempenho e a confiabilidade da Fender.',
         img: 'guitarra2.jpg', 
-        
+        img2:'hello1-2.jpg',
+        img3:'hello-1-3.jpg',
+        img4:'hello-1-4.jpg'
     },
     {
         id: 13,
@@ -112,7 +129,9 @@ export const MockProducts = [
         preco: 'R$ 32,00 por mês',
         descricao:'O Player II Jazzmaster irradia o charme atemporal da Fender, mas, por baixo do capô, ele é preparado para os músicos de hoje. Tudo no braço é projetado para uma tocabilidade rápida e fluida, desde o perfil moderno em "C" com acabamento em uretano acetinado sedoso na parte traseira até a confortável escala de jacarandá de 9,5" de raio com bordas suaves e 22 trastes médios jumbo. Um corpo de amieiro clássico está disponível em acabamentos Fender atemporais e cores nunca antes vistas descobertas nos arquivos. Os captadores Player Series Alnico V Single-Coil Jazzmaster oferecem agudos cristalinos, médios musicais e graves firmes que elevam qualquer gênero. O seletor de 3 vias permite que você disque facilmente tudo, desde o toque de captação do braço vítreo até a mordida cortante do captador da ponte e todos os pontos intermediários, enquanto uma ponte Jazzmaster de 6 rastilhos com Tremolo Flutuante, rastilhos Mustang® atualizados e afinadores ClassicGear™ garantem estabilidade de afinação precisa para a flexibilidade de explorar infinitas possibilidades sonoras.',
         img: 'guitarra3.jpg', 
-
+        img2: 'guitarra3-2.jpg',
+        img3: 'guitarra3-3.jpg',
+        img4: 'guitarra3-4.jpg'
     },
     {
         id: 14,
@@ -120,6 +139,9 @@ export const MockProducts = [
         preco: 50.00 ,
         descricao:'Quando o riff de abertura de "Good Times Bad Times" saiu no rádio em 1969, tudo mudou. Naquele momento, Jimmy Page consolidou seu legado e alterou o curso da música popular com uma única guitarra: sua Fender Telecaster. A Fender Jimmy Page Telecaster é uma homenagem àquela guitarra, que começou sua vida em seu acabamento de laca White Blonde de fábrica, depois se tornou a "guitarra espelho" antes de assumir sua forma final - um instrumento mágico único, pintado à mão pelo próprio Page, que viria a produzir alguns dos riffs mais icônicos do século XX.',
         img: 'guitarra4.jpg', 
+        img2: 'guitarra4-2.jpg',
+        img3: 'guitarra4-3.jpg',
+        img4: 'guitarra4-4.jpg'
         
     },
     {
@@ -128,6 +150,9 @@ export const MockProducts = [
         preco:  30.00 ,
         descricao:'Retorne à intensidade sombria e aos enormes sons de guitarra do movimento grunge rock com o Kurt Cobain Jaguar, uma versão com novo visual do surrado e altamente incomum Jaguar de 1965 que Cobain empunhou durante a era inebriante do início dos anos 90, quando o Nirvana dominava o rock e liderava um movimento musicalmente deslumbrante e culturalmente subversivo. Ele evoca autenticamente o Jaguar canhoto modificado que Cobain encontrou de segunda mão e veio a premiar logo após a gravação do enorme álbum Nevermind de 1991 , completo com captadores humbucking DiMarzio®, comutação especial, extras exclusivos no estojo e muito mais. Disponível em versões para destros e canhotos.',
         img: 'guitarra5.jpg', 
+        img2: 'guitarra5-2.jpg',
+        img3: 'guitarra5-3.jpg',
+        img4: 'guitarra5-4.jpg'
         
     },
     {
@@ -135,7 +160,10 @@ export const MockProducts = [
         nome: 'Guitarra American Performer Stratocaster® HSS',
         preco: 35.00 ,
         descricao:'Nascida em Corona, Califórnia, a American Performer Stratocaster HSS oferece o timbre e a sensação excepcionais que você espera de uma Fender autêntica - com novos aprimoramentos, como o captador humbucking Double Tap™, que a tornam ainda mais inspiradora para tocar.',
-        img: 'guitarra6.jpg', 
+        img: 'guitarra6.jpg',
+        img2: 'guitarra6-2.jpg',
+        img3: 'guitarra6-3.jpg',
+        img4: 'guitarra6-4.jpg' 
     },
     {
         id: 17,
@@ -143,6 +171,9 @@ export const MockProducts = [
         preco: 69.00 ,
         descricao:'Experimente o estilo Strat® inigualável do próprio Slowhand com a Eric Clapton Stratocaster, um dos nossos modelos de assinatura de artista mais aclamados e duradouros. Com design clássico e recursos especiais que lhe dão versatilidade tonal excepcional e sensação sem esforço digna de um dos maiores nomes do rock e do blues do mundo, ela coloca o timbre e a sensação puros da Clapton Stratocaster diretamente em suas mãos. Os recursos incluem um corpo de amieiro, três captadores Vintage Noiseless™, circuitos mid-boost ativos (25 db) e TBX, braço especial em formato de "V" suave e tremolo sincronizado vintage original bloqueado.',
         img: 'guitarra7.jpg', 
+        img2: 'guitarra7-2.jpg',
+        img3: 'guitarra7-3.jpg',
+        img4: 'guitarra7-4.jpg'
         
     },
     {
@@ -151,7 +182,9 @@ export const MockProducts = [
         preco:  22.00 ,
         descricao:'Homenageando a eletrizante "Voodoo Child" que popularizou a guitarra Stratocaster e sua tremenda flexibilidade sonora, a Jimi Hendrix Stratocaster lhe dá o mesmo timbre ardente e a mesma sensação de tocar para empunhar como a sua. Cheio de timbre vintage incendiário e estilo clássico, este instrumento extraordinário apresenta toques de assinatura e detalhes únicos baseados em suas guitarras distintas "invertidas".',
         img: 'guitarra8.jpg', 
-        
+        img2: 'guitarra8-2.jpg',
+        img3: 'guitarra8-3.jpg',
+        img4: 'guitarra8-4.jpg'
     },
     {
         id: 19,
@@ -159,6 +192,9 @@ export const MockProducts = [
         preco:  40.00,
         descricao:'A dinâmica artista de R&B HER conquistou o público e ganhou prêmios Grammy com suas performances poderosas e músicas emocionantes - seus ritmos suaves e solos lentos sempre em primeiro plano. A HER Stratocaster faz uma declaração tão ousada quanto o artista que a inspirou. Com acabamento em deslumbrante Chrome Glow e apresentando um braço de maple em formato "C" de meados dos anos 60, captadores Vintage Noiseless™ e um escudo de alumínio anodizado, esta guitarra oferece tocabilidade sem esforço, timbre clássico Strat® e uma aparência extraordinariamente boa.',
         img: 'guitarra9.jpg', 
+        img2: 'guitarra9-2.jpg',
+        img3: 'guitarra9-3.jpg',
+        img4: 'guitarra9-4.jpg'
         
     },
     {
@@ -167,6 +203,9 @@ export const MockProducts = [
         preco: 17.00 ,
         descricao:'Os sons únicos e poderosos de Tom Morello - de ritmos suaves a feedback gritante, gagueiras caóticas e muito mais - exigem uma Stratocaster® muito especial. A Stratocaster "Soul Power" de Tom Morello - baseada na Strat Designer Series modificada usada durante seu tempo na Audioslave - apresenta um corpo de laje de amieiro com encadernação e um braço de maple em formato de "C moderno" com escala de jacarandá de raio composto de 9,5"-14" e 22 trastes médio-jumbo. Outros recursos incluem um sistema de tremolo de travamento Floyd Rose® recuado, humbucker de ponte Seymour Duncan Hot Rails, dois captadores Fender® Noiseless™ nas posições do braço e do meio, escudo cromado, alavanca de chave de segurança, afinadores de travamento, headcap pintado combinando e o icônico decalque de corpo "Soul Power" na caixa preta da Fender.',
         img: 'guitarra10.jpg', 
+        img2: 'guitarra10-2.jpg',
+        img3: 'guitarra10-3.jpg',
+        img4: 'guitarra10-4.jpg'
     },
      
     {//baixos
