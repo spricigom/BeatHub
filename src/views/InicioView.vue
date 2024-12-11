@@ -7,11 +7,9 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
 
 const produtoStore = useProdutoStore();
 
-onMounted(() => {
-  produtoStore.buscarTodosOsProdutos();
+onMounted(async() => {
+  await  produtoStore.buscarTodosOsProdutos();
 });
-
-
 
 </script>
 
@@ -96,7 +94,18 @@ onMounted(() => {
 
 
       
-     
+      <div class="container">
+        <div class="left">
+          <p>Escolha uma imagem:</p>
+          <div class="buttons">
+            <!-- Alteração: Caminhos diretos para a pasta public/assets -->
+            <button @click="changeImage('@/assets/logo.png')">Imagem 1</button>
+            <button @click="changeImage('@/assets/teclado1-2.png')">Imagem 2</button>
+            <button @click="changeImage('@/assets/teclado.png')">Imagem 3</button>
+          </div>
+        </div>
+      </div>
+
       <ListHome :produtos="produtoStore.produtos" tipo="home" />
 
     </main>
