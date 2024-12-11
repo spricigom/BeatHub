@@ -1,5 +1,4 @@
 <script setup>
-import { ref } from 'vue';
 import { onMounted } from 'vue';
 import { useProdutoStore } from '@/stores/produto';
 import NavFooter from '@/components/NavFooter.vue';
@@ -7,26 +6,13 @@ import ListHome from '@/components/ListHome.vue';
 import HeaderComponente from '@/components/HeaderComponente.vue';
 
 const produtoStore = useProdutoStore();
-const mostrarLocalizacao = ref(false);
-const dynamicImage = ref('/assets/imagem1.png'); // Caminho inicial da imagem
 
 onMounted(() => {
   produtoStore.buscarTodosOsProdutos();
 });
 
-const mostrarDivLocalizacao = () => {
-  mostrarLocalizacao.value = true;
-};
 
-const esconderDivLocalizacao = () => {
-  mostrarLocalizacao.value = false;
-};
 
-// Função para trocar a imagem
-function changeImage(url) {
-  console.log("Changing image to:", url); // Log para depuração
-  dynamicImage.value = url;
-}
 </script>
 
 
@@ -110,21 +96,7 @@ function changeImage(url) {
 
 
       
-      
-      <div class="container">
-        <div class="left">
-          <p>Escolha uma imagem:</p>
-          <div class="buttons">
-            <!-- Alteração: Caminhos diretos para a pasta public/assets -->
-            <button @click="changeImage('@/assets/logo.png')">Imagem 1</button>
-            <button @click="changeImage('@/assets/teclado1-2.png')">Imagem 2</button>
-            <button @click="changeImage('@/assets/teclado.png')">Imagem 3</button>
-          </div>
-        </div>
-        <div class="right">
-          <img src="dynamicImage" alt="Imagem dinâmica" style="max-height: 150px; border-radius: 10px;">
-        </div>
-      </div>
+     
       <ListHome :produtos="produtoStore.produtos" tipo="home" />
 
     </main>

@@ -7,8 +7,8 @@ import { createPinia } from 'pinia';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap'
 
-import 'primeicons/primeicons.css'
 
+import "primeicons/primeicons.css";
 
 
 const app = createApp(App);
