@@ -214,6 +214,9 @@ export const MockProducts = [
         preco: 17.00 ,
         descricao:'O American Professional II Precision Bass® conta com mais de sessenta anos de inovação, inspiração e evolução para atender às demandas do músico profissional de hoje.O braço de perfil P Bass 63 agora ostenta bordas suaves de escala enroladas, um acabamento acetinado "Super-Natural" e um calcanhar de braço recém-esculpido para uma sensação extremamente confortável e fácil acesso ao registro superior. O novo captador split-coil V-Mod II Precision Bass está mais articulado do que nunca, ao mesmo tempo em que oferece o impacto e o rosnado pelos quais o P Bass® é conhecido.O American Pro II Precision Bass proporciona familiaridade instantânea e versatilidade sonora que você sentirá e ouvirá imediatamente, com amplas melhorias que somam nada menos que um novo padrão para instrumentos profissionais.',
         img: 'baixo1.jpg', 
+        img2: 'baixo1-2.jpg',
+        img3: 'baixo1-3.jpg',
+        img4: 'baixo1-4.jpg'
     },
     {
         id: 22,
@@ -221,7 +224,9 @@ export const MockProducts = [
         preco: 42.00 ,
         descricao: 'O baixo Fender® American Ultra II Meteora® é uma versão de ponta, feita para músicos que buscam qualidade superior. Com corpo de amieiro esculpido, braço de maple com perfil Modern D e acabamento Ultra Satin, ele oferece excelente tocabilidade. As escalas de ébano ou maple possuem raio composto 10”-14” e trastes médios-jumbo. Equipado com humbuckers Haymaker™, o baixo oferece uma vasta gama tonal com graves profundos e agudos articulados, sem zumbido. O pré-amplificador redesenhado inclui controles ativos e passivos, além de um equalizador de 3 bandas. Outros recursos incluem ponte HiMass™, afinadores leves e um design icônico, proporcionando desempenho excepcional e versatilidade.',
         img: 'baixo2.jpg', 
-        
+        img2:'baixo2-2.jpg',
+        img3:'baixo2-3.jpg',
+        img4: 'baixo2-4.jpg'
     },
     {
         id: 23,
@@ -229,7 +234,9 @@ export const MockProducts = [
         preco: 32.00 ,
         descricao: 'O Duff McKagan Deluxe Precision Bass é baseado no Jazz Bass Special dos anos 80 que ele usou durante a gravação de Appetite for Destruction . Uma evolução do seu modelo de assinatura, este baixo adiciona recursos amigáveis ​​ao músico e toques estilísticos que Duff exige.',
         img: 'baixo3.jpg', 
-
+        img2: 'baixo3-2.jpg', 
+        img3: 'baixo3-3.jpg',
+        img4: 'baixo3-4.jpg'
     },
     {
         id: 24,
@@ -237,7 +244,9 @@ export const MockProducts = [
         preco: 24.00 ,
         descricao: 'Apresentando o Fender® Limited Edition Mark Hoppus Jaguar® Bass — este lançamento de edição limitada acabará antes que você pisque, então pegue o seu hoje e tenha o modelo exato que Mark Hoppus toca atualmente no palco com o Blink-182. Para começar, você está recebendo um corpo Jaguar® de amieiro sólido e totalmente curvilíneo. Adicione a isso um braço de bordo com um perfil "C" personalizado, uma linda escala de jacarandá e elegantes pontos de pérola branca, finalizados com um conjunto de afinadores leves de estilo vintage. O escudo perolado branco de 4 camadas é equipado com captadores P Bass® split-coil Seymour Duncan® SPB3 Quarter Pound™ montados de forma personalizada em posições invertidas. Para um timbre estelar e uma entonação sólida, este baixo Jaguar apresenta uma ponte HiMass™ Vintage. A placa de braço personalizada apresenta o logotipo de polvo "Hi My Name is Mark" de Mark, assim como a bolsa de luxo incluída.',
         img: 'baixo4.jpg', 
-        
+        img2:'baixo4-2.jpg', 
+        img3:'baixo4-3.jpg', 
+        img4: 'baixo4-4.jpg'
     },
     {
         id: 25,
@@ -245,6 +254,9 @@ export const MockProducts = [
         preco:  30.00,
         descricao: 'Alimentado por um conjunto de captadores Player Plus Noiseless™ Jazz Bass, o Player Plus Jazz Bass® oferece a clareza e o rosnado que definem o timbre do baixo Fender®. Um equalizador ativo de 3 bandas oferece modelagem precisa do timbre com um seletor para alternar entre o modo ativo ou passivo para máxima flexibilidade. O braço do Player Plus Jazz Bass é elegante, rápido e suave graças ao seu acabamento acetinado sedoso, bordas enroladas confortáveis ​​em uma escala de raio de 12" e formato moderno de "C". Uma ponte HiMass™ sólida como uma rocha fornece sustentação, ressonância e entonação perfeita. Com o estilo clássico da Fender, recursos avançados e novos acabamentos impressionantes, o Player Plus Jazz Bass é a ferramenta perfeita para despertar sua criatividade e se destacar da multidão.',
         img: 'baixo5.jpg', 
+        img2: 'baixo5-2.jpg', 
+        img3: 'baixo5-3.jpg', 
+        img4: 'baixo5-4.jpg', 
         
     },
     {
@@ -252,7 +264,10 @@ export const MockProducts = [
         nome: 'Baixo Vintera® II 50s Precision Bass®',
         preco: 35.00 ,
         descricao: 'O Vintera® II 50s Precision Bass® apresenta um corpo de amieiro e um braço de bordo para um timbre Fender clássico cheio de impacto e clareza. O braço em formato de "C" do final dos anos 50 oferece uma pegada confortavelmente familiar que se sente bem na sua mão, enquanto a escala de raio de 7,25" com trastes altos vintage proporciona conforto vintage com amplo espaço para grandes curvas e vibrato expressivo. Sob o capô, a bobina dividida estilo vintage dos anos 50 oferece o som icônico da Fender: quente, amadeirado, dinâmico e poderoso. A ponte de 4 rastilhos estilo vintage e as tarraxas estilo vintage proporcionam visuais clássicos com entonação aprimorada e estabilidade de afinação para completar o pacote.',
-        img: 'baixo.jpg', 
+        img: 'baixo6.jpg', 
+        img2: 'baixo6-2.jpg', 
+        img3: 'baixo6-3.jpg', 
+        img4: 'baixo6-4.jpg', 
     },
     {
         id: 27,
@@ -260,7 +275,10 @@ export const MockProducts = [
         preco: 69.00 ,
         descricao: 'O Fender® Troy Sanders Precision Bass® é um baixo projetado para oferecer timbre potente e versátil, com captadores personalizados de Tim Shaw, pré-amplificador de 18V e ponte vintage Fender HiMass™. Seu corpo é de amieiro com acabamento Silverburst, e conta com um braço de bordo no formato 70s P Bass® "C", escala de jacarandá laje de raio 9,5" e incrustações perolizadas. O instrumento ainda possui detalhes exclusivos, como o particularmente de Sanders no headstock e o logotipo Mastodon "Remission". Com claro e potência, é ideal para capturar a sonoridade agressiva do Mastodon.',
         img: 'baixo7.jpg', 
-        
+        img2: 'baixo7-2.jpg', 
+        img3: 'baixo7-3.jpg', 
+        img4: 'baixo7-4.jpg'
+    
     },
     {
         id: 28,
@@ -268,7 +286,9 @@ export const MockProducts = [
         preco:  50.00,
         descricao: 'Nascido em Corona, Califórnia, o baixo American Performer Mustang de escala reduzida oferece o timbre e a sensação excepcionais que você espera de um Fender autêntico, junto com novos aprimoramentos e um captador especial de bobina dividida, replicado dos desenhos originais dos anos 70, que o tornam ainda mais inspirador de tocar.',
         img: 'baixo8.jpg', 
-        
+        img2: 'baixo8-2.jpg',
+        img3: 'baixo8-3.jpg',
+        img4: 'baixo8-4.jpg'
     },
     {
         id: 29,
@@ -276,14 +296,20 @@ export const MockProducts = [
         preco:  40.00,
         descricao: 'O Classic Vibe 70s Jazz Bass® V é uma homenagem à evolução dos anos 1970 do J Bass®, combinando a tocabilidade luxuosa que o tornou famoso com a versatilidade e o timbre massivo de seus captadores single-coil alnico duplos projetados pela Fender. Os recursos amigáveis ​​ao músico incluem um perfil de braço fino e confortável em forma de "C" com uma escala de raio de 9,5" fácil de tocar e trastes estreitos e altos, bem como uma ponte de estilo vintage com selas de barril ranhuradas para estabilidade sólida das cordas. Este modelo Squier retrô também apresenta marcações de headstock inspiradas nos anos 1970, hardware banhado a níquel de aparência rica e um acabamento de braço brilhante com tonalidade vintage para uma vibração old-school.',
         img: 'baixo9.jpg', 
-        
+        img2:'baixo9-2.jpg',
+        img3:'baixo9-3.jpg',
+        img4: 'baixo9-4.jpg'
     },
     {
         id: 30,
         nome: 'Baixo Tony Franklin Fretless Precision Bass®',
         preco: 17.00 ,
         descricao: 'Poucos baixistas de rock são tão intimamente identificados com o baixo fretless quanto Tony Franklin. Aclamado por seus inúmeros créditos de sessão e trabalho com Roy Harper, the Firm, Blue Murder, Kenny Wayne Shepherd e outros, Franklin é um artista dedicado e de longa data da Precision e um dos melhores expoentes modernos da versão fretless do instrumento. O Tony Franklin Fretless Precision Bass oferece seu estilo e tom elástico poderoso em um modelo com aparência clássica e recursos Franklin personalizados, incluindo um braço de bordo moderno em forma de C com uma escala de ébano sem trastes, um captador de braço American Series Precision Bass, um captador de ponte Dimarzio Model J™ e um afinador de cordas E drop-D.',
-        img: 'baixo10', 
+        img: 'baixo10.jpg', 
+        img2: 'baixo10-2.jpg', 
+        img3: 'baixo10-3.jpg', 
+        img4: 'baixo10-4.jpg'
+        
     },    
     {//pedais
         id:31,
@@ -291,6 +317,11 @@ export const MockProducts = [
         preco: 42.00,
         descricao: 'Versão premium do icônico distortion da BOSS, circuito de ganho de dois estágios 100% analógico, modo standard e modo custom, componentes premium e fabricação no Japão.',
         img: 'pedal1.png',
+        img2: 'pedal1-2.png',
+        img3: 'pedal1-3.png',
+        img4: 'pedal1-4.png',
+
+
     },
     {
         id: 32,
@@ -298,6 +329,10 @@ export const MockProducts = [
         preco: 17.00,
         descricao: 'Pedal de distorção de alto ganho com controles de Level, Dist e EQ de 3 bandas, modo standard e custom, feito no Japão com componentes premium.',
         img: 'pedal2.webp',
+        img2: 'pedal2-2.png',
+        img3: 'pedal2-3.png',
+        img4: 'pedal2-4.png',
+
     },
     {
         id: 33,
@@ -305,6 +340,10 @@ export const MockProducts = [
         preco: 32.00,
         descricao: 'Pedal de Fuzz 100% analógico, dois modos vintage e modern, transistores de silício, componentes premium e fabricação no Japão.',
         img: 'pedal3.png',
+        img2: 'pedal3-2.png',
+        img3: 'pedal3-3.png',
+        img4: 'pedal3-4.png',
+
     },
     {
         id: 34,
@@ -312,6 +351,11 @@ export const MockProducts = [
         preco: 69.00,
         descricao: '',
         img: 'pedal4.webp',
+        img2: 'pedal4-2.webp',
+        img3: 'pedal4-3.jpeg',
+        img4: 'pedal4-4.jpeg',
+
+
     },
     {
         id: 35,
@@ -319,6 +363,10 @@ export const MockProducts = [
         preco: 22.00,
         descricao: 'Pedal de Chorus para guitarra com 3 modos (Standard, CE-1 Chorus e CE-1 Vibrato) e controles de Rate e Depth.',
         img: 'pedal5.webp',
+        img2: 'pedal5-2.webp',
+        img3: 'pedal5-3.png',
+        img4: 'pedal5-4.webp',
+
     },
     {
         id: 36,
@@ -326,6 +374,10 @@ export const MockProducts = [
         preco: 50.00,
         descricao: 'Pedal de Reverb com 8 modos, Entrada para pedal de Expressão e Operação Mono ou Estéreo',
         img: 'pedal6.webp',
+        img2: 'pedal6-2.webp',
+        img3: 'pedal6-3.webp',
+        img4: 'pedal6-4.png',
+
     },
     {
         id: 37,
@@ -333,6 +385,10 @@ export const MockProducts = [
         preco: 40.00,
         descricao: 'Pedal com Efeito Vintage de Tremolo, controles de Rate, Depth e Wave',
         img: 'pedal7.webp',
+        img2: 'pedal7-2.webp',
+        img3: 'pedal7-3.webp',
+        img4: 'pedal7-4.webp',
+
     },
     {
         id: 38,
@@ -340,6 +396,10 @@ export const MockProducts = [
         preco: 35.00,
         descricao: 'Pedal de Overdrive/ Distortion para Guitarra com os timbres do BOSS Blues Driver e JHS Angry Charlie, 6 modos de operação e conexão remote para acionamento externo',
         img: 'pedal8.webp',
+        img2: 'pedal8-2.webp',
+        img3: 'pedal8-3.webp',
+        img4: 'pedal8-4.webp',
+
     },
     {
         id: 39,
@@ -347,6 +407,10 @@ export const MockProducts = [
         preco: 17.00,
         descricao: 'Pedal supressor de ruído com 2 modos de operação e conexão send/return.',
         img: 'pedal9.png',
+        img2: 'pedal9-2.png',
+        img3: 'pedal9-3.png',
+        img4: 'pedal9-4.png',
+
     },
     {
         id: 40,
@@ -354,13 +418,22 @@ export const MockProducts = [
         preco: 69.00,
         descricao: 'Pedal com 3 Vozes de Harmônia para Guitarra, Pitch Shifter, Detune, Modo S-Bend (Super Bend), Entrada para Pedal de Expressão',
         img: 'pedal10.webp', 
+        img2: 'pedal10-2.webp', 
+        img3: 'pedal10-3.webp', 
+        img4: 'pedal10-4.webp', 
+
     },
     {//teclados tudo mudado
         id: 41,
         nome: 'Teclado  PSR-E383',
         preco: 92.00,
         descricao: 'Teclado portátil de 61 teclas, modelo padrão, para aqueles que estão tocando teclado pela primeira vez, ou inclusive para os músicos que o utilizam para suas performances. Ele é repleto de funções versáteis, com ação expressiva do teclado sensível ao toque e muitas funções convenientes para que até mesmo os iniciantes possam se divertir tocando-o imediatamente.',
-        img: 'Piano-1-1PSR-E383.jpg', 
+        img: 'Piano-1-1PSR-E383.jpg',
+        img2: 'Piano-1-2PSR-E383.webp', 
+        img3: 'Piano-1-3PSR-E383.webp', 
+        img4: 'Piano-1-4PSR-E383.webp', 
+
+
     },
     {
         id: 42,
@@ -368,6 +441,10 @@ export const MockProducts = [
         preco: 77.00,
         descricao: 'Teclado portátil de 76 teclas, modelo padrão, para aqueles que estão tocando teclado pela primeira vez, ou inclusive para os músicos que o utilizam para suas performances. Ele é repleto de funções versáteis, com ação expressiva do teclado sensível ao toque e muitas funções convenientes para que até mesmo os iniciantes possam se divertir tocando-o imediatamente.',
         img: 'Piano-2-1PSR-EW320.webp', 
+        img2: 'Piano-2-2PSR-EW320.webp', 
+        img3: 'Piano-2-3PSR-EW320.webp', 
+        img4: 'Piano-2-4PSR-EW320.webp', 
+
     },
     {
         id: 43,
@@ -375,6 +452,10 @@ export const MockProducts = [
         preco: 72.00 ,
         descricao: 'Teclado portátil de 61 teclas, modelo padrão, para aqueles que estão tocando teclado pela primeira vez, ou inclusive para os músicos que o utilizam para suas performances. Ele é repleto de funções versáteis, com ação expressiva do teclado sensível ao toque e muitas funções convenientes para que até mesmo os iniciantes possam se divertir tocando-o imediatamente.',
         img: 'Piano-3-1YTP-380.avif', 
+        img2: 'Piano-3-2YTP-380.avif', 
+        img3: 'Piano-3-3YTP-380.avif', 
+        img4: 'Piano-3-4YTP-380.avif', 
+
     },
     {
         id: 44,
@@ -382,13 +463,20 @@ export const MockProducts = [
         preco: 84.00,
         descricao: 'O teclado YPT-280 é um instrumento eletrônico portátil de 61 teclas, ideal para iniciantes e músicos em aprendizado. Oferece uma ampla variedade de sons e ritmos, além de funções educacionais, como lições guiadas e acompanhamento automático. Possui sensibilidade ao toque, conexão para fones de ouvido e opções de alimentação por adaptador ou pilhas, proporcionando praticidade e versatilidade para prática musical em qualquer lugar.',
         img: 'Piano-4-1YPT-280.avif',
+        img2: 'Piano-4-2YPT-280.avif',
+        img3: 'Piano-4-3YPT-280.avif',
+        img4: 'Piano-4-4YPT-280.avif',
     },
     {
         id: 45,
         nome: 'Teclado EZ-310',
         preco: 31.00,
         descricao: 'Teclado de 61 teclas, sensível ao toque, especialmente equipado com teclas de iluminação e projetado como um modelo de teclado portátil de entrada para os músicos principiantes. Com este elegante e abrangente instrumento, você pode praticar, tocar e se apresentar com várias funções de lição e sons de instrumentos autênticos.',
-        img: 'Piano-5-1EZ-310.avif',         
+        img: 'Piano-5-1EZ-310.avif',     
+        img2: 'Piano-5-2EZ-310.webp',         
+        img3: 'Piano-5-3EZ-310.webp',         
+        img4: 'Piano-5-4EZ-310.webp',         
+
     },
     {
         id: 46,
@@ -396,6 +484,10 @@ export const MockProducts = [
         preco: 38.00 ,
         descricao: 'A série PSR-400 é uma ótima opção de 61 teclas que é ideal para quem está iniciando, mas também representa uma alternativa robusta para músicos experientes. O mais recente PSR-473 apresenta um gerador de tom recém desenvolvido que proporciona melhorias fabulosas na qualidade do som, assim como efeitos de alta qualidade, como delays.',
         img: 'Piano-6-1PSR-E473.webp', 
+        img2: 'Piano-6-2PSR-E473.webp', 
+        img3: 'Piano-6-3PSR-E473.webp', 
+        img4: 'Piano-6-4PSR-E473.webp', 
+
     },
     {
         id: 47,
@@ -403,6 +495,10 @@ export const MockProducts = [
         preco: 69.00,
         descricao: 'A série PSR-EW400 é uma excelente opção para se tocar ao vivo, com um teclado de 76 teclas o qual os músicos mais experientes podem desfrutar. O mais recente PSR-EW425 inclui um criador de tons recém desenvolvido que proporciona melhorias incríveis na qualidade do som, assim como efeitos de alta qualidade, como delays, e como um som de órgão premium, sampleado da série YC, linha de stage keyboard top de linha da Yamaha.',
         img: 'Piano-7-1PSR-EW425.webp', 
+        img2: 'Piano-7-2PSR-EW425.webp', 
+        img3: 'Piano-7-3PSR-EW425.webp', 
+        img4: 'Piano-7-4PSR-EW425.webp', 
+
     },
     {
         id: 48,
@@ -410,6 +506,10 @@ export const MockProducts = [
         preco: 20.00,
         descricao: 'O Yamaha PSS-A50 é um teclado eletrônico portátil e compacto, ideal para músicos de todos os níveis, oferecendo 42 sons de instrumentos e 138 tipos de arpejo, além de recursos como arpejador, 34 efeitos de movimento e o Phrase Recorder para gravação e reprodução de músicas. Com um miniteclado de alta qualidade (37 teclas sensíveis ao toque), ele permite grande expressividade musical e conta com conectividade USB-MIDI para integração com software de música, além de entrada para fone de ouvido. Seu design leve e portátil é alimentado por 4 pilhas AA ou adaptador USB (vendido separadamente), tornando-o versátil para uso em qualquer lugar. O PSS-A50 também oferece funções como metrônomo, ajuste de oitava e transposição, sendo uma excelente opção para iniciantes e músicos mais experientes que buscam um teclado profissional e acessível para práticas, gravações e apresentações.',
         img: 'Piano-8-1Pss-a50.jpg', 
+        img2: 'Piano-8-2Pss-a50.jpg', 
+        img3: 'Piano-8-3Pss-a50.jpg', 
+        img4: 'Piano-8-4Pss-a50.jpg', 
+
     },
     {
         id: 49,
@@ -417,7 +517,10 @@ export const MockProducts = [
         preco: 44.00 ,
         descricao: '',
         img: 'Piano-9-1PSR-360B.jpg', 
-        
+        img2: 'Piano-9-2PSR-360B.jpg', 
+        img3: 'Piano-9-3PSR-360B.jpg', 
+        img4: 'Piano-9-4PSR-360B.jpg', 
+
     },
     {
         id: 50,
@@ -425,6 +528,10 @@ export const MockProducts = [
         preco: 50.00,
         descricao: 'O Yamaha PSR-F52 é um teclado acessível e completo, perfeito para músicos de todos os níveis. Ele conta com 136 sons de instrumentos, incluindo 41 músicas do mundo, e 158 estilos de acompanhamento automático que abrangem diversos gêneros musicais. Além disso, possui 69 músicas pré-programadas e um livro digital gratuito com músicas populares e lições em vídeo, facilitando o aprendizado. A função Smart Chord torna a criação musical simples, permitindo tocar sem precisar de conhecimentos complexos de acordes. Com recursos como Panel Sustain, Metrônomo, Sound Boost e alto-falantes integrados, o PSR-F52 oferece uma experiência musical completa. Leve e compacto, pode ser alimentado por pilhas ou adaptador, sendo ideal para uso em qualquer lugar. A confiabilidade da Yamaha garante durabilidade, tornando-o uma excelente escolha para quem busca qualidade e versatilidade em um teclado.',
         img: 'Piano-10--1PSR-F52.webp', 
+        img2: 'Piano-10--2PSR-F52.webp', 
+        img3: 'Piano-10--3PSR-F52.webp', 
+        img4: 'Piano-10--4PSR-F52.webp', 
+
     },
     {//violao coloquei acento no violão
         id: 51,
@@ -432,6 +539,12 @@ export const MockProducts = [
         preco: 42.00,
         descricao: ' violão Yamaha C80II Clássico Nylon Natural é uma excelente escolha para músicos que buscam um instrumento de qualidade e sonoridade excepcional. Com um design clássico e acabamento em nylon natural, esse violão oferece uma combinação de beleza estética e desempenho sonoro. Equipado com cordas de nylon, o Yamaha C80II proporciona um som suave, equilibrado e rico em harmônicos, ideal para interpretações clássicas, flamenco, bossa nova e outros estilos que demandam uma sonoridade refinada. Seu braço confortável e ergonômico facilita a execução de acordes e melodias complexas, tornando-o adequado tanto para iniciantes quanto para músicos mais experientes.',
         img: 'violao1.webp',
+        img2: 'violao1-2.webp',
+        img3: 'violao1-3.webp',
+        img4: 'violao1-4.webp',
+
+
+
     },
     {
         id: 52,
@@ -439,6 +552,9 @@ export const MockProducts = [
         preco: 17.00,
         descricao: ' O Violão C40M da YAMAHA é a versão sem brilho (mate) do violão acústico clássico de iniciação mais famoso da Yamaha, o C40. Uma fina camada de acabamento acetinado proporciona um tato mais refinado, agradável e suave. Seu modelo clássico com uma ótima caixa de ressonância, tornam este instrumento perfeito para músicos que buscam um violão para tocar em casa, no churrasco com os amigos, para estudo e iniciação no violão.',
         img: 'violao2.webp',
+        img2: 'violao2-2.webp',
+        img3: 'violao2-3.webp',
+        img4: 'violao2-4.webp',
     },
     {
         id: 53,
@@ -446,6 +562,10 @@ export const MockProducts = [
         preco: 69.00,
         descricao: 'O Violão Yamaha F-130 é um modelo clássico de excelente custo-benefício, ideal para iniciantes e intermediários. Com tampo em spruce (abeto), lateral e fundo em meranti, e braço em nato, oferece um som equilibrado, com graves firmes e agudos claros. Sua escala de rosewood (jacarandá) proporciona boa tocabilidade, e seu corpo dreadnought garante boa projeção sonora. Com acabamento limpo e durável, o F-130 é uma ótima opção para quem busca um violão acessível, confiável e de boa qualidade para práticas e apresentações de menor escala.',
         img: 'violao3.webp',
+        img2: 'violao3-2.webp',
+        img3: 'violao3-3.webp',
+        img4: 'violao3-4.webp',
+
     },
     {
         id: 54,
@@ -453,6 +573,9 @@ export const MockProducts = [
         preco: 24.00,
         descricao: 'O Violão Phoenix Nylon NL4BK é um modelo clássico de entrada, com corpo em madeira de basswood e braço em nato, oferecendo um som equilibrado e uma tocabilidade confortável. Com acabamento em preto brilhante e cordas de nylon, é ideal para iniciantes, proporcionando um instrumento acessível, com boa qualidade sonora e design elegante.',
         img: 'violao4.webp',
+        img2: 'violao4-2.jpg',
+        img3: 'violao4-3.jpg',
+        img4: 'violao4-4.webp',
     },
     {
         id: 55,
@@ -460,6 +583,10 @@ export const MockProducts = [
         preco: 40.00,
         descricao: 'O violão Infantil Vogga VCA85 Rosa faz parte da nova linha de violões Vogga que foi especialmente pensada para atender aos mais variados estilos musicais. De modelos clássicos a folks, tanto acústicos quanto eletroacústicos, a Vogga proporciona aos músicos brasileiros um excelente instrumento para os primeiros acordes.',
         img: 'violao5.webp',
+        img2: 'violao5-2.webp',
+        img3: 'violao5-3.webp',
+        img4: 'violao5-4.webp',
+
     },
     {
         id: 56,
@@ -467,6 +594,10 @@ export const MockProducts = [
         preco:  69.00,
         descricao: 'O Violão Giannini Clássico é uma opção de violão de entrada, projetado para iniciantes ou músicos que buscam um instrumento acessível, mas de boa qualidade. Ele geralmente apresenta tampo em madeira de spruce (abeto), que proporciona uma sonoridade clara e brilhante, e lateral e fundo em madeira de meranti, garantindo um bom equilíbrio de timbre. O braço é em nato, com escala em jacarandá, oferecendo uma tocabilidade confortável e precisa. Seu formato clássico, com cordas de nylon, proporciona uma sonoridade suave e adequada para estilos musicais como música clássica, flamenco e bossa nova. O design simples e robusto, junto ao custo acessível, torna o violão Giannini uma excelente escolha para quem está começando no universo do violão.',
         img: 'violao6.jpg',
+        img2: 'violao6-2.jpg',
+        img3: 'violao6-3.jpg',
+        img4: 'violao6-4.jpg',
+
     },
     {
         id: 57,
@@ -474,6 +605,10 @@ export const MockProducts = [
         preco:  20.00,
         descricao: 'A Giannini chega com a linha Arizona em busca de auxiliar o artista na obtenção de um som ainda mais destacado, poderoso e vibrante, tanto faz se junto aos amigos ou se frente a uma audiência de milhares. A utilização de madeiras como Pau-Ferro e Louro-Preto é uma das novidades que aqui apresentamos, complementada por equalizadores desenvolvidos para que a experiência dos novos modelos seja realmente especial. A novidade agora é a opção pelo sistema Fishman de captação. O pré-amplificador Fishman Presys II apresenta um desempenho sonoro excelente em um design compacto. Este modelo possui o captador flexível Fishman Sonicore (de rastilho, nova versão ainda melhor) e tem controles de Volume, Grave, Agudo e Chave de Fase. Além do Afinador Cromático (com display de LED), também tem um indicador de bateria fraca e uma caixa de bateria (9V) com Jack de saída para plug P10 mono.',
         img: 'violao7.webp',
+        img2: 'violao7-2.webp',
+        img3: 'violao7-3.webp',
+        img4: 'violao7-4.webp',
+
     },
     {
         id: 58,
@@ -481,6 +616,10 @@ export const MockProducts = [
         preco:  44.00,
         descricao: 'Ousado e impetuoso, o som deste acústico dreadnought foi projetado para inspirar desde o momento em que você o pega. Apresentando um tampo em spruce maciço e costas e laterais em mahogany maciço, o Redondo Classic tem uma voz rica e dominante que preenche qualquer ambiente. Projetado para tocar, ele também inclui um sistema de pré-amplificador premium projetado pela Fender e Fishman® especificamente para a forma do corpo do Redondo, permitindo que você reproduza o som natural do violão, quando conectado a um amplificador. O braço de mogno apresenta um perfil em forma de "C" confortável e fino, inspirado no legado elétrico da Fender.',
         img: 'violao8.webp',
+        img2: 'violao8-2.webp',
+        img3: 'violao8-3.webp',
+        img4: 'violao8-4.webp',
+
     },
     {
         id: 59,
@@ -488,6 +627,10 @@ export const MockProducts = [
         preco:  69.00,
         descricao: 'Design clássico neste modelo da linha Memphis, fabricado pela Tagima. Ideal para quem está aprendendo, pois possui cordas em nylon e preço bem acessível. O Violão de Nylon AC39 da Memphis é um sucesso de vendas da reconhecida marca TAGIMA. Aliás foi um dos instrumentos musicais mais vendidos no ano de 2009 em todo o Brasil. Isso se deve a sua ótima qualidade, tanto sonora quanto de acabamento, aliada ao seu baixo custo. O Violão Memphis AC39 da TAGIMA é um dos violões mais indicados pelas escolas de música para iniciantes e estudantes.',
         img: 'violao9.webp',
+        img2: 'violao9-2.webp',
+        img3: 'violao9-3.webp',
+        img4: 'violao9-4.webp',
+
     },
     {
         id:60,
@@ -495,27 +638,43 @@ export const MockProducts = [
         preco:  35.00,
         descricao: 'O Tagima Modena chegou para revolucionar o mercado de violões elétricos, combinando portabilidade, qualidade sonora e versatilidade para músicos que fazem apresentações. 100% elétrico, o Modena é ideal para ser usado com uma caixa amplificada, oferecendo diversas regulagens em seu próprio sistema, o que o torna adaptável a diferentes situações. Além de ser perfeito para performances, ele também é ótimo para estudos, já que pode ser conectado a fones de ouvido, transformando-se em um violão silencioso sem perder a tocabilidade e a experiência de um instrumento real, similar a baterias eletrônicas. Seu corpo maciço proporciona timbres impressionantes, enquanto os 5 botões de controle e o afinador embutido garantem um som único. Com um design diferenciado, conforto ao tocar e excelente custo-benefício, o Tagima Modena é a escolha ideal para quem busca um violão elétrico de alta qualidade e funcionalidades inovadoras.',
         img: 'violao10.webp',
+        img2: 'violao10-2.webp',
+        img3: 'violao10-3.webp',
+        img4: 'violao10-4.webp',
+
     },
     {//bateria
         id: 61,
         nome: 'Bateria Gretsch',
         preco:  92.00,
         descricao: 'Os tambores da Gretsch Energy são feitos com 7 folhas de Poplar com bordas de 30 graus, como os modelos mais tops da Gretsch, com aros de 1.6mm triple flanged e peles Remo, também características tradicionais da bateria Gretsch como as 5 canoas de afinação nos tambores de 10 e 12 polegadas.',
-        img: 'bateria1.webp', 
+        img: 'bateria1.webp',
+        img2: 'bateria1-2.webp', 
+        img3: 'bateria1-3.webp', 
+        img4: 'bateria1-4.webp', 
+ 
     },
     {
         id: 62,
         nome: 'Bateria Recording Custom',
         preco:  77.00,
         descricao: 'Trabalhando de perto com a lenda Steve Gadd, a Yamaha ressuscitou uma das mais populares séries de baterias profissionais e apresenta a nova Recording Custom Drums, uma série de baterias re-desenhadas que oferecem condições ideais para o uso profissional no estúdio. A nova Recording Custom Drums revista convence com um som focado e redondo com frequências mais baixas, adequado a cada estilo de som e a cada tipo de música. A bétula norte-americana serve de base para as Recording Custom Drums, 6 camadas de madeira de crescimento lento são coladas num casco perfeitamente redondo e fornecido com um ângulo de 30°. Os Lugs de Alta Tensão especialmente concebidos ajudam nas frequências mais baixas fora da madeira. Apesar do design revisto e mais moderno, as baterias Recording Custom mantêm o aspecto clássico que tem moldado o mundo das baterias durante tantos anos. Devido ao aumento do peso dos suportes, tem sido possível fazer o melhor uso das madeiras de bétula nas propriedades de redução de frequências indesejadas sem utilizar abafadores extra. Isto resulta numa sustentação óptima para o som central e, portanto, num tom nítido e articulado.',
-        img: 'bateria2.webp', 
+        img: 'bateria2.webp',     
+        img2: 'bateria2-2.webp', 
+        img3: 'bateria2-3.webp', 
+        img4: 'bateria2-4.webp', 
+
     },
     {
         id: 63,
         nome: 'Bateria American Musical',
         preco:  72.00,
         descricao: 'Nas baterias America você encontra o novo sistema de suspensão dos tambores, que diminui a área de contato entre a ferragem e o casco, fazendo com que além da aparência mais profissional você tenha ganhos em volume e timbre.',
-        img: 'bateria33.jpeg', 
+        img: 'bateria33.jpeg',       
+      img2: 'bateria33-2.jpeg', 
+        img3: 'bateria33-3.jpeg', 
+        img4: 'bateria33-4.jpeg', 
+
 
     },
     {
@@ -524,6 +683,10 @@ export const MockProducts = [
         preco:  84.00,
         descricao: 'A ferragem D-One, com sua construção reforçada e sistema de suspensão de 4 pontos, garante estabilidade e resistência mesmo nas performances mais intensas. Detalhes como bordas 45° graus, tom holder duplo e estantes com pés duplos demonstram o compromisso com a qualidade e a inovação em cada aspecto desta bateria.',
         img: 'bateria4.webp', 
+        img2: 'bateria4-2.webp', 
+        img3: 'bateria4-3.webp', 
+        img4: 'bateria4-4.webp', 
+
         
     },
     {
@@ -532,6 +695,10 @@ export const MockProducts = [
         preco:  31.00,
         descricao: ' Super Bateria Musical Infantil com Banqueta Completa Jazz Drum "Meu Ritmo" é o presente ideal para incentivar o desenvolvimento musical das crianças. Este conjunto de bateria é projetado para introduzir os pequenos ao mundo da música de maneira divertida e educativa. Equipado com 2 tons médios, 1 tambor grande e 2 tambores pequenos, o brinquedo oferece uma experiência completa, permitindo que as crianças explorem diferentes sons e ritmos. A banqueta inclusa é perfeita para proporcionar conforto durante as sessões de prática. Ao tocar a bateria, as crianças não só desenvolvem habilidades motoras e coordenação, como também aprendem a apreciar a música e a trabalhar em equipe, caso estejam tocando com amigos ou familiares. A Super Bateria Musical Infantil é mais do que um simples brinquedo; é uma ferramenta valiosa para despertar a criatividade e o talento musical dos jovens músicos, tornando o aprendizado uma experiência dinâmica e divertida.',
         img: 'bateria5.webp', 
+        img2: 'bateria5-2.webp', 
+        img3: 'bateria5-3.webp', 
+        img4: 'bateria5-4.webp', 
+
         
     },
     {
@@ -540,6 +707,10 @@ export const MockProducts = [
         preco:  38.00,
         descricao: 'Apresentando a Bateria Acústica D-One Rocket DR22 Red Satin Sparkle - uma obra-prima da percussão que redefine o padrão de qualidade e desempenho para músicos exigentes. Com um design meticuloso e uma construção impecável, esta bateria oferece uma experiência de tocar incomparável. O modelo Rocket DR22 é uma expressão de excelência, combinando elegância e potência em cada batida. Seu acabamento revestido em Red Satin Sparkle (RSS) exala estilo e sofisticação, enquanto a madeira 100% Poplar proporciona uma ressonância rica e vibrante. Com uma configuração meticulosamente planejada, a Rocket DR22 é uma verdadeira máquina de ritmo. Seu bumbo de 22x16" com aro de madeira e 16 canoas oferece uma base sólida e profunda, enquanto as caixas, tons e surdos proporcionam uma variedade de timbres expressivos. Equipada com peles D-One de filme duplo em todo o conjunto, esta bateria oferece durabilidade incomparável e uma resposta sonora precisa em todas as frequências. A ferragem D-One, com sua construção reforçada e sistema de suspensão de 4 pontos, garante estabilidade e resistência mesmo nas performances mais intensas. Detalhes como bordas 45° graus, tom holder duplo e estantes com pés duplos demonstram o compromisso com a qualidade e a inovação em cada aspecto desta bateria. Com a Rocket DR22, você não apenas toca, mas eleva sua música a novos patamares de excelência.',
         img: 'bateria6.webp', 
+        img2: 'bateria6-2.webp', 
+        img3: 'bateria6-3.webp', 
+        img4: 'bateria6-3.webp', 
+
     },
     {
         id: 67,
@@ -547,6 +718,10 @@ export const MockProducts = [
         preco:  69.00,
         descricao: 'A Bateria AudioTek é uma linha de baterias eletrônicas projetada para atender músicos e produtores que buscam uma solução versátil, acessível e de boa qualidade sonora. Com sensores de alta precisão e um módulo de som que oferece uma ampla variedade de timbres, ela é ideal tanto para práticas silenciosas quanto para gravações e performances ao vivo. Seu design compacto e fácil de montar proporciona conforto e praticidade, enquanto as peles de borracha ou mesh garantem uma sensação realista durante a execução. A AudioTek é equipada com kits variados, efeitos ajustáveis e conectividade para fones de ouvido ou amplificadores, tornando-a uma opção interessante para quem deseja explorar a bateria eletrônica com um ótimo custo-benefício.',
         img: 'bateria7.webp', 
+        img2: 'bateria7-2.jpg', 
+        img3: 'bateria7-3.jpg', 
+        img4: 'bateria7-4.jpg', 
+
         
     },
     {
@@ -554,7 +729,11 @@ export const MockProducts = [
         nome: 'Bateria Tama Stagestar',
         preco:  20.00,
         descricao: 'A Bateria Tama StageStar ST52H5C-SEM Sea Blue Mist 22" é a escolha ideal para bateristas que buscam qualidade, durabilidade e um som excepcional a um preço acessível. Com mais de 40 anos de experiência, a TAMA desenvolveu um kit que atende tanto iniciantes quanto músicos experientes. O modelo StageStar incorpora características avançadas, como o suporte de tom Omni-ball e hardware com suporte duplo, proporcionando maior estabilidade e versatilidade durante as performances. Os cascos são feitos de poplar, uma madeira conhecida por seu tom quente e ataque médio, utilizada na fabricação de tambores há mais de 50 anos. O pedal de bumbo possui transmissão por corrente dupla e ajuste do ângulo do batedor, garantindo uma resposta precisa e confortável. Além disso, o conjunto inclui pratos de bronze (hi-hat de 14" e crash de 16"), proporcionando um som brilhante e bem definido. O banco de bateria é reforçado e ajustável, permitindo que o baterista encontre a altura ideal com facilidade.',
-        img: 'bateria8.jpeg', 
+        img: 'bateria8.jpeg',         
+        img2: 'bateria8-2.jpeg', 
+        img3: 'bateria8-3.jpeg', 
+        img4: 'bateria8-4.jpeg', 
+
         
     },
     {
@@ -563,14 +742,20 @@ export const MockProducts = [
         preco:  44.00,
         descricao: 'Desde o início, estamos focados em desenvolver baterias para bateristas. Não importa se você é um iniciante, um profissional, um professor ou membro de uma igreja. Para nós, você é um baterista e precisa ser tratado com respeito e dentro das perspectivas exigidas por profissionais experientes. O modelo GARAGE FUSION 20 tem um bumbo de 20x16 com um incrível controle de harmônicos e uma capacidade de trabalhar em vários tipos de afinações e dinâmicas. O kit possui Tons de 10x08 e 12x09, porem o surdo é de 14x14, muito mais adequado a ambientes pequenos e concepções mais jazzistas e brasileiras. A caixa de 14x 5 apresenta o clássico som da história da bateria, rimshots, backbeats e esteira.',
         img: 'bateria9.webp', //mudança de img
-        
-    },
+        img2: 'bateria9-2.jpg',
+        img3: 'bateria9-3.webp',
+        img4: 'bateria9-4.webp',
+    }
     {
         id: 70,
         nome: 'Bateria Power ROckers',
         preco:  50.00,
         descricao: 'Eles demonstram que a paixão pela música se manifesta desde os primeiros momentos de suas vidas Então deixe seu pequeno(a) descobrir também a musicalidade que existe nele(a). O instrumento inclui 3 tons 1 prato, e 2 baquetas. Recomendação: Recomendado para crianças a partir de 3 anos de idade.',
-        img: 'bateria10.webp', 
+        img: 'bateria10.webp',       
+         img2: 'bateria10-2.webp', 
+        img3: 'bateria10-3.webp', 
+        img4: 'bateria10-4.webp', 
+
     }
 ]
 export const favoritos = MockProducts.filter(p => p.favoritado)
