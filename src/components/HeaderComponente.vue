@@ -33,10 +33,11 @@ function toggleMenu() {
 
             <div class="direita">
                 <div class="login">
-                    <button class="botao">
+                    <RouterLink to="/Login"><button class="botao">
                         <span class="pi pi-user" style="font-size: 1.3rem; color: white;"></span>
                         <h6 id="amarelo">login</h6>
-                    </button>
+                    </button></RouterLink>
+                    
                 </div>
                 <div class="botoes-header">
                     <RouterLink to="/Carrinho"><span style="color: white; font-size: 1.3rem;" class="pi pi-shopping-cart"></span></RouterLink> 

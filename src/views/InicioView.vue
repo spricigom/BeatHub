@@ -8,7 +8,7 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
 
 const produtoStore = useProdutoStore();
 const mostrarLocalizacao = ref(false);
-
+const dynamicImage = ref('/assets/imagem1.png'); // Caminho inicial da imagem
 
 onMounted(() => {
   produtoStore.buscarTodosOsProdutos();
@@ -21,12 +21,14 @@ const mostrarDivLocalizacao = () => {
 const esconderDivLocalizacao = () => {
   mostrarLocalizacao.value = false;
 };
+
+// Função para trocar a imagem
 function changeImage(url) {
-            console.log("Changing image to:", url); // Log para verificar se a função é chamada
-            const image = document.getElementById('dynamicImage');
-            image.src = url;
-        }
+  console.log("Changing image to:", url); // Log para depuração
+  dynamicImage.value = url;
+}
 </script>
+
 
 <template>
 
@@ -105,19 +107,24 @@ function changeImage(url) {
           </div>
         </div>
       </div>
+
+
+      
+      
       <div class="container">
         <div class="left">
-            <p>Escolha uma imagem:</p>
-            <div class="buttons">
-                <button onclick="changeImage('@/assets/logo.png')">Imagem 1</button>
-                <button onclick="changeImage('@/assets/logo.png')">Imagem 2</button>
-                <button onclick="changeImage('@/assets/logo.png')">Imagem 3</button>
-            </div>
+          <p>Escolha uma imagem:</p>
+          <div class="buttons">
+            <!-- Alteração: Caminhos diretos para a pasta public/assets -->
+            <button @click="changeImage('@/assets/logo.png')">Imagem 1</button>
+            <button @click="changeImage('@/assets/teclado1-2.png')">Imagem 2</button>
+            <button @click="changeImage('@/assets/teclado.png')">Imagem 3</button>
+          </div>
         </div>
         <div class="right">
-            <img id="dynamicImage" src="https://via.placeholder.com/150/FF0000/FFFFFF?text=Imagem+1" alt="Imagem dinâmica">
+          <img src="dynamicImage" alt="Imagem dinâmica" style="max-height: 150px; border-radius: 10px;">
         </div>
-    </div>
+      </div>
       <ListHome :produtos="produtoStore.produtos" tipo="home" />
 
     </main>
@@ -128,53 +135,57 @@ function changeImage(url) {
 
 <style scoped>
 body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+main{
+  margin: 0;
+  padding: 0
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f48200;
+  width: 100vw;
+  height: 200px;
+  padding: 20px;
+  box-sizing: border-box;
+}
 
-        .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #f48200;
-            width: 100%;
-            height: 200px;
-            padding: 20px;
-            box-sizing: border-box;
-        }
+.left {
+  color: white;
+}
 
-        .left {
-            color: white;
-        }
+.left p {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
 
-        .left p {
-            margin: 0 0 10px;
-            font-size: 18px;
-        }
+.left .buttons {
+  display: flex;
+  gap: 10px;
+}
 
-        .left .buttons {
-            display: flex;
-            gap: 10px;
-        }
+.left button {
+  background-color: white;
+  color: #f48200;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
 
-        .left button {
-            background-color: white;
-            color: #f48200;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
+.left button:hover {
+  background-color: #ffe5d1;
+}
 
-        .left button:hover {
-            background-color: #ffe5d1;
-        }
+.right img {
+  max-height: 150px;
+  border-radius: 10px;
+}
 
-        .right img {
-            max-height: 150px;
-            border-radius: 10px;
-        }
 body {
   position: relative;
 }
