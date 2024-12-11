@@ -50,7 +50,7 @@ function removerProduto(productId) {
 }
 
 .produtos {
-    background-color: red;
+    background-color: white;
     width: 35vw;
     height: 47vh;
     margin-left: 12px;
