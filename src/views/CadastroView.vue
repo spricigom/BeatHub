@@ -205,7 +205,19 @@ main {
   background: #efefef;
 }
 
+@media (max-width:1087px){
+    .direita .input{
+      width:20vh;
+    }
+}
+@media (max-width:799px){
 
+  .direita .input{
+    width:13vh;
+    box-sizing: border-box;
+    padding: 3px;
+  }
+  }
 .esquerda {
   background-color: #efefef;
   width: 55%;
@@ -304,9 +316,7 @@ main {
   width: 33vw;
 }
 
-.data .input {
-  width: 6vw;
-}
+
 
 .genero {
   width: 70%;
