@@ -18,8 +18,8 @@ import NavFooter from '@/components/NavFooter.vue';
             </div>
             <div class="fundo-topo">
                 <h1>Sobre a <span>BeatHub</span> </h1>
-                <h6>Descubra como a Beathub foi criada e como nossos colaboradores nos ajudam a cada dia desenvolvermos
-                    melhorias para nossos clientes.</h6>
+                <h3>Descubra como a Beathub foi criada e como nossos colaboradores nos ajudam a cada dia desenvolvermos
+                    melhorias para nossos clientes.</h3>
                 <button><a href="#quem-somos">Quem Somos?</a></button>
             </div>
 
@@ -142,7 +142,7 @@ import NavFooter from '@/components/NavFooter.vue';
     margin-bottom: 4vh;
 }
 
-.fundo-topo h6 {
+.fundo-topo h3 {
     color: #292929;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1.5;
@@ -277,6 +277,7 @@ button a {
     height: 70vh;
     width: 90%;
     background-color: #fcbb72;
+    font-size: 3vh;
 }
 
 .img-grupo {
@@ -509,5 +510,238 @@ body {
     top: 0;
     width: 100vw;
     height: 120vh;
+}
+
+@media (max-width: 1440px) {
+    
+
+    .fundo-topo h3 {
+        margin-bottom: 15vh; 
+    }
+
+    button {
+        font-size: 1.1vw; 
+        width: 15vw;
+    }
+}
+.descricao-grupo{
+    font-size: 2vh;
+}
+
+@media (max-width: 1024px) {
+    .quem-somos {
+        margin-top: 18vh;
+        height: auto;
+    }
+
+    .img-grupo {
+        width: 100%;
+        height: 45vh;
+        float: none;
+    }
+
+    .texto-grupo {
+        padding: 0 15%;
+    }
+
+    .titulo-grupo h1 {
+        font-size: 5vw;
+    }
+
+    .descricao-grupo{
+    font-size: 1.8vh;
+}
+}
+@media (max-width: 820px) {
+    .fundo-topo h1 {
+        font-size: 7vh; 
+        margin-bottom: 5vh; 
+    }
+
+    .fundo-topo h3 {
+        font-size: 3vh; 
+        margin-bottom: 12vh; 
+    }
+
+    button {
+        font-size: 2vw; 
+        width: 20vw; 
+    }
+}
+@media (max-width: 768px) {
+    .quem-somos {
+        margin-top: 18vh;
+        height: auto;
+    }
+
+    .img-grupo {
+        width: 100%;
+        height: 45vh;
+        float: none;
+    }
+
+    .texto-grupo {
+        padding: 0 15%;
+    }
+
+    .titulo-grupo h1 {
+        font-size: 5vw;
+    }
+
+    .descricao-grupo{
+    font-size: 1.6vh;
+    
+}
+}
+
+@media (max-width: 425px) {
+    .fundo-topo h1 {
+        font-size: 6vw;
+        margin-bottom: 6vh;
+    }
+
+    .fundo-topo h3 {
+        font-size: 4vw; 
+        margin-bottom: 8vh; 
+    }
+
+    button {
+        font-size: 2.5vw; 
+        width: 22vw;
+    }
+}
+
+@media (max-width: 375px) {
+    .fundo-topo h1 {
+        font-size: 7vw; 
+        margin-bottom: 7vh;
+    }
+
+    .fundo-topo h3 {
+        font-size: 5vw; 
+        margin-bottom: 6vh; 
+    }
+
+    button {
+        font-size: 3vw; 
+        width: 25vw; 
+    }
+}
+
+@media (max-width: 320px) {
+    .fundo-topo h1 {
+        font-size: 8vw;
+        margin-bottom: 8vh;
+    }
+
+    .fundo-topo h3 {
+        font-size: 6vw; 
+        margin-bottom: 5vh; 
+    }
+
+    button {
+        font-size: 3.5vw; 
+        width: 30vw; 
+    }
+}
+/*quem somos*/
+@media (max-width: 375px) {
+    .quem-somos {
+        margin-top: 20vh; /* Reduz a margem superior */
+        height: auto; /* Deixa a altura flexível */
+    }
+
+    .img-grupo {
+        width: 100%; /* A imagem ocupa toda a largura da tela */
+        height: 40vh; /* Ajusta a altura da imagem */
+        float: none; /* Remove o float */
+    }
+
+    .descricao-grupo p {
+        font-size: 4vw;
+        margin-bottom: 20vh;
+        width: 100%;
+    }
+
+    .titulo-grupo h1 {
+        font-size: 5vw; /* Ajusta o tamanho da fonte do título */
+    }
+
+    .descricao-grupo p {
+        font-size: 4vw; /* Ajusta o tamanho da fonte da descrição */
+        
+    }
+}
+
+/* Responsividade para telas de 414px */
+@media (max-width: 414px) {
+    .quem-somos {
+        margin-top: 18vh; /* Ajusta a margem superior */
+        height: auto;
+    }
+
+    .img-grupo {
+        width: 100%; /* A imagem ocupa toda a largura da tela */
+        height: 45vh; /* Ajusta a altura da imagem */
+        float: none; /* Remove o float */
+    }
+
+    .texto-grupo {
+        padding: 0 15%; /* Adiciona mais padding nas laterais */
+    }
+
+    .titulo-grupo h1 {
+        font-size: 5vw; /* Ajusta o tamanho da fonte do título */
+    }
+
+    .descricao-grupo p {
+        font-size: 4vw; /* Ajusta o tamanho da fonte da descrição */
+        
+    }
+}
+
+/* Responsividade para telas de 430px */
+@media (max-width: 430px) {
+    .quem-somos {
+        margin-top: 18vh; /* Ajusta a margem superior */
+        height: auto;
+    }
+
+    .img-grupo {
+        width: 100%; /* A imagem ocupa toda a largura da tela */
+        height: 45vh; /* Ajusta a altura da imagem */
+        float: none; /* Remove o float */
+    }
+
+    .texto-grupo {
+        padding: 0 15%; /* Adiciona mais padding nas laterais */
+    }
+
+    .titulo-grupo h1 {
+        font-size: 5vw; /* Ajusta o tamanho da fonte do título */
+    }
+
+    .descricao-grupo p {
+        font-size: 4vw; /* Ajusta o tamanho da fonte da descrição */
+    }
+    @media (max-width: 540px) {
+    .quem-somos {
+        margin-top: 18vh; /* Ajusta a margem superior */
+        height: auto; /* Permite que a altura se ajuste conforme o conteúdo */
+    }
+
+    .img-grupo {
+        width: 100%; /* A imagem ocupa toda a largura da tela */
+        height: 50vh; /* Ajusta a altura da imagem */
+        float: none; /* Remove o float */
+    }
+
+ 
+
+    .descricao-grupo p {
+    font-size: 1vh; /* Ajusta o tamanho da fonte da descrição */
+        word-wrap: break-word; /* Quebra de linha para o texto */
+    }
+}
 }
 </style>
