@@ -6,7 +6,9 @@ export const MockProducts = [
         preco:42.00,
         descricao: 'O Microfone SoundPro SP é um modelo acessível e de boa qualidade, ideal para quem busca um microfone confiável para gravações de voz, podcasts, transmissões ao vivo e outras aplicações. Geralmente, apresenta design robusto, captação unidirecional (cardioide) e oferece uma boa relação custo-benefício. É fácil de usar, com conexões XLR ou USB, sendo adequado tanto para iniciantes quanto para usuários mais experientes. Embora não tenha os recursos avançados de modelos profissionais, oferece uma performance sólida para quem precisa de um microfone versátil e de baixo custo.',
         img: 'microfone.png', 
-        
+        img2:'microfone-2.webp',
+        img3:'microfone-3.webp',
+        img4:'microfone-4.webp'
     },
     {
         id: 2,
@@ -14,6 +16,9 @@ export const MockProducts = [
         preco :17.00 ,
         descricao: 'Um pedal Overdrive é um efeito de guitarra utilizado para criar distorção suave ou saturação no som, simulando o comportamento de amplificadores valvulados quando sobrecarregados. Ele é popular em estilos como rock, blues e hard rock, pois adiciona "quente" e "grit" ao som, dando uma sonoridade mais rica e encorpada. Ao ativar o pedal, o sinal da guitarra é distorcido, geralmente de forma mais suave e controlada do que um pedal de distorção, preservando características tonais da guitarra. Muitos pedais overdrive permitem ajustes de ganho, tom e nível, permitindo ao músico controlar a intensidade e o caráter da distorção. O overdrive é bastante apreciado por sua capacidade de produzir um som "orgânico", muitas vezes com a sensação de que o amplificador está "forçando" suas válvulas, o que resulta em uma saturação natural e dinâmica, que responde ao toque do guitarrista.',
         img: 'pedal-OverDrive.png', 
+        img2:'pedal-OverDrive-2.webp',
+        img3:'pedal-OverDrive-3.webp',
+        img4:'pedal-OverDrive-4.webp'
     },
     {
         id: 3,
@@ -21,7 +26,9 @@ export const MockProducts = [
         preco :32.00 ,
         descricao: 'O cubo amplificador é um amplificador compacto e portátil, ideal para guitarras elétricas, oferecendo uma solução prática para músicos que precisam de um equipamento leve e fácil de transportar. Com potências que variam de 10W a 100W, esses amplificadores são comuns para ensaios, apresentações pequenas ou gravações caseiras. Além disso, muitos modelos vêm com controles de volume, ganho, tonalidade e efeitos integrados como reverb e overdrive, oferecendo versatilidade para diferentes estilos musicais.',
         img: 'amplificador.png', 
-
+        img2: 'amplificador-2.jpg',
+        img3: 'amplificador-3.jpg',
+        img4: 'amplificador-4.jpg'
     },
     {
         id: 4,
@@ -29,7 +36,9 @@ export const MockProducts = [
         preco :24.00 ,
         descricao:'O Ukulele Classic é um instrumento pequeno e tradicional de quatro cordas, com corpo de madeira, geralmente afinado em C (sol). Conhecido por seu som alegre e vibrante, é popular entre iniciantes e músicos que buscam um som suave e melódico. Usado em estilos como havaiiano e folk, o Ukulele Classic é fácil de tocar, acessível e ideal para quem procura um instrumento descontraído e de timbre único.',
         img: 'ukulele2.png', 
-        
+        img2:'ukulele2-2.webp',
+        img3:'ukulele2-3.webp',
+        img4:'ukulele2-4.webp'
     },
     {
         id: 5,
@@ -37,7 +46,9 @@ export const MockProducts = [
         preco:32.00 ,
         descricao:'O pandeiro é um instrumento de percussão tradicionalmente utilizado na música brasileira, especialmente em gêneros como samba, choro e MPB. Ele é composto por uma tampa circular (geralmente de madeira) e tambores com platinelas (pequenos címbalos metálicos) nas bordas, que produzem o característico som chocalhante quando agitado ou tocado com as mãos. O pandeiro pode ser tocado de várias maneiras, incluindo batidas com os dedos, palmas e batidas de mão aberta, oferecendo uma grande variedade de timbres e ritmos. Além de ser um dos principais instrumentos na música popular brasileira, é também utilizado em outros estilos de música latina e mundial, pela sua versatilidade e presença marcante.',
         img: 'pandeiro.png', 
-        
+        img2:'pandeiro-2.jpg',
+        img3:'pandeiro-3.jpg',
+        img4:'pandeiro-4.jpg'
     },
     {
         id: 6,
@@ -45,6 +56,9 @@ export const MockProducts = [
         preco: 35.00 ,
         descricao: 'A Fender Hello Kitty Pink Stratocaster é uma guitarra elétrica que combina o design clássico da famosa Stratocaster com um toque único e lúdico inspirado na personagem Hello Kitty, da Sanrio. Lançada como um modelo especial, ela apresenta um acabamento rosa brilhante, com detalhes exclusivos da Hello Kitty, como adesivos e uma imagem da personagem no headstock (a parte superior do braço). Além de seu visual atraente, o modelo mantém a qualidade e o som característicos da Fender, com três captadores single-coil, que proporcionam um som claro e brilhante, ideal para uma ampla gama de estilos musicais, como pop, rock e música alternativa. A Fender Hello Kitty Pink Stratocaster é uma guitarra voltada para fãs da marca, colecionadores e músicos que buscam um instrumento com um design diferenciado, mas com o desempenho e a confiabilidade da Fender.',
         img: 'guitarra2.jpg', 
+        img2:'hello1-2.jpg',
+        img3:'hello-1-3.jpg',
+        img4:'hello-1-4.jpg'
     },
     {
         id: 7,
