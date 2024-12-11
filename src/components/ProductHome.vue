@@ -4,6 +4,7 @@ const props = defineProps([
     "produto",
     "index"
 ]);
+console.log();
 const shareProduct = () => {
     const productUrl = `${window.location.origin}/produto/${props.produto?.id}`;
     const message = encodeURIComponent(`Confira este incrível produto: ${props.produto?.nome}! 🎉\nPreço: R$${props.produto?.preco}\nAcesse agora: ${productUrl}`);
@@ -36,8 +37,7 @@ const fallbackShare = () => {
         <img src="@/assets/coracao.png" style="cursor: pointer;" alt="" class="icones"
             @click="$emit('favorito', props.produto.id)" v-else>
     </div>
-
-    <router-link to="produto">
+    <router-link :to="`/produto/${props.produto.id}`"  @imagem="getImage">
         <div class="img-produtos"> <img :src="getImage(index)" alt=""></div>
     </router-link>
     <div>

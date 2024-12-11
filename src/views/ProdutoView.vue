@@ -1,10 +1,19 @@
 <script setup>
 import HeaderComponente from '@/components/HeaderComponente.vue';
+import { getImage } from '@/utils/getProductImage'
 import NavFooter from '@/components/NavFooter.vue';
+import { useRoute } from 'vue-router';
+import { useProdutoStore } from '@/stores/produto';
+import { onMounted,ref } from 'vue'
+const router = useRoute();
+const produtoStore = useProdutoStore();
+const produto = ref({});
+const idProduto = router.params.id;
 
-
-
-
+onMounted(() => {
+    produto.value = produtoStore.getProdutoById(idProduto);
+    console.log(produto);
+});
 </script>
 
 <template>
@@ -41,8 +50,7 @@ import NavFooter from '@/components/NavFooter.vue';
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="@/assets/guitarra2.jpg" class="d-block w-100" alt="@/assets/hello1-1.jpg">
-                            </div>
+                                <img :src="getImage(produto.img)" alt="">                             </div>
                             <div class="carousel-item">
                                 <img src="@/assets/hello1-2.jpg" class="d-block w-100" alt="@/assets/hello1-1.jpg">
                             </div>
@@ -69,7 +77,7 @@ import NavFooter from '@/components/NavFooter.vue';
 
 
                 <div class="centro">
-                    <h4 class="titulo-produto">Fender® x Hello Kitty® Pink Stratocaster®</h4>
+                    <h4 class="titulo-produto">{{ produto.nome }}</h4>
 
                     <div class="avaliacao">
 
@@ -78,7 +86,8 @@ import NavFooter from '@/components/NavFooter.vue';
                     <h6 id="esquerda">130 avaliações</h6>
 
                     <div class="descricao">
-                        <p>Diga olá ao mundo vibrante da Hello Kitty com a coleção Fender x Hello Kitty, celebrando uma colaboração icônica que transcende gerações. Esta coleção mescla a estética ousada e colorida da Hello Kitty com a excelência confiável dos equipamentos Fender, proporcionando desempenho incomparável e estilo elegante. Toque seu instrumento em um estilo lúdico e deixe a Hello Kitty acompanhá-lo em sua jornada musical!
+                        <p>
+                            {{ produto.descricao }}
                         </p>
                     </div>
 
@@ -86,7 +95,7 @@ import NavFooter from '@/components/NavFooter.vue';
 
                 <div class="direita">
                     <div class="valor">
-                        <h2 class="preco">R$45,00 por mês</h2>
+                <h2 class="preco">R${{ produto.preco }},00 por mês</h2>
                         <h5 class="forma_pagamento">No pix</h5>
 
                     </div>
