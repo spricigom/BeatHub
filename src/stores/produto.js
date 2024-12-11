@@ -4,7 +4,10 @@ import { supabase } from "@/lib/supabaseClient";
 export const useProdutoStore = defineStore('produto', () => {
     const produtos = ref([]);
     
-    const getProdutoById = (id) => produtos.value.find(p => p.id == id)
+    function getProdutoById(id) {
+      const produto = produtos.value.find(p => p.id == id);
+      return produto;
+    }
 
   
     const buscarTodosOsProdutos  = async () => {
