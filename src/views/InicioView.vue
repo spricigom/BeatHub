@@ -11,7 +11,7 @@ const mostrarLocalizacao = ref(false);
 
 
 onMounted(() => {
-    produtoStore.buscarTodosOsProdutos();
+  produtoStore.buscarTodosOsProdutos();
 });
 
 const mostrarDivLocalizacao = () => {
@@ -21,13 +21,19 @@ const mostrarDivLocalizacao = () => {
 const esconderDivLocalizacao = () => {
   mostrarLocalizacao.value = false;
 };
+function changeImage(url) {
+            console.log("Changing image to:", url); // Log para verificar se a função é chamada
+            const image = document.getElementById('dynamicImage');
+            image.src = url;
+        }
 </script>
 
 <template>
+
   <body>
     <HeaderComponente />
 
-  
+
     <main>
       <h2 id="amarelo" style="margin-left: 10vw;position: relative;bottom: 1vh;">Os mais alugados</h2>
       <div class="campo">
@@ -99,7 +105,20 @@ const esconderDivLocalizacao = () => {
           </div>
         </div>
       </div>
-      <ListHome :produtos="produtoStore.produtos" tipo="home"/>  
+      <div class="container">
+        <div class="left">
+            <p>Escolha uma imagem:</p>
+            <div class="buttons">
+                <button onclick="changeImage('@/assets/logo.png')">Imagem 1</button>
+                <button onclick="changeImage('@/assets/logo.png')">Imagem 2</button>
+                <button onclick="changeImage('@/assets/logo.png')">Imagem 3</button>
+            </div>
+        </div>
+        <div class="right">
+            <img id="dynamicImage" src="https://via.placeholder.com/150/FF0000/FFFFFF?text=Imagem+1" alt="Imagem dinâmica">
+        </div>
+    </div>
+      <ListHome :produtos="produtoStore.produtos" tipo="home" />
 
     </main>
 
@@ -108,6 +127,54 @@ const esconderDivLocalizacao = () => {
 </template>
 
 <style scoped>
+body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f48200;
+            width: 100%;
+            height: 200px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .left {
+            color: white;
+        }
+
+        .left p {
+            margin: 0 0 10px;
+            font-size: 18px;
+        }
+
+        .left .buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .left button {
+            background-color: white;
+            color: #f48200;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .left button:hover {
+            background-color: #ffe5d1;
+        }
+
+        .right img {
+            max-height: 150px;
+            border-radius: 10px;
+        }
 body {
   position: relative;
 }
@@ -131,7 +198,7 @@ body {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(5px);  
+  backdrop-filter: blur(5px);
   z-index: -1;
 }
 
@@ -143,103 +210,110 @@ body {
   z-index: 1;
   font-family: 'Josefin Sans', sans-serif;
 }
-.localizacao-content p{
-    color: black;
+
+.localizacao-content p {
+  color: black;
 }
+
 .container {
-    position: relative;
-    bottom: 17vh;
+  position: relative;
+  bottom: 17vh;
 }
+
 .compra-e-coracao2 {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 1vw;
-    margin-top: 3vh;
-    margin-right: 1vw;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 1vw;
+  margin-top: 3vh;
+  margin-right: 1vw;
 }
+
 .conteudo2 {
-    margin-top: 2vh;
-}.icones {
-    width: 1.5vw;
+  margin-top: 2vh;
 }
+
+.icones {
+  width: 1.5vw;
+}
+
 .compra-e-coracao2 {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 1vw;
-    margin-top: 3vh;
-    margin-right: 1vw;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 1vw;
+  margin-top: 3vh;
+  margin-right: 1vw;
 }
 
 .preco {
-    display: flex;
-    float: left;
-    margin-left: 3vw;
-    font-family: 'Inter', 'sans serif';
+  display: flex;
+  float: left;
+  margin-left: 3vw;
+  font-family: 'Inter', 'sans serif';
 }
 
 
 
 .compartilhe {
-    display: flex;
-    float: right;
-    margin-right: 3vw;
-    width: 1.2vw;
+  display: flex;
+  float: right;
+  margin-right: 3vw;
+  width: 1.2vw;
 }
 
 
 
 
 .estrelas {
-    display: flex;
-    float: left;
-    margin-left: 2.5vw;
+  display: flex;
+  float: left;
+  margin-left: 2.5vw;
 }
 
 
 
 .avaliacao {
-    display: flex;
-    float: right;
-    margin-right: 2.5vw;
+  display: flex;
+  float: right;
+  margin-right: 2.5vw;
 }
 
 
 .produtos-MaisAlugados {
-    width: 130px;
-    height: 321px;
+  width: 130px;
+  height: 321px;
 }
 
 .mais-alugados {
-    height: 64vh;
-    width: 19vw;
-    background-color: white;
-    border-radius: 1vw;
+  height: 64vh;
+  width: 19vw;
+  background-color: white;
+  border-radius: 1vw;
 
 }
 
 .mais-alugados h2 {
-    margin-top: 2vh;
-    font-size: 1.3vw;
-    font-family: 'Inter', 'sans-serif';
+  margin-top: 2vh;
+  font-size: 1.3vw;
+  font-family: 'Inter', 'sans-serif';
 }
 
 .campo {
-    background-color: white;
-    height: 66vh;
-    width: 80vw;
-    transform: translate(-50%, -50%);
-    margin-top: 33vh;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    left: 50%;
+  background-color: white;
+  height: 66vh;
+  width: 80vw;
+  transform: translate(-50%, -50%);
+  margin-top: 33vh;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  left: 50%;
 
-    border-radius: 1vw;
+  border-radius: 1vw;
 
 }
 
 * {
-    padding: 0;
+  padding: 0;
 }
 
 /*estilos do header */
@@ -249,22 +323,22 @@ body {
 
 
 #amarelo {
-    color: #f48200;
+  color: #f48200;
 }
 
 
 
 .icones {
-    width: 1.5vw;
+  width: 1.5vw;
 }
 
 .compra-e-coracao {
-    position: relative;
-    left: 7vw;
-    bottom: 1.3vh;
+  position: relative;
+  left: 7vw;
+  bottom: 1.3vh;
 }
 
 .compra-e-coracao .icones {
-    margin-right: 1.5vw;
+  margin-right: 1.5vw;
 }
 </style>
