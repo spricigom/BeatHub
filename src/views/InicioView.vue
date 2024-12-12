@@ -5,19 +5,33 @@ import NavFooter from '@/components/NavFooter.vue';
 import ListHome from '@/components/ListHome.vue';
 import HeaderComponente from '@/components/HeaderComponente.vue';
 
+
 const produtoStore = useProdutoStore();
+const selectedImage = ref('image1'); // Armazena qual imagem está selecionada
 
 onMounted(async() => {
   await  produtoStore.buscarTodosOsProdutos();
 });
 
+
+// Função para selecionar a imagem
+const selectImage = (image) => {
+  console.log("Selected image:", image); // Log para depuração
+  selectedImage.value = image;
+};
+
 </script>
+
+
 
 
 <template>
 
+
   <body>
     <HeaderComponente />
+
+
 
 
     <main>
@@ -29,8 +43,10 @@ onMounted(async() => {
             <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
           </div>
 
+
           <img src="@/assets/ukulele.png" alt="" class="produtos-MaisAlugados" />
           <h2>Ukulele Concert Us23 Spring</h2>
+
 
           <div class="conteudo2">
             <div class="preco">
@@ -40,14 +56,17 @@ onMounted(async() => {
           </div>
         </div>
 
+
         <div class="mais-alugados text-center">
           <div class="compra-e-coracao2">
             <img src="@/assets/coracao.png" alt="" class="icones" />
             <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
           </div>
 
+
           <img src="@/assets/violao.png" alt="" class="produtos-MaisAlugados" />
           <h2>Violão Di Giorgio Master</h2>
+
 
           <div class="conteudo2">
             <div class="preco">
@@ -57,14 +76,17 @@ onMounted(async() => {
           </div>
         </div>
 
+
         <div class="mais-alugados text-center">
           <div class="compra-e-coracao2">
             <img src="@/assets/coracao.png" alt="" class="icones" />
             <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
           </div>
 
+
           <img src="@/assets/guitarra.png" alt="" class="produtos-MaisAlugados" />
           <h2>Guitarra elétrica SG</h2>
+
 
           <div class="conteudo2">
             <div class="preco">
@@ -74,14 +96,17 @@ onMounted(async() => {
           </div>
         </div>
 
+
         <div class="mais-alugados text-center">
           <div class="compra-e-coracao2">
             <img src="@/assets/coracao.png" alt="" class="icones" />
             <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
           </div>
 
+
           <img src="@/assets/baixo.png" alt="" class="produtos-MaisAlugados" />
           <h2>Baixo Strinberg JBS50</h2>
+
 
           <div class="conteudo2">
             <div class="preco">
@@ -93,83 +118,231 @@ onMounted(async() => {
       </div>
 
 
-      
+
+      <div class="fundo-v-if">
+
+        <div class="right">
+          <!-- Exibição condicional das imagens -->
+          <div class="v-if-cima" v-if="selectedImage === 'image1'">
+            <div class="texto-v-if">
+              <div class="titulo-v-iv">
+                <h2>PAGAMENTOS</h2>
+              </div>
+
+              <p class="descricao-v-if"><span class="pi pi-credit-card" style="color: #f48200;"></span> Nossas formas de pagamento variam em pix e cartão em nossa loja fisica.</p>
+              <p class="descricao-v-if"><span class="pi pi-exclamation-triangle" style="color: #f48200;"></span> Sem taxas por venda!</p>
+            </div>
+
+            <div class="img-v-if">
+              <img src="@/assets/logo.png" alt="Imagem 1" >
+            </div>
+          </div>
+
+          <div class="v-if-cima"  v-if="selectedImage === 'image2'">
+            <div class="texto-v-if">
+              <div class="titulo-v-iv">
+                <h2>SOBRE NÓS</h2>
+              </div>
+
+              <p class="descricao-v-if">Conheça um pouco da nossa equipe 
+                e como a Beathub se desenvolveu.</p>
+              <h4 class="descricao-v-if"><RouterLink to="/Membros">Clique aqui</RouterLink></h4>
+            </div>
+
+            <div class="img-v-if">
+              <img src="@/assets/teclado.png" alt="Imagem 2" >            </div>
+          </div>
+
+          <div class="v-if-cima" v-if="selectedImage === 'image3'" >
+            <div class="texto-v-if">
+              <div class="titulo-v-iv-endereco">
+                <h2>ENDEREÇO</h2>
+              </div>
+
+              <p class="descricao-v-if">Nossas lojas</p>
+              <p class="descricao-v-if" id="amarelo">RETIRADA DO INSTRUMENTO APENAS NA LOJA FISÍCA!</p>
+              <ul>
+                <li>Rua: Rua dos Sonhos</li>
+                <li>Número: 42</li>
+                <li>Bairro: Centro</li>
+                <li>Cidade: Joinville</li>
+              </ul>
+            </div>
+
+            <div class="img-v-if">
+              <img src="@/assets/teclado1-2.png" alt="Imagem 3"
+            >
+            </div>
+          </div>
+
+
+          
+          
+          
+        </div>
       <div class="container">
         <div class="left">
-          <p>Escolha uma imagem:</p>
           <div class="buttons">
-            <!-- Alteração: Caminhos diretos para a pasta public/assets -->
-            <button @click="changeImage('@/assets/logo.png')">Imagem 1</button>
-            <button @click="changeImage('@/assets/teclado1-2.png')">Imagem 2</button>
-            <button @click="changeImage('@/assets/teclado.png')">Imagem 3</button>
+            <button @click="selectImage('image1')" class="botao-selecionado"><span class="pi pi-receipt"></span> Pagamento</button>
+            <button @click="selectImage('image2')" class="botao-selecionado"><span class="pi pi-users"></span> Sobre Nós</button>
+            <button @click="selectImage('image3')" class="botao-selecionado"><span class="pi pi-map-marker"></span> Endereço</button>
           </div>
-        </div>
+        </div>  
+        
+
       </div>
 
       <ListHome :produtos="produtoStore.produtos" tipo="home" />
 
+
     </main>
 
+   
     <NavFooter />
   </body>
 </template>
 
+
 <style scoped>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-main{
-  margin: 0;
-  padding: 0
-}
-.container {
+
+.img-v-if{
+  background-color: black;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  top: 3vh;
+  right: 15vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  background-color: #f48200;
-  width: 100vw;
-  height: 200px;
-  padding: 20px;
-  box-sizing: border-box;
 }
+.img-v-if img {
+  width: 100%; /* A largura da imagem será igual à largura da div */
+  height: 100%; /* A altura da imagem será igual à altura da div */
+  object-fit: contain; /* A imagem será redimensionada para caber completamente na div sem distorção */
+  border-radius: 10px; /* Mantém o arredondamento */
+}
+.descricao-v-if {
+  width: 45vw;
+  font-weight: 400;
+  font-family: 'Kanit', sans-serif;
+  font-size: 1.3vw;
+  color: black;
+}
+
+.descricao-v-if a{
+  color:#f48200;
+  text-decoration:none ;
+  font-size: 1.7vw;
+}
+
+.titulo-v-iv {
+  margin-top: 5vh;
+  margin-bottom: 12vh;
+}
+
+.titulo-v-iv h2 {
+  font-family: 'Kameron', sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 2vw;
+}
+.titulo-v-iv-endereco h2{
+  font-family: 'Kameron', sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 2vw;
+}
+.v-if-cima {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90vw;
+  height: 30vh;
+  padding: 2vw;
+}
+.v-if-cima ul{
+  list-style: none;
+  color: rgb(14, 14, 14);
+  font-family: 'Kameron', sans-serif;
+  font-size: 1.3vw;
+}
+
+.fundo-v-if {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffbe74;
+  width: 100%;
+  padding-top:15vh;
+  padding-bottom: 40vh;
+  padding-left: 20vw;
+  padding-right: 20vw;
+  box-sizing: border-box;
+  margin-bottom: 20vh;
+}
+
 
 .left {
   color: white;
+  position: relative;
+  right: 34vw;
+  top: 13vh;
+  padding-left: 15vw;
 }
+
 
 .left p {
   margin: 0 0 10px;
   font-size: 18px;
 }
 
+
 .left .buttons {
   display: flex;
-  gap: 10px;
+  gap: 3vw;
+  margin-left: 2vw;
 }
+
 
 .left button {
-  background-color: white;
-  color: #f48200;
+  background-color: #ff6f00;
+  color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 10px 40px;
   font-size: 16px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 17px;
+  transition: .3s;
+  font-family: 'Poppins', sans-serif;
+
 }
+
 
 .left button:hover {
-  background-color: #ffe5d1;
+ 
+  background-color: white;
+  color: black;
 }
 
-.right img {
-  max-height: 150px;
-  border-radius: 10px;
+
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
+
+main {
+  margin: 0;
+  padding: 0
+}
+
 
 body {
   position: relative;
 }
+
 
 .localizacao-modal {
   position: fixed;
@@ -183,6 +356,7 @@ body {
   z-index: 1000;
 }
 
+
 .modal-overlay {
   position: absolute;
   top: 0;
@@ -194,6 +368,7 @@ body {
   z-index: -1;
 }
 
+
 .localizacao-content {
   background-color: rgb(202, 202, 202);
   padding: 4vw;
@@ -203,15 +378,18 @@ body {
   font-family: 'Josefin Sans', sans-serif;
 }
 
+
 .localizacao-content p {
   color: black;
 }
+
 
 .container {
   position: relative;
   bottom: 17vh;
 }
 
+
 .compra-e-coracao2 {
   display: flex;
   justify-content: space-between;
@@ -219,14 +397,17 @@ body {
   margin-top: 3vh;
   margin-right: 1vw;
 }
+
 
 .conteudo2 {
   margin-top: 2vh;
 }
 
+
 .icones {
   width: 1.5vw;
 }
+
 
 .compra-e-coracao2 {
   display: flex;
@@ -235,6 +416,7 @@ body {
   margin-top: 3vh;
   margin-right: 1vw;
 }
+
 
 .preco {
   display: flex;
@@ -242,6 +424,9 @@ body {
   margin-left: 3vw;
   font-family: 'Inter', 'sans serif';
 }
+
+
+
 
 
 
@@ -255,11 +440,18 @@ body {
 
 
 
+
+
+
+
 .estrelas {
   display: flex;
   float: left;
   margin-left: 2.5vw;
 }
+
+
+
 
 
 
@@ -270,10 +462,13 @@ body {
 }
 
 
+
+
 .produtos-MaisAlugados {
   width: 130px;
   height: 321px;
 }
+
 
 .mais-alugados {
   height: 64vh;
@@ -281,13 +476,16 @@ body {
   background-color: white;
   border-radius: 1vw;
 
+
 }
+
 
 .mais-alugados h2 {
   margin-top: 2vh;
   font-size: 1.3vw;
   font-family: 'Inter', 'sans-serif';
 }
+
 
 .campo {
   background-color: white;
@@ -300,15 +498,24 @@ body {
   position: relative;
   left: 50%;
 
+
   border-radius: 1vw;
 
+
 }
+
 
 * {
   padding: 0;
 }
 
+
 /*estilos do header */
+
+
+
+
+
 
 
 
@@ -320,15 +527,20 @@ body {
 
 
 
+
+
+
 .icones {
   width: 1.5vw;
 }
+
 
 .compra-e-coracao {
   position: relative;
   left: 7vw;
   bottom: 1.3vh;
 }
+
 
 .compra-e-coracao .icones {
   margin-right: 1.5vw;
