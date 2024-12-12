@@ -7,6 +7,7 @@ import ListHome from '@/components/ListHome.vue';
 import HeaderComponente from '@/components/HeaderComponente.vue';
 
 
+
 const produtoStore = useProdutoStore();
 const selectedImage = ref('image1'); // Armazena qual imagem está selecionada
 
@@ -54,21 +55,22 @@ const selectImage = (image) => {
       <div class="passos">
         <div class="esquerda">
           <div class="img-passos">
-            <img src="@/assets/baixista.jpeg" alt="">
+            <img src="@/assets/baixista.avif" alt="">
           </div>
         </div>
-
+        <hr id="vertical">
         <div class="direita">
           <div class="texto-passos">
             <h2>
               Siga os passos a seguir e alugue seu instrumento
             </h2>
+            
             <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
+              <li><span class="numeros">1</span> Escolha seu  instrumento selecionado e adicione em seu carrinho.</li>
+              <li><span class="numeros">2</span>Faça o seu login na Beathub.</li>
+              <li><span class="numeros">3</span>Confira a forma de pagamento.</li>
+              <li><span class="numeros">4</span>Confira o endereço da loja.</li>
+              <li><span class="numeros">5</span>Pronto, agora você já pode retirar seu instrumento!</li>
             </ul>
           </div>
         </div>
@@ -76,7 +78,7 @@ const selectImage = (image) => {
 
       </div>
 
-      <h2 id="amarelo" style="margin-left: 10vw;position: relative;bottom: 1vh;">Os mais alugados</h2>
+      <h2 id="amarelo" style="margin-left: 10vw; margin-top: 5vh;">Os mais alugados</h2>
       <div class="campo">
         <div class="mais-alugados text-center" id="mais-alugados">
           <div class="compra-e-coracao2">
@@ -157,6 +159,66 @@ const selectImage = (image) => {
           </div>
         </div>
       </div>
+
+
+
+      <div class="categorias">
+        <h2>Categorias:</h2>
+        <ul>
+          <li>Guitarra</li>
+          <li>Baixos</li>
+          <li>Pedais</li>
+          <li>Teclado</li>
+          <li>Violao</li>
+          <li>Bateria</li>
+        </ul>
+      </div>
+
+      <div class="fundo-marcas">
+        <div class="titulo-marcas">
+          <h2>CONHEÇA NOSSAS MARCAS PARCEIRAS</h2>   
+        </div>
+        <div class="imagens-marcas">
+          <div  class="marcas">
+          <img  src="@/assets/tagima.png" alt="">
+        </div>
+        <div  class="marcas">
+          <img  src="@/assets/yamaha.png" alt="">
+        </div>
+        <div  class="marcas">
+          <img  src="@/assets/fender.png" alt="">
+        </div>
+        <div  class="marcas">
+          <img  src="@/assets/giannini.svg" alt="">
+        </div>
+        <div  class="marcas">
+          <img  src="@/assets/casio.png" alt="">
+        </div>
+        <div  class="marcas">
+          <img src="@/assets/boss.png" alt="">
+        </div>
+        </div>
+        
+       
+    
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
 
 
 
@@ -251,19 +313,96 @@ const selectImage = (image) => {
 
 
 <style scoped>
-.passos{
+
+.fundo-marcas{
+  display: flex;
+  flex-direction: column;
+}
+.imagens-marcas{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
+.titulo-marcas{
+  display: flex;
+  flex-direction:row ;
+  justify-content: center;
+  margin-bottom: 5vh;
+}
+.titulo-marcas h2{
+  font-family: 'Kameron', sans-serif;
+  font-weight: 600;
+  color: black;
+}
+.marcas {
+    width: 10vw;
+    display: flex;
+    margin-left: 1vw;
+}
+
+.marcas img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+
+#vertical{
+  height: 30vh;
+  border-left: 2px solid #f48200;
+  opacity: 1;
+  border-top: transparent;
+  position: relative;
+  top: 12vh;
+  left: 2.4vw;
+  z-index: 0;
+}
+.numeros{
+  color: #f48200;
+  font-size: 1.3vw;
+  margin-right: 1.5vw;
+  background-color: white;
+  position: relative; 
+  padding-top: 7px;
+  padding-bottom: 7px;
+  
+}
+.esquerda{
+  width: 50vw;
+  display: flex;
+  justify-content: right;
+  padding-right: 4vw;
+}
+
+.direita{
+  width: 50vw;
+  padding-left: 2vw;
+}
+.img-passos img{
+  width: 33vw;
+  border-radius: 2vw;
+}
+.passos{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 60vh;
+}
 .texto-passos{
-  width: 20vw;
-  background-color: green
-  p
+  width: 35vw;
+ 
 }
-.texto-passos ul{
-  list-decoration: none
+.texto-passos h2{
+  font-family: 'Kanit', sans-serif;
+  font-weight: 400;
 }
+.texto-passos li{
+  list-style: none;
+  margin-top: 3vh;
+  font-family: 'Kanit', sans-serif;
+}
+
 .background-container {
   position: relative;
   width: 100%;
