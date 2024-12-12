@@ -1,4 +1,5 @@
 <script setup>
+import { ref } from 'vue';
 import { onMounted } from 'vue';
 import { useProdutoStore } from '@/stores/produto';
 import NavFooter from '@/components/NavFooter.vue';
@@ -9,8 +10,9 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
 const produtoStore = useProdutoStore();
 const selectedImage = ref('image1'); // Armazena qual imagem está selecionada
 
-onMounted(async() => {
-  await  produtoStore.buscarTodosOsProdutos();
+
+onMounted(() => {
+  produtoStore.buscarTodosOsProdutos();
 });
 
 
@@ -35,6 +37,45 @@ const selectImage = (image) => {
 
 
     <main>
+
+      <div class="background-container">
+        <img src="https://via.placeholder.com/1920x1080" alt="Background Image" class="background-image" />
+        <div class="overlay">
+          <div class="overlay-text">
+            <h1>BEM VINDO A <br><span id="amarelo">Beat Hub</span></h1>
+            <h4>Alugue os melhores produtos por preços baixissimos</h4>
+            <button>
+              <h4>iniciar sessão</h4>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="passos">
+        <div class="esquerda">
+          <div class="img-passos">
+            <img src="@/assets/baixista.jpeg" alt="">
+          </div>
+        </div>
+
+        <div class="direita">
+          <div class="texto-passos">
+            <h2>
+              Siga os passos a seguir e alugue seu instrumento
+            </h2>
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+
+
+      </div>
+
       <h2 id="amarelo" style="margin-left: 10vw;position: relative;bottom: 1vh;">Os mais alugados</h2>
       <div class="campo">
         <div class="mais-alugados text-center" id="mais-alugados">
@@ -119,6 +160,7 @@ const selectImage = (image) => {
 
 
 
+
       <div class="fundo-v-if">
 
         <div class="right">
@@ -129,31 +171,36 @@ const selectImage = (image) => {
                 <h2>PAGAMENTOS</h2>
               </div>
 
-              <p class="descricao-v-if"><span class="pi pi-credit-card" style="color: #f48200;"></span> Nossas formas de pagamento variam em pix e cartão em nossa loja fisica.</p>
-              <p class="descricao-v-if"><span class="pi pi-exclamation-triangle" style="color: #f48200;"></span> Sem taxas por venda!</p>
+              <p class="descricao-v-if"><span class="pi pi-credit-card" style="color: #f48200;"></span> Nossas formas de
+                pagamento variam em pix e cartão em nossa loja fisica.</p>
+              <p class="descricao-v-if"><span class="pi pi-exclamation-triangle" style="color: #f48200;"></span> Sem
+                taxas por venda!</p>
             </div>
 
             <div class="img-v-if">
-              <img src="@/assets/logo.png" alt="Imagem 1" >
+              <img src="@/assets/logo.png" alt="Imagem 1">
             </div>
           </div>
 
-          <div class="v-if-cima"  v-if="selectedImage === 'image2'">
+          <div class="v-if-cima" v-if="selectedImage === 'image2'">
             <div class="texto-v-if">
               <div class="titulo-v-iv">
                 <h2>SOBRE NÓS</h2>
               </div>
 
-              <p class="descricao-v-if">Conheça um pouco da nossa equipe 
+              <p class="descricao-v-if">Conheça um pouco da nossa equipe
                 e como a Beathub se desenvolveu.</p>
-              <h4 class="descricao-v-if"><RouterLink to="/Membros">Clique aqui</RouterLink></h4>
+              <h4 class="descricao-v-if">
+                <RouterLink to="/Membros">Clique aqui</RouterLink>
+              </h4>
             </div>
 
             <div class="img-v-if">
-              <img src="@/assets/teclado.png" alt="Imagem 2" >            </div>
+              <img src="@/assets/teclado.png" alt="Imagem 2">
+            </div>
           </div>
 
-          <div class="v-if-cima" v-if="selectedImage === 'image3'" >
+          <div class="v-if-cima" v-if="selectedImage === 'image3'">
             <div class="texto-v-if">
               <div class="titulo-v-iv-endereco">
                 <h2>ENDEREÇO</h2>
@@ -170,42 +217,109 @@ const selectImage = (image) => {
             </div>
 
             <div class="img-v-if">
-              <img src="@/assets/teclado1-2.png" alt="Imagem 3"
-            >
+              <img src="@/assets/teclado1-2.png" alt="Imagem 3">
             </div>
           </div>
 
 
-          
-          
-          
+
+
+
         </div>
-      <div class="container">
         <div class="left">
           <div class="buttons">
-            <button @click="selectImage('image1')" class="botao-selecionado"><span class="pi pi-receipt"></span> Pagamento</button>
-            <button @click="selectImage('image2')" class="botao-selecionado"><span class="pi pi-users"></span> Sobre Nós</button>
-            <button @click="selectImage('image3')" class="botao-selecionado"><span class="pi pi-map-marker"></span> Endereço</button>
+            <button @click="selectImage('image1')" class="botao-selecionado"><span class="pi pi-receipt"></span>
+              Pagamento</button>
+            <button @click="selectImage('image2')" class="botao-selecionado"><span class="pi pi-users"></span> Sobre
+              Nós</button>
+            <button @click="selectImage('image3')" class="botao-selecionado"><span class="pi pi-map-marker"></span>
+              Endereço</button>
           </div>
-        </div>  
-        
+        </div>
+
 
       </div>
-
       <ListHome :produtos="produtoStore.produtos" tipo="home" />
 
 
     </main>
 
-   
+
     <NavFooter />
   </body>
 </template>
 
 
 <style scoped>
+.passos{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.texto-passos{
+  width: 20vw;
+  background-color: green
+  p
+}
+.texto-passos ul{
+  list-decoration: none
+}
+.background-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
 
-.img-v-if{
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: black;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(transparent, white);
+  color: white;
+  padding: 35vh;
+}
+
+.overlay-text {
+  margin: 0;
+  width: 27vw;
+  position: absolute;
+  right: 63vw;
+  bottom: 47vh;
+  color: black;
+}
+
+.overlay-text h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  letter-spacing: .1vw;
+  font-family: 'Kameron', sans-serif;
+}
+
+.overlay-text h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: .1vw;
+  font-family: 'Kameron', sans-serif;
+}
+
+.overlay-text button {
+  border: none;
+  padding: 5px 50px;
+  border-radius: 30px;
+  color: #f48200;
+  margin-top: 3vh;
+
+}
+
+.img-v-if {
   background-color: black;
   width: 300px;
   height: 300px;
@@ -216,12 +330,18 @@ const selectImage = (image) => {
   justify-content: center;
   align-items: center;
 }
+
 .img-v-if img {
-  width: 100%; /* A largura da imagem será igual à largura da div */
-  height: 100%; /* A altura da imagem será igual à altura da div */
-  object-fit: contain; /* A imagem será redimensionada para caber completamente na div sem distorção */
-  border-radius: 10px; /* Mantém o arredondamento */
+  width: 100%;
+  /* A largura da imagem será igual à largura da div */
+  height: 100%;
+  /* A altura da imagem será igual à altura da div */
+  object-fit: contain;
+  /* A imagem será redimensionada para caber completamente na div sem distorção */
+  border-radius: 10px;
+  /* Mantém o arredondamento */
 }
+
 .descricao-v-if {
   width: 45vw;
   font-weight: 400;
@@ -230,9 +350,9 @@ const selectImage = (image) => {
   color: black;
 }
 
-.descricao-v-if a{
-  color:#f48200;
-  text-decoration:none ;
+.descricao-v-if a {
+  color: #f48200;
+  text-decoration: none;
   font-size: 1.7vw;
 }
 
@@ -247,12 +367,14 @@ const selectImage = (image) => {
   letter-spacing: 1px;
   font-size: 2vw;
 }
-.titulo-v-iv-endereco h2{
+
+.titulo-v-iv-endereco h2 {
   font-family: 'Kameron', sans-serif;
   font-weight: 600;
   letter-spacing: 1px;
   font-size: 2vw;
 }
+
 .v-if-cima {
   display: flex;
   flex-direction: row;
@@ -261,7 +383,8 @@ const selectImage = (image) => {
   height: 30vh;
   padding: 2vw;
 }
-.v-if-cima ul{
+
+.v-if-cima ul {
   list-style: none;
   color: rgb(14, 14, 14);
   font-family: 'Kameron', sans-serif;
@@ -274,7 +397,7 @@ const selectImage = (image) => {
   align-items: center;
   background-color: #ffbe74;
   width: 100%;
-  padding-top:15vh;
+  padding-top: 15vh;
   padding-bottom: 40vh;
   padding-left: 20vw;
   padding-right: 20vw;
@@ -320,7 +443,7 @@ const selectImage = (image) => {
 
 
 .left button:hover {
- 
+
   background-color: white;
   color: black;
 }
