@@ -1,6 +1,6 @@
 <script setup>
 import HeaderComponente from '@/components/HeaderComponente.vue';
-import { getImage } from '@/utils/getProductImage'
+import { getImage, getImage2, getImage3, getImage4 } from '@/utils/getProductImage'
 import NavFooter from '@/components/NavFooter.vue';
 import { useRoute } from 'vue-router';
 import { useProdutoStore } from '@/stores/produto';
@@ -50,12 +50,13 @@ onBeforeMount(() => {
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img :src="getImage(produto?.id)" alt="">                             </div>
-                            <div class="carousel-item">
-                                <img src="@/assets/hello1-2.jpg" class="d-block w-100" alt="@/assets/hello1-1.jpg">
+                                <img :src="getImage(produto?.id)" class="d-block w-100" alt="">                             
                             </div>
                             <div class="carousel-item">
-                                <img src="@/assets/hello-1-3.jpg" class="d-block w-100" alt="@/assets/teclado.png">
+                                <img :src="getImage2(produto?.id)" class="d-block w-100" alt="">                             
+                            </div>
+                            <div class="carousel-item">
+                                <img :src="getImage3(produto?.id)" class="d-block w-100" alt="">                             
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"

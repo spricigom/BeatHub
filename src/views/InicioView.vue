@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
 import { useProdutoStore } from '@/stores/produto';
 import NavFooter from '@/components/NavFooter.vue';
 import ListHome from '@/components/ListHome.vue';
@@ -117,6 +117,7 @@ const selectImage = (image) => {
         </div>
       </div>
 
+      <ListHome :produtos="produtoStore.produtos" tipo="home" />
 
 
       <div class="fundo-v-if">
@@ -179,6 +180,7 @@ const selectImage = (image) => {
           
           
           
+        </div>
         </div>
       <div class="container">
         <div class="left">
