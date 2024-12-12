@@ -21,6 +21,7 @@ const selectImage = (image) => {
   console.log("Selected image:", image); // Log para depuração
   selectedImage.value = image;
 };
+
 </script>
 
 
@@ -131,12 +132,12 @@ const selectImage = (image) => {
                 <h2>PAGAMENTOS</h2>
               </div>
 
-              <p class="descricao-v-if">Nossas formas de pagamento variam em pix e cartão em nossa loja fisica.</p>
-              <p class="descricao-v-if">Sem taxas por venda!</p>
+              <p class="descricao-v-if"><span class="pi pi-credit-card" style="color: #f48200;"></span> Nossas formas de pagamento variam em pix e cartão em nossa loja fisica.</p>
+              <p class="descricao-v-if"><span class="pi pi-exclamation-triangle" style="color: #f48200;"></span> Sem taxas por venda!</p>
             </div>
 
             <div class="img-v-if">
-              <img src="@/assets/logo.png" alt="Imagem 1" style="max-height: 150px; border-radius: 10px;">
+              <img src="@/assets/logo.png" alt="Imagem 1" >
             </div>
           </div>
 
@@ -152,7 +153,7 @@ const selectImage = (image) => {
             </div>
 
             <div class="img-v-if">
-              <img src="@/assets/teclado.png" alt="Imagem 2" style="max-height: 150px; border-radius: 10px;">            </div>
+              <img src="@/assets/teclado.png" alt="Imagem 2" >            </div>
           </div>
 
           <div class="v-if-cima" v-if="selectedImage === 'image3'" >
@@ -162,7 +163,7 @@ const selectImage = (image) => {
               </div>
 
               <p class="descricao-v-if">Nossas lojas</p>
-              <p class="descricao-v-if">RETIRADA DO INSTRUMENTO APENAS NA LOJA FISÍCA!</p>
+              <p class="descricao-v-if" id="amarelo">RETIRADA DO INSTRUMENTO APENAS NA LOJA FISÍCA!</p>
               <ul>
                 <li>Rua: Rua dos Sonhos</li>
                 <li>Número: 42</li>
@@ -173,7 +174,7 @@ const selectImage = (image) => {
 
             <div class="img-v-if">
               <img src="@/assets/teclado1-2.png" alt="Imagem 3"
-            style="max-height: 150px; border-radius: 10px;">
+            >
             </div>
           </div>
 
@@ -184,22 +185,20 @@ const selectImage = (image) => {
         </div>
         <div class="left">
           <div class="buttons">
-            <!-- Botões que alteram a imagem exibida -->
-            <button @click="selectImage('image1')">Imagem 1</button>
-            <button @click="selectImage('image2')">Imagem 2</button>
-            <button @click="selectImage('image3')">Imagem 3</button>
+            <button @click="selectImage('image1')" class="botao-selecionado"><span class="pi pi-receipt"></span> Pagamento</button>
+            <button @click="selectImage('image2')" class="botao-selecionado"><span class="pi pi-users"></span> Sobre Nós</button>
+            <button @click="selectImage('image3')" class="botao-selecionado"><span class="pi pi-map-marker"></span> Endereço</button>
           </div>
-        </div>
+        </div>  
+        
+
       </div>
-
-
       <ListHome :produtos="produtoStore.produtos" tipo="home" />
 
 
     </main>
 
-    h4
-    h4
+   
     <NavFooter />
   </body>
 </template>
@@ -208,18 +207,20 @@ const selectImage = (image) => {
 <style scoped>
 
 .img-v-if{
-  background-color: red;
+  background-color: black;
   width: 300px;
   height: 300px;
   position: relative;
-  top: 13vh;
+  top: 3vh;
   right: 15vw;
-  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .img-v-if img {
   width: 100%; /* A largura da imagem será igual à largura da div */
   height: 100%; /* A altura da imagem será igual à altura da div */
-  object-fit: cover; /* A imagem será redimensionada para caber completamente na div sem distorção */
+  object-fit: contain; /* A imagem será redimensionada para caber completamente na div sem distorção */
   border-radius: 10px; /* Mantém o arredondamento */
 }
 .descricao-v-if {
@@ -231,7 +232,7 @@ const selectImage = (image) => {
 }
 
 .descricao-v-if a{
-  color:#fff;
+  color:#f48200;
   text-decoration:none ;
   font-size: 1.7vw;
 }
@@ -247,7 +248,12 @@ const selectImage = (image) => {
   letter-spacing: 1px;
   font-size: 2vw;
 }
-
+.titulo-v-iv-endereco h2{
+  font-family: 'Kameron', sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 2vw;
+}
 .v-if-cima {
   display: flex;
   flex-direction: row;
@@ -258,7 +264,7 @@ const selectImage = (image) => {
 }
 .v-if-cima ul{
   list-style: none;
-  color: white;
+  color: rgb(14, 14, 14);
   font-family: 'Kameron', sans-serif;
   font-size: 1.3vw;
 }
@@ -267,9 +273,10 @@ const selectImage = (image) => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #faad56;
+  background-color: #ffbe74;
   width: 100%;
-  height: 70vh;
+  padding-top:15vh;
+  padding-bottom: 40vh;
   padding-left: 20vw;
   padding-right: 20vw;
   box-sizing: border-box;
@@ -281,7 +288,7 @@ const selectImage = (image) => {
   color: white;
   position: relative;
   right: 34vw;
-  top: 10vh;
+  top: 13vh;
   padding-left: 15vw;
 }
 
@@ -300,8 +307,8 @@ const selectImage = (image) => {
 
 
 .left button {
-  background-color: white;
-  color: black;
+  background-color: #ff6f00;
+  color: white;
   border: none;
   padding: 10px 40px;
   font-size: 16px;
@@ -314,15 +321,12 @@ const selectImage = (image) => {
 
 
 .left button:hover {
-  background-color: #ff6f00;
-  color: white;
+ 
+  background-color: white;
+  color: black;
 }
 
 
-.right img {
-  max-height: 150px;
-  border-radius: 10px;
-}
 
 
 body {
