@@ -160,6 +160,7 @@ const selectImage = (image) => {
         </div>
       </div>
 
+      <ListHome :produtos="produtoStore.produtos" tipo="home" />
 
 
       <div class="categorias">
@@ -299,8 +300,6 @@ const selectImage = (image) => {
           </div>
         </div>
 
-
-      </div>
       <ListHome :produtos="produtoStore.produtos" tipo="home" />
 
 

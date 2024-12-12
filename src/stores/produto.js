@@ -11,7 +11,7 @@ export const useProdutoStore = defineStore('produto', () => {
 
   
     const buscarTodosOsProdutos  = async () => {
-    const { data, error } = await supabase.from('produtos').select('*').eq('categoria', 'principal');
+    const { data, error } = await supabase.from('produtos').select('*').eq('categoria', 'Principal');
     if (error) {
       console.error('Erro ao buscar produtos:', error.message);
     } else {
@@ -30,8 +30,11 @@ export const useProdutoStore = defineStore('produto', () => {
 
     const addCarrinho = (id) => {
         const product = produtos.value.find(p => p.id == id)
+        console.log(product)
+        const userData = localStorage.getItem('product');
         product.noCarrinho = !product.noCarrinho
-        // vai salvar no carrinho no localStorage ou algum outro lugar
+        console.log(userData)
+        return userData
     }
 
     const produtosCarrinho = computed(() => produtos.value.filter(p => p.noCarrinho))
@@ -42,7 +45,7 @@ export const useProdutoStore = defineStore('produto', () => {
 
 
     const produtoGuitarra = async () => {
-    const { data, error } = await supabase.from('produtos').select('*').eq('categoria', 'guitarra');
+    const { data, error } = await supabase.from('produtos').select('*').eq('categoria', 'Guitarras');
     if (error) {
       console.error('Erro ao carregar produtos do catálogo:', error);
     } else {
@@ -53,7 +56,7 @@ export const useProdutoStore = defineStore('produto', () => {
 
 
     const produtoBaixo = async () => {
-        const { data, error } = await supabase.from('produtos').select('*').eq('categoria', 'baixo');
+        const { data, error } = await supabase.from('produtos').select('*').eq('categoria', 'Baixos');
         if (error) {
           console.error('Erro ao carregar produtos do catálogo:', error);
         } else {
@@ -62,7 +65,7 @@ export const useProdutoStore = defineStore('produto', () => {
         }}
 
     const produtoPedais = async () => {
-        const { data, error } = await supabase.from('produtos').select('*').eq('categoria', 'pedal');
+        const { data, error } = await supabase.from('produtos').select('*').eq('categoria', 'Pedais');
         if (error) {
           console.error('Erro ao carregar produtos do catálogo:', error);
         } else {
@@ -71,7 +74,7 @@ export const useProdutoStore = defineStore('produto', () => {
         }}
 
     const produtoTeclado = async () => {
-        const { data, error } = await supabase.from('produtos').select('*').eq('categoria', 'teclado');
+        const { data, error } = await supabase.from('produtos').select('*').eq('categoria', 'Teclados');
         if (error) {
           console.error('Erro ao carregar produtos do catálogo:', error);
         } else {
@@ -80,7 +83,7 @@ export const useProdutoStore = defineStore('produto', () => {
         }}
 
     const produtoViolao = async () => {
-        const { data, error } = await supabase.from('produtos').select('*').eq('categoria', 'violao');
+        const { data, error } = await supabase.from('produtos').select('*').eq('categoria', 'Violões');
         if (error) {
           console.error('Erro ao carregar produtos do catálogo:', error);
         } else {
@@ -89,7 +92,7 @@ export const useProdutoStore = defineStore('produto', () => {
         }}
 
     const produtoBateria = async () => {
-        const { data, error } = await supabase.from('produtos').select('*').eq('categoria', 'bateria');
+        const { data, error } = await supabase.from('produtos').select('*').eq('categoria', 'Baterias');
         if (error) {
           console.error('Erro ao carregar produtos do catálogo:', error);
         } else {
