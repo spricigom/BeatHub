@@ -1,6 +1,14 @@
 <script setup>
 import NavFooter from '@/components/NavFooter.vue';
 import HeaderComponente from '@/components/HeaderComponente.vue';
+import { useProdutoStore } from '@/stores/produto';
+import { onMounted } from 'vue';
+import ListHome from '@/components/ListHome.vue';
+const produtoStore = useProdutoStore();
+
+onMounted(async () => {
+    await produtoStore.produtoGuitarra();
+})
 </script>
 
 <template>
@@ -14,167 +22,10 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
             
             <h2 id="amarelo" style="position: relative;bottom: 1vh; margin-top:5vh;">Guitarras</h2>
 
-
-
-
-
-
-
             <div class="fundo">
-                <div class="linha">
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/guitarra1.png" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Masterbuilt John Frusciante Stratocaster®</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 42,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/guitarra2.jpg" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Fender® x Hello Kitty® Pink Stratocaster®</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 17,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/guitarra3.jpg" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Player II Jazzmaster®</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 32,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/guitarra4.jpg" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Jimmy Page Telecaster®</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 24,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/guitarra5.jpg" alt="" width="100%" />
-                        </div>
-                        <h2 class="texto-produtos">Kurt Cobain Jaguar® Left-Hand</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 32,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="linha">
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/guitarra6.jpg" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">American Performer Stratocaster® HSS</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 35,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/guitarra7.jpg" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Eric Clapton Stratocaster®</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 69,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/guitarra8.jpg" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Jimi Hendrix Stratocaster®</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 287,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/guitarra9.jpg" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">H.E.R. Stratocaster®</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 42,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/guitarra10.jpg" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Tom Morello Stratocaster®</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 17,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-                </div>
+                <ListHome :produtos="produtoStore.produtos" tipo="home"/>
             </div>
+
         </main>
 
 

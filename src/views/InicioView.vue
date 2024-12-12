@@ -1,5 +1,4 @@
 <script setup>
-import { ref } from 'vue';
 import { onMounted } from 'vue';
 import { useProdutoStore } from '@/stores/produto';
 import NavFooter from '@/components/NavFooter.vue';
@@ -10,9 +9,8 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
 const produtoStore = useProdutoStore();
 const selectedImage = ref('image1'); // Armazena qual imagem está selecionada
 
-
-onMounted(() => {
-  produtoStore.buscarTodosOsProdutos();
+onMounted(async() => {
+  await  produtoStore.buscarTodosOsProdutos();
 });
 
 
@@ -121,7 +119,6 @@ const selectImage = (image) => {
 
 
 
-
       <div class="fundo-v-if">
 
         <div class="right">
@@ -183,6 +180,7 @@ const selectImage = (image) => {
           
           
         </div>
+      <div class="container">
         <div class="left">
           <div class="buttons">
             <button @click="selectImage('image1')" class="botao-selecionado"><span class="pi pi-receipt"></span> Pagamento</button>
@@ -193,6 +191,7 @@ const selectImage = (image) => {
         
 
       </div>
+
       <ListHome :produtos="produtoStore.produtos" tipo="home" />
 
 
