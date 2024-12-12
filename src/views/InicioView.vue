@@ -46,7 +46,7 @@ const selectImage = (image) => {
             <h1>BEM VINDO A <br><span id="amarelo">Beat Hub</span></h1>
             <h4>Alugue os melhores produtos por preços baixissimos</h4>
             <button>
-              <h4>iniciar sessão</h4>
+              <h4><RouterLink to="/Login">iniciar sessão</RouterLink> </h4>
             </button>
           </div>
         </div>
@@ -87,12 +87,12 @@ const selectImage = (image) => {
       <div class="categorias">
         <h2>Categorias:</h2>
           <div class="botoes-categorias">
-             <button>Guitarra</button>
-          <button>Baixos</button>
-          <button>Pedais</button>
-          <button>Teclado</button>
-          <button>Violao</button>
-          <button>Bateria</button>
+          <button> <RouterLink to="/Guitarra">Guitarra</RouterLink> </button>
+          <button> <RouterLink to="/Baixo">Baixos</RouterLink> </button>
+          <button> <RouterLink to="/Pedais">Pedais</RouterLink> </button>
+          <button> <RouterLink to="/Teclado">Teclado</RouterLink> </button>
+          <button> <RouterLink to="/Violao">Violao</RouterLink> </button>
+          <button> <RouterLink to="/Bateria">Bateria</RouterLink> </button>
           </div>
          
       </div>
@@ -202,7 +202,7 @@ const selectImage = (image) => {
             </div>
 
             <div class="img-v-if">
-              <img src="@/assets/teclado1-2.png" alt="Imagem 3">
+              <img src="@/assets/local.jpeg" alt="Imagem 3">
             </div>
           </div>
 
@@ -240,13 +240,18 @@ const selectImage = (image) => {
   border: none;
   margin-left: 1vw;
   background-color: #f48200;
-  color: white;
+  
   padding-left: 2vw;
   padding-right: 2vw;
   padding-top: 1vh;
   padding-bottom: 1vh;
   border-radius: 50px;
 
+}
+
+.botoes-categorias button a{
+  text-decoration: none;
+  color: white;
 }
 .categorias{
   display: flex;
@@ -397,11 +402,16 @@ const selectImage = (image) => {
   font-family: 'Kameron', sans-serif;
 }
 
+.overlay-text h4 a{
+  text-decoration: none;
+  color: #f48200;
+
+}
+
 .overlay-text button {
   border: none;
   padding: 5px 50px;
   border-radius: 30px;
-  color: #f48200;
   margin-top: 3vh;
 
 }

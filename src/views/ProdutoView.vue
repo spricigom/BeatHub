@@ -515,7 +515,7 @@ body {
 }
 
 main {
-    background-color: #efefef;
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -530,6 +530,7 @@ main {
     height: 75vh;
     background-color: #e9e9e9;
     border-radius: 20px;
+    margin-top: 10vh;
 }
 
 .Copyright {

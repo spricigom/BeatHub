@@ -22,7 +22,7 @@ onMounted(async () => {
     
         <main>
             
-            <h2 id="amarelo" style="position: relative;bottom: 1vh;">Violões</h2>
+            <h2 id="amarelo"  style="margin-top: 10vh;">Violões</h2>
 
             <div class="fundo">
                 <ListHome :produtos="produtoStore.produtos" tipo="home"/>

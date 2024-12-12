@@ -61,6 +61,7 @@ main{
     flex-direction: column;
     align-items: center;
     padding-top: 7vh;
+    margin-top: 10vh;
 }
 .fundo h2 {
     font-family: 'Josefin Sans', sans-serif;
