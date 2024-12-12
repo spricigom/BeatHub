@@ -27,8 +27,7 @@ function toggleMenu() {
     <input class="busca-texto" type="text" placeholder="Pesquise">
 </div>
 
-                <!--
-                -->
+                
             </div>
 
             <div class="direita">
@@ -235,7 +234,6 @@ function toggleMenu() {
 header{
     background-color: #f48200;
     height: 20vh;
-    margin-bottom: 17vh;
 
 }
 

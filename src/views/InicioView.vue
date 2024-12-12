@@ -1,16 +1,19 @@
 <script setup>
-import { onMounted, ref } from 'vue';
+import { ref } from 'vue';
+import { onMounted } from 'vue';
 import { useProdutoStore } from '@/stores/produto';
 import NavFooter from '@/components/NavFooter.vue';
 import ListHome from '@/components/ListHome.vue';
 import HeaderComponente from '@/components/HeaderComponente.vue';
 
 
+
 const produtoStore = useProdutoStore();
 const selectedImage = ref('image1'); // Armazena qual imagem está selecionada
 
-onMounted(async() => {
-  await  produtoStore.buscarTodosOsProdutos();
+
+onMounted(() => {
+  produtoStore.buscarTodosOsProdutos();
 });
 
 
@@ -35,7 +38,47 @@ const selectImage = (image) => {
 
 
     <main>
-      <h2 id="amarelo" style="margin-left: 10vw;position: relative;bottom: 1vh;">Os mais alugados</h2>
+
+      <div class="background-container">
+        <img src="https://via.placeholder.com/1920x1080" alt="Background Image" class="background-image" />
+        <div class="overlay">
+          <div class="overlay-text">
+            <h1>BEM VINDO A <br><span id="amarelo">Beat Hub</span></h1>
+            <h4>Alugue os melhores produtos por preços baixissimos</h4>
+            <button>
+              <h4>iniciar sessão</h4>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="passos">
+        <div class="esquerda">
+          <div class="img-passos">
+            <img src="@/assets/baixista.avif" alt="">
+          </div>
+        </div>
+        <hr id="vertical">
+        <div class="direita">
+          <div class="texto-passos">
+            <h2>
+              Siga os passos a seguir e alugue seu instrumento
+            </h2>
+            
+            <ul>
+              <li><span class="numeros">1</span> Escolha seu  instrumento selecionado e adicione em seu carrinho.</li>
+              <li><span class="numeros">2</span>Faça o seu login na Beathub.</li>
+              <li><span class="numeros">3</span>Confira a forma de pagamento.</li>
+              <li><span class="numeros">4</span>Confira o endereço da loja.</li>
+              <li><span class="numeros">5</span>Pronto, agora você já pode retirar seu instrumento!</li>
+            </ul>
+          </div>
+        </div>
+
+
+      </div>
+
+      <h2 id="amarelo" style="margin-left: 10vw; margin-top: 5vh;">Os mais alugados</h2>
       <div class="campo">
         <div class="mais-alugados text-center" id="mais-alugados">
           <div class="compra-e-coracao2">
@@ -120,6 +163,67 @@ const selectImage = (image) => {
       <ListHome :produtos="produtoStore.produtos" tipo="home" />
 
 
+      <div class="categorias">
+        <h2>Categorias:</h2>
+        <ul>
+          <li>Guitarra</li>
+          <li>Baixos</li>
+          <li>Pedais</li>
+          <li>Teclado</li>
+          <li>Violao</li>
+          <li>Bateria</li>
+        </ul>
+      </div>
+
+      <div class="fundo-marcas">
+        <div class="titulo-marcas">
+          <h2>CONHEÇA NOSSAS MARCAS PARCEIRAS</h2>   
+        </div>
+        <div class="imagens-marcas">
+          <div  class="marcas">
+          <img  src="@/assets/tagima.png" alt="">
+        </div>
+        <div  class="marcas">
+          <img  src="@/assets/yamaha.png" alt="">
+        </div>
+        <div  class="marcas">
+          <img  src="@/assets/fender.png" alt="">
+        </div>
+        <div  class="marcas">
+          <img  src="@/assets/giannini.svg" alt="">
+        </div>
+        <div  class="marcas">
+          <img  src="@/assets/casio.png" alt="">
+        </div>
+        <div  class="marcas">
+          <img src="@/assets/boss.png" alt="">
+        </div>
+        </div>
+        
+       
+    
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
       <div class="fundo-v-if">
 
         <div class="right">
@@ -130,31 +234,36 @@ const selectImage = (image) => {
                 <h2>PAGAMENTOS</h2>
               </div>
 
-              <p class="descricao-v-if"><span class="pi pi-credit-card" style="color: #f48200;"></span> Nossas formas de pagamento variam em pix e cartão em nossa loja fisica.</p>
-              <p class="descricao-v-if"><span class="pi pi-exclamation-triangle" style="color: #f48200;"></span> Sem taxas por venda!</p>
+              <p class="descricao-v-if"><span class="pi pi-credit-card" style="color: #f48200;"></span> Nossas formas de
+                pagamento variam em pix e cartão em nossa loja fisica.</p>
+              <p class="descricao-v-if"><span class="pi pi-exclamation-triangle" style="color: #f48200;"></span> Sem
+                taxas por venda!</p>
             </div>
 
             <div class="img-v-if">
-              <img src="@/assets/logo.png" alt="Imagem 1" >
+              <img src="@/assets/logo.png" alt="Imagem 1">
             </div>
           </div>
 
-          <div class="v-if-cima"  v-if="selectedImage === 'image2'">
+          <div class="v-if-cima" v-if="selectedImage === 'image2'">
             <div class="texto-v-if">
               <div class="titulo-v-iv">
                 <h2>SOBRE NÓS</h2>
               </div>
 
-              <p class="descricao-v-if">Conheça um pouco da nossa equipe 
+              <p class="descricao-v-if">Conheça um pouco da nossa equipe
                 e como a Beathub se desenvolveu.</p>
-              <h4 class="descricao-v-if"><RouterLink to="/Membros">Clique aqui</RouterLink></h4>
+              <h4 class="descricao-v-if">
+                <RouterLink to="/Membros">Clique aqui</RouterLink>
+              </h4>
             </div>
 
             <div class="img-v-if">
-              <img src="@/assets/teclado.png" alt="Imagem 2" >            </div>
+              <img src="@/assets/teclado.png" alt="Imagem 2">
+            </div>
           </div>
 
-          <div class="v-if-cima" v-if="selectedImage === 'image3'" >
+          <div class="v-if-cima" v-if="selectedImage === 'image3'">
             <div class="texto-v-if">
               <div class="titulo-v-iv-endereco">
                 <h2>ENDEREÇO</h2>
@@ -171,35 +280,32 @@ const selectImage = (image) => {
             </div>
 
             <div class="img-v-if">
-              <img src="@/assets/teclado1-2.png" alt="Imagem 3"
-            >
+              <img src="@/assets/teclado1-2.png" alt="Imagem 3">
             </div>
           </div>
 
 
-          
-          
-          
+
+
+
         </div>
-        </div>
-      <div class="container">
         <div class="left">
           <div class="buttons">
-            <button @click="selectImage('image1')" class="botao-selecionado"><span class="pi pi-receipt"></span> Pagamento</button>
-            <button @click="selectImage('image2')" class="botao-selecionado"><span class="pi pi-users"></span> Sobre Nós</button>
-            <button @click="selectImage('image3')" class="botao-selecionado"><span class="pi pi-map-marker"></span> Endereço</button>
+            <button @click="selectImage('image1')" class="botao-selecionado"><span class="pi pi-receipt"></span>
+              Pagamento</button>
+            <button @click="selectImage('image2')" class="botao-selecionado"><span class="pi pi-users"></span> Sobre
+              Nós</button>
+            <button @click="selectImage('image3')" class="botao-selecionado"><span class="pi pi-map-marker"></span>
+              Endereço</button>
           </div>
-        </div>  
-        
-
-      </div>
+        </div>
 
       <ListHome :produtos="produtoStore.produtos" tipo="home" />
 
 
     </main>
 
-   
+
     <NavFooter />
   </body>
 </template>
@@ -207,7 +313,151 @@ const selectImage = (image) => {
 
 <style scoped>
 
-.img-v-if{
+.fundo-marcas{
+  display: flex;
+  flex-direction: column;
+}
+.imagens-marcas{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.titulo-marcas{
+  display: flex;
+  flex-direction:row ;
+  justify-content: center;
+  margin-bottom: 5vh;
+}
+.titulo-marcas h2{
+  font-family: 'Kameron', sans-serif;
+  font-weight: 600;
+  color: black;
+}
+.marcas {
+    width: 10vw;
+    display: flex;
+    margin-left: 1vw;
+}
+
+.marcas img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+
+#vertical{
+  height: 30vh;
+  border-left: 2px solid #f48200;
+  opacity: 1;
+  border-top: transparent;
+  position: relative;
+  top: 12vh;
+  left: 2.4vw;
+  z-index: 0;
+}
+.numeros{
+  color: #f48200;
+  font-size: 1.3vw;
+  margin-right: 1.5vw;
+  background-color: white;
+  position: relative; 
+  padding-top: 7px;
+  padding-bottom: 7px;
+  
+}
+.esquerda{
+  width: 50vw;
+  display: flex;
+  justify-content: right;
+  padding-right: 4vw;
+}
+
+.direita{
+  width: 50vw;
+  padding-left: 2vw;
+}
+.img-passos img{
+  width: 33vw;
+  border-radius: 2vw;
+}
+.passos{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 60vh;
+}
+.texto-passos{
+  width: 35vw;
+ 
+}
+.texto-passos h2{
+  font-family: 'Kanit', sans-serif;
+  font-weight: 400;
+}
+.texto-passos li{
+  list-style: none;
+  margin-top: 3vh;
+  font-family: 'Kanit', sans-serif;
+}
+
+.background-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: black;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(transparent, white);
+  color: white;
+  padding: 35vh;
+}
+
+.overlay-text {
+  margin: 0;
+  width: 27vw;
+  position: absolute;
+  right: 63vw;
+  bottom: 47vh;
+  color: black;
+}
+
+.overlay-text h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  letter-spacing: .1vw;
+  font-family: 'Kameron', sans-serif;
+}
+
+.overlay-text h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: .1vw;
+  font-family: 'Kameron', sans-serif;
+}
+
+.overlay-text button {
+  border: none;
+  padding: 5px 50px;
+  border-radius: 30px;
+  color: #f48200;
+  margin-top: 3vh;
+
+}
+
+.img-v-if {
   background-color: black;
   width: 300px;
   height: 300px;
@@ -218,12 +468,18 @@ const selectImage = (image) => {
   justify-content: center;
   align-items: center;
 }
+
 .img-v-if img {
-  width: 100%; /* A largura da imagem será igual à largura da div */
-  height: 100%; /* A altura da imagem será igual à altura da div */
-  object-fit: contain; /* A imagem será redimensionada para caber completamente na div sem distorção */
-  border-radius: 10px; /* Mantém o arredondamento */
+  width: 100%;
+  /* A largura da imagem será igual à largura da div */
+  height: 100%;
+  /* A altura da imagem será igual à altura da div */
+  object-fit: contain;
+  /* A imagem será redimensionada para caber completamente na div sem distorção */
+  border-radius: 10px;
+  /* Mantém o arredondamento */
 }
+
 .descricao-v-if {
   width: 45vw;
   font-weight: 400;
@@ -232,9 +488,9 @@ const selectImage = (image) => {
   color: black;
 }
 
-.descricao-v-if a{
-  color:#f48200;
-  text-decoration:none ;
+.descricao-v-if a {
+  color: #f48200;
+  text-decoration: none;
   font-size: 1.7vw;
 }
 
@@ -249,12 +505,14 @@ const selectImage = (image) => {
   letter-spacing: 1px;
   font-size: 2vw;
 }
-.titulo-v-iv-endereco h2{
+
+.titulo-v-iv-endereco h2 {
   font-family: 'Kameron', sans-serif;
   font-weight: 600;
   letter-spacing: 1px;
   font-size: 2vw;
 }
+
 .v-if-cima {
   display: flex;
   flex-direction: row;
@@ -263,7 +521,8 @@ const selectImage = (image) => {
   height: 30vh;
   padding: 2vw;
 }
-.v-if-cima ul{
+
+.v-if-cima ul {
   list-style: none;
   color: rgb(14, 14, 14);
   font-family: 'Kameron', sans-serif;
@@ -276,7 +535,7 @@ const selectImage = (image) => {
   align-items: center;
   background-color: #ffbe74;
   width: 100%;
-  padding-top:15vh;
+  padding-top: 15vh;
   padding-bottom: 40vh;
   padding-left: 20vw;
   padding-right: 20vw;
@@ -322,7 +581,7 @@ const selectImage = (image) => {
 
 
 .left button:hover {
- 
+
   background-color: white;
   color: black;
 }
