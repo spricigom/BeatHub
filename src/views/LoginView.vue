@@ -190,7 +190,7 @@ async function fazerLogin() {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to bottom, transparent 25%, #efefef);
+    background: linear-gradient(to bottom, transparent 25%, white);
     z-index: 1;
     /* Coloca o gradiente acima da imagem */
 }
@@ -216,7 +216,7 @@ async function fazerLogin() {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to top, transparent 25%, #efefef);
+    background: linear-gradient(to top, transparent 25%, white);
     z-index: 1;
     /* Coloca o gradiente acima da imagem */
 }
@@ -243,7 +243,7 @@ async function fazerLogin() {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(90deg, transparent 25%, #efefef);
+    background: linear-gradient(90deg, transparent 25%, white);
     z-index: 1;
     /* Coloca o gradiente acima da imagem */
 }
@@ -304,7 +304,7 @@ button {
 
 main {
     height: 320vh;
-    background-color: #efefef;
+    background-color: white;
     display: flex;
     align-items: center;
     flex-direction: column;

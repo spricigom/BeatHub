@@ -40,7 +40,7 @@ const selectImage = (image) => {
     <main>
 
       <div class="background-container">
-        <img src="https://via.placeholder.com/1920x1080" alt="Background Image" class="background-image" />
+        <img src="@/assets/violinos.jpeg" alt="Background Image" class="background-image" />
         <div class="overlay">
           <div class="overlay-text">
             <h1>BEM VINDO A <br><span id="amarelo">Beat Hub</span></h1>
@@ -78,101 +78,23 @@ const selectImage = (image) => {
 
       </div>
 
-      <h2 id="amarelo" style="margin-left: 10vw; margin-top: 5vh;">Os mais alugados</h2>
-      <div class="campo">
-        <div class="mais-alugados text-center" id="mais-alugados">
-          <div class="compra-e-coracao2">
-            <img src="@/assets/coracao.png" alt="" class="icones" />
-            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-          </div>
-
-
-          <img src="@/assets/ukulele.png" alt="" class="produtos-MaisAlugados" />
-          <h2>Ukulele Concert Us23 Spring</h2>
-
-
-          <div class="conteudo2">
-            <div class="preco">
-              <h5>R$ 20,00 por mês</h5>
-            </div>
-            <img src="@/assets/compartilhe.png" alt="" class="compartilhe" />
-          </div>
-        </div>
-
-
-        <div class="mais-alugados text-center">
-          <div class="compra-e-coracao2">
-            <img src="@/assets/coracao.png" alt="" class="icones" />
-            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-          </div>
-
-
-          <img src="@/assets/violao.png" alt="" class="produtos-MaisAlugados" />
-          <h2>Violão Di Giorgio Master</h2>
-
-
-          <div class="conteudo2">
-            <div class="preco">
-              <h5>R$ 25,00 por mês</h5>
-            </div>
-            <img src="@/assets/compartilhe.png" alt="" class="compartilhe" />
-          </div>
-        </div>
-
-
-        <div class="mais-alugados text-center">
-          <div class="compra-e-coracao2">
-            <img src="@/assets/coracao.png" alt="" class="icones" />
-            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-          </div>
-
-
-          <img src="@/assets/guitarra.png" alt="" class="produtos-MaisAlugados" />
-          <h2>Guitarra elétrica SG</h2>
-
-
-          <div class="conteudo2">
-            <div class="preco">
-              <h5>R$ 38,00 por mês</h5>
-            </div>
-            <img src="@/assets/compartilhe.png" alt="" class="compartilhe" />
-          </div>
-        </div>
-
-
-        <div class="mais-alugados text-center">
-          <div class="compra-e-coracao2">
-            <img src="@/assets/coracao.png" alt="" class="icones" />
-            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-          </div>
-
-
-          <img src="@/assets/baixo.png" alt="" class="produtos-MaisAlugados" />
-          <h2>Baixo Strinberg JBS50</h2>
-
-
-          <div class="conteudo2">
-            <div class="preco">
-              <h5>R$ 27,00 por mês</h5>
-            </div>
-            <img src="@/assets/compartilhe.png" alt="" class="compartilhe" />
-          </div>
-        </div>
-      </div>
+      <h2 id="amarelo" style="margin-left: 7vw; margin-top: 5vh;">Os mais alugados</h2>
+      
 
       <ListHome :produtos="produtoStore.produtos" tipo="home" />
 
 
       <div class="categorias">
         <h2>Categorias:</h2>
-        <ul>
-          <li>Guitarra</li>
-          <li>Baixos</li>
-          <li>Pedais</li>
-          <li>Teclado</li>
-          <li>Violao</li>
-          <li>Bateria</li>
-        </ul>
+          <div class="botoes-categorias">
+             <button>Guitarra</button>
+          <button>Baixos</button>
+          <button>Pedais</button>
+          <button>Teclado</button>
+          <button>Violao</button>
+          <button>Bateria</button>
+          </div>
+         
       </div>
 
       <div class="fundo-marcas">
@@ -241,7 +163,7 @@ const selectImage = (image) => {
             </div>
 
             <div class="img-v-if">
-              <img src="@/assets/logo.png" alt="Imagem 1">
+              <img src="@/assets/forma.png" alt="Imagem 1">
             </div>
           </div>
 
@@ -259,7 +181,7 @@ const selectImage = (image) => {
             </div>
 
             <div class="img-v-if">
-              <img src="@/assets/teclado.png" alt="Imagem 2">
+              <img src="@/assets/equipe.png" alt="Imagem 2">
             </div>
           </div>
 
@@ -299,8 +221,7 @@ const selectImage = (image) => {
               Endereço</button>
           </div>
         </div>
-
-      <ListHome :produtos="produtoStore.produtos" tipo="home" />
+      </div>
 
 
     </main>
@@ -312,7 +233,34 @@ const selectImage = (image) => {
 
 
 <style scoped>
+.botoes-categorias{
+  margin-left: 4vw;
+}
+.botoes-categorias button{
+  border: none;
+  margin-left: 1vw;
+  background-color: #f48200;
+  color: white;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  border-radius: 50px;
 
+}
+.categorias{
+  display: flex;
+  flex-direction: row;
+  margin-bottom:15vh;
+  padding-left: 7vw;
+  align-items: center;
+  position: relative;
+  bottom: 10vh;
+}
+.categorias h2{
+  color: #f48200;
+  font-family: 'Josefin Sans', sans-serif;
+}
 .fundo-marcas{
   display: flex;
   flex-direction: column;
@@ -407,6 +355,7 @@ const selectImage = (image) => {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  margin-bottom: 10vh;
 }
 
 .background-image {
@@ -458,7 +407,6 @@ const selectImage = (image) => {
 }
 
 .img-v-if {
-  background-color: black;
   width: 300px;
   height: 300px;
   position: relative;
@@ -540,7 +488,7 @@ const selectImage = (image) => {
   padding-left: 20vw;
   padding-right: 20vw;
   box-sizing: border-box;
-  margin-bottom: 20vh;
+  margin-top: 20vh;
 }
 
 

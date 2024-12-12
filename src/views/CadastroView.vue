@@ -100,7 +100,7 @@ async function cadastrarUsuario() {
   <HeaderComponente />
 
   <main>
-    <div class="esquerda">
+    <div class="left">
       <div class="titulo">
         <h1>FAÇA O SEU CADASTRO!</h1>
       </div>
@@ -113,7 +113,7 @@ async function cadastrarUsuario() {
       </div>
     </div>
 
-    <div class="direita">
+    <div class="right">
       <form class="cadastro" @submit.prevent="cadastrarUsuario">
         <div class="campo_cadastro nome">
           <p class="titulo_cadastro" id="cabecalho">Nome completo</p>
@@ -199,31 +199,30 @@ async function cadastrarUsuario() {
 
 <style scooped>
 body {
-  background: #efefef;
+  background: white;
   font-family: 'Josefin Sans', sans-serif;
 }
 
 main {
-  margin-top: -4vh;
   display: flex;
-  background: #efefef;
+  background: white;
 }
 
 @media (max-width:1087px){
-    .direita .input{
+    .right .input{
       width:20vh;
     }
 }
 @media (max-width:799px){
 
-  .direita .input{
+  .right .input{
     width:13vh;
     box-sizing: border-box;
     padding: 3px;
   }
   }
-.esquerda {
-  background-color: #efefef;
+.left {
+  background-color: white;
   width: 55%;
   margin-top: 5vh;
 }
@@ -273,11 +272,9 @@ main {
   margin-top: 2vh;
 }
 
-.direita {
+.right {
   background: #f8bb75;
   width: 45%;
-  border-radius: 1vw;
-  margin-top: 5vh;
 }
 
 .cadastro {
@@ -286,7 +283,7 @@ main {
   flex-direction: column;
 }
 
-.direita .input {
+.right .input {
   border: none;
   height: 8vh;
   width: 15vw;
@@ -294,13 +291,13 @@ main {
   padding-left: 1vw;
 }
 
-.direita ::placeholder {
+.right ::placeholder {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.1vw;
   font-weight: light;
 }
 
-.direita p {
+.right p {
   font-family: 'Josefin Sans', sans-serif;
   color: black;
   margin-bottom: -0.1vh;
@@ -356,40 +353,6 @@ button {
   margin-top: 7vh;
   margin-left: 5vw;
   margin-bottom: 5vh;
-}
-
-/* Estilos de Header */
-.logo {
-  width: 8vw;
-  cursor: pointer;
-  position: relative;
-  bottom: 15px;
-}
-
-
-.regiao {
-  position: relative;
-  left: 5vw;
-  font-family: 'Inter', sans-serif;
-  color: #595959;
-  font-size: 1vw;
-}
-
-.navegacao {
-  list-style: none;
-  position: relative;
-  right: 8vw;
-}
-
-.navegacao li {
-  display: inline-block;
-  padding: 0px 10px;
-}
-
-a {
-  text-decoration: none;
-  color: #595959;
-  font-family: 'Josefin Sans', sans-serif;
 }
 
 #amarelo {
