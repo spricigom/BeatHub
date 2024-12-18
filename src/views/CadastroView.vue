@@ -1,7 +1,7 @@
 <script setup>
-import HeaderComponente from '@/components/HeaderComponente.vue'
-import { reactive } from 'vue'
-import { supabase } from '../lib/supabaseClient'
+import { reactive } from 'vue';
+import HeaderComponente from '@/components/HeaderComponente.vue';
+import { supabase } from '../lib/supabaseClient';
 
 const novoUsuario = reactive({
   cpf: '',
@@ -13,37 +13,94 @@ const novoUsuario = reactive({
   password: '',
   passwordconfirmation: '',
   message: '',
-})
+  cep: '',
+  rua: '',
+  numero: '',
+  bairro: '',
+  cidade: '',
+});
+
+function validarCPF(cpf) {
+  const cpfNumeros = cpf.replace(/\D/g, ''); 
+  return cpfNumeros.length === 11;
+}
+
+function validarTelefone(telefone) {
+  const telefoneNumeros = telefone.replace(/\D/g, ''); 
+  return telefoneNumeros.length >= 10 && telefoneNumeros.length <= 11; 
+}
+
+async function buscarEnderecoPorCEP() {
+  if (novoUsuario.cep.length === 8) {
+    try {
+      const response = await fetch(`https://viacep.com.br/ws/${novoUsuario.cep}/json/`);
+      const data = await response.json();
+
+      if (data.erro) {
+        alert('CEP não encontrado!');
+        return;
+      }
+      console.log(data);
+
+      novoUsuario.rua = data.logradouro || '';
+      novoUsuario.bairro = data.bairro || '';
+      novoUsuario.cidade = data.localidade || '';
+    } catch (error) {
+      console.error('Erro ao buscar o endereço:', error);
+      alert('Ocorreu um erro ao buscar o CEP');
+    }
+  }
+}
 
 async function cadastrarUsuario() {
-    if (novoUsuario.password !== novoUsuario.passwordconfirmation) {
-        alert('As senhas não coincidem!');
-        return;
-    }
+  if (!validarCPF(novoUsuario.cpf)) {
+    alert('CPF inválido! Certifique-se de que contém 11 dígitos numéricos.');
+    return;
+  }
 
-    // eslint-disable-next-line no-unused-vars
-    const { data: userData, error: userError } = await supabase
-        .from('usuarios')
-        .insert([{
-            cpf: novoUsuario.cpf,
-            name: novoUsuario.name,
-            gender: novoUsuario.gender,
-            email: novoUsuario.email,
-            number: novoUsuario.number,
-            datebirth: novoUsuario.datebirth,
-            password: novoUsuario.password,
-            message: novoUsuario.message,
-        }]);
+  if (!validarTelefone(novoUsuario.number)) {
+    alert('Número de telefone inválido! Certifique-se de que contém entre 10 e 11 dígitos.');
+    return;
+  }
 
-    alert('Usuário cadastrado com sucesso!');
+  if (novoUsuario.password !== novoUsuario.passwordconfirmation) {
+    alert('As senhas não coincidem!');
+    return;
+  }
+
+  const { data: userData, error: userError } = await supabase
+    .from('usuarios')
+    .insert([
+      {
+        cpf: novoUsuario.cpf,
+        name: novoUsuario.name,
+        gender: novoUsuario.gender,
+        email: novoUsuario.email,
+        number: novoUsuario.number,
+        datebirth: novoUsuario.datebirth,
+        password: novoUsuario.password,
+        message: novoUsuario.message,
+        cep: novoUsuario.cep,
+        rua: novoUsuario.rua,
+        numero: novoUsuario.numero,
+        bairro: novoUsuario.bairro,
+        cidade: novoUsuario.cidade,
+      },
+    ]);
+
+  if (userError) {
+    alert('Erro ao cadastrar usuário!');
+    return;
+  }
+  alert('Usuário cadastrado com sucesso!');
 }
 </script>
 
 <template>
   <HeaderComponente />
-  
+
   <main>
-    <div class="esquerda">
+    <div class="left">
       <div class="titulo">
         <h1>FAÇA O SEU CADASTRO!</h1>
       </div>
@@ -56,7 +113,7 @@ async function cadastrarUsuario() {
       </div>
     </div>
 
-    <div class="direita">
+    <div class="right">
       <form class="cadastro" @submit.prevent="cadastrarUsuario">
         <div class="campo_cadastro nome">
           <p class="titulo_cadastro" id="cabecalho">Nome completo</p>
@@ -65,22 +122,26 @@ async function cadastrarUsuario() {
 
         <div class="campo_cadastro data">
           <p class="titulo_cadastro">Data de nascimento</p>
-          <input class="input" type="date" v-model="novoUsuario.datebirth" placeholder="insira sua data de nascimento" />
+          <input class="input" type="date" v-model="novoUsuario.datebirth"
+            placeholder="insira sua data de nascimento" />
         </div>
 
         <p>Gênero</p>
 
         <div class="genero">
           <div class="form-check">
-            <input class="form-check-input" type="radio" v-model="novoUsuario.gender" value="masculino" id="flexRadioDefault1" />
+            <input class="form-check-input" type="radio" v-model="novoUsuario.gender" value="masculino"
+              id="flexRadioDefault1" />
             <label class="form-check-label" for="flexRadioDefault1">Masculino</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" v-model="novoUsuario.gender" value="feminino" id="flexRadioDefault2" />
+            <input class="form-check-input" type="radio" v-model="novoUsuario.gender" value="feminino"
+              id="flexRadioDefault2" />
             <label class="form-check-label" for="flexRadioDefault2">Feminino</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" v-model="novoUsuario.gender" value="prefiro não informar" id="flexRadioDefault3" />
+            <input class="form-check-input" type="radio" v-model="novoUsuario.gender" value="prefiro não informar"
+              id="flexRadioDefault3" />
             <label class="form-check-label" for="flexRadioDefault3">Prefiro não informar</label>
           </div>
         </div>
@@ -105,6 +166,27 @@ async function cadastrarUsuario() {
           <p class="titulo_cadastro">Confirmação de Senha</p>
           <input class="input" type="password" v-model="novoUsuario.passwordconfirmation" />
         </div>
+        <div>
+          <p class="titulo_cadastro">CEP</p>
+          <input class="input" type="text" v-model="novoUsuario.cep" @blur="buscarEnderecoPorCEP"
+            placeholder="Digite o CEP" />
+        </div>
+        <div class="campo_cadastro">
+          <p class="titulo_cadastro">Rua</p>
+          <input class="input" type="text" v-model="novoUsuario.rua" />
+        </div>
+        <div class="campo_cadastro">
+          <p class="titulo_cadastro">Número e/ou bloco</p>
+          <input class="input" type="text" v-model="novoUsuario.numero" />
+        </div>
+        <div class="campo_cadastro">
+          <p class="titulo_cadastro">Bairro</p>
+          <input class="input" type="text" v-model="novoUsuario.bairro" />
+        </div>
+        <div class="campo_cadastro">
+          <p class="titulo_cadastro">Cidade</p>
+          <input class="input" type="text" v-model="novoUsuario.cidade" />
+        </div>
 
         <button type="submit">Criar Conta</button>
       </form>
@@ -112,25 +194,35 @@ async function cadastrarUsuario() {
   </main>
 </template>
 
-<style scoped>
-</style>
 
-  <style scooped>
+<style scoped></style>
 
+<style scooped>
 body {
-  background: #efefef;
+  background: white;
   font-family: 'Josefin Sans', sans-serif;
 }
 
 main {
-  margin-top: -4vh;
   display: flex;
-  background: #efefef;
+  background: white;
 }
 
+@media (max-width:1087px){
+    .right .input{
+      width:20vh;
+    }
+}
+@media (max-width:799px){
 
-.esquerda {
-  background-color: #efefef;
+  .right .input{
+    width:13vh;
+    box-sizing: border-box;
+    padding: 3px;
+  }
+  }
+.left {
+  background-color: white;
   width: 55%;
   margin-top: 5vh;
 }
@@ -180,11 +272,9 @@ main {
   margin-top: 2vh;
 }
 
-.direita {
+.right {
   background: #f8bb75;
   width: 45%;
-  border-radius: 1vw;
-  margin-top: 5vh;
 }
 
 .cadastro {
@@ -193,7 +283,7 @@ main {
   flex-direction: column;
 }
 
-.direita .input {
+.right .input {
   border: none;
   height: 8vh;
   width: 15vw;
@@ -201,13 +291,13 @@ main {
   padding-left: 1vw;
 }
 
-.direita ::placeholder {
+.right ::placeholder {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.1vw;
   font-weight: light;
 }
 
-.direita p {
+.right p {
   font-family: 'Josefin Sans', sans-serif;
   color: black;
   margin-bottom: -0.1vh;
@@ -227,9 +317,7 @@ main {
   width: 33vw;
 }
 
-.data .input {
-  width: 6vw;
-}
+
 
 .genero {
   width: 70%;
@@ -267,70 +355,11 @@ button {
   margin-bottom: 5vh;
 }
 
-/* Estilos de Header */
-.logo {
-  width: 8vw;
-  cursor: pointer;
-  position: relative;
-  bottom: 15px;
-}
-
-header input {
-  display: flex;
-  position: relative;
-  left: 7vw;
-  bottom: 1.1vh;
-}
-
-.regiao {
-  position: relative;
-  left: 5vw;
-  font-family: 'Inter', sans-serif;
-  color: #595959;
-  font-size: 1vw;
-}
-
-header ::placeholder {
-  padding-left: 20px;
-  font-family: 'Inter', sans-serif;
-  font-size: 1.8vh;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 10%;
-  height: 20vh;
-  background-color: #efefef;
-}
-
-.navegacao {
-  list-style: none;
-  position: relative;
-  right: 8vw;
-}
-
-.navegacao li {
-  display: inline-block;
-  padding: 0px 10px;
-}
-
-a {
-  text-decoration: none;
-  color: #595959;
-  font-family: 'Josefin Sans', sans-serif;
-}
-
 #amarelo {
   color: #f48200;
 }
 
-.hr {
-  position: relative;
-  bottom: 5vh;
-  border: 1px solid black;
-}
+
 
 .icones {
   width: 1.5vw;

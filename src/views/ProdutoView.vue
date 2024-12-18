@@ -1,10 +1,19 @@
 <script setup>
 import HeaderComponente from '@/components/HeaderComponente.vue';
+import { getImage, getImage2, getImage3, getImage4 } from '@/utils/getProductImage'
 import NavFooter from '@/components/NavFooter.vue';
+import { useRoute } from 'vue-router';
+import { useProdutoStore } from '@/stores/produto';
+import { ref, onBeforeMount } from 'vue'
+const router = useRoute();
+const produtoStore = useProdutoStore();
+const produto = ref({});
+const idProduto = router.params?.id;
 
-
-
-
+onBeforeMount(() => {
+    produto.value = produtoStore.getProdutoById(idProduto);
+    console.log(produto);
+});
 </script>
 
 <template>
@@ -12,7 +21,7 @@ import NavFooter from '@/components/NavFooter.vue';
     <body>
         <HeaderComponente />
 
-        <hr class="hr" />
+
 
         <main>
             <div class="fundo">
@@ -41,13 +50,13 @@ import NavFooter from '@/components/NavFooter.vue';
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="@/assets/guitarra2.jpg" class="d-block w-100" alt="@/assets/hello1-1.jpg">
+                                <img :src="getImage(produto?.id)" class="d-block w-100" alt="">                             
                             </div>
                             <div class="carousel-item">
-                                <img src="@/assets/hello1-2.jpg" class="d-block w-100" alt="@/assets/hello1-1.jpg">
+                                <img :src="getImage2(produto?.id)" class="d-block w-100" alt="">                             
                             </div>
                             <div class="carousel-item">
-                                <img src="@/assets/hello-1-3.jpg" class="d-block w-100" alt="@/assets/teclado.png">
+                                <img :src="getImage3(produto?.id)" class="d-block w-100" alt="">                             
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -69,7 +78,7 @@ import NavFooter from '@/components/NavFooter.vue';
 
 
                 <div class="centro">
-                    <h4 class="titulo-produto">Fender® x Hello Kitty® Pink Stratocaster®</h4>
+                    <h4 class="titulo-produto">{{ produto?.nome }}</h4>
 
                     <div class="avaliacao">
 
@@ -78,7 +87,8 @@ import NavFooter from '@/components/NavFooter.vue';
                     <h6 id="esquerda">130 avaliações</h6>
 
                     <div class="descricao">
-                        <p>Diga olá ao mundo vibrante da Hello Kitty com a coleção Fender x Hello Kitty, celebrando uma colaboração icônica que transcende gerações. Esta coleção mescla a estética ousada e colorida da Hello Kitty com a excelência confiável dos equipamentos Fender, proporcionando desempenho incomparável e estilo elegante. Toque seu instrumento em um estilo lúdico e deixe a Hello Kitty acompanhá-lo em sua jornada musical!
+                        <p>
+                            {{ produto?.descricao }}
                         </p>
                     </div>
 
@@ -86,7 +96,7 @@ import NavFooter from '@/components/NavFooter.vue';
 
                 <div class="direita">
                     <div class="valor">
-                        <h2 class="preco">R$45,00 por mês</h2>
+                <h2 class="preco">R${{ produto?.preco }},00 por mês</h2>
                         <h5 class="forma_pagamento">No pix</h5>
 
                     </div>
@@ -505,7 +515,7 @@ body {
 }
 
 main {
-    background-color: #efefef;
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -520,6 +530,7 @@ main {
     height: 75vh;
     background-color: #e9e9e9;
     border-radius: 20px;
+    margin-top: 10vh;
 }
 
 .Copyright {
@@ -740,14 +751,6 @@ input {
     font-size: 1.8vh;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 10%;
-    height: 20vh;
-    background-color: #efefef;
-}
 
 .navegacao {
     list-style: none;
@@ -768,12 +771,6 @@ a {
 
 #amarelo {
     color: #f48200;
-}
-
-.hr {
-    position: relative;
-    bottom: 5vh;
-    border: 1px solid black;
 }
 
 .icones {

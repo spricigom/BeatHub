@@ -2,6 +2,17 @@
 import NavFooter from '@/components/NavFooter.vue';
 import ListProduct from '@/components/ListProduct.vue';
 import HeaderComponente from '@/components/HeaderComponente.vue';
+import { onMounted } from 'vue';
+import ProductCart from '@/components/ProductCart.vue';
+import ListHome from '@/components/ListHome.vue';
+import { useProdutoStore } from '@/stores/produto';
+
+const produtoStore = useProdutoStore();
+
+onMounted(async () => {
+    await produtoStore.produtoBaixo();
+})
+
 </script>
 
 <template>
@@ -11,169 +22,18 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
         <HeaderComponente />
 
 
-        <hr class="hr" />
+        
         <main>
-            
-            <h2 id="amarelo" style="position: relative;bottom: 1vh;">Baixos</h2>
+
+            <h2 id="amarelo"  style="margin-top: 10vh;">Baixos</h2>
 
             <div class="fundo">
-                <div class="linha">
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/baixo1.jpg" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Flea Jazz Bass®</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 42,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/baixo2.jpg" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">American Ultra II Meteora® Bass</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 17,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/baixo3.jpg" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Duff McKagan Deluxe Precision Bass®</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 32,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/baixo4.jpg" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Player II Mustang® Bass PJ</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 24,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/baixo5.jpg" alt="" width="100%" />
-                        </div>
-                        <h2 class="texto-produtos">Player Plus Active Jazz Bass®</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 32,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="linha">
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/baixo6.jpg" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Vintera® II '50s Precision Bass®</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 35,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/baixo7.jpg" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Troy Sanders Precision Bass®</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 69,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/baixo8.jpg" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">American Performer Mustang® Bass</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 287,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/baixo9.jpg" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Classic Vibe '70s Jazz Bass® V</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 42,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/baixo10.jpg" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Tony Franklin Fretless Precision Bass®</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 17,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-                </div>
+                <ListHome :produtos="produtoStore.produtos" tipo="home" />
             </div>
+
         </main>
 
-        <NavFooter/>
+        <NavFooter />
 
 
     </body>
@@ -466,14 +326,6 @@ input {
     font-size: 1.8vh;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 10%;
-    height: 20vh;
-    background-color: #efefef;
-}
 
 .navegacao {
     list-style: none;
@@ -497,11 +349,7 @@ a {
     padding-left: 7vw;
 }
 
-.hr {
-    position: relative;
-    bottom: 5vh;
-    border: 1px solid black;
-}
+
 
 .icones {
     width: 1.5vw;

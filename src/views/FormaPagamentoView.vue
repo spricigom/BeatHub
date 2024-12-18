@@ -12,7 +12,7 @@ const toggleModal = () => {
 <template>
     <body>
         <HeaderComponente />
-        <hr class="hr" />
+       
         <main :class="{ 'blur-background': showModal }">
             <div class="fundo">
                 <h2>Pagamento Via Pix</h2>
@@ -61,6 +61,7 @@ main{
     flex-direction: column;
     align-items: center;
     padding-top: 7vh;
+    margin-top: 10vh;
 }
 .fundo h2 {
     font-family: 'Josefin Sans', sans-serif;
@@ -95,14 +96,8 @@ button {
     align-items: center;
     flex-direction: column;
 }
-.hr {
-    position: relative;
-    bottom: 5vh;
-    border: 1px solid black;
-}
-body {
-    background-color: rgb(240, 240, 240);
-}
+
+
 
 /* Adicionando o fundo desfocado */
 .blur-background {

@@ -1,7 +1,16 @@
 <script setup>
-import NavFooter from '@/components/NavFooter.vue';
-import ListProduct from '@/components/ListProduct.vue';
+// import NavFooter from '@/components/NavFooter.vue';
+// import ListProduct from '@/components/ListProduct.vue';
+import ListHome from '@/components/ListHome.vue';
 import HeaderComponente from '@/components/HeaderComponente.vue';
+import { useProdutoStore } from '@/stores/produto';
+import { onMounted } from 'vue';
+
+const produtoStore = useProdutoStore();
+
+onMounted(async () => {
+    await produtoStore.produtoBateria();
+})
 </script>
 
 <template>
@@ -11,172 +20,15 @@ import HeaderComponente from '@/components/HeaderComponente.vue';
         <HeaderComponente />
 
 
-        <hr class="hr" />
+       
         <main>
-            
-            <h2 id="amarelo" style="position: relative;bottom: 1vh;">Baterias</h2>
 
-
-
-
-
-
+            <h2 id="amarelo" style="margin-top: 10vh;">Baterias</h2>
 
             <div class="fundo">
-                <div class="linha">
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/bateria1.webp" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Bateria Gretsch</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 92,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/bateria2.webp" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Bateria Recording Custom</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 77,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/bateria33.jpeg" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Bateria American Musical</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 72,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/bateria4.webp" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Bateria D'one Grestch</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 84,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/bateria5.webp" alt="" width="100%" />
-                        </div>
-                        <h2 class="texto-produtos">Bateria Well Drums</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 31,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="linha">
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/bateria6.webp" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Bateria Fusion Df22cb</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 38,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/bateria7.webp" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Bateria AudioTek</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 35,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/bateria8.jpeg" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Bateria Tama Stagestar</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 20,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/bateria9.jpeg" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Bateria Bumbo 20</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 44,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-
-                    <div class="produtos">
-                        <div class="compra-e-coracao_produto">
-                            <img src="@/assets/carrinho-de-compras.png" alt="" class="icones" />
-                            <img src="@/assets/coracao.png" alt="" class="icones" />
-                        </div>
-                        <div class="img-produtos">
-                            <img src="@/assets/bateria10.webp" alt="" />
-                        </div>
-                        <h2 class="texto-produtos">Bateria Power ROckers</h2>
-                        <div class="preco-produtos">
-                            <h5>R$ 10,00 por mes</h5>
-                            <img src="@/assets/tres-pontinhos.png" alt="" class="compartilhe-produtos">
-                        </div>
-                    </div>
-                </div>
+                <ListHome :produtos="produtoStore.produtos" tipo="home"/>
             </div>
+
         </main>
 
 
@@ -603,15 +455,6 @@ input {
     font-size: 1.8vh;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 10%;
-    height: 20vh;
-    background-color: #efefef;
-}
-
 .navegacao {
     list-style: none;
     position: relative;
@@ -634,11 +477,6 @@ a {
     padding-left: 7vw;
 }
 
-.hr {
-    position: relative;
-    bottom: 5vh;
-    border: 1px solid black;
-}
 
 .icones {
     width: 1.5vw;
